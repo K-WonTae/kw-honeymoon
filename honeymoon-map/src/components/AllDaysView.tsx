@@ -69,6 +69,7 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
   }
 
   const totalEur = trip.days.reduce((sum, d) => sum + (d.estimatedCostForTwo ?? 0), 0)
+  const totalCashEur = trip.days.reduce((sum, d) => sum + (d.cashForTwo ?? 0), 0)
 
   return (
     <div className="alldays">
@@ -123,6 +124,30 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
         <div className="alldays-total">
           💶 9일 누적 예상비용(2인): <strong>{formatEur(totalEur)}</strong> ·{' '}
           <strong>{eurToKrwText(totalEur, fx.eurToKrw)}</strong>
+        </div>
+        <div className="alldays-cash">
+          <div className="alldays-cash-head">
+            💵 환전해 갈 현금(2인): <strong>{formatEur(totalCashEur)}</strong> ·{' '}
+            <strong>{eurToKrwText(totalCashEur, fx.eurToKrw)}</strong>
+            <span className="alldays-cash-rest">— 나머지는 전부 신용카드로 충분합니다</span>
+          </div>
+          <ul className="alldays-cash-tips">
+            <li>
+              <strong>현금이 반드시 필요한 곳</strong> — D4 <strong>Trattoria Sostanza(€80,
+              신용카드 절대 불가)</strong> · 택시(로마 트라스테베레·피렌체 미켈란젤로 왕복) ·
+              산로렌초/중앙시장·부라노 상점 등 노점 · 바포레토·지하철 자판기 · 젤라또·카페 소액 ·
+              트레비 분수 동전 · 가이드/스냅 팁.
+            </li>
+            <li>
+              <strong>카드로 충분한 곳</strong> — 호텔·기차(Frecciarossa/Italo)·가이드투어·박물관
+              사전예매·대부분의 식당(Armando는 카드 보증 필수)·짐보관·면세점.
+            </li>
+            <li>
+              지폐는 <strong>€20·€10 위주</strong>로 받으세요. €100·€200권은 택시·소상공인이 거부합니다.
+              카드 단말기가 “KRW로 결제할까요?”라고 물으면 <strong>반드시 EUR 선택</strong>(원화 결제는
+              수수료 3~8%). 현금은 하루치만 지갑에, 나머지는 호텔 금고에 두세요.
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -179,7 +204,17 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
                           fx.eurToKrw,
                         )})`
                       : ''}
+                    {typeof day.cashForTwo === 'number'
+                      ? ` · 💵 현금 ${day.cashForTwo > 0 ? `€${day.cashForTwo}` : '불필요'}`
+                      : ''}
                   </div>
+                  {day.cashNote && (
+                    <div
+                      className={`day-block-cash ${(day.cashForTwo ?? 0) >= 100 ? 'heavy' : ''}`}
+                    >
+                      💵 {day.cashNote}
+                    </div>
+                  )}
                   <AlertCard alerts={day.alerts} />
                   <div className="card-list">
                     {day.items.map((item) => {

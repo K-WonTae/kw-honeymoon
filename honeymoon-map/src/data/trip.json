@@ -16,6 +16,8 @@
       "hotel": "Hotel Diocleziano (로마)",
       "defaultTransportMode": "transit",
       "estimatedCostForTwo": 60,
+      "cashForTwo": 50,
+      "cashNote": "La Famiglia 저녁(입구 데스크에서 계산 — 소액 현금이 빠름) · 레오나르도 익스프레스 자판기 · FCO 생수/화장실. 출국 전 환전한 €20·€10 지폐로 준비하세요.",
       "alerts": [
         "늦은 체크인: 10/19 호텔 도착 예상 21:30~22:00 (비EU 입국심사가 밀리면 22:30까지도 정상 범위). Hotel Diocleziano에 D-7 이메일로 'Late check-in around 22:00'를 사전 통보하세요(24시간 데스크지만 확인 필수).",
         "★ 버퍼 마인드셋: 레오나르도 익스프레스는 15분 간격 — 한 대 놓쳐도 다음 편 타면 됩니다. 절대 뛰지 말 것. 인천 라운지·기내식에서 든든히 먹어두면 첫날 저녁이 여유로워집니다.",
@@ -60,6 +62,8 @@
       "hotel": "Hotel Diocleziano",
       "defaultTransportMode": "walking",
       "estimatedCostForTwo": 270,
+      "cashForTwo": 60,
+      "cashNote": "트라스테베레 택시 왕복(로마 택시는 '카드 안 된다'는 기사 흔함 — €30 현금 필수) · 지하철 1회권 자판기(동전) · 카페/군것질. 식당 Luzzi·Roma Sparita는 카드 OK.",
       "alerts": [
         "콜로세움 가이드 미팅 14:00~14:30 (여행톡톡) — 미팅 시간은 전날 카카오톡으로 확정. 이 투어는 확정 예약이라 시간 고정, 앞뒤로 버퍼를 잡습니다.",
         "Trattoria Luzzi는 워크인(예약 불가) — 12:40 도착으로 피크 전에 착석.",
@@ -99,6 +103,8 @@
       "hotel": "Hotel Diocleziano",
       "defaultTransportMode": "walking",
       "estimatedCostForTwo": 300,
+      "cashForTwo": 60,
+      "cashNote": "Bonci Pizzarium 조각피자(무게 계산·소액) · Giolitti 젤라또(선불 카운터는 현금이 빠름) · 트레비 분수 동전(€1 동전 미리) · 야경 후 호텔 복귀 택시 · 지하철 자판기. Armando는 카드 OK(노쇼 시 1인 €25 카드 청구).",
       "alerts": [
         "바티칸 가이드 미팅 8:00~10:00 배정 (맘마미아 패스트트랙) — 전날 카톡 확정. 이르면(8:00~8:30) 기상·조식 앞당기기.",
         "Armando al Pantheon는 9/21(월) 아침 7:00(한국) 온라인 오픈 — 30일 전 로마 자정 롤링 방식(armandoalpantheon.it → ResDiary 전용, 전화 불가). 신용카드 보증 입력·노쇼 €25. 정각 접속 필수, 가장 어려운 예약.",
@@ -139,6 +145,8 @@
       "hotel": "B&B Laurus al Duomo (피렌체)",
       "defaultTransportMode": "walking",
       "estimatedCostForTwo": 230,
+      "cashForTwo": 140,
+      "cashNote": "⚠️ 9일 중 현금이 가장 많이 필요한 날. Trattoria Sostanza 저녁 €80은 신용카드 절대 불가(현금·이탈리아 bancomat만) — 아침에 미리 확보해 두세요 · 피아찰레 미켈란젤로 택시 왕복 €30 · All'Antico Vinaio 샌드위치(줄 서서 소액 현금이 빠름).",
       "alerts": [
         "Hotel Diocleziano 체크아웃 11:00 엄수.",
         "피렌체 도착(~11:55)은 체크인 14:00 전 → 짐 먼저 맡기고(12:15) 점심·관광.",
@@ -184,6 +192,8 @@
       "hotel": "B&B Laurus al Duomo",
       "defaultTransportMode": "walking",
       "estimatedCostForTwo": 400,
+      "cashForTwo": 110,
+      "cashNote": "산로렌초 시장 가죽·기념품과 중앙시장 군것질 €80~100 — 노점은 카드를 안 받거나 '현금이면 깎아준다'가 기본이라 흥정용 현금이 곧 할인입니다 · 가이드 팁. 4 Leoni·La Giostra는 카드 OK.",
       "alerts": [
         "이날만 07:00 기상 — 우피치 가이드 미팅 09:00 (지오마레). 확정 투어라 시간 고정.",
         "La Giostra는 2주 전 예약 필수 (로맨틱·인기).",
@@ -225,6 +235,8 @@
       "hotel": "BW Plus Hotel Bologna (Mestre)",
       "defaultTransportMode": "transit",
       "estimatedCostForTwo": 200,
+      "cashForTwo": 90,
+      "cashNote": "부라노 스냅 작가 잔금(현지 정산이면 현금 — 출발 전 결제 방식 확인 필수) · 바포레토 12번 왕복 자판기 · 부라노 레이스 상점(가족 가게라 카드 거부 잦음) · 메스트레역 근처 간단 점심.",
       "alerts": [
         "베네치아는 Mestre 하차! 본섬 산타루치아역까지 가지 말 것 (호텔이 Mestre).",
         "B&B Laurus 체크아웃 12:00 엄수 — 일찍 출발.",
@@ -270,6 +282,8 @@
       "hotel": "BW Plus Hotel Bologna",
       "defaultTransportMode": "transit",
       "estimatedCostForTwo": 400,
+      "cashForTwo": 60,
+      "cashNote": "바포레토 1번 티켓·Mestre↔S.Lucia 기차 자판기(줄·고장 대비 현금) · 비엔날레 기념품숍 · 산마르코 골목 기념품. Dallo Zio·Ca' Dolfin·광장 카페 아페리티보는 카드 OK.",
       "alerts": [
         "DST 종료(서머타임 해제) — 간밤 시계 1시간 뒤로. 휴대폰 자동 변경·호텔 알람 확인. 몸은 1시간 이득이라 조식은 느긋하되 09:45 출발로 비엔날레를 일찍 시작합니다. 일몰 약 17:08로 빨라져 오후는 실내(대성당·두칼레) 위주.",
         "베네치아 비엔날레(Giardini) 온라인 사전 예매 €30/인 · 11:00 입장해 한국·일본·독일 3개 국가관 + 중앙관(또는 프랑스·북유럽관)까지 4곳 여유. 관람 우선순위 미리 정하기 · 일요일 운영시간 확인.",
@@ -316,6 +330,8 @@
       "hotel": "비행기 (KE928)",
       "defaultTransportMode": "transit",
       "estimatedCostForTwo": 130,
+      "cashForTwo": 30,
+      "cashNote": "밀라노 지하철 M3 왕복·역 커피/간식 정도만. 마지막 유로 소진일 — 남은 현금은 말펜사 공항 면세점에서 쓰고 오세요(재환전은 손해). KIPOINT 짐보관·Trattoria Milanese는 카드 OK.",
       "alerts": [
         "출국일 타임라인: KE928 20:05 출발 — Malpensa Express 16:13 Centrale 출발 → MXP T1 17:05 도착(약 3시간 버퍼). 시내 일정은 15:05 M3로 Centrale 복귀. 말펜사 익스프레스는 매시 13/43분 간격 — 16:43편이 최종 안전망.",
         "★ 플랜B(열차 지연·시내 지연 시): 두오모 내부·옥상은 포기하고 광장 외관+갈레리아만 40분. 점심을 Centrale역 안 Mercato Centrale Milano로 바꾸면 지하철 M3 왕복(두오모) 리스크 자체가 사라져 16:13 열차를 확실히 탑니다.",
@@ -360,6 +376,8 @@
       "hotel": "집",
       "defaultTransportMode": "transit",
       "estimatedCostForTwo": 30,
+      "cashForTwo": 0,
+      "cashNote": "유로 현금 불필요. 김해공항 → 부산 시내 택시는 원화/카드이니, 귀국용 원화 3~5만 원만 지갑에 남겨두세요.",
       "alerts": [
         "국내선 환승: 수하물 픽업 후 재위탁 필요 (ICN T2) — 15:35 도착 후 바로 이동하면 18:25 부산행까지 약 2h50 버퍼로 넉넉. 서두를 필요 없음."
       ],

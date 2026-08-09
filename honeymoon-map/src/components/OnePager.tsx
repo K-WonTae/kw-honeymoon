@@ -29,6 +29,7 @@ const TYPE_ICON: Record<PlaceType, string> = {
  */
 export function OnePager({ trip, fx, density }: Props) {
   const totalEur = trip.days.reduce((sum, d) => sum + (d.estimatedCostForTwo ?? 0), 0)
+  const totalCashEur = trip.days.reduce((sum, d) => sum + (d.cashForTwo ?? 0), 0)
 
   return (
     <div className={`onepager density-${density}`} id="onepager-sheet">
@@ -38,6 +39,8 @@ export function OnePager({ trip, fx, density }: Props) {
           {trip.startDate.replace(/-/g, '.')} ~ {trip.endDate.replace(/-/g, '.')} · {trip.travelerCount}인
           <span className="op-meta-sep">·</span>
           💶 누적 {formatEur(totalEur)} ({eurToKrwText(totalEur, fx.eurToKrw)})
+          <span className="op-meta-sep">·</span>
+          💵 현금 {formatEur(totalCashEur)} ({eurToKrwText(totalCashEur, fx.eurToKrw)})
           <span className="op-meta-sep">·</span>
           {density === 'highlights' ? '핵심 장소만' : '전체 일정'}
         </div>
@@ -92,11 +95,18 @@ export function OnePager({ trip, fx, density }: Props) {
                 ))}
               </ul>
 
-              {(day.hotel || typeof day.estimatedCostForTwo === 'number') && (
+              {(day.hotel ||
+                typeof day.estimatedCostForTwo === 'number' ||
+                typeof day.cashForTwo === 'number') && (
                 <footer className="op-day-foot">
                   {day.hotel ? <span>🏨 {day.hotel}</span> : null}
                   {typeof day.estimatedCostForTwo === 'number' ? (
                     <span>💶 €{day.estimatedCostForTwo}</span>
+                  ) : null}
+                  {typeof day.cashForTwo === 'number' ? (
+                    <span className={`op-cash ${day.cashForTwo >= 100 ? 'heavy' : ''}`}>
+                      💵 현금 {day.cashForTwo > 0 ? `€${day.cashForTwo}` : '불필요'}
+                    </span>
                   ) : null}
                 </footer>
               )}

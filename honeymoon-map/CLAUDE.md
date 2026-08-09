@@ -55,6 +55,9 @@ https://www.google.com/maps/dir/?api=1&destination={lat,lng | 인코딩 주소}
 2. 물리적 장소면 `mappable: true` + `type` 지정. 좌표 규칙(위 §)에 따라 `placeId` 또는 `placeName` 채움.
 3. 식당/호텔이면 같은 Day의 `reservations[]`에 `Reservation`(예약 필요도·시점·EN/IT 멘트) 추가.
 4. 경고가 필요하면 `alerts[]`에 한 줄. 비용은 `estimatedCostForTwo`(Day) / `estimatedCost`(항목, EUR·2인 기준).
+   현금은 `cashForTwo`(Day, EUR·2인) + `cashNote`(어디에 쓰는지 한 줄). **`cashForTwo`는 그 날 예상비용 중
+   "카드가 안 되거나 현금이 훨씬 편한 몫"만** 담습니다(전체 비용의 부분집합, 별도 합산 아님).
+   `cashForTwo >= 100`이면 UI가 자동으로 주황 경고색으로 승격합니다.
 5. 타입이 맞는지 `npm run build`(= `tsc -b && vite build`)로 확인.
 
 ## 충돌 시 우선순위 (지시서 §10)

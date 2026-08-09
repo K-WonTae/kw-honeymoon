@@ -86,6 +86,20 @@ export function ScheduleList({
             </strong>
           </div>
         )}
+        {typeof day.cashForTwo === 'number' && (
+          <div className={`cash-line ${day.cashForTwo >= 100 ? 'heavy' : ''}`}>
+            <div className="cash-line-top">
+              💵 이 중 현금(2인):{' '}
+              <strong>
+                {day.cashForTwo > 0
+                  ? `€${day.cashForTwo} (${eurToKrwText(day.cashForTwo, fx.eurToKrw)})`
+                  : '불필요'}
+              </strong>
+              <span className="cash-line-rest">· 나머지는 카드 결제 OK</span>
+            </div>
+            {day.cashNote && <div className="cash-line-note">{day.cashNote}</div>}
+          </div>
+        )}
       </div>
 
       <AlertCard alerts={day.alerts} />

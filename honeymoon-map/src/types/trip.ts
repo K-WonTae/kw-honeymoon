@@ -74,6 +74,10 @@ export interface DayPlan {
   hotel?: string
   defaultTransportMode: TransportMode
   estimatedCostForTwo?: number // EUR
+  /** 그 날 손에 쥐고 있어야 할 현금(2인·EUR). 카드로 안 되거나 현금이 훨씬 편한 몫만. */
+  cashForTwo?: number
+  /** 현금이 "어디에" 필요한지 한 줄 설명 (cashForTwo 가 있을 때만 의미 있음) */
+  cashNote?: string
   alerts: string[] // 경고 카드 문구
   items: ScheduleItem[]
   reservations: Reservation[]
