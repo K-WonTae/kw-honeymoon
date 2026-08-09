@@ -1,0 +1,455 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//honeymoon-map//italy-2026//KO
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:이탈리아 허니문 2026 · 예약 준비
+X-WR-TIMEZONE:Europe/Rome
+BEGIN:VEVENT
+UID:book-armando@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART:20260921T070000
+DTEND:20260921T073000
+SUMMARY:⏰⭐ Armando al Pantheon 온라인 예약 오픈 (정각 접속!)
+DESCRIPTION:가장 어려운 예약. armandoalpantheon.it → ResDiary 온
+ 라인 전용(전화·이메일 불가).\n10/21(수) 저녁분이 9/21(
+ 월) 아침 7:00(한국) 정각에 열림 — 30일 전 로마 자정 롤
+ 링.\n신용카드 보증 필수·노쇼 €25. 확인 이메일 와야 
+ 성립. 9월 중순 예약 화면 미리 익히기.\n실패 시 ①점심
+  전환(훨씬 쉬움) ②1~2일 전 취소분 확인 ③Osteria da Fortu
+ nata 대체.\n한국어: 안녕하세요\, [이름] 이름으로 10월 21
+ 일 수요일 20:00 2인 테이블을 예약하고 싶습니다. 저희
+ 는 신혼여행을 기념하고 있습니다. 정말 감사합니다!\n\
+ nEN: Hello\, I'd like to reserve a table for 2 on Wednesday 21 October at
+  20:00\, under [이름]. We're celebrating our honeymoon. Thank you very 
+ much!\n\nIT: Buongiorno\, vorrei prenotare un tavolo per 2 persone mercol
+ edì 21 ottobre alle 20:00\, a nome [이름]. Siamo in luna di miele. Gra
+ zie mille!
+LOCATION:Armando al Pantheon\, Roma
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 아침 7시 Armando 예약 오픈
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:30분 뒤 Armando 예약 오픈 — 대기
+TRIGGER:-PT30M
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:5분 뒤 정각 접속!
+TRIGGER:-PT5M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20260921-3@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20260921
+DTEND;VALUE=DATE:20260922
+SUMMARY:🏨 호텔 3곳 허니문 요청 메일 보내기
+DESCRIPTION:지금 보내도 되는 사전 요청(부담 없이). 조용한
+  방/전망/허니문 어필.\n① Hotel Diocleziano (로마):\n한국어
+ : 안녕하세요 Hotel Diocleziano 팀\, [이름] 이름으로 10월 19
+ –22일 3박 예약했습니다. 저희는 이탈리아에서 신혼여
+ 행을 보낼 예정입니다. 가능하다면 길소음이 적은 조용
+ 한 방이면 좋겠습니다. 전혀 부담 갖지 않으셔도 되고\,
+  이미 숙박을 기대하고 있습니다. 정말 감사합니다!\n\nE
+ N: Dear Hotel Diocleziano team\, we have a reservation under [이름] for
+  19–22 October (3 nights)\, and we'll be spending our honeymoon in Ital
+ y. If possible\, we'd love a quiet room away from street noise. No pressu
+ re at all — we're already looking forward to our stay. Thank you so muc
+ h!\n② B&B Laurus al Duomo (피렌체):\n한국어: 안녕하세요 Laur
+ us al Duomo 팀\, [이름] 이름으로 10월 22–24일 예약했습니
+ 다. 저희는 신혼여행 중이라 가능하다면 조용한 방이나
+  전망 좋은 방이면 이번 숙박이 더 특별할 것 같습니다.
+  가능한 선에서 배정해 주시면 감사하겠고\, 전혀 부담 
+ 갖지 않으셔도 됩니다. 감사합니다!\n\nEN: Dear Laurus al Duo
+ mo team\, we have a booking under [이름] for 22–24 October. We're on 
+ our honeymoon\, and a quiet room — or one with a nice view\, if you hav
+ e it — would make our stay extra special. We'd be grateful for anything
+  you can arrange\, and there's no pressure at all. Thank you!\n③ Best W
+ estern Plus Hotel Bologna (메스트레):\n한국어: 안녕하세요 Bes
+ t Western Plus Hotel Bologna 팀\, [이름] 이름으로 10월 24–26일
+  예약했습니다. 저희는 신혼여행을 기념하고 있습니다.
+  가능하다면 조용하고 편안한 방이면 정말 좋겠습니다.
+  전혀 부담 갖지 않으셔도 됩니다. 정말 감사드리고 숙
+ 박을 기대하고 있습니다!\n\nEN: Dear Best Western Plus Hotel Bol
+ ogna team\, we have a reservation under [이름] for 24–26 October\, an
+ d we're celebrating our honeymoon. A quiet\, comfortable room would be wo
+ nderful if that's possible. No pressure at all — thank you so much\, an
+ d we look forward to our stay!
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20261001-@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:🎟️ 관광지 티켓 사전 예매 (시간지정)
+DESCRIPTION:온라인 사전 예매 필수 — 당일 매진 잦음. 일정
+  시간에 맞춰 슬롯 지정.\n□ 아카데미아 갤러리(다비드
+ 상) — 10/23(금) 15:00 슬롯\, €20/인\n□ 두칼레 궁전 — 10
+ /25(일) 16:00 시간지정\, €30/인 (마지막 입장 18:00)\n□ 베
+ 네치아 비엔날레(Giardini) — 10/25(일) 11:00 입장\, €30/인\
+ n□ (선택) 산마르코 대성당 — 10/25(일) 오후 입장권 €
+ 사전예약\n□ (선택) 밀라노 두오모 옥상 — 10/26(월) "시
+ 간 미지정/오픈" 티켓으로만 (고정시간 ❌)\n※ 가이드 
+ 투어(콜로세움·바티칸·우피치·부라노 스냅)는 이미 
+ 확정 예약 — 미팅 시간만 전날 카톡 확인.
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20260928-LaGiostra23@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:🍝⭐ La Giostra 예약 (피렌체\, 2~3주 전)
+DESCRIPTION:10/23(금) 19:00\, 2인. ristorantelagiostra.com → SevenRooms
+  / 전화 +39 055 241341 / WhatsApp +39 335 7615196.\n요청칸에 'honey
+ moon' 기재 시 좋은 자리·웰컴 프로세코 확률 UP.\n한국어
+ : 안녕하세요\, [이름] 이름으로 10월 23일 금요일 19:00 2
+ 인 테이블을 예약하고 싶습니다. 저희는 신혼여행 중이
+ 라 둘이 앉을 조용하고 아늑한 자리면 정말 좋겠습니다
+ . 정말 감사합니다!\n\nEN: Hello\, I'd like to book a table for 2 o
+ n Friday 23 October at 19:00\, under [이름]. We're on our honeymoon\, a
+ nd a quiet\, cozy table for the two of us would be lovely. Thank you so m
+ uch!\n\nIT: Buongiorno\, vorrei prenotare un tavolo per 2 persone venerd
+ ì 23 ottobre alle 19:00\, a nome [이름]. Siamo in luna di miele — se
+  possibile un tavolo tranquillo e accogliente. Grazie mille!
+LOCATION:La Giostra\, Firenze
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20260928-RomaSparita2@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20260928
+DTEND;VALUE=DATE:20260929
+SUMMARY:🍝👍 Roma Sparita 예약 (로마\, 2~3주 전)
+DESCRIPTION:10/20(화) 19:30\, 2인. 전화 +39 06 580 0757(영어 통함) 
+ 또는 TheFork 앱.\n19:30 오픈 첫 손님이 최적. 야외석 원하
+ 면 outside table 요청.\n한국어: 안녕하세요\, [이름] 이름
+ 으로 10월 20일 화요일 19:30 2인 테이블을 예약하고 싶습
+ 니다. 저희는 신혼여행 중이라 가능하면 야외 테이블이
+ 면 좋겠습니다. 방문을 무척 기대하고 있습니다. 정말 
+ 감사합니다!\n\nEN: Hello\, I'd like to book a table for 2 on Tuesday
+  20 October at 19:30\, under the name [이름]. We're celebrating our hon
+ eymoon — an outside table would be lovely if possible. We can't wait to
+  visit! Thank you so much.\n\nIT: Buongiorno\, vorrei prenotare un tavolo
+  per 2 persone martedì 20 ottobre alle 19:30\, a nome [이름]. Siamo in
+  luna di miele — se possibile un tavolo all'aperto. Non vediamo l'ora! 
+ Grazie mille.
+LOCATION:Roma Sparita\, Roma
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20261005-TrattoriaSos@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20261005
+DTEND;VALUE=DATE:20261006
+SUMMARY:🍝⭐ Trattoria Sostanza 예약 (피렌체\, 전화만·매진주
+ 의)
+DESCRIPTION:10/22(목) 19:30\, 2인. 전화 예약만 +39 055 212691 (온
+ 라인·이메일 불가\, 토·일 휴무라 평일 현지 오전에만)
+ .\n1주 전이면 매진될 수 있으니 여유 있게. ★신용카드 
+ 불가 — 현금 €80 준비 필수.\n직접 전화 부담되면 호텔
+  컨시어지 대리 요청.\n한국어: 안녕하세요\, [이름] 이
+ 름으로 10월 22일 목요일 19:30 2인 테이블을 예약하고 싶
+ 습니다. 감사합니다!\n\nEN: Hello\, I'd like to book a table for 2
+  on Thursday 22 October at 7:30 pm\, under the name [이름]. Thank you!\
+ n\nIT: Buongiorno\, vorrei prenotare un tavolo per 2 persone giovedì 22 
+ ottobre alle 19:30\, a nome [이름]. Grazie!
+LOCATION:Trattoria Sostanza\, Firenze
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20261008-Trattoria4Le@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:🍝👍 Trattoria 4 Leoni 예약 (피렌체\, 1~2주 전)
+DESCRIPTION:10/23(금) 13:00\, 2인. 4leoni.it → PRENOTA TAVOLO 또는 +3
+ 9 055 218562.\n한국어: 안녕하세요\, [이름] 이름으로 10월 2
+ 3일 금요일 13:00 2인 테이블을 부탁드립니다. 감사합니
+ 다!\n\nEN: Hello\, I'd like a table for 2 on Friday 23 October at 13:00\
+ , under [이름]. Thank you!\n\nIT: Buongiorno\, vorrei un tavolo per 2 p
+ ersone venerdì 23 ottobre alle 13:00\, a nome [이름]. Grazie!
+LOCATION:Trattoria 4 Leoni\, Firenze
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20261012-HotelDioclez@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:🏨⭐ Hotel Diocleziano 늦은 체크인 통보 (D-7 필수)
+DESCRIPTION:10/19 도착 ~22:00 예정. 24시간 데스크지만 확인 필
+ 수.\n한국어: 안녕하세요\, [이름] 이름으로 10월 19–22일
+  예약 건입니다. 저희 항공편(KE931)이 10월 19일 19:30 로마
+  FCO에 도착해 호텔에는 22:00경 도착할 예정입니다. 그날
+  저녁 늦은 체크인을 위해 객실을 보관해 주시고\, 리셉
+ 션이 24시간 운영되는지도 알려주실 수 있을까요? 정말 
+ 감사합니다!\n\nEN: Hello\, this is regarding our reservation under [
+ 이름] for 19–22 October. Our flight (KE931) lands at Rome FCO at 19:3
+ 0 on 19 October\, so we expect to arrive around 22:00. Could you please h
+ old our room for a late check-in that evening\, and let us know whether r
+ eception is staffed 24 hours? Thank you very much!
+LOCATION:Hotel Diocleziano\, Roma
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20261012-TrattoriaAll@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:🍝👍 Trattoria Alla Fontana 예약 (베네치아\, 1주 전)
+DESCRIPTION:10/24(토) 18:45\, 2인. 전화 +39 041 715077 또는 온라인
+  trattoriaallafontana.shop.\n운하뷰 자리 요청. 주방 작아 착
+ 석 즉시 주문(20:15 기차).\n한국어: 안녕하세요\, [이름] 
+ 이름으로 10월 24일 토요일 18:45 2인 테이블을 예약하고 
+ 싶습니다. 저희는 신혼여행 중이라 가능하면 운하뷰 자
+ 리면 좋겠습니다. 정말 감사합니다!\n\nEN: Hello\, I'd like t
+ o book a table for 2 on Saturday 24 October at 18:45\, under [이름]. We
+ 're on our honeymoon — a canal-side table would be lovely if possible. 
+ Thank you so much!\n\nIT: Buongiorno\, vorrei prenotare un tavolo per 2 p
+ ersone sabato 24 ottobre alle 18:45\, a nome [이름]. Siamo in luna di m
+ iele — se possibile un tavolo vista canale. Grazie mille!
+LOCATION:Trattoria Alla Fontana\, Venezia
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20261022-BBLaurus@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:🏨 B&B Laurus 이른 짐보관 요청 (도착 전 메시지)
+DESCRIPTION:10/22 12:15경 도착(체크인 14:00 전). 짐 먼저 맡기
+ 기.\n한국어: 안녕하세요\, 저희는 10월 22일 12:15경 피렌
+ 체에 도착 예정이라 14:00 체크인보다 조금 이릅니다. 도
+ 착 시 짐을 먼저 맡기고 조금 뒤에 체크인할 수 있을까
+ 요? 정말 감사합니다!\n\nEN: Hello\, we'll arrive in Florence arou
+ nd 12:15 on 22 October\, before your 14:00 check-in. Would it be possible
+  to drop off our luggage when we arrive and check in a little later? Than
+ k you very much!
+LOCATION:B&B Laurus al Duomo\, Firenze
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20261023-CaDolfinWhat@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:🍝⭐ Ca' Dolfin 예약 (베네치아\, WhatsApp 1~2일 전)
+DESCRIPTION:10/25(일) 19:15\, 2인. WhatsApp +39 041 528 5299 로 메시
+ 지 → 답장 오면 확정.\n전체 일정 최고 평점 ⭐4.8. 구글
+ 맵 "Ca' Dolfin Venezia" 핀 미리 저장.\n한국어: 안녕하세요\,
+  [이름] 이름으로 10월 25일 일요일 19:15 2인 테이블을 예
+ 약하고 싶습니다. 저희는 신혼여행을 기념하고 있어 조
+ 용한 자리면 정말 좋겠습니다. 정말 감사합니다!\n\nEN: H
+ ello! I would like to reserve a table for 2 people on Sunday\, October 25
+ th at 7:15 pm. Name: [이름]. We are on our honeymoon from Korea. Thank 
+ you! 😊\n\nIT: Buongiorno\, vorrei prenotare un tavolo per 2 persone do
+ menica 25 ottobre alle 19:15\, a nome [이름]. Siamo in luna di miele e 
+ un tavolo tranquillo sarebbe perfetto. Grazie mille!
+LOCATION:Ristorante Ca' Dolfin\, Venezia
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20261024-BWPlus@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:🏨 BW Plus 짐보관+저녁 체크인 요청 (도착 당일)
+DESCRIPTION:10/24 12:45경 Mestre 도착. 낮에 짐만 맡기고 부라노
+  스냅 후 저녁 체크인.\n한국어: 안녕하세요\, 저희 열차
+ 는 10월 24일 12:45경 Venezia Mestre에 도착합니다. 도착 시 
+ 짐을 맡기고 저녁에 체크인할 수 있을까요? 감사합니다
+ !\n\nEN: Hello\, our train reaches Venezia Mestre around 12:45 on 24 Octo
+ ber. Would it be possible to drop off our luggage on arrival and check in
+  later in the evening? Thank you!
+LOCATION:Best Western Plus Hotel Bologna Mestre
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20261024-DalloZioTheF@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:🍝👍 Dallo Zio 예약 (베네치아\, 선택·TheFork)
+DESCRIPTION:10/25(일) 14:00\, 2인. TheFork 앱 또는 sanmarco.dallozio.c
+ om (워크인도 가능).\n🚨 반드시 'San Marco'(Spadaria 676) 지
+ 점 — 구글맵 'Santa Margherita' 지점 아님!\n한국어: 안녕하
+ 세요\, [이름] 이름으로 10월 25일 일요일 14:00 2인 테이블
+ 을 예약하고 싶습니다. 신혼여행 중입니다 — 정말 감
+ 사합니다!\n\nEN: Hello\, I'd like to book a table for 2 on Sunday 25 
+ October at 14:00\, under the name [이름]. We're on our honeymoon — th
+ ank you so much!\n\nIT: Buongiorno\, vorrei prenotare un tavolo per 2 per
+ sone domenica 25 ottobre alle 14:00\, a nome [이름]. Siamo in luna di m
+ iele — grazie mille!
+LOCATION:Ristorante Dallo Zio\, San Marco\, Venezia
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:book-20261025-TrattoriaMil@italy-honeymoon-2026
+DTSTAMP:20260702T000000Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+SUMMARY:🍝👍 Trattoria Milanese 예약 (밀라노\, 전날 저녁 전
+ 화)
+DESCRIPTION:10/26(월) 13:00\, 2인. 전화 +39 02 8645 1991 (10/25 저녁
+ ·시차 -8h 주의).\n★점심 마감 14:30 — 13:00 도착 엄수. 
+ 리소토는 셰어 금지.\n한국어: 안녕하세요\, [이름] 이름
+ 으로 10월 26일 월요일 13:00 2인 테이블을 예약하고 싶습
+ 니다. 감사합니다!\n\nEN: Hello\, I'd like to book a table for 2 on
+  Monday 26 October at 1:00 pm\, under the name [이름]. Thank you!\n\nIT
+ : Buongiorno\, vorrei prenotare un tavolo per 2 persone lunedì 26 ottobr
+ e alle 13:00\, a nome [이름]. Grazie!
+LOCATION:Trattoria Milanese\, Milano
+CATEGORIES:허니문\,예약
+STATUS:CONFIRMED
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:내일 예약 준비
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:오늘 예약 준비
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

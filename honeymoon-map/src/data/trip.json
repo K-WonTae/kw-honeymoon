@@ -1,0 +1,408 @@
+{
+  "tripId": "italy-honeymoon-2026",
+  "title": "이탈리아 허니문 9일",
+  "startDate": "2026-10-19",
+  "endDate": "2026-10-27",
+  "travelerCount": 2,
+  "homeCurrency": "KRW",
+  "baseCurrency": "EUR",
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-10-19",
+      "weekday": "월",
+      "city": "부산 → 인천 → 로마",
+      "title": "부산→인천→로마, 호텔 늦은 체크인",
+      "hotel": "Hotel Diocleziano (로마)",
+      "defaultTransportMode": "transit",
+      "estimatedCostForTwo": 60,
+      "alerts": [
+        "늦은 체크인: 10/19 호텔 도착 예상 21:30~22:00 (비EU 입국심사가 밀리면 22:30까지도 정상 범위). Hotel Diocleziano에 D-7 이메일로 'Late check-in around 22:00'를 사전 통보하세요(24시간 데스크지만 확인 필수).",
+        "★ 버퍼 마인드셋: 레오나르도 익스프레스는 15분 간격 — 한 대 놓쳐도 다음 편 타면 됩니다. 절대 뛰지 말 것. 인천 라운지·기내식에서 든든히 먹어두면 첫날 저녁이 여유로워집니다.",
+        "저녁은 호텔 길 건너 La Famiglia(도보 1분, 23:00까지)에서 로마 첫 파스타 — 22:15까지 착석. Termini 도착이 22:00을 넘기면 자정까지 여는 Ristorante Pizzeria Mino(Via Milazzo 18, 역 동쪽 출구)로 플랜B.",
+        "심카드는 인천에서 미리 구입/이심 개통 권장."
+      ],
+      "items": [
+        { "id": "D1-01", "sequence": 1, "startTime": "06:00", "endTime": "06:30", "title": "PUS 김해공항 도착 (T1 국제선)", "note": "출발 2h 30m 전", "mappable": true, "type": "airport", "placeName": "Gimhae International Airport, Busan", "placeId": "ChIJDfcSIsGSaDUR7DKMmkKpoxU", "lat": 35.1728688, "lng": 128.9471783 },
+        { "id": "D1-02", "sequence": 2, "startTime": "06:30", "endTime": "07:30", "title": "KE 체크인·수하물 위탁·보안검색", "mappable": false },
+        { "id": "D1-03", "sequence": 3, "startTime": "07:30", "endTime": "08:30", "title": "면세점·간단 아침 (편의점·카페)", "mappable": false },
+        { "id": "D1-04", "sequence": 4, "startTime": "08:30", "endTime": "08:45", "title": "게이트·탑승", "mappable": false },
+        { "id": "D1-05", "sequence": 5, "startTime": "08:45", "title": "KE 1406 PUS 출발", "note": "A321-neo", "mappable": false, "transportFromPrevious": "flight" },
+        { "id": "D1-06", "sequence": 6, "startTime": "08:45", "endTime": "09:55", "title": "비행 (1h 10m)", "mappable": false, "transportFromPrevious": "flight" },
+        { "id": "D1-07", "sequence": 7, "startTime": "09:55", "title": "ICN 인천 도착 (T2)", "mappable": true, "type": "airport", "placeName": "Incheon International Airport Terminal 2", "placeId": "ChIJ7TZN-XaQezUR0UAqfjDR5eU", "lat": 37.4688875, "lng": 126.433359, "transportFromPrevious": "flight" },
+        { "id": "D1-08", "sequence": 8, "startTime": "09:55", "endTime": "10:30", "title": "환승 게이트 이동·라운지 안내", "mappable": false },
+        { "id": "D1-09", "sequence": 9, "startTime": "10:30", "endTime": "12:30", "title": "환승 라운지·식사·면세점", "note": "3h 25m 환승", "mappable": false },
+        { "id": "D1-10", "sequence": 10, "startTime": "12:30", "endTime": "13:00", "title": "게이트 도착", "mappable": false },
+        { "id": "D1-11", "sequence": 11, "startTime": "13:20", "title": "KE 931 ICN 출발", "note": "A350-900", "mappable": false, "transportFromPrevious": "flight" },
+        { "id": "D1-12", "sequence": 12, "startTime": "13:20", "endTime": "19:30", "title": "비행 (13h 10m)", "note": "기내식 2회·수면(도착 직전 깨어있기) — 시차 적응", "mappable": false, "transportFromPrevious": "flight" },
+        { "id": "D1-13", "sequence": 13, "startTime": "19:30", "title": "FCO 로마 피우미치노 도착 (T3)", "note": "현지시각(CET)", "mappable": true, "type": "airport", "placeName": "Rome Fiumicino Airport (FCO)", "placeId": "ChIJHxSYOHnwJRMRbzFY47QT5a8", "lat": 41.8034632, "lng": 12.2519211, "transportFromPrevious": "flight" },
+        { "id": "D1-14", "sequence": 14, "startTime": "19:30", "endTime": "20:00", "title": "입국심사", "mappable": false },
+        { "id": "D1-15", "sequence": 15, "startTime": "20:00", "endTime": "20:30", "title": "수하물·심카드 수령", "note": "심카드 인천 사전 구입 권장", "mappable": false },
+        { "id": "D1-16", "sequence": 16, "startTime": "20:30", "endTime": "21:00", "title": "레오나르도 익스프레스 탑승", "note": "T3 도보 8분 · €14/인 · 15분 간격(놓쳐도 다음 편, 서두르지 말 것)", "mappable": false, "transportFromPrevious": "train", "estimatedCost": 28 },
+        { "id": "D1-17", "sequence": 17, "startTime": "21:00", "endTime": "21:30", "title": "열차 이동 (32분) → Roma Termini", "mappable": true, "type": "station", "placeName": "Roma Termini", "placeId": "ChIJ7__AOaRhLxMRlKlh8r59MKQ", "lat": 41.9012873, "lng": 12.5015756, "transportFromPrevious": "train" },
+        { "id": "D1-18", "sequence": 18, "startTime": "21:30", "endTime": "21:45", "title": "Termini역 → Hotel Diocleziano 도보 6분", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D1-19", "sequence": 19, "startTime": "21:45", "endTime": "22:15", "title": "Hotel Diocleziano 체크인·짐 풀기", "note": "늦은 체크인, 짐 정리, 휴식", "mappable": true, "type": "hotel", "placeName": "Hotel Diocleziano, Roma", "placeId": "ChIJcclrH6dhLxMRewY0e7iKP-A", "lat": null, "lng": null, "transportFromPrevious": "walking" },
+        { "id": "D1-20", "sequence": 20, "startTime": "22:15", "endTime": "23:00", "title": "저녁: La Famiglia — 로마 첫 파스타", "note": "호텔 길 건너 도보 1분 · 22:15까지 착석해 바로 주문(주방 마감 임박) · 계산은 테이블이 아니라 입구 데스크 · 2인 €30~40 · 문 닫았거나 Termini 도착이 늦으면 플랜B Ristorante Pizzeria Mino", "recommendedMenu": ["까르보나라(간판)", "프로슈토", "마르게리타 피자"], "mappable": true, "type": "restaurant", "placeName": "La Famiglia, Via Gaeta 66, Roma", "lat": null, "lng": null, "reservationLevel": "walk-in", "transportFromPrevious": "walking", "estimatedCost": 35 },
+        { "id": "D1-21", "sequence": 21, "startTime": "23:00", "title": "취침", "note": "시차 적응 우선", "mappable": false }
+      ],
+      "reservations": [
+        { "id": "RES-D1-HOTEL-LATE", "placeName": "Hotel Diocleziano", "reservationLevel": "required", "recommendedTiming": "D-7 (필수)", "note": "늦은 체크인 통보 — 24시간 데스크지만 확인 필수.", "messageEN": "Hello, this is regarding our reservation under [이름] for 19–22 October. Our flight (KE931) lands at Rome FCO at 19:30 on 19 October, so we expect to arrive around 22:00. Could you please hold our room for a late check-in that evening, and let us know whether reception is staffed 24 hours? Thank you very much!" , "messageKO": "안녕하세요, [이름] 이름으로 10월 19–22일 예약 건입니다. 저희 항공편(KE931)이 10월 19일 19:30 로마 FCO에 도착해 호텔에는 22:00경 도착할 예정입니다. 그날 저녁 늦은 체크인을 위해 객실을 보관해 주시고, 리셉션이 24시간 운영되는지도 알려주실 수 있을까요? 정말 감사합니다!" },
+        { "id": "RES-D1-HOTEL-HONEYMOON", "placeName": "Hotel Diocleziano", "reservationLevel": "recommended", "recommendedTiming": "예약 직후~도착 3~7일 전", "note": "허니문 어필 — 길소음이 적은 조용한 방 요청. 중앙 냉난방·소음 후기 → 귀마개 지참 권장.", "messageEN": "Dear Hotel Diocleziano team, we have a reservation under [이름] for 19–22 October (3 nights), and we'll be spending our honeymoon in Italy. If possible, we'd love a quiet room away from street noise. No pressure at all — we're already looking forward to our stay. Thank you so much!" , "messageKO": "안녕하세요 Hotel Diocleziano 팀, [이름] 이름으로 10월 19–22일 3박 예약했습니다. 저희는 이탈리아에서 신혼여행을 보낼 예정입니다. 가능하다면 길소음이 적은 조용한 방이면 좋겠습니다. 전혀 부담 갖지 않으셔도 되고, 이미 숙박을 기대하고 있습니다. 정말 감사합니다!" },
+        { "id": "RES-D1-DINNER", "placeName": "La Famiglia", "meal": "dinner", "reservationLevel": "walk-in", "note": "Via Gaeta 66 — 호텔 디오클레치아노 길 건너 도보 1분. 매일 12:15~23:00 · ⭐4.4(7,400+) · 2인 €30~40. 예약 불필요, 22:15까지 착석해 바로 주문. 계산은 테이블이 아니라 입구 데스크에서. 추천: 까르보나라(간판)·프로슈토·마르게리타. 플랜B: Termini 도착이 22:00을 넘기면 호텔 가기 전 Ristorante Pizzeria Mino(Via Milazzo 18, 역 동쪽 출구 앞, 자정까지, ⭐4.6)." }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-10-20",
+      "weekday": "화",
+      "city": "Rome",
+      "title": "로마: 오전 산책 + 오후 콜로세움 가이드 투어",
+      "hotel": "Hotel Diocleziano",
+      "defaultTransportMode": "walking",
+      "estimatedCostForTwo": 270,
+      "alerts": [
+        "콜로세움 가이드 미팅 14:00~14:30 (여행톡톡) — 미팅 시간은 전날 카카오톡으로 확정. 이 투어는 확정 예약이라 시간 고정, 앞뒤로 버퍼를 잡습니다.",
+        "Trattoria Luzzi는 워크인(예약 불가) — 12:40 도착으로 피크 전에 착석.",
+        "★ 컨디션 밸브(뺄 수 있는 항목): 저녁 후 트라스테베레 야경 산책(21:30~22:00). 첫날 여독이 남았으면 저녁만 즐기고 바로 택시 귀가해도 무방."
+      ],
+      "items": [
+        { "id": "D2-01", "sequence": 1, "startTime": "07:30", "endTime": "08:00", "title": "기상·여유로운 준비", "mappable": false },
+        { "id": "D2-02", "sequence": 2, "startTime": "08:00", "endTime": "09:00", "title": "호텔 조식", "mappable": true, "type": "hotel", "placeName": "Hotel Diocleziano, Roma", "placeId": "ChIJcclrH6dhLxMRewY0e7iKP-A", "lat": null, "lng": null },
+        { "id": "D2-03", "sequence": 3, "startTime": "09:00", "endTime": "09:30", "title": "외출 준비", "mappable": false },
+        { "id": "D2-04", "sequence": 4, "startTime": "09:30", "endTime": "10:30", "title": "동네 산책 — 디오클레티아누스 욕장·공화국 광장", "note": "시차 회복", "mappable": true, "type": "sightseeing", "placeName": "Terme di Diocleziano, Roma", "placeId": "ChIJWyX42qZhLxMR1SKaD-s0etQ", "lat": 41.9032158, "lng": 12.4987538, "transportFromPrevious": "walking" },
+        { "id": "D2-05", "sequence": 5, "startTime": "10:30", "endTime": "11:30", "title": "산타 마리아 마조레 대성당", "note": "무료 · 호텔 도보 5분 · 모자이크 명작", "mappable": true, "type": "sightseeing", "placeName": "Basilica di Santa Maria Maggiore, Roma", "placeId": "ChIJ1zB926RhLxMRejWMj_tUs_c", "lat": 41.89759859999999, "lng": 12.4984084, "transportFromPrevious": "walking" },
+        { "id": "D2-06", "sequence": 6, "startTime": "11:30", "endTime": "12:30", "title": "카페 휴식·간단 군것질", "note": "에스프레소 €1.5", "mappable": false },
+        { "id": "D2-07", "sequence": 7, "startTime": "12:30", "endTime": "13:00", "title": "지하철 B선 Termini → Colosseo (1정거장)", "note": "€1.5/인", "mappable": false, "transportFromPrevious": "transit" },
+        { "id": "D2-08", "sequence": 8, "startTime": "13:00", "endTime": "13:45", "title": "점심: Trattoria Luzzi — 까르보나라·라자냐", "note": "Via di San Giovanni in Laterano 88(Via Celimontana 코너 건물) · 콜로세움 도보 3분 · ⚠️수요일 휴무·그 외 매일 12:00~24:00(D2 화요일 OK, D3 수요일로 옮기면 못 감) · 워크인 12:40 도착(피크 전) · 13:40까지 일어나 미팅으로", "recommendedMenu": ["카르보나라", "아마트리차나", "라자냐", "티라미수(리뷰 극찬)"], "mappable": true, "type": "restaurant", "placeName": "Trattoria Luzzi", "placeId": "ChIJC2NPNbhhLxMRf0qXePNRGn4", "lat": null, "lng": null, "reservationLevel": "walk-in", "transportFromPrevious": "transit", "estimatedCost": 35 },
+        { "id": "D2-09", "sequence": 9, "startTime": "13:45", "endTime": "14:00", "title": "콜로세오 역 앞 미팅 장소 이동", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D2-10", "sequence": 10, "startTime": "14:00", "endTime": "14:30", "title": "콜로세움 가이드 미팅 (여행톡톡)", "note": "14:00~14:30 배정·전날 카톡", "mappable": false },
+        { "id": "D2-11", "sequence": 11, "startTime": "14:30", "endTime": "17:30", "title": "콜로세움 가이드투어 — FAST TRACK → 내부 → 개선문 → 포로로마노/팔라티노", "note": "3~3.5시간, 한국어 가이드 · 티켓+수신기 €76", "mappable": true, "type": "sightseeing", "placeName": "Colosseo, Roma", "placeId": "ChIJrRMgU7ZhLxMRxAOFkC7I8Sg", "lat": 41.8902102, "lng": 12.4922309, "transportFromPrevious": "walking", "estimatedCost": 76 },
+        { "id": "D2-12", "sequence": 12, "startTime": "17:30", "endTime": "18:30", "title": "베네치아 광장 + 비토리아노 외관", "note": "일몰 18:25", "mappable": true, "type": "sightseeing", "placeName": "Altare della Patria, Roma", "placeId": "ChIJTYk8xExgLxMRtf6pDniJ9cg", "lat": 41.894891, "lng": 12.4829541, "transportFromPrevious": "walking" },
+        { "id": "D2-13", "sequence": 13, "startTime": "18:30", "endTime": "19:00", "title": "호텔 복귀·휴식·옷 갈아입기", "mappable": true, "type": "hotel", "placeName": "Hotel Diocleziano, Roma", "placeId": "ChIJcclrH6dhLxMRewY0e7iKP-A", "lat": null, "lng": null },
+        { "id": "D2-14", "sequence": 14, "startTime": "19:00", "endTime": "19:30", "title": "트라스테베레 지구 택시 이동", "note": "€10 · 가장 로맨틱한 동네", "mappable": false, "transportFromPrevious": "taxi" },
+        { "id": "D2-15", "sequence": 15, "startTime": "19:30", "endTime": "21:30", "title": "저녁: Roma Sparita — 치즈통째 카초에페페", "note": "Piazza di Santa Cecilia 24, 트라스테베레 · 월요일 전일 휴무·일요일 저녁 휴무 / 화~토 12:30~14:30·19:30~23:00(화요일 OK) · 저녁 오픈이 19:30이라 19:30 예약=오픈 첫 손님(최적) · 전화 +39 06 580 0757 · 광장 야외석이 분위기 최고 · 앤서니 부르댕 방영 시그니처", "recommendedMenu": ["치즈볼 카치오 에 페페(시그니처)", "호박꽃 튀김(fiori di zucca)", "초콜릿 수플레"], "mappable": true, "type": "restaurant", "placeName": "Roma Sparita", "placeId": "ChIJuXfIQjZgLxMR8p7QxVGGtnY", "lat": null, "lng": null, "reservationLevel": "recommended", "transportFromPrevious": "taxi", "estimatedCost": 70 },
+        { "id": "D2-16", "sequence": 16, "startTime": "21:30", "endTime": "22:00", "title": "트라스테베레 야경 산책 — 산타 마리아 인 트라스테베레 광장", "note": "컨디션 봐서 생략 가능 — 피곤하면 저녁 후 바로 택시 귀가", "mappable": true, "type": "sightseeing", "placeName": "Piazza di Santa Maria in Trastevere, Roma", "placeId": "ChIJ16LBeThgLxMRoqZg5W7XWvs", "lat": 41.8896969, "lng": 12.4702193, "transportFromPrevious": "walking" },
+        { "id": "D2-17", "sequence": 17, "startTime": "22:00", "endTime": "22:30", "title": "호텔 복귀 (택시)", "note": "€12", "mappable": true, "type": "hotel", "placeName": "Hotel Diocleziano, Roma", "placeId": "ChIJcclrH6dhLxMRewY0e7iKP-A", "lat": null, "lng": null, "transportFromPrevious": "taxi" },
+        { "id": "D2-18", "sequence": 18, "startTime": "22:30", "title": "취침", "mappable": false }
+      ],
+      "reservations": [
+        { "id": "RES-D2-LUNCH", "placeName": "Trattoria Luzzi", "meal": "lunch", "reservationLevel": "walk-in", "note": "Via di San Giovanni in Laterano 88(Via Celimontana 코너 건물) · 콜로세움 도보 3분. ⚠️수요일 휴무 — D2가 화요일이라 문제없지만 일정을 D3(수)로 옮기면 못 감! 그 외 매일 12:00~24:00. 예약 안 받음(워크인) — 12:40 도착하면 피크 전이라 빨리 앉음(회전 빠름). ⭐4.1(18,500+)·저렴한 로컬 트라토리아. 14:00 가이드 미팅 전 점심으로 최적, 13:40까지 일어나기. 추천: 까르보나라·아마트리치아나·라자냐·티라미수." },
+        { "id": "RES-D2-DINNER", "placeName": "Roma Sparita", "meal": "dinner", "reservationLevel": "recommended", "recommendedTiming": "출발 2~3주 전", "note": "Piazza di Santa Cecilia 24, 트라스테베레. 월요일 전일 휴무·일요일 저녁 휴무 / 화~토 12:30~14:30·19:30~23:00. 전화 +39 06 580 0757(영어 통함) 또는 TheFork 앱. 저녁 오픈이 19:30이라 19:30 예약이 첫 손님(최적). 좌석 적은 인기집 — 야외석 원하면 'outside table if possible'. ⭐4.3. 매니저가 무뚝뚝하다는 리뷰 있지만 음식은 확실하니 신경 쓰지 말 것.", "messageEN": "Hello, I'd like to book a table for 2 on Tuesday 20 October at 19:30, under the name [이름]. We're celebrating our honeymoon — an outside table would be lovely if possible. We can't wait to visit! Thank you so much.", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone martedì 20 ottobre alle 19:30, a nome [이름]. Siamo in luna di miele — se possibile un tavolo all'aperto. Non vediamo l'ora! Grazie mille." , "messageKO": "안녕하세요, [이름] 이름으로 10월 20일 화요일 19:30 2인 테이블을 예약하고 싶습니다. 저희는 신혼여행 중이라 가능하면 야외 테이블이면 좋겠습니다. 방문을 무척 기대하고 있습니다. 정말 감사합니다!" }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2026-10-21",
+      "weekday": "수",
+      "city": "Rome",
+      "title": "로마: 오전 바티칸 + 오후 호텔 휴식 + 저녁 야경 3곳",
+      "hotel": "Hotel Diocleziano",
+      "defaultTransportMode": "walking",
+      "estimatedCostForTwo": 300,
+      "alerts": [
+        "바티칸 가이드 미팅 8:00~10:00 배정 (맘마미아 패스트트랙) — 전날 카톡 확정. 이르면(8:00~8:30) 기상·조식 앞당기기.",
+        "Armando al Pantheon는 9/21(월) 아침 7:00(한국) 온라인 오픈 — 30일 전 로마 자정 롤링 방식(armandoalpantheon.it → ResDiary 전용, 전화 불가). 신용카드 보증 입력·노쇼 €25. 정각 접속 필수, 가장 어려운 예약.",
+        "바티칸·성당 드레스 코드: 무릎·어깨 가리기 (얇은 카디건).",
+        "오후 16:00~18:00 호텔 2시간 휴식이 핵심 — 바티칸 강행군 후 발 회복. 다리가 무거우면 산탄젤로는 생략하고 바로 호텔로."
+      ],
+      "items": [
+        { "id": "D3-01", "sequence": 1, "startTime": "07:30", "endTime": "08:00", "title": "기상·준비", "mappable": false },
+        { "id": "D3-02", "sequence": 2, "startTime": "08:00", "endTime": "08:30", "title": "호텔 조식 (간단히·일찍)", "mappable": true, "type": "hotel", "placeName": "Hotel Diocleziano, Roma", "placeId": "ChIJcclrH6dhLxMRewY0e7iKP-A", "lat": null, "lng": null },
+        { "id": "D3-03", "sequence": 3, "startTime": "08:30", "endTime": "09:00", "title": "지하철 A선 Termini → Ottaviano (약 15분)", "mappable": false, "transportFromPrevious": "transit" },
+        { "id": "D3-04", "sequence": 4, "startTime": "09:00", "endTime": "09:15", "title": "도보 → 바티칸 박물관 입구 미팅", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D3-05", "sequence": 5, "startTime": "09:00", "endTime": "09:30", "title": "바티칸 가이드 미팅 (맘마미아 패스)", "note": "8:00~10:00 배정·전날 카톡 확정", "mappable": false },
+        { "id": "D3-06", "sequence": 6, "startTime": "09:30", "endTime": "13:30", "title": "바티칸 가이드투어 — 미술관·시스티나·성베드로 대성당", "note": "약 4시간 내내 서서 걷는 강행군 — 편한 신발·물 필수 · 한국어 가이드 · 패스트트랙 €116(2인·수신기)", "mappable": true, "type": "sightseeing", "placeName": "Musei Vaticani, Città del Vaticano", "placeId": "ChIJKcGbg2NgLxMRthZkUqDs4M8", "lat": 41.9064878, "lng": 12.4536413, "transportFromPrevious": "transit", "estimatedCost": 116 },
+        { "id": "D3-07", "sequence": 7, "startTime": "13:30", "endTime": "14:00", "title": "성베드로 광장·오벨리스크 인증샷", "mappable": true, "type": "sightseeing", "placeName": "Basilica di San Pietro, Vaticano", "placeId": "ChIJWZsUt2FgLxMRg1KHzXfwS3I", "lat": 41.9021667, "lng": 12.4539367, "transportFromPrevious": "walking" },
+        { "id": "D3-08", "sequence": 8, "startTime": "14:00", "endTime": "15:00", "title": "점심: Bonci Pizzarium — 조각 피자 (가볍게)", "note": "Via della Meloria 43 · 바티칸 출구 도보 10분 · 월~토 11:00~22:00·일 11~15/17~22(수요일 OK) · 번호표 뽑고 대기(스탠딩/테이크아웃, 좌석 거의 없음) · 조각 2~3종+수플리면 2인 충분 · 대안 Il Sorpasso(€60/2인)", "recommendedMenu": ["마르게리타", "감자 피자(patate)", "수플리(supplì)"], "mappable": true, "type": "restaurant", "placeName": "Bonci Pizzarium", "placeId": "ChIJr76feHtgLxMRSpUk8Ed4h24", "lat": null, "lng": null, "reservationLevel": "walk-in", "transportFromPrevious": "walking", "estimatedCost": 25 },
+        { "id": "D3-09", "sequence": 9, "startTime": "15:00", "endTime": "16:00", "title": "산탄젤로 성 외관·테베레강 산책 (가볍게)", "note": "산탄젤로 다리 경유(인생샷) · 다리가 너무 무거우면 생략하고 바로 호텔로 · 내부 €15 옵션", "mappable": true, "type": "sightseeing", "placeName": "Castel Sant'Angelo, Roma", "placeId": "ChIJ0aTnEYeKJRMRiUF95xwRbDY", "lat": 41.9030632, "lng": 12.466276, "transportFromPrevious": "walking" },
+        { "id": "D3-10", "sequence": 10, "startTime": "16:00", "endTime": "18:00", "title": "호텔 복귀 — 충분히 휴식 (낮잠·샤워·발 쉬기)", "note": "★ 바티칸으로 지친 다리를 회복하는 핵심 시간 (2시간)", "mappable": true, "type": "hotel", "placeName": "Hotel Diocleziano, Roma", "placeId": "ChIJcclrH6dhLxMRewY0e7iKP-A", "lat": null, "lng": null, "transportFromPrevious": "taxi" },
+        { "id": "D3-11", "sequence": 11, "startTime": "18:00", "endTime": "18:20", "title": "지하철 A선 Termini → Barberini (약 10분)", "mappable": false, "transportFromPrevious": "transit" },
+        { "id": "D3-12", "sequence": 12, "startTime": "18:20", "endTime": "19:00", "title": "트레비 분수 — 해 진 직후 조명 야경·동전 던지기", "note": "Barberini역 도보 5분 · 천천히 머물기", "mappable": true, "type": "sightseeing", "placeName": "Fontana di Trevi, Roma", "placeId": "ChIJ1UCDJ1NgLxMRtrsCzOHxdvY", "lat": 41.9009325, "lng": 12.483313, "transportFromPrevious": "transit" },
+        { "id": "D3-13", "sequence": 13, "startTime": "19:00", "endTime": "19:25", "title": "판테온 외관 야경", "note": "도보 8분 · 무료", "mappable": true, "type": "sightseeing", "placeName": "Pantheon, Roma", "placeId": "ChIJqUCGZ09gLxMRLM42IPpl0co", "lat": 41.8986108, "lng": 12.4768729, "transportFromPrevious": "walking" },
+        { "id": "D3-14", "sequence": 14, "startTime": "19:25", "endTime": "20:00", "title": "나보나 광장 — 분수·거리 화가 산책", "note": "도보 5분", "mappable": true, "type": "sightseeing", "placeName": "Piazza Navona, Roma", "placeId": "ChIJPRydwYNgLxMRSjOCLlYkV6M", "lat": 41.8991633, "lng": 12.4730742, "transportFromPrevious": "walking" },
+        { "id": "D3-15", "sequence": 15, "startTime": "20:00", "endTime": "22:00", "title": "저녁: Armando al Pantheon — 카초에페페·그리치아", "note": "Salita de' Crescenzi 31, 판테온 바로 옆(야경 동선 완벽) · 월~금 저녁 18:00~23:00 2턴제·토 저녁·일 휴무(수요일 OK) · 1961년 가족 운영 로마 파스타의 정점 · 하우스 와인 추천 받기 · ★★9/21(월) 아침 7:00(한국) 온라인 오픈(ResDiary, 30일 전 로마 자정 롤링·전화 불가) · 카드 보증 필수·노쇼 €25", "recommendedMenu": ["카치오 에 페페", "카르보나라", "그리치아(스탠리 투치 리가토니)", "아마트리차나"], "mappable": true, "type": "restaurant", "placeName": "Armando al Pantheon", "placeId": "ChIJcwb92FFgLxMR_nDe5ODn_ZE", "lat": null, "lng": null, "reservationLevel": "required", "transportFromPrevious": "walking", "estimatedCost": 90 },
+        { "id": "D3-16", "sequence": 16, "startTime": "22:00", "endTime": "22:30", "title": "Giolitti 젤라또 → 택시로 호텔", "note": "Via degli Uffici del Vicario 40 · ~24:00 · 선결제(입구 카운터 결제 후 영수증 들고 쇼케이스 주문) · 콘/컵 동일 가격 · 파나(생크림) 무료니 '콘 판나!' · 이후 택시 €12", "recommendedMenu": ["피스타치오", "초콜라토", "크레마", "생크림(panna·무료, '콘 판나!')"], "mappable": true, "type": "cafe", "placeName": "Giolitti", "placeId": "ChIJe3P6nFFgLxMRB4GPokAKYTg", "lat": null, "lng": null, "reservationLevel": "walk-in", "transportFromPrevious": "walking", "estimatedCost": 12 },
+        { "id": "D3-17", "sequence": 17, "startTime": "22:30", "title": "취침", "mappable": false }
+      ],
+      "reservations": [
+        { "id": "RES-D3-LUNCH", "placeName": "Bonci Pizzarium", "meal": "lunch", "reservationLevel": "walk-in", "note": "Via della Meloria 43 · 바티칸 출구 도보 10분. 월~토 11:00~22:00·일 11~15/17~22(공식). 예약 불가 — 번호표 뽑고 대기, 좌석 거의 없음(스탠딩/테이크아웃). ⭐4.1(14,000+)·넷플릭스 '셰프의 테이블' 출연. 무게 단위 판매, 손가락으로 크기 지정. 근처 벤치나 걸으면서 먹는 게 정석. 추천: 마르게리타·감자 피자·수플리." },
+        { "id": "RES-D3-DINNER", "placeName": "Armando al Pantheon", "meal": "dinner", "reservationLevel": "required", "recommendedTiming": "9/21(월) 아침 7:00 정각 (30일 전 로마 자정 롤링 오픈)", "note": "armandoalpantheon.it → ResDiary 온라인 전용(전화·이메일 불가). 매일 로마 자정에 30일 뒤 하루치가 새로 열리는 롤링 방식 — 10/21(수) 저녁분은 9/21(월) 아침 7:00(한국) 오픈이라 정각 접속(후기상 3시간 늦으면 밤 10시 타임만 남음). 9월 중순 예약 화면 흐름 미리 익히기(카드 입력 단계까지). ★신용카드 보증 입력 필수, 노쇼/24시간 내 취소 시 1인 €25 청구(취소는 이메일로 24시간 전까지). 저녁은 2시간 턴제(첫 턴 인기 최고), 예약 +15분까지만 자리 유지. 확인 이메일이 와야 성립(안 오면 스팸함→재시도). 실패 시 ①점심 전환(매일 12:30~15:00, 훨씬 쉬움) ②방문 1~2일 전 24시간 취소분 수시 확인 ③Osteria da Fortunata 등 대체.", "messageEN": "Hello, I'd like to reserve a table for 2 on Wednesday 21 October at 20:00, under [이름]. We're celebrating our honeymoon. Thank you very much!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone mercoledì 21 ottobre alle 20:00, a nome [이름]. Siamo in luna di miele. Grazie mille!", "messageKO": "안녕하세요, [이름] 이름으로 10월 21일 수요일 20:00 2인 테이블을 예약하고 싶습니다. 저희는 신혼여행을 기념하고 있습니다. 정말 감사합니다!" },
+        { "id": "RES-D3-DESSERT", "placeName": "Giolitti", "meal": "dessert", "reservationLevel": "walk-in", "note": "Via degli Uffici del Vicario 40. ⭐4.4(28,000+). 선결제: 입구 카운터에서 먼저 결제 → 영수증 들고 젤라또 카운터에서 주문. 콘/컵 동일 가격, 파나(생크림) 무료니 '콘 판나!' 추가. 추천: 피스타치오+초콜라토+크레마 조합." }
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2026-10-22",
+      "weekday": "목",
+      "city": "Rome → Florence",
+      "title": "오전 로마→피렌체 + 피렌체 첫인상 · 피아찰레 일몰",
+      "hotel": "B&B Laurus al Duomo (피렌체)",
+      "defaultTransportMode": "walking",
+      "estimatedCostForTwo": 230,
+      "alerts": [
+        "Hotel Diocleziano 체크아웃 11:00 엄수.",
+        "피렌체 도착(~11:55)은 체크인 14:00 전 → 짐 먼저 맡기고(12:15) 점심·관광.",
+        "★ 피아찰레 미켈란젤로 일몰 18:15 — 오후 관광을 15:30에 시작해 베키오 다리를 17:30에 떠나면 18:00 도착·자리 선점 후 여유롭게 골든아워를 맞습니다(기존 16:00 시작은 빠듯했음). 택시 10분/도보 20분.",
+        "All'Antico Vinaio 점심 줄 최대 1시간 — 12:30 일찍 가기. 테이크아웃이라 받으면 금방.",
+        "Trattoria Sostanza는 전화 예약만(+39 055 212691, 토·일 휴무라 평일에만 받음) — 1주 전이면 매진. 두 타임 중 19:30 첫 타임으로 예약(피아찰레 일몰 하강 후 딱), ★신용카드 불가 — 현금 €80 준비 필수(2인 €60~80). 직접 전화가 부담되면 호텔 컨시어지 대리 요청. 월~금 12:30~14시/19:30~밤."
+      ],
+      "items": [
+        { "id": "D4-01", "sequence": 1, "startTime": "07:30", "endTime": "08:00", "title": "기상·준비·짐 정리", "mappable": false },
+        { "id": "D4-02", "sequence": 2, "startTime": "08:00", "endTime": "09:00", "title": "호텔 조식 (마지막 로마)", "mappable": true, "type": "hotel", "placeName": "Hotel Diocleziano, Roma", "placeId": "ChIJcclrH6dhLxMRewY0e7iKP-A", "lat": null, "lng": null },
+        { "id": "D4-03", "sequence": 3, "startTime": "09:00", "endTime": "09:30", "title": "체크아웃·짐 정리", "note": "체크아웃 11:00 엄수", "mappable": true, "type": "hotel", "placeName": "Hotel Diocleziano, Roma", "placeId": "ChIJcclrH6dhLxMRewY0e7iKP-A", "lat": null, "lng": null },
+        { "id": "D4-04", "sequence": 4, "startTime": "09:30", "endTime": "10:25", "title": "Roma Termini 도보 6분", "note": "플랫폼 대기·커피·빵 구입", "mappable": true, "type": "station", "placeName": "Roma Termini", "placeId": "ChIJ7__AOaRhLxMRlKlh8r59MKQ", "lat": 41.9012873, "lng": 12.5015756, "transportFromPrevious": "walking" },
+        { "id": "D4-05", "sequence": 5, "startTime": "10:25", "endTime": "11:55", "title": "Italo/Frecciarossa 출발 → 피렌체 (1h 30m)", "note": "90일전 €18/인 · 토스카나 풍경", "mappable": false, "transportFromPrevious": "train" },
+        { "id": "D4-06", "sequence": 6, "startTime": "11:55", "title": "피렌체 산타 마리아 노벨라 도착", "mappable": true, "type": "station", "placeName": "Firenze Santa Maria Novella", "placeId": "ChIJk_t4QpFWKhMRFdiSiZZjCqg", "lat": 43.7753392, "lng": 11.2476522, "transportFromPrevious": "train" },
+        { "id": "D4-07", "sequence": 7, "startTime": "11:55", "endTime": "12:15", "title": "SMN역 → 호텔 도보 9분 (650m)", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D4-08", "sequence": 8, "startTime": "12:15", "endTime": "12:30", "title": "호텔 짐 보관", "note": "체크인 14:00", "mappable": true, "type": "hotel", "placeName": "B&B Hotel Firenze Laurus al Duomo", "placeId": "ChIJl2RFCQJUKhMR49JBM4bY2tA", "lat": null, "lng": null },
+        { "id": "D4-09", "sequence": 9, "startTime": "12:30", "endTime": "14:00", "title": "점심: All'Antico Vinaio — 피렌체 샌드위치", "note": "Via dei Neri 65 · 호텔(두오모) 도보 8분 · 매일 10:00~22:00 · 같은 골목에 매장 3개니 줄 짧은 곳으로(대기 10분~1시간) · 스키아차타 커서 2인 1.5개면 충분 · 대안 Trattoria Mario(점심만·일 휴무)", "recommendedMenu": ["La Favolosa (살라미·페코리노 크림·가지 — 1위)", "Paradiso"], "mappable": true, "type": "restaurant", "placeName": "All'Antico Vinaio", "placeId": "ChIJe1LisABUKhMR9gcnnxWrwls", "lat": null, "lng": null, "reservationLevel": "walk-in", "transportFromPrevious": "walking", "estimatedCost": 25 },
+        { "id": "D4-10", "sequence": 10, "startTime": "14:00", "endTime": "14:30", "title": "B&B Laurus al Duomo 체크인·짐 풀기", "mappable": true, "type": "hotel", "placeName": "B&B Hotel Firenze Laurus al Duomo", "placeId": "ChIJl2RFCQJUKhMR49JBM4bY2tA", "lat": null, "lng": null, "transportFromPrevious": "walking" },
+        { "id": "D4-11", "sequence": 11, "startTime": "14:30", "endTime": "15:30", "title": "호텔 휴식 (낮잠 OK)", "note": "허니문 페이스 · 15:30 출발 (오후 관광 30분 앞당김)", "mappable": true, "type": "hotel", "placeName": "B&B Hotel Firenze Laurus al Duomo", "placeId": "ChIJl2RFCQJUKhMR49JBM4bY2tA", "lat": null, "lng": null },
+        { "id": "D4-12", "sequence": 12, "startTime": "15:30", "endTime": "16:30", "title": "두오모 광장 — 대성당·세례당·조토 종탑 외관", "note": "첫인상 · 호텔 도보 5분 · 30분 앞당겨 여유롭게", "mappable": true, "type": "sightseeing", "placeName": "Cattedrale di Santa Maria del Fiore, Firenze", "placeId": "ChIJ9S_ivwNUKhMR9fGqh4RDkVU", "lat": 43.773145, "lng": 11.2559602, "transportFromPrevious": "walking" },
+        { "id": "D4-13", "sequence": 13, "startTime": "16:30", "endTime": "17:00", "title": "시뇨리아 광장·베키오 궁전·다비드 복제 외관", "mappable": true, "type": "sightseeing", "placeName": "Piazza della Signoria, Firenze", "placeId": "ChIJNa5CIAFUKhMRbZDj-HFpvJ8", "lat": 43.7696855, "lng": 11.2556422, "transportFromPrevious": "walking" },
+        { "id": "D4-14", "sequence": 14, "startTime": "17:00", "endTime": "17:30", "title": "베키오 다리 — 중간 발코니 뷰", "mappable": true, "type": "sightseeing", "placeName": "Ponte Vecchio, Firenze", "placeId": "ChIJZ7bcoqpWKhMR6ALnMOgKMUA", "lat": 43.767925, "lng": 11.2531435, "transportFromPrevious": "walking" },
+        { "id": "D4-15", "sequence": 15, "startTime": "17:30", "endTime": "18:00", "title": "피아찰레 미켈란젤로로 이동 (택시 10분 / 도보 20분)", "note": "★ 17:30 출발 → 18:00 도착, 일몰 전 여유 · 오르막 계단 대신 택시 추천(체력 아낌)", "mappable": false, "transportFromPrevious": "taxi" },
+        { "id": "D4-16", "sequence": 16, "startTime": "18:00", "endTime": "18:50", "title": "피아찰레 미켈란젤로 — 일몰 감상", "note": "18:00 도착·자리 선점 · 일몰 18:15 → 노을+야경 전환까지 감상 · 와인 1병 사 가서", "mappable": true, "type": "sightseeing", "placeName": "Piazzale Michelangelo, Firenze", "placeId": "ChIJQzhmQ_dTKhMRGVENguFo97Q", "lat": 43.7629314, "lng": 11.2650561, "transportFromPrevious": "taxi" },
+        { "id": "D4-17", "sequence": 17, "startTime": "18:50", "endTime": "19:30", "title": "야경 하강·식당 방향 이동 (택시)", "note": "18:50 하강 → 19:30 첫 타임 예약에 딱", "mappable": false, "transportFromPrevious": "taxi" },
+        { "id": "D4-18", "sequence": 18, "startTime": "19:30", "endTime": "21:30", "title": "저녁: Trattoria Sostanza — 버터치킨·아티초크 오믈렛", "note": "Via del Porcellana 25/R · 1869년 개업(150년+) · 월~금 12:30~14시/19:30~밤·토·일 휴무(두 타임 중 19:30 첫 타임) · 전화 예약만 +39 055 212691(온라인·이메일 불가, 1주 전 매진, 토·일 휴무라 평일 현지 오전에만 받음) · ★신용카드 불가 — 현금 €80 준비 필수(2인 €60~80, bancomat도 가능) · 좁고 합석 문화가 매력", "recommendedMenu": ["버터치킨(Pollo al Burro·팬째)", "아티초크 오믈렛(Tortino di Carciofi)", "딸기 머랭 케이크"], "mappable": true, "type": "restaurant", "placeName": "Trattoria Sostanza", "placeId": "ChIJN60f96tWKhMRiZNBRkS36BM", "lat": null, "lng": null, "reservationLevel": "required", "transportFromPrevious": "taxi", "estimatedCost": 75 },
+        { "id": "D4-19", "sequence": 19, "startTime": "21:30", "endTime": "22:00", "title": "호텔 도보 복귀", "mappable": true, "type": "hotel", "placeName": "B&B Hotel Firenze Laurus al Duomo", "placeId": "ChIJl2RFCQJUKhMR49JBM4bY2tA", "lat": null, "lng": null, "transportFromPrevious": "walking" },
+        { "id": "D4-20", "sequence": 20, "startTime": "22:00", "title": "취침", "mappable": false }
+      ],
+      "reservations": [
+        { "id": "RES-D4-HOTEL-HONEYMOON", "placeName": "B&B Laurus al Duomo", "reservationLevel": "recommended", "recommendedTiming": "예약 직후", "note": "허니문 어필. 조용한 방 또는 전망 좋은 방을 정중히 요청.", "messageEN": "Dear Laurus al Duomo team, we have a booking under [이름] for 22–24 October. We're on our honeymoon, and a quiet room — or one with a nice view, if you have it — would make our stay extra special. We'd be grateful for anything you can arrange, and there's no pressure at all. Thank you!", "messageKO": "안녕하세요 Laurus al Duomo 팀, [이름] 이름으로 10월 22–24일 예약했습니다. 저희는 신혼여행 중이라 가능하다면 조용한 방이나 전망 좋은 방이면 이번 숙박이 더 특별할 것 같습니다. 가능한 선에서 배정해 주시면 감사하겠고, 전혀 부담 갖지 않으셔도 됩니다. 감사합니다!" },
+        { "id": "RES-D4-HOTEL-LUGGAGE", "placeName": "B&B Laurus al Duomo", "reservationLevel": "recommended", "recommendedTiming": "도착일 당일", "note": "이른 짐 보관 요청 (체크인 14:00 전 도착).", "messageEN": "Hello, we'll arrive in Florence around 12:15 on 22 October, before your 14:00 check-in. Would it be possible to drop off our luggage when we arrive and check in a little later? Thank you very much!", "messageKO": "안녕하세요, 저희는 10월 22일 12:15경 피렌체에 도착 예정이라 14:00 체크인보다 조금 이릅니다. 도착 시 짐을 먼저 맡기고 조금 뒤에 체크인할 수 있을까요? 정말 감사합니다!" },
+        { "id": "RES-D4-LUNCH", "placeName": "All'Antico Vinaio", "meal": "lunch", "reservationLevel": "walk-in", "note": "Via dei Neri 65 · 호텔 도보 8분. 예약 불필요, 피렌체 샌드위치 1번지 ⭐4.5(47,000+). 같은 골목 매장 3개 — 줄 짧은 곳으로(대기 10분~1시간). La Favolosa(살라미·페코리노 크림·가지)가 부동의 1위. 스키아차타 하나가 커서 2인 1.5개면 충분. 짐 맡기고(12:15) 바로 출발." },
+        { "id": "RES-D4-DINNER", "placeName": "Trattoria Sostanza", "meal": "dinner", "reservationLevel": "required", "recommendedTiming": "지금~1주 전 (전화만·매진 주의)", "note": "Via del Porcellana 25/R. 전화 예약만 +39 055 212691(온라인·이메일 불가, 토·일 휴무라 평일 현지 오전에만 받음). 1주 전이면 매진될 수 있으니 여유 있게. 두 타임 운영 → 19:30 첫 타임으로(일몰 하강 후 딱). 월~금 12:30~14시/19:30~밤, 토·일 휴무. ★신용카드 불가 — 현금 또는 이탈리아 데빗(bancomat)만, 해외 카드는 안 될 수 있으니 현금 €80 준비 필수(2인 €60~80). 직접 전화가 부담되면 호텔 컨시어지에 대리 요청: 'Could you please call Trattoria Sostanza and book a table for two, October 22nd at 7:30 pm, under the name [이름]? They only take phone reservations.'", "messageEN": "Hello, I'd like to book a table for 2 on Thursday 22 October at 7:30 pm, under the name [이름]. Thank you!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone giovedì 22 ottobre alle 19:30, a nome [이름]. Grazie!", "messageKO": "안녕하세요, [이름] 이름으로 10월 22일 목요일 19:30 2인 테이블을 예약하고 싶습니다. 감사합니다!" }
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2026-10-23",
+      "weekday": "금",
+      "city": "Florence",
+      "title": "피렌체 풀데이: 우피치 가이드 투어 + 다비드",
+      "hotel": "B&B Laurus al Duomo",
+      "defaultTransportMode": "walking",
+      "estimatedCostForTwo": 400,
+      "alerts": [
+        "이날만 07:00 기상 — 우피치 가이드 미팅 09:00 (지오마레). 확정 투어라 시간 고정.",
+        "La Giostra는 2주 전 예약 필수 (로맨틱·인기).",
+        "아카데미아 갤러리(다비드상)는 시간지정 입장권 사전 예매 필수 (€20/인) — 당일 매진 잦음. 15:00 슬롯으로.",
+        "★ 오늘이 체력 소모 최대(우피치+아카데미아+시장+야경). 컨디션 밸브: 아카데미아 관람 후 산로렌초·중앙시장(16:30)은 스킵 가능 — 피곤하면 호텔 휴식을 늘리고 베키오 다리 야경으로 바로. 가죽·기념품은 밀라노에서도 가능."
+      ],
+      "items": [
+        { "id": "D5-01", "sequence": 1, "startTime": "07:00", "endTime": "07:30", "title": "기상·준비", "mappable": false },
+        { "id": "D5-02", "sequence": 2, "startTime": "07:30", "endTime": "08:30", "title": "호텔 조식 (일찍)", "mappable": true, "type": "hotel", "placeName": "B&B Hotel Firenze Laurus al Duomo", "placeId": "ChIJl2RFCQJUKhMR49JBM4bY2tA", "lat": null, "lng": null },
+        { "id": "D5-03", "sequence": 3, "startTime": "08:30", "endTime": "08:50", "title": "외출 준비", "mappable": false },
+        { "id": "D5-04", "sequence": 4, "startTime": "08:50", "endTime": "09:00", "title": "도보 → 시뇨리아 광장 '오르카냐 식당' 좌측 (미팅)", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D5-05", "sequence": 5, "startTime": "09:00", "title": "우피치 가이드 미팅 (지오마레)", "note": "09:00, 한국어 가이드", "mappable": false },
+        { "id": "D5-06", "sequence": 6, "startTime": "09:00", "endTime": "11:40", "title": "우피치 클래식 가이드투어 — 보티첼리·다 빈치·미켈란젤로·카라바조·티치아노", "note": "2시간 40분 · €68(2인·수신기)", "mappable": true, "type": "sightseeing", "placeName": "Galleria degli Uffizi, Firenze", "placeId": "ChIJgZDFjQBUKhMRzcTwm8i33s0", "lat": 43.7677856, "lng": 11.2553108, "transportFromPrevious": "walking", "estimatedCost": 68 },
+        { "id": "D5-07", "sequence": 7, "startTime": "11:40", "endTime": "12:10", "title": "우피치 테라스 두오모 뷰 인증샷", "note": "루프탑 카페 €5", "mappable": false },
+        { "id": "D5-08", "sequence": 8, "startTime": "12:10", "endTime": "13:00", "title": "시뇨리아 광장·베키오 궁전 외관 (천천히)", "mappable": true, "type": "sightseeing", "placeName": "Palazzo Vecchio, Firenze", "placeId": "ChIJ-ZN45QBUKhMRh1fGVOcr4uQ", "lat": 43.7693012, "lng": 11.2561509, "transportFromPrevious": "walking" },
+        { "id": "D5-09", "sequence": 9, "startTime": "13:00", "endTime": "14:30", "title": "점심: Trattoria 4 Leoni — 배 피오케티", "note": "Via de' Vellutini 1r(Piazza della Passera), 올트라르노(아르노강 건너·우피치 도보 10분) · 매일 12:00~24:00 · 4leoni.it → PRENOTA TAVOLO 또는 +39 055 218562 · 메뉴판 이탈리아어만(구글 렌즈로 해결) · 광장 야외석 분위기 좋음", "recommendedMenu": ["배 피오케티(Fiocchetti di pera, 탈레지오 소스)", "호박 뇨키(계절)"], "mappable": true, "type": "restaurant", "placeName": "Trattoria 4 Leoni", "placeId": "ChIJ4ST2O1VRKhMRwVH6dww3fmM", "lat": null, "lng": null, "reservationLevel": "recommended", "transportFromPrevious": "walking", "estimatedCost": 55 },
+        { "id": "D5-10", "sequence": 10, "startTime": "14:30", "endTime": "15:00", "title": "아카데미아 갤러리 도보 이동", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D5-11", "sequence": 11, "startTime": "15:00", "endTime": "16:30", "title": "아카데미아 갤러리 — 다비드상·미완성 노예상", "note": "개별 예약 €20/인", "mappable": true, "type": "sightseeing", "placeName": "Galleria dell'Accademia, Firenze", "placeId": "ChIJJ7mRvIxVKhMRx6JB-q73TG0", "lat": 43.7768145, "lng": 11.2586424, "transportFromPrevious": "walking", "estimatedCost": 40 },
+        { "id": "D5-12", "sequence": 12, "startTime": "16:30", "endTime": "17:30", "title": "산로렌초 시장 + 중앙시장", "note": "가죽·스카프·치즈 · 가죽 지갑 €30~50 · ★컨디션 봐서 스킵 가능(피곤하면 호텔 휴식 연장)", "mappable": true, "type": "shopping", "placeName": "Mercato Centrale, Firenze", "placeId": "ChIJl8DqtwJUKhMRtRP0_Mh84X0", "lat": 43.7764676, "lng": 11.2528338, "transportFromPrevious": "walking", "estimatedCost": 40 },
+        { "id": "D5-13", "sequence": 13, "startTime": "17:30", "endTime": "18:00", "title": "호텔 휴식", "mappable": true, "type": "hotel", "placeName": "B&B Hotel Firenze Laurus al Duomo", "placeId": "ChIJl2RFCQJUKhMR49JBM4bY2tA", "lat": null, "lng": null },
+        { "id": "D5-14", "sequence": 14, "startTime": "18:00", "endTime": "18:30", "title": "베키오 다리 야경 산책", "note": "일몰 18:25", "mappable": true, "type": "sightseeing", "placeName": "Ponte Vecchio, Firenze", "placeId": "ChIJZ7bcoqpWKhMR6ALnMOgKMUA", "lat": 43.767925, "lng": 11.2531435, "transportFromPrevious": "walking" },
+        { "id": "D5-15", "sequence": 15, "startTime": "18:30", "endTime": "19:00", "title": "식당 이동·도착", "mappable": false },
+        { "id": "D5-16", "sequence": 16, "startTime": "19:00", "endTime": "21:00", "title": "저녁: La Giostra — 배 라비올리·피오렌티나", "note": "Borgo Pinti 16R, 두오모 호텔 도보 10분 · 저녁 매일 18:30~00:30 · ristorantelagiostra.com → 'Prenota un tavolo'(SevenRooms)/전화 +39 055 241341/WhatsApp +39 335 7615196 · 촛불 조명 허니문 무드 끝판왕(합스부르크 후손 오픈) · 입장 시 웰컴 프로세코·빵 · ⚠️'기대보다 평범' 소수 리뷰 있어 파스타·시그니처 위주 주문이 안전 · 예산 부담되면 스테이크 대신 파스타 2+세콘도 1", "recommendedMenu": ["배 라비올리", "비스테카 알라 피오렌티나(1kg·2인 셰어)", "오소부코"], "mappable": true, "type": "restaurant", "placeName": "La Giostra", "placeId": "ChIJt9Hy2AVUKhMRfaoxnj4MUDA", "lat": null, "lng": null, "reservationLevel": "required", "transportFromPrevious": "walking", "estimatedCost": 130 },
+        { "id": "D5-17", "sequence": 17, "startTime": "21:00", "endTime": "22:00", "title": "산토 스피리토 광장 와인바 또는 산책", "note": "디저트 와인 €8", "mappable": true, "type": "sightseeing", "placeName": "Piazza Santo Spirito, Firenze", "placeId": "ChIJHUqFj1RRKhMRL7ATkNupM-s", "lat": 43.766855, "lng": 11.2474139, "transportFromPrevious": "walking" },
+        { "id": "D5-18", "sequence": 18, "startTime": "22:00", "endTime": "22:30", "title": "호텔 복귀", "mappable": true, "type": "hotel", "placeName": "B&B Hotel Firenze Laurus al Duomo", "placeId": "ChIJl2RFCQJUKhMR49JBM4bY2tA", "lat": null, "lng": null },
+        { "id": "D5-19", "sequence": 19, "startTime": "22:30", "title": "취침", "mappable": false }
+      ],
+      "reservations": [
+        { "id": "RES-D5-LUNCH", "placeName": "Trattoria 4 Leoni", "meal": "lunch", "reservationLevel": "recommended", "recommendedTiming": "출발 1~2주 전", "note": "Via de' Vellutini 1r(Piazza della Passera), 올트라르노(우피치 도보 10분). 4leoni.it → PRENOTA TAVOLO(온라인 예약 앱 연결) 또는 +39 055 218562. 배 피오케티(Fiocchetti di pera, 탈레지오 소스)가 '인생 파스타' 시그니처. 메뉴판 이탈리아어만이라 구글 렌즈. 광장 야외석 분위기 좋음.", "messageEN": "Hello, I'd like a table for 2 on Friday 23 October at 13:00, under [이름]. Thank you!", "messageIT": "Buongiorno, vorrei un tavolo per 2 persone venerdì 23 ottobre alle 13:00, a nome [이름]. Grazie!" , "messageKO": "안녕하세요, [이름] 이름으로 10월 23일 금요일 13:00 2인 테이블을 부탁드립니다. 감사합니다!" },
+        { "id": "RES-D5-DINNER", "placeName": "La Giostra", "meal": "dinner", "reservationLevel": "required", "recommendedTiming": "출발 2~3주 전", "note": "Borgo Pinti 16R. ristorantelagiostra.com → 'Prenota un tavolo'(SevenRooms) 또는 전화 +39 055 241341 또는 WhatsApp +39 335 7615196 — 요청사항 칸에 'honeymoon' 기재하면 좋은 자리 확률 UP(웰컴 프로세코). 저녁 매일 18:30~00:30. 인기·로맨틱이라 예약 필수. 높음(2인 €120~150, 스테이크 포함 시).", "messageEN": "Hello, I'd like to book a table for 2 on Friday 23 October at 19:00, under [이름]. We're on our honeymoon, and a quiet, cozy table for the two of us would be lovely. Thank you so much!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone venerdì 23 ottobre alle 19:00, a nome [이름]. Siamo in luna di miele — se possibile un tavolo tranquillo e accogliente. Grazie mille!" , "messageKO": "안녕하세요, [이름] 이름으로 10월 23일 금요일 19:00 2인 테이블을 예약하고 싶습니다. 저희는 신혼여행 중이라 둘이 앉을 조용하고 아늑한 자리면 정말 좋겠습니다. 정말 감사합니다!" }
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2026-10-24",
+      "weekday": "토",
+      "city": "Florence → Venice/Mestre",
+      "title": "오전 피렌체→베네치아 + 부라노 스냅(골든아워) · 카나레지오 저녁",
+      "hotel": "BW Plus Hotel Bologna (Mestre)",
+      "defaultTransportMode": "transit",
+      "estimatedCostForTwo": 200,
+      "alerts": [
+        "베네치아는 Mestre 하차! 본섬 산타루치아역까지 가지 말 것 (호텔이 Mestre).",
+        "B&B Laurus 체크아웃 12:00 엄수 — 일찍 출발.",
+        "부라노 스냅 촬영(베네베네스냅): 작가 미팅 15:30(확정 예약, 지각 불가) · 토요일 일몰 약 18:15라 빛 충분. 미팅 장소(부라노 'C' 선착장)·시간 사전 확정.",
+        "★ 미팅 버퍼: Vaporetto 12번(부라노行)은 약 30분 간격 — F.te Nove에서 14:40 편 승선 목표(놓치면 15:10라 아슬아슬). 시간표 미리 캡처, 1일권 €25/인 권장(Mestre↔S.Lucia 기차는 별도 €1.55/인). 기차가 늦으면 점심은 착석 대신 파니니 테이크아웃으로 빠르게 — 미팅 시간 사수 우선.",
+        "저녁은 산마르코까지 안 가고 카나레지오(역 근처)에서 — Alla Fontana 또는 Bar Pontini로 가볍게 후 일찍 귀가. 컨디션 밸브: 부라노 레이스 상점 구경(16:45)·카나레지오 야경 산책은 빛·체력 상황 봐서 줄이기."
+      ],
+      "items": [
+        { "id": "D6-01", "sequence": 1, "startTime": "07:30", "endTime": "08:00", "title": "기상·준비·짐 정리", "mappable": false },
+        { "id": "D6-02", "sequence": 2, "startTime": "08:00", "endTime": "09:00", "title": "호텔 조식 (마지막 피렌체)", "mappable": true, "type": "hotel", "placeName": "B&B Hotel Firenze Laurus al Duomo", "placeId": "ChIJl2RFCQJUKhMR49JBM4bY2tA", "lat": null, "lng": null },
+        { "id": "D6-03", "sequence": 3, "startTime": "09:00", "endTime": "09:30", "title": "체크아웃", "note": "12:00 엄수 · 일찍 출발", "mappable": true, "type": "hotel", "placeName": "B&B Hotel Firenze Laurus al Duomo", "placeId": "ChIJl2RFCQJUKhMR49JBM4bY2tA", "lat": null, "lng": null },
+        { "id": "D6-04", "sequence": 4, "startTime": "09:30", "endTime": "10:25", "title": "산타 마리아 노벨라역 도보 9분", "note": "역 도착·플랫폼 대기", "mappable": true, "type": "station", "placeName": "Firenze Santa Maria Novella", "placeId": "ChIJk_t4QpFWKhMRFdiSiZZjCqg", "lat": 43.7753392, "lng": 11.2476522, "transportFromPrevious": "walking" },
+        { "id": "D6-05", "sequence": 5, "startTime": "10:25", "endTime": "12:30", "title": "Frecciarossa 출발 → 베네치아 (2h 5m)", "note": "90일전 €25/인", "mappable": false, "transportFromPrevious": "train" },
+        { "id": "D6-06", "sequence": 6, "startTime": "12:30", "endTime": "12:45", "title": "베네치아 메스트레 하차", "note": "본섬 가기 전 정차 — 여기서 하차!", "mappable": true, "type": "station", "placeName": "Stazione di Venezia Mestre, Viale Stazione, 30171 Venezia", "placeId": "ChIJj4rg9iS0fkcRlo4qoF69ajY", "lat": 45.4824787, "lng": 12.2317675, "transportFromPrevious": "train" },
+        { "id": "D6-07", "sequence": 7, "startTime": "12:45", "endTime": "13:00", "title": "BW Plus Hotel Bologna 짐 보관", "note": "짐만 맡기기 · 체크인은 저녁 귀가 후", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null, "transportFromPrevious": "walking" },
+        { "id": "D6-08", "sequence": 8, "startTime": "13:00", "endTime": "13:50", "title": "점심: 메스트레역 근처에서 가볍게·빠르게 (약 45분)", "note": "역사 안·앞 바(bar)에서 파니니+커피로 가볍게 · 15:30 스냅 촬영 전 과식 금지! · 기차 늦으면 테이크아웃 · 예: PASTA & PIZZA e non solo", "mappable": false, "transportFromPrevious": "walking", "estimatedCost": 20 },
+        { "id": "D6-09", "sequence": 9, "startTime": "13:50", "endTime": "14:10", "title": "기차 Mestre → S.Lucia (10분)", "note": "€1.55/인", "mappable": true, "type": "station", "placeName": "Venezia Santa Lucia", "placeId": "ChIJ8dEcUcexfkcRCZPKgPIBfPw", "lat": 45.4410697, "lng": 12.3210436, "transportFromPrevious": "train" },
+        { "id": "D6-10", "sequence": 10, "startTime": "14:10", "endTime": "14:40", "title": "S.Lucia → F.te Nove(폰다멘테 노베) 도보 20분", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D6-11", "sequence": 11, "startTime": "14:40", "endTime": "15:30", "title": "Vaporetto 12번 → 부라노 (약 45분)", "note": "12번은 약 30분 간격 — 시간표 미리 캡처 · 1일권 €25/인 권장", "mappable": false, "transportFromPrevious": "vaporetto", "estimatedCost": 50 },
+        { "id": "D6-12", "sequence": 12, "startTime": "15:30", "endTime": "15:45", "title": "부라노 스냅 작가 미팅 (베네베네스냅)", "note": "부라노 'C' 선착장 앞 · 10분 전 도착", "mappable": true, "type": "tour_meeting", "placeName": "Burano, Venezia", "placeId": "ChIJpZAw91KsfkcR0hexUsNgxn0", "lat": 45.4853906, "lng": 12.4166562, "transportFromPrevious": "vaporetto" },
+        { "id": "D6-13", "sequence": 13, "startTime": "15:45", "endTime": "16:45", "title": "부라노 스냅 촬영 — 컬러풀 운하", "note": "토요일 일몰 약 18:15라 빛 충분 · 알록달록 골목 인생샷 · 스냅 패키지 별도", "mappable": false },
+        { "id": "D6-14", "sequence": 14, "startTime": "16:45", "endTime": "17:15", "title": "부라노 골목·레이스 상점 잠깐 구경", "note": "merletti(레이스) 상점", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D6-15", "sequence": 15, "startTime": "17:15", "endTime": "18:15", "title": "Vaporetto 12번 → F.te Nove (약 45분)", "mappable": false, "transportFromPrevious": "vaporetto" },
+        { "id": "D6-16", "sequence": 16, "startTime": "18:15", "endTime": "18:45", "title": "카나레지오 운하 산책하며 역 방향으로 (약 20분)", "note": "카나레지오 운하 야경 산책", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D6-17", "sequence": 17, "startTime": "18:45", "endTime": "20:15", "title": "저녁: Trattoria Alla Fontana (운하뷰·역 근처)", "note": "Fondamenta Cannaregio 1102 · 부라노 복귀 후 역으로 걷는 운하 산책 동선 · 매일 영업·자정 무렵 마감 · ⭐4.5 · +39 041 715077 또는 온라인 예약(trattoriaallafontana.shop)(작은 로컬) · 주방이 작아 느릴 수 있으니 착석 즉시 주문(20:15 기차 복귀) · 대안 Trattoria Bar Pontini(한국인 후기 多·캐주얼)", "recommendedMenu": ["파스타 알 마레(해산물 파스타)", "봉골레", "먹물(seppia) 파스타", "티라미수"], "mappable": true, "type": "restaurant", "placeName": "Trattoria Alla Fontana, Fondamenta Cannaregio 1102, Venezia", "lat": null, "lng": null, "reservationLevel": "recommended", "transportFromPrevious": "vaporetto", "estimatedCost": 65 },
+        { "id": "D6-18", "sequence": 18, "startTime": "20:15", "endTime": "20:30", "title": "S.Lucia역 도보 8분", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D6-19", "sequence": 19, "startTime": "20:30", "endTime": "21:00", "title": "S.Lucia → Mestre 기차 (10분)", "note": "€1.55/인", "mappable": false, "transportFromPrevious": "train" },
+        { "id": "D6-20", "sequence": 20, "startTime": "21:00", "endTime": "22:00", "title": "BW Plus Hotel Bologna 체크인·짐 풀기 (일찍 휴식)", "note": "야간 체크인 (낮에 짐 보관 후) · 일찍 쉬기", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null, "transportFromPrevious": "train" },
+        { "id": "D6-21", "sequence": 21, "startTime": "22:00", "title": "취침", "mappable": false }
+      ],
+      "reservations": [
+        { "id": "RES-D6-HOTEL-HONEYMOON", "placeName": "BW Plus Hotel Bologna", "reservationLevel": "recommended", "recommendedTiming": "예약 직후", "note": "허니문 어필. 조용하고 편한 방을 정중히 요청.", "messageEN": "Dear Best Western Plus Hotel Bologna team, we have a reservation under [이름] for 24–26 October, and we're celebrating our honeymoon. A quiet, comfortable room would be wonderful if that's possible. No pressure at all — thank you so much, and we look forward to our stay!", "messageKO": "안녕하세요 Best Western Plus Hotel Bologna 팀, [이름] 이름으로 10월 24–26일 예약했습니다. 저희는 신혼여행을 기념하고 있습니다. 가능하다면 조용하고 편안한 방이면 정말 좋겠습니다. 전혀 부담 갖지 않으셔도 됩니다. 정말 감사드리고 숙박을 기대하고 있습니다!" },
+        { "id": "RES-D6-HOTEL-LUGGAGE", "placeName": "BW Plus Hotel Bologna", "reservationLevel": "recommended", "recommendedTiming": "도착일 당일", "note": "낮에 짐만 맡기고 부라노 스냅·관람 후 저녁에 체크인.", "messageEN": "Hello, our train reaches Venezia Mestre around 12:45 on 24 October. Would it be possible to drop off our luggage on arrival and check in later in the evening? Thank you!", "messageKO": "안녕하세요, 저희 열차는 10월 24일 12:45경 Venezia Mestre에 도착합니다. 도착 시 짐을 맡기고 저녁에 체크인할 수 있을까요? 감사합니다!" },
+        { "id": "RES-D6-DINNER", "placeName": "Trattoria Alla Fontana", "meal": "dinner", "reservationLevel": "recommended", "recommendedTiming": "출발 1주 전", "note": "Fondamenta Cannaregio 1102, 산타루치아역 근처(카나레지오·운하뷰). ⭐4.5. 전화 +39 041 715077(작은 로컬이라 전화가 확실) 또는 온라인 예약(trattoriaallafontana.shop). 매일 영업·자정 무렵 마감. 주방이 작아 음식이 느릴 수 있어 착석 즉시 주문(20:15 기차 복귀). 대안 Trattoria Bar Pontini. 토요일 영업.", "messageEN": "Hello, I'd like to book a table for 2 on Saturday 24 October at 18:45, under [이름]. We're on our honeymoon — a canal-side table would be lovely if possible. Thank you so much!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone sabato 24 ottobre alle 18:45, a nome [이름]. Siamo in luna di miele — se possibile un tavolo vista canale. Grazie mille!", "messageKO": "안녕하세요, [이름] 이름으로 10월 24일 토요일 18:45 2인 테이블을 예약하고 싶습니다. 저희는 신혼여행 중이라 가능하면 운하뷰 자리면 좋겠습니다. 정말 감사합니다!" }
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2026-10-25",
+      "weekday": "일",
+      "city": "Venice",
+      "title": "베네치아: 비엔날레 + 산마르코·두칼레 · DST 종료",
+      "hotel": "BW Plus Hotel Bologna",
+      "defaultTransportMode": "transit",
+      "estimatedCostForTwo": 400,
+      "alerts": [
+        "DST 종료(서머타임 해제) — 간밤 시계 1시간 뒤로. 휴대폰 자동 변경·호텔 알람 확인. 몸은 1시간 이득이라 조식은 느긋하되 09:45 출발로 비엔날레를 일찍 시작합니다. 일몰 약 17:08로 빨라져 오후는 실내(대성당·두칼레) 위주.",
+        "베네치아 비엔날레(Giardini) 온라인 사전 예매 €30/인 · 11:00 입장해 한국·일본·독일 3개 국가관 + 중앙관(또는 프랑스·북유럽관)까지 4곳 여유. 관람 우선순위 미리 정하기 · 일요일 운영시간 확인.",
+        "일요일 산마르코 대성당은 14:00부터 입장(마지막 16:45) — 15:15 입장. 두칼레 궁전은 16:00 시간지정으로 예약하면 마지막 입장 변동과 무관하게 안전.",
+        "🚨 점심 Dallo Zio는 'San Marco'(Spadaria 676) 지점! 구글맵에 'Santa Margherita' 지점(도르소두로)이 먼저 떠서 잘못 가면 왕복 40분 손실 → 대성당·두칼레 붕괴. 지도 즐겨찾기를 San Marco 지점으로 미리 저장.",
+        "저녁 Ristorante Ca' Dolfin은 예약 필수 — WhatsApp +39 041 528 5299로 1~2일 전 메시지. 구글맵 'Ca' Dolfin Venezia' 핀 미리 저장(주소가 소스마다 달라 지도 핀이 확실). ⭐4.8(8,300+) 전체 일정 중 최고 평점. 화~일 18:00~22:00·월요일 휴무(일요일 저녁 OK, 마감 22:00이니 19:15 착석 여유).",
+        "★ 컨디션 밸브: 비엔날레 4번째 관(12:40)이 조절 밸브 — 피곤하면 3개관만 보고 나와도 일정에 여유. 리바 해안 산책(13:45)도 지치면 Vaporetto 1·2번으로 대체."
+      ],
+      "items": [
+        { "id": "D7-01", "sequence": 1, "startTime": "08:30", "endTime": "09:00", "title": "기상 — 느지막이 (서머타임 종료로 1시간 이득)", "note": "⚠️ 폰 시계 1시간 뒤로 자동 변경 확인", "mappable": false },
+        { "id": "D7-02", "sequence": 2, "startTime": "09:00", "endTime": "09:45", "title": "호텔 조식 — 느긋하게", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null },
+        { "id": "D7-03", "sequence": 3, "startTime": "09:45", "endTime": "10:00", "title": "호텔 → Mestre역 도보", "note": "역 앞 숙소 — 짐 없이 가볍게", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D7-04", "sequence": 4, "startTime": "10:00", "endTime": "10:10", "title": "기차 Mestre → S.Lucia (10분)", "note": "€1.55/인", "mappable": true, "type": "station", "placeName": "Venezia Santa Lucia", "placeId": "ChIJ8dEcUcexfkcRCZPKgPIBfPw", "lat": 45.4410697, "lng": 12.3210436, "transportFromPrevious": "train" },
+        { "id": "D7-05", "sequence": 5, "startTime": "10:15", "endTime": "11:00", "title": "Vaporetto 1번 (Ferrovia 선착장) → 자르디니 (대운하 감상 약 45분)", "note": "1일권 €25/인 · 대운하 전체를 훑는 노선이라 이 45분 자체가 관광 · 신혼여행 무드", "mappable": false, "transportFromPrevious": "vaporetto", "estimatedCost": 50 },
+        { "id": "D7-06", "sequence": 6, "startTime": "11:00", "endTime": "11:05", "title": "비엔날레 자르디니 입장 → 석호 끝 클러스터 직행", "note": "온라인 사전 예매 €30/인 · 11:00 입장으로 관람 시간 최대 확보", "mappable": true, "type": "sightseeing", "placeName": "Giardini della Biennale, Venezia", "placeId": "ChIJqzZkRzGufkcRiabs3CYIiBk", "lat": 45.4290703, "lng": 12.3580118, "transportFromPrevious": "vaporetto", "estimatedCost": 60 },
+        { "id": "D7-07", "sequence": 7, "startTime": "11:05", "endTime": "11:40", "title": "🇰🇷 한국관 《해방공간: 요새/둥지》", "note": "천천히 · 노혜리·한강 애도 스테이션·최고은", "mappable": false },
+        { "id": "D7-08", "sequence": 8, "startTime": "11:40", "endTime": "12:10", "title": "🇯🇵 일본관 'Grass, Moon and Babies'", "note": "한국관 바로 옆", "mappable": false },
+        { "id": "D7-09", "sequence": 9, "startTime": "12:10", "endTime": "12:40", "title": "🇩🇪 독일관", "note": "인접", "mappable": false },
+        { "id": "D7-10", "sequence": 10, "startTime": "12:40", "endTime": "13:20", "title": "중앙관(Padiglione Centrale) 또는 프랑스·북유럽관 등 1~2곳 추가", "note": "★ 아침을 앞당겨 확보한 시간 — 우선순위 미리 정하기 · 피곤하면 생략 가능(조절 밸브)", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D7-11", "sequence": 11, "startTime": "13:20", "endTime": "13:45", "title": "정원 산책·기념품숍 둘러보고 퇴장", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D7-12", "sequence": 12, "startTime": "13:45", "endTime": "14:00", "title": "리바 데글리 스키아보니 해안 산책 → 산마르코 (약 15~20분)", "note": "햇빛 좋으면 산책 / 피곤하면 Vaporetto 1·2번(약 15분)", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D7-13", "sequence": 13, "startTime": "14:00", "endTime": "15:00", "title": "점심: Dallo Zio 'San Marco' 지점 — 1시간 컷", "note": "Spadaria 676, 산마르코 광장 도보 2~3분 · ⚠️구글맵의 'Santa Margherita'(도르소두로) 지점 아님! 즐겨찾기 San Marco 지점(Spadaria 676) 미리 저장 · 매일 영업·TheFork 평점 8.7(평균 €40) · TheFork 앱 또는 sanmarco.dallozio.com 예약(워크인도 가능) · 1시간 컷(15:15 대성당→16:00 두칼레), 착석 즉시 주문·디저트는 광장 아페리티보로 미룸 · 자리 없으면 근처 바카로(cicchetti)로 전환", "recommendedMenu": ["오징어먹물 파스타(al nero di seppia)", "봉골레", "해산물 리조토"], "mappable": true, "type": "restaurant", "placeName": "Ristorante Dallo Zio, Spadaria 676, San Marco, Venezia", "lat": null, "lng": null, "reservationLevel": "recommended", "transportFromPrevious": "walking", "estimatedCost": 55 },
+        { "id": "D7-14", "sequence": 14, "startTime": "15:15", "endTime": "16:00", "title": "산마르코 대성당 — 황금 모자이크·팔라 도로", "note": "일요일 14:00 입장·마지막 16:45 · 약 45분 · Dallo Zio에서 도보 5분", "mappable": true, "type": "sightseeing", "placeName": "Basilica di San Marco, Venezia", "placeId": "ChIJv2xSZNexfkcRBaKsgyfVEgo", "lat": 45.4345606, "lng": 12.3397125, "transportFromPrevious": "walking", "estimatedCost": 12 },
+        { "id": "D7-15", "sequence": 15, "startTime": "16:00", "endTime": "17:45", "title": "두칼레 궁전 — 대회의실·황금계단·탄식의 다리", "note": "★ 예약 시 16:00 시간대 지정 필수 · 마지막 입장 18:00 · 천천히 1.5~2시간 · €30/인 · 실내라 해질녘에 딱", "mappable": true, "type": "sightseeing", "placeName": "Palazzo Ducale, Venezia", "placeId": "ChIJiYRBbtexfkcR0XTK3ATSCbg", "lat": 45.4337035, "lng": 12.3403894, "transportFromPrevious": "walking", "estimatedCost": 60 },
+        { "id": "D7-16", "sequence": 16, "startTime": "17:50", "endTime": "18:45", "title": "산마르코 광장 카페 아페리티보 + 야경 — 스프리츠 한 잔", "note": "일몰 약 17:08라 이미 야경 · 불 켜진 광장 보며 스프리츠 + 인증샷 · 라이브 시 자릿세", "mappable": true, "type": "sightseeing", "placeName": "Piazza San Marco, Venezia", "placeId": "ChIJiYRBbtexfkcRG_b_RJa70AI", "lat": 45.4341668, "lng": 12.3384717, "transportFromPrevious": "walking", "estimatedCost": 25 },
+        { "id": "D7-17", "sequence": 17, "startTime": "18:45", "endTime": "19:15", "title": "리알토 거쳐 카나레지오로 도보 (약 30분)", "note": "리알토 다리 경유 야경", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D7-18", "sequence": 18, "startTime": "19:15", "endTime": "21:00", "title": "저녁: Ristorante Ca' Dolfin (카나레조)", "note": "리알토 근처 카나레조 초입(야경 도보 동선) · 구글맵 'Ca' Dolfin Venezia' 핀 미리 저장(주소 표기가 소스마다 달라 지도 핀이 가장 확실) · 화~일 12:00~15:00/18:00~22:00·월요일 휴무(일요일 저녁 OK) · 마감 22:00이라 19:15 착석 딱 좋음 · ⭐4.8(8,300+) 전체 일정 중 최고 평점 · WhatsApp +39 041 528 5299로 1~2일 전 예약 · 작고 아늑한 허니문 마지막 베네치아 밤에 딱", "recommendedMenu": ["카르보나라", "새우 전채", "브루스케타", "그날의 해산물 스페셜(직원 추천)"], "mappable": true, "type": "restaurant", "placeName": "Ristorante Ca' Dolfin, Salizada San Canzian 5903, Venezia", "lat": null, "lng": null, "reservationLevel": "required", "transportFromPrevious": "walking", "estimatedCost": 75 },
+        { "id": "D7-19", "sequence": 19, "startTime": "21:00", "endTime": "21:15", "title": "스트라다 노바 따라 S.Lucia로 도보", "note": "스트라다 노바 경유", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D7-20", "sequence": 20, "startTime": "21:15", "endTime": "21:25", "title": "기차 S.Lucia → Mestre (10분)", "note": "€1.55/인", "mappable": false, "transportFromPrevious": "train" },
+        { "id": "D7-21", "sequence": 21, "startTime": "21:25", "endTime": "22:00", "title": "BW Plus Hotel Bologna 복귀·휴식", "note": "호텔 도보", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null, "transportFromPrevious": "walking" },
+        { "id": "D7-22", "sequence": 22, "startTime": "22:00", "title": "취침", "mappable": false }
+      ],
+      "reservations": [
+        { "id": "RES-D7-LUNCH", "placeName": "Ristorante Dallo Zio", "meal": "lunch", "reservationLevel": "recommended", "recommendedTiming": "여행 중 (선택·TheFork)", "note": "Spadaria 676, 산마르코 광장 도보 2~3분. ⚠️구글맵 검색 시 'Santa Margherita' 지점(도르소두로)이 먼저 뜸 — 절대 그쪽 아님! 잘못 가면 왕복 40분 손실로 대성당·두칼레 일정 붕괴. 지도 즐겨찾기를 San Marco 지점(Spadaria 676)으로 미리 저장. TheFork 앱(평점 8.7·평균 €40) 또는 sanmarco.dallozio.com 예약 가능(워크인도 가능). 1시간 컷 필수, 자리 없으면 근처 바카로(cicchetti)로 즉시 전환.", "messageEN": "Hello, I'd like to book a table for 2 on Sunday 25 October at 14:00, under the name [이름]. We're on our honeymoon — thank you so much!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone domenica 25 ottobre alle 14:00, a nome [이름]. Siamo in luna di miele — grazie mille!", "messageKO": "안녕하세요, [이름] 이름으로 10월 25일 일요일 14:00 2인 테이블을 예약하고 싶습니다. 신혼여행 중입니다 — 정말 감사합니다!" },
+        { "id": "RES-D7-DINNER", "placeName": "Ristorante Ca' Dolfin", "meal": "dinner", "reservationLevel": "required", "recommendedTiming": "여행 중 1~2일 전 (WhatsApp)", "note": "리알토 근처 카나레조 초입. 구글맵 'Ca' Dolfin Venezia' 핀 미리 저장(주소 표기가 소스마다 달라 지도 핀이 가장 확실). WhatsApp +39 041 528 5299로 메시지 전송(리뷰 검증된 공식 루트) → 답장 받으면 확정. ⭐4.8(8,300+) 최고 평점, 작은 가게라 예약 필수. 화~일 12:00~15:00/18:00~22:00·월요일 휴무(마감 22:00이라 19:15 착석 딱). 아래 EN 템플릿 복붙.", "messageEN": "Hello! I would like to reserve a table for 2 people on Sunday, October 25th at 7:15 pm. Name: [이름]. We are on our honeymoon from Korea. Thank you! 😊", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone domenica 25 ottobre alle 19:15, a nome [이름]. Siamo in luna di miele e un tavolo tranquillo sarebbe perfetto. Grazie mille!", "messageKO": "안녕하세요, [이름] 이름으로 10월 25일 일요일 19:15 2인 테이블을 예약하고 싶습니다. 저희는 신혼여행을 기념하고 있어 조용한 자리면 정말 좋겠습니다. 정말 감사합니다!" }
+      ]
+    },
+    {
+      "day": 8,
+      "date": "2026-10-26",
+      "weekday": "월",
+      "city": "Venice → Milan",
+      "title": "오전 베네치아→밀라노 + 두오모·갈레리아 + 저녁 MXP 출국",
+      "hotel": "비행기 (KE928)",
+      "defaultTransportMode": "transit",
+      "estimatedCostForTwo": 130,
+      "alerts": [
+        "출국일 타임라인: KE928 20:05 출발 — Malpensa Express 16:13 Centrale 출발 → MXP T1 17:05 도착(약 3시간 버퍼). 시내 일정은 15:05 M3로 Centrale 복귀. 말펜사 익스프레스는 매시 13/43분 간격 — 16:43편이 최종 안전망.",
+        "★ 플랜B(열차 지연·시내 지연 시): 두오모 내부·옥상은 포기하고 광장 외관+갈레리아만 40분. 점심을 Centrale역 안 Mercato Centrale Milano로 바꾸면 지하철 M3 왕복(두오모) 리스크 자체가 사라져 16:13 열차를 확실히 탑니다.",
+        "BW Plus Hotel Bologna 체크아웃 12:00 엄수.",
+        "Centrale역 KIPOINT 짐 보관(€11/일)으로 큰 캐리어 두고 시내 관광.",
+        "점심은 밀라노 명물 Trattoria Milanese(리소토 알라 밀라네제) 착석식 13:00 — 점심 마감 14:30이라 13:00 도착 엄수, 셰어 금지 리소토는 1인 1개. 밀라노 도착 전날(D7) 저녁 +39 02 8645 1991로 예약. 빠듯하면 리소토+음료만 빠르게.",
+        "두오모 옥상은 '시간 미지정/오픈' 티켓으로만 — 고정시간 예약은 출국 타임라인과 충돌하니 ❌."
+      ],
+      "items": [
+        { "id": "D8-01", "sequence": 1, "startTime": "07:30", "endTime": "08:00", "title": "기상·준비·짐 정리", "mappable": false },
+        { "id": "D8-02", "sequence": 2, "startTime": "08:00", "endTime": "09:00", "title": "호텔 조식 (마지막 베네치아)", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null },
+        { "id": "D8-03", "sequence": 3, "startTime": "09:00", "endTime": "09:30", "title": "체크아웃", "note": "12:00 엄수 · 일찍", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null },
+        { "id": "D8-04", "sequence": 4, "startTime": "09:30", "endTime": "09:55", "title": "Mestre역 도보·플랫폼", "mappable": true, "type": "station", "placeName": "Stazione di Venezia Mestre, Viale Stazione, 30171 Venezia", "placeId": "ChIJj4rg9iS0fkcRlo4qoF69ajY", "lat": 45.4824787, "lng": 12.2317675, "transportFromPrevious": "walking" },
+        { "id": "D8-05", "sequence": 5, "startTime": "09:55", "endTime": "12:25", "title": "Frecciarossa 출발 → 밀라노 (2h 30m)", "note": "90일전 €29/인 · 베로나·브레시아 경유", "mappable": false, "transportFromPrevious": "train" },
+        { "id": "D8-06", "sequence": 6, "startTime": "12:25", "title": "밀라노 Centrale 도착", "mappable": true, "type": "station", "placeName": "Milano Centrale", "placeId": "ChIJQ1j3T8XGhkcRKs-XGhSxJiI", "lat": 45.487137, "lng": 9.204822, "transportFromPrevious": "train" },
+        { "id": "D8-07", "sequence": 7, "startTime": "12:25", "endTime": "12:40", "title": "짐 보관 (KIPOINT, Centrale역 내)", "note": "€11/일 · 큰 캐리어 OK", "mappable": false },
+        { "id": "D8-08", "sequence": 8, "startTime": "12:40", "endTime": "13:00", "title": "지하철 M3 → Duomo (3정거장)", "note": "€2.2", "mappable": false, "transportFromPrevious": "transit" },
+        { "id": "D8-09", "sequence": 9, "startTime": "13:00", "endTime": "14:00", "title": "점심: Trattoria Milanese — 밀라노 북부 요리", "note": "Via Santa Marta 11 · 두오모 도보 7분 · 월~토 12:00~14:30/19:00~22:30·일요일만 휴무(월요일 세이프) · ★점심 마감 14:30, 13:00 도착 엄수 · 리소토는 셰어 금지, 코톨레타는 양 많아 셰어 · 빠듯하면 리소토+음료만 빠르게 · 열차 지연 시 플랜B Mercato Centrale", "recommendedMenu": ["리소토 알라 밀라네제(사프란·셰어 금지)", "코톨레타 알라 밀라네제(양 많음·셰어)", "오소부코"], "mappable": true, "type": "restaurant", "placeName": "Trattoria Milanese, Via Santa Marta 11, Milano", "lat": null, "lng": null, "reservationLevel": "recommended", "transportFromPrevious": "walking", "estimatedCost": 70 },
+        { "id": "D8-10", "sequence": 10, "startTime": "14:00", "endTime": "14:35", "title": "밀라노 두오모 광장 + (선택) 두오모 옥상", "note": "광장·외관 · 옥상은 '시간 미지정/오픈' 티켓으로만(고정시간 예약 ❌, €15/인 옵션) · 줄 짧으면 내부", "mappable": true, "type": "sightseeing", "placeName": "Duomo di Milano", "placeId": "ChIJoTZGw67GhkcREy4aECdOf6s", "lat": 45.4640976, "lng": 9.1919265, "transportFromPrevious": "walking" },
+        { "id": "D8-11", "sequence": 11, "startTime": "14:35", "endTime": "14:55", "title": "갈레리아 비토리오 에마누엘레 II", "note": "세계 가장 오래된 쇼핑몰 · 황소 발자국 의식", "mappable": true, "type": "shopping", "placeName": "Galleria Vittorio Emanuele II, Milano", "placeId": "ChIJw7aG_QY1eUcRFtQJWKmcCyc", "lat": 45.4658434, "lng": 9.1899401, "transportFromPrevious": "walking" },
+        { "id": "D8-12", "sequence": 12, "startTime": "14:55", "endTime": "15:05", "title": "라스칼라 광장·동상 (1분)", "mappable": true, "type": "sightseeing", "placeName": "Piazza della Scala, Milano", "placeId": "ChIJxQN4-63GhkcR-9PPaathtmM", "lat": 45.4672111, "lng": 9.1902263, "transportFromPrevious": "walking" },
+        { "id": "D8-13", "sequence": 13, "startTime": "15:05", "endTime": "15:20", "title": "지하철 M3 → Centrale (3정거장)", "mappable": false, "transportFromPrevious": "transit" },
+        { "id": "D8-14", "sequence": 14, "startTime": "15:20", "endTime": "15:40", "title": "짐 픽업 (KIPOINT)", "mappable": false },
+        { "id": "D8-15", "sequence": 15, "startTime": "15:40", "endTime": "16:13", "title": "역에서 커피·간식 여유", "note": "출국 버퍼 — 서두르지 않기", "mappable": false },
+        { "id": "D8-16", "sequence": 16, "startTime": "16:13", "endTime": "17:05", "title": "Malpensa Express 탑승 → MXP (약 50분)", "note": "€13/인 · 매시 13/43분 · T1 직행", "mappable": false, "transportFromPrevious": "train" },
+        { "id": "D8-17", "sequence": 17, "startTime": "17:05", "title": "MXP T1 도착 — 약 3시간 버퍼 확보", "note": "KE 출국 카운터 · 출발(20:05)까지 약 3시간", "mappable": true, "type": "airport", "placeName": "Milan Malpensa Airport Terminal 1 (MXP)", "placeId": "ChIJR6BsfxJhhkcRM9qTpVN8cac", "lat": 45.6269595, "lng": 8.7122707, "transportFromPrevious": "train" },
+        { "id": "D8-18", "sequence": 18, "startTime": "17:10", "endTime": "18:30", "title": "KE928 체크인·수하물 위탁·보안검색", "mappable": false },
+        { "id": "D8-19", "sequence": 19, "startTime": "18:30", "endTime": "19:30", "title": "면세점·마지막 쇼핑", "mappable": false },
+        { "id": "D8-20", "sequence": 20, "startTime": "19:30", "endTime": "20:00", "title": "게이트 도착·탑승", "mappable": false },
+        { "id": "D8-21", "sequence": 21, "startTime": "20:05", "title": "KE 928 MXP 출발", "note": "B787-9", "mappable": false, "transportFromPrevious": "flight" }
+      ],
+      "reservations": [
+        { "id": "RES-D8-LUNCH", "placeName": "Trattoria Milanese", "meal": "lunch", "reservationLevel": "recommended", "recommendedTiming": "여행 중 (D7 저녁 전화)", "note": "Via Santa Marta 11, 두오모 도보 7분. 전화 +39 02 8645 1991 — 밀라노 도착 전날(D7) 저녁에 전화(이날부터 시차 -8시간, 한국 가족 대리 시 주의) / 구글맵 예약 버튼도 확인. 월~토 12:00~14:30/19:00~22:30·일요일만 휴무(토요일 영업·월요일 세이프). ★점심 마감 14:30, 13:00 도착 엄수. 리소토 알라 밀라네제(셰어 금지)·코톨레타(양 많음·셰어)·오소부코. 열차 30분+ 지연 시 예약 취소 후 Mercato Centrale Milano(Centrale역사 내)로 플랜B.", "messageEN": "Hello, I'd like to book a table for 2 on Monday 26 October at 1:00 pm, under the name [이름]. Thank you!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone lunedì 26 ottobre alle 13:00, a nome [이름]. Grazie!", "messageKO": "안녕하세요, [이름] 이름으로 10월 26일 월요일 13:00 2인 테이블을 예약하고 싶습니다. 감사합니다!" }
+      ]
+    },
+    {
+      "day": 9,
+      "date": "2026-10-27",
+      "weekday": "화",
+      "city": "인천 → 부산",
+      "title": "인천 환승 → 부산 도착 → 22시 전 집",
+      "hotel": "집",
+      "defaultTransportMode": "transit",
+      "estimatedCostForTwo": 30,
+      "alerts": [
+        "국내선 환승: 수하물 픽업 후 재위탁 필요 (ICN T2) — 15:35 도착 후 바로 이동하면 18:25 부산행까지 약 2h50 버퍼로 넉넉. 서두를 필요 없음."
+      ],
+      "items": [
+        { "id": "D9-01", "sequence": 1, "startTime": "—", "title": "KE 928 비행 (11h 30m)", "note": "기내식 2회·수면 · 한국시간 도착 전 기내", "mappable": false, "transportFromPrevious": "flight" },
+        { "id": "D9-02", "sequence": 2, "startTime": "15:35", "title": "인천 ICN 도착 (T2)", "note": "10/27 (KST)", "mappable": true, "type": "airport", "placeName": "Incheon International Airport Terminal 2", "placeId": "ChIJ7TZN-XaQezUR0UAqfjDR5eU", "lat": 37.4688875, "lng": 126.433359, "transportFromPrevious": "flight" },
+        { "id": "D9-03", "sequence": 3, "startTime": "15:35", "endTime": "16:30", "title": "입국심사·수하물 (국내선 환승: 픽업 후 재위탁)", "mappable": false },
+        { "id": "D9-04", "sequence": 4, "startTime": "16:30", "endTime": "18:00", "title": "환승 라운지·간단 식사", "note": "2h 50m 환승", "mappable": false },
+        { "id": "D9-05", "sequence": 5, "startTime": "18:00", "endTime": "18:25", "title": "게이트 도착·탑승", "mappable": false },
+        { "id": "D9-06", "sequence": 6, "startTime": "18:25", "title": "KE 1407 ICN 출발", "note": "B737-8", "mappable": false, "transportFromPrevious": "flight" },
+        { "id": "D9-07", "sequence": 7, "startTime": "18:25", "endTime": "19:35", "title": "비행 (1h 10m)", "mappable": false, "transportFromPrevious": "flight" },
+        { "id": "D9-08", "sequence": 8, "startTime": "19:35", "title": "PUS 김해공항 도착 (T1)", "mappable": true, "type": "airport", "placeName": "Gimhae International Airport, Busan", "placeId": "ChIJDfcSIsGSaDUR7DKMmkKpoxU", "lat": 35.1728688, "lng": 128.9471783, "transportFromPrevious": "flight" },
+        { "id": "D9-09", "sequence": 9, "startTime": "19:35", "endTime": "20:00", "title": "입국·수하물", "mappable": false },
+        { "id": "D9-10", "sequence": 10, "startTime": "20:00", "endTime": "20:45", "title": "김해공항 → 부산 시내 (택시)", "note": "30~40분 ≈ 3만원 · 또는 공항버스 1h", "mappable": false, "transportFromPrevious": "taxi" },
+        { "id": "D9-11", "sequence": 11, "startTime": "21:00", "title": "집 도착 — 22시 전 여유 도착", "mappable": false }
+      ],
+      "reservations": []
+    }
+  ],
+  "diningTips": {
+    "reservation": [
+      "전화는 현지 오전 10~12시 또는 오후 4~6시(브레이크 타임)에 잘 받습니다. 10/24까지는 시차 -7시간(한국 오후 5~7시=현지 오전), 10/25부터는 서머타임 해제로 -8시간(한국 오후 6~8시=현지 오전)이라 시간 계산 주의.",
+      "국제전화 대신 WhatsApp 메시지/통화가 되는 곳이 많으니 번호를 WhatsApp에서 먼저 검색해보기.",
+      "예약 확인 메일·메시지는 캡처해서 사진첩에 보관 — 도착 시 이름과 함께 제시.",
+      "관광지 예약(두칼레 16:00 입장·아카데미아·비엔날레)은 별도 관리 — 이 팁은 식당 전용.",
+      "전화 예약(EN): Hello, I'd like to book a table for two on October 22nd at 7:30 pm, please. The name is [성함].",
+      "전화 예약(IT): Buonasera! Vorrei prenotare un tavolo per due persone, per il ventidue ottobre alle diciannove e trenta. A nome [성함]. (부오나세라! 보레이 프레노타레 운 타볼로 페르 두에 페르소네)",
+      "식당 도착 시: Hello, we have a reservation for two under [성함].",
+      "WhatsApp 예약(Ca' Dolfin·La Giostra): Hello! I would like to reserve a table for 2 people on Sunday, October 25th at 7:15 pm. Name: [성함]. We are on our honeymoon from Korea. Thank you! 😊",
+      "허니문 어필(서비스·자리 좋아지는 마법의 문장): We're on our honeymoon! — 웰컴 프로세코나 디저트 서비스가 종종 나옵니다."
+    ],
+    "culture": [
+      "코페르토(Coperto): 자릿세 1인 €2~4가 자동 청구 — 사기 아님, 정상.",
+      "팁 불필요: 코페르토가 있으므로 팁 문화 없음. 만족스러우면 잔돈 반올림 정도.",
+      "물은 유료: Acqua naturale(생수) / frizzante(탄산수) — 수돗물 요청은 안 통하는 곳 많음.",
+      "식전빵도 코페르토에 포함 — 눈치 보지 말고 드세요.",
+      "주문 순서: Antipasto(전채) → Primo(파스타) → Secondo(메인). 다 시킬 필요 없음. 2인이면 프리모 2 + 세콘도 1 셰어가 국룰.",
+      "카드 결제 대부분 가능. 단 Sostanza는 신용카드 불가(현금 또는 bancomat만·현금 €80 준비), 소액은 현금이 편함 (€200~300 준비).",
+      "예약 시간 엄수: 15분 이상 늦으면 자리 날아갈 수 있음(Armando는 15분 규정 명시·예약 +15분까지만 자리 유지) — 늦으면 전화/WhatsApp.",
+      "라스트오더: 표기 마감보다 주방은 30분~1시간 먼저 닫는다고 생각할 것.",
+      "휴무 함정(검증 완료): 이 일정 요일은 전부 충돌 없음. 임의 변경 시 주의 — Luzzi 수요일 휴무 / Roma Sparita 월 전일·일 저녁 휴무 / Sostanza 토·일 휴무 / Armando 토 저녁·일 휴무 / Ca' Dolfin 월요일 휴무 / Trattoria Milanese 일요일 휴무.",
+      "시차: 10/24까지 -7시간, 10/25(일)부터 -8시간(유럽 서머타임 해제) — 여행 중 예약 전화·시간 계산에 반영.",
+      "유용한 표현: Un tavolo per due(운 타볼로 페르 두에)=2인 테이블이요 / Il conto, per favore(일 콘토 페르 파보레)=계산서 주세요."
+    ]
+  }
+}
