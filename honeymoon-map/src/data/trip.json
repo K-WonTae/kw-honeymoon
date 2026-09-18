@@ -333,13 +333,13 @@
       "defaultTransportMode": "transit",
       "estimatedCostForTwo": 130,
       "cashForTwo": 30,
-      "cashNote": "밀라노 지하철 M3(두오모 왕복)+M2(Centrale→Cadorna) 4회권·역 커피/간식 정도만. 마지막 유로 소진일 — 남은 현금은 말펜사 공항 면세점에서 쓰고 오세요(재환전은 손해). KIPOINT 짐보관·Trattoria Milanese는 카드 OK.",
+      "cashNote": "밀라노 지하철 M3 두오모 왕복(1회권 €2.2 × 2인 × 2회)·역 커피/간식 정도만. 마지막 유로 소진일 — 남은 현금은 말펜사 공항 면세점에서 쓰고 오세요(재환전은 손해). KIPOINT 짐보관·Trattoria Milanese는 카드 OK.",
       "alerts": [
-        "🎫 예매 완료 — ①Venezia Mestre 09:00 → Milano Centrale 11:15 (직통) ②Milano Cadorna 16:26 → Malpensa Aeroporto T1 17:04. 둘 다 Trenitalia 앱 'My Journeys'에 있음.",
-        "★★ 말펜사행은 Centrale가 아니라 Milano Cadorna(FN) 출발입니다 — 절대 헷갈리지 말 것! Centrale에서 Cadorna까지는 지하철 M2(녹색) 직통 약 12분. 15:50에 Centrale에서 출발해 16:10 Cadorna 도착 → 플랫폼 여유 16분. Cadorna발 말펜사 익스프레스는 약 30분 간격이라 16:56편이 최종 안전망(그래도 KE928 20:05엔 여유).",
-        "출국일 타임라인: 09:00 Mestre 출발 → 11:15 Centrale 도착 → 시내 4시간 30분 → 15:50 M2로 Cadorna 이동 → 16:26 말펜사 익스프레스 → 17:04 MXP T1 도착(약 3시간 버퍼).",
+        "🎫 예매 완료 — ①Venezia Mestre 09:00 → Milano Centrale 11:15 (직통) ②Milano Centrale 16:25 → Malpensa Aeroporto T1 17:18 (직통). 둘 다 Trenitalia 앱 'My Journeys'에 있음.",
+        "★ 말펜사 익스프레스는 Milano Centrale 출발 — 오전에 도착한 바로 그 역에서 탑니다(Cadorna로 갈 필요 없음, 지하철 환승 없음). Centrale의 말펜사 익스프레스 승강장은 1~3번 쪽(역 서쪽 끝)이라 짐 픽업 후 이동에 10분 잡을 것 — 전광판 확인 후 16:05까지 승강장 도착. 놓쳐도 약 30분 뒤 16:55편이 최종 안전망(KE928 20:05엔 여유).",
+        "출국일 타임라인: 09:00 Mestre 출발 → 11:15 Centrale 도착 → 시내 4시간 → 15:35 Centrale 복귀·짐 픽업 → 16:25 말펜사 익스프레스 → 17:18 MXP T1 도착(출발 20:05까지 약 2시간 45분 버퍼).",
         "★ 아침이 이릅니다 — 09:00 기차라 08:00엔 호텔을 나서야 합니다. 짐은 전날 밤에 다 싸두고, BW Plus 조식이 07:00부터인지 전날 프런트에 확인(늦게 시작하면 테이크아웃 요청). 체크아웃도 08:00 전.",
-        "Centrale역 KIPOINT 짐 보관(€11/일)으로 큰 캐리어 두고 시내 관광 — 픽업 후 M2로 바로 Cadorna. (Centrale 왕복이 번거로우면 두오모·카도르나 주변 사설 짐보관(Radical Storage 등)을 미리 예약해 두는 것도 방법 — 운영 여부는 출발 전 확인.)",
+        "Centrale역 KIPOINT 짐 보관(€11/일)으로 큰 캐리어 두고 시내 관광 — 픽업 후 같은 역에서 바로 말펜사 익스프레스 탑승. 지하철은 M3 두오모 왕복뿐이라 캐리어 들고 지하철 탈 일 없음.",
         "점심은 밀라노 명물 Trattoria Milanese(리소토 알라 밀라네제) 착석식 12:15 — 오픈 12:00 직후라 자리·서빙이 여유롭습니다. 셰어 금지 리소토는 1인 1개. 밀라노 도착 전날(D7) 저녁 +39 02 8645 1991로 예약.",
         "★ 플랜B(열차 지연 시): 두오모 내부·옥상은 포기하고 광장 외관+갈레리아만 40분. 점심을 Centrale역 안 Mercato Centrale Milano로 바꾸면 두오모 왕복 리스크가 사라집니다.",
         "두오모 옥상은 '시간 미지정/오픈' 티켓으로만 — 고정시간 예약은 출국 타임라인과 충돌하니 ❌."
@@ -358,14 +358,13 @@
         { "id": "D8-11", "sequence": 11, "startTime": "14:40", "endTime": "15:05", "title": "갈레리아 비토리오 에마누엘레 II", "note": "세계 가장 오래된 쇼핑몰 · 황소 발자국 의식", "mappable": true, "type": "shopping", "placeName": "Galleria Vittorio Emanuele II, Milano", "placeId": "ChIJw7aG_QY1eUcRFtQJWKmcCyc", "lat": 45.4658434, "lng": 9.1899401, "transportFromPrevious": "walking" },
         { "id": "D8-12", "sequence": 12, "startTime": "15:05", "endTime": "15:15", "title": "라스칼라 광장·동상 (1분)", "mappable": true, "type": "sightseeing", "placeName": "Piazza della Scala, Milano", "placeId": "ChIJxQN4-63GhkcR-9PPaathtmM", "lat": 45.4672111, "lng": 9.1902263, "transportFromPrevious": "walking" },
         { "id": "D8-13", "sequence": 13, "startTime": "15:15", "endTime": "15:35", "title": "지하철 M3 → Centrale (3정거장)", "mappable": false, "transportFromPrevious": "transit" },
-        { "id": "D8-14", "sequence": 14, "startTime": "15:35", "endTime": "15:50", "title": "짐 픽업 (KIPOINT) · 물·간식 구입", "mappable": false },
-        { "id": "D8-15", "sequence": 15, "startTime": "15:50", "endTime": "16:10", "title": "★ 지하철 M2(녹색) Centrale FS → Cadorna FN (직통 약 12분)", "note": "말펜사행은 Centrale가 아니라 Cadorna 출발! M2 한 번으로 환승 없이 감 · 캐리어 들고 이동이라 15:50 출발 엄수", "mappable": false, "transportFromPrevious": "transit" },
-        { "id": "D8-16", "sequence": 16, "startTime": "16:10", "endTime": "16:26", "title": "Milano Cadorna FN 도착·플랫폼", "note": "🎫 말펜사 익스프레스 출발역 · 플랫폼 여유 16분 · 놓쳐도 약 30분 뒤 16:56편", "mappable": true, "type": "station", "placeName": "Milano Cadorna, Piazzale Luigi Cadorna, Milano", "lat": null, "lng": null, "transportFromPrevious": "transit" },
-        { "id": "D8-17", "sequence": 17, "startTime": "16:26", "endTime": "17:04", "title": "Malpensa Express 탑승 → MXP T1 도착 (38분)", "note": "🎫 예매 완료 (Cadorna 16:26 → Malpensa Aeroporto T1 17:04) · T1 직행 · 도착 후 KE 출국 카운터로, 출발(20:05)까지 약 3시간 버퍼", "mappable": true, "type": "airport", "placeName": "Milan Malpensa Airport Terminal 1 (MXP)", "placeId": "ChIJR6BsfxJhhkcRM9qTpVN8cac", "lat": 45.6269595, "lng": 8.7122707, "transportFromPrevious": "train" },
-        { "id": "D8-18", "sequence": 18, "startTime": "17:10", "endTime": "18:30", "title": "KE928 체크인·수하물 위탁·보안검색", "mappable": false },
-        { "id": "D8-19", "sequence": 19, "startTime": "18:30", "endTime": "19:30", "title": "면세점·마지막 쇼핑", "note": "남은 유로 현금 소진", "mappable": false },
-        { "id": "D8-20", "sequence": 20, "startTime": "19:30", "endTime": "20:00", "title": "게이트 도착·탑승", "mappable": false },
-        { "id": "D8-21", "sequence": 21, "startTime": "20:05", "title": "KE 928 MXP 출발", "note": "B787-9", "mappable": false, "transportFromPrevious": "flight" }
+        { "id": "D8-14", "sequence": 14, "startTime": "15:35", "endTime": "15:55", "title": "짐 픽업 (KIPOINT) · 물·간식 구입", "note": "픽업 대기줄 감안 20분", "mappable": false },
+        { "id": "D8-15", "sequence": 15, "startTime": "15:55", "endTime": "16:25", "title": "★ Centrale 말펜사 익스프레스 승강장 이동·대기", "note": "🎫 말펜사 익스프레스는 Milano Centrale 출발(Cadorna 아님) · 승강장은 1~3번 쪽(역 서쪽 끝) — 전광판으로 확인, 짐 들고 이동 10분 · 놓쳐도 약 30분 뒤 16:55편", "mappable": true, "type": "station", "placeName": "Milano Centrale", "placeId": "ChIJQ1j3T8XGhkcRKs-XGhSxJiI", "lat": 45.487137, "lng": 9.204822, "transportFromPrevious": "transit" },
+        { "id": "D8-16", "sequence": 16, "startTime": "16:25", "endTime": "17:18", "title": "Malpensa Express 탑승 → MXP T1 도착 (53분)", "note": "🎫 예매 완료 (Milano Centrale 16:25 → Malpensa Aeroporto T1 17:18 직행) · 도착 후 KE 출국 카운터로, 출발(20:05)까지 약 2시간 45분 버퍼", "mappable": true, "type": "airport", "placeName": "Milan Malpensa Airport Terminal 1 (MXP)", "placeId": "ChIJR6BsfxJhhkcRM9qTpVN8cac", "lat": 45.6269595, "lng": 8.7122707, "transportFromPrevious": "train" },
+        { "id": "D8-17", "sequence": 17, "startTime": "17:25", "endTime": "18:30", "title": "KE928 체크인·수하물 위탁·보안검색", "mappable": false },
+        { "id": "D8-18", "sequence": 18, "startTime": "18:30", "endTime": "19:30", "title": "면세점·마지막 쇼핑", "note": "남은 유로 현금 소진", "mappable": false },
+        { "id": "D8-19", "sequence": 19, "startTime": "19:30", "endTime": "20:00", "title": "게이트 도착·탑승", "mappable": false },
+        { "id": "D8-20", "sequence": 20, "startTime": "20:05", "title": "KE 928 MXP 출발", "note": "B787-9", "mappable": false, "transportFromPrevious": "flight" }
       ],
       "reservations": [
         { "id": "RES-D8-LUNCH", "placeName": "Trattoria Milanese", "meal": "lunch", "reservationLevel": "recommended", "recommendedTiming": "여행 중 (D7 저녁 전화)", "note": "Via Santa Marta 11, 두오모 도보 7분. 전화 +39 02 8645 1991 — 밀라노 도착 전날(D7) 저녁에 전화(이날부터 시차 -8시간, 한국 가족 대리 시 주의) / 구글맵 예약 버튼도 확인. 월~토 12:00~14:30/19:00~22:30·일요일만 휴무(토요일 영업·월요일 세이프). ★열차가 11:15 Centrale 도착이라 오픈 직후 12:15로 예약 — 자리·서빙 모두 여유롭습니다. 리소토 알라 밀라네제(셰어 금지)·코톨레타(양 많음·셰어)·오소부코. 열차 30분+ 지연 시 예약 취소 후 Mercato Centrale Milano(Centrale역사 내)로 플랜B.", "messageEN": "Hello, I'd like to book a table for 2 on Monday 26 October at 12:15 pm, under the name [이름]. Thank you!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone lunedì 26 ottobre alle 12:15, a nome [이름]. Grazie!", "messageKO": "안녕하세요, [이름] 이름으로 10월 26일 월요일 12:15 2인 테이블을 예약하고 싶습니다. 감사합니다!" }
