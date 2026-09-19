@@ -134,7 +134,7 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
           <ul className="alldays-cash-tips">
             <li>
               <strong>현금이 반드시 필요한 곳</strong> — D4 <strong>Trattoria Sostanza(€80,
-              신용카드 절대 불가)</strong> · 택시(로마 트라스테베레·피렌체 미켈란젤로 왕복) ·
+              신용카드 절대 불가)</strong> · 택시(로마 트라스테베레·피렌체 미켈란젤로 왕복·피렌체 La Giostra 저녁 왕복) ·
               산로렌초/중앙시장·부라노 상점 등 노점 · 바포레토·지하철 자판기 · 젤라또·카페 소액 ·
               트레비 분수 동전 · 가이드/스냅 팁.
             </li>
