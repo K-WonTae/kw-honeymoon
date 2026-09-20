@@ -133,14 +133,16 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
           </div>
           <ul className="alldays-cash-tips">
             <li>
-              <strong>현금이 반드시 필요한 곳</strong> — D4 <strong>Trattoria Sostanza(€80,
-              신용카드 절대 불가)</strong> · 택시(로마 트라스테베레·피렌체 미켈란젤로 왕복·피렌체 La Giostra 저녁 왕복) ·
+              <strong>현금이 반드시 필요한 곳</strong> — D2 <strong>콜로세움 투어 현장 지불 €76</strong> ·
+              D3 <strong>바티칸 투어 현장 지불 €96~126</strong>(둘 다 입장권+수신기, 카드 불가 — 출국 전
+              €200 이상 확보해 두 사람이 나눠 보관) · D4 <strong>Trattoria Sostanza(€80, 신용카드 절대 불가)</strong> ·
+              택시(로마 트라스테베레·피렌체 미켈란젤로 왕복·피렌체 La Giostra 저녁 왕복) ·
               산로렌초/중앙시장·부라노 상점 등 노점 · 바포레토·지하철 자판기 · 젤라또·카페 소액 ·
               트레비 분수 동전 · 가이드/스냅 팁.
             </li>
             <li>
-              <strong>카드로 충분한 곳</strong> — 호텔·기차(Frecciarossa/Italo)·가이드투어·박물관
-              사전예매·대부분의 식당(Armando는 카드 보증 필수)·짐보관·면세점.
+              <strong>카드로 충분한 곳</strong> — 호텔·기차(Frecciarossa/Italo)·가이드투어 투어비(마이리얼트립
+              결제분)·박물관 사전예매·대부분의 식당(Armando는 카드 보증 필수)·짐보관·면세점.
             </li>
             <li>
               지폐는 <strong>€20·€10 위주</strong>로 받으세요. €100·€200권은 택시·소상공인이 거부합니다.

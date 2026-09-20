@@ -20,7 +20,11 @@ const MODES: { key: TransportMode; label: string; icon: string }[] = [
   { key: 'driving', label: '자동차', icon: '🚗' },
 ]
 
-/** 상단 바: Day 요약 · 전체 이동거리/시간 · 이동수단 토글 · 전체보기 */
+/**
+ * 상단 바: Day 요약 · 전체 이동거리/시간 · 이동수단 토글 · 전체보기.
+ * 모바일(<=900px)에서는 CSS 로 한 줄 요약으로 줄어든다 — 통계는 아이콘+숫자만,
+ * 버튼은 아이콘만, 이동수단 토글은 숨김(지도 위 컨트롤에 같은 토글이 있다).
+ */
 export function TopBar({
   day,
   summary,
@@ -36,6 +40,7 @@ export function TopBar({
   const duration = formatDuration(summary.totalDurationSeconds)
   const est = summary.hasEstimate ? ' (추정)' : ''
   const pct = progressTotal > 0 ? Math.round((progressDone / progressTotal) * 100) : 0
+  const clock = formatRomeClock(now)
 
   return (
     <header className="topbar">
@@ -43,17 +48,21 @@ export function TopBar({
         <div className="topbar-title">
           <strong>
             Day {day.day} · {day.date.replace(/-/g, '.')} ({day.weekday})
+            <span className="topbar-clock-inline"> · 🇮🇹 {clock}</span>
           </strong>
           <span className="topbar-subtitle">
-            {day.title} · 🇮🇹 현지 시각 {formatRomeClock(now)}
+            {day.title}
+            <span className="topbar-clock"> · 🇮🇹 현지 시각 {clock}</span>
           </span>
         </div>
         <div className="topbar-actions">
           <button className="btn btn-ghost" onClick={onOpenSettings} title="설정">
-            ⚙️ 설정
+            <span aria-hidden>⚙️</span>
+            <span className="btn-label">설정</span>
           </button>
           <button className="btn btn-showall" onClick={onShowAll} title="전체 경로/마커 보기">
-            🧭 전체보기
+            <span aria-hidden>🧭</span>
+            <span className="btn-label">전체보기</span>
           </button>
         </div>
       </div>
@@ -62,6 +71,7 @@ export function TopBar({
         <div className="summary-stats">
           <div className="stat">
             <span className="stat-label">전체 이동거리</span>
+            <span className="stat-icon" aria-hidden>📏</span>
             <span className="stat-value">
               {distance}
               {summary.totalDistanceMeters != null ? est : ''}
@@ -69,6 +79,7 @@ export function TopBar({
           </div>
           <div className="stat">
             <span className="stat-label">전체 예상 이동시간</span>
+            <span className="stat-icon" aria-hidden>⏱️</span>
             <span className="stat-value">
               {duration}
               {summary.totalDurationSeconds != null ? est : ''}
@@ -76,6 +87,7 @@ export function TopBar({
           </div>
           <div className="stat">
             <span className="stat-label">방문 진행률</span>
+            <span className="stat-icon" aria-hidden>✓</span>
             <span className="stat-value">
               {progressDone}/{progressTotal} · {pct}%
             </span>

@@ -2,8 +2,7 @@ import { useEffect, useMemo, useRef } from 'react'
 import type { DayPlan, MappablePoint, RouteSummary, TransportMode } from '../../types/trip'
 import type { UserDataApi } from '../../hooks/useUserData'
 import type { FxSetting } from '../../lib/money'
-import { eurToKrwText } from '../../lib/money'
-import { AlertCard } from './AlertCard'
+import { DayBrief } from './DayBrief'
 import { ReservationBox } from './ReservationBox'
 import { ScheduleCard } from './ScheduleCard'
 
@@ -72,37 +71,8 @@ export function ScheduleList({
 
   return (
     <div className="schedule" ref={listRef}>
-      <div className="schedule-meta">
-        {day.hotel && (
-          <div className="hotel-line">
-            🏨 숙소: <strong>{day.hotel}</strong>
-          </div>
-        )}
-        {typeof day.estimatedCostForTwo === 'number' && (
-          <div className="cost-line">
-            💶 Day {day.day} 예상 비용(2인):{' '}
-            <strong>
-              약 €{day.estimatedCostForTwo} ({eurToKrwText(day.estimatedCostForTwo, fx.eurToKrw)})
-            </strong>
-          </div>
-        )}
-        {typeof day.cashForTwo === 'number' && (
-          <div className={`cash-line ${day.cashForTwo >= 100 ? 'heavy' : ''}`}>
-            <div className="cash-line-top">
-              💵 이 중 현금(2인):{' '}
-              <strong>
-                {day.cashForTwo > 0
-                  ? `€${day.cashForTwo} (${eurToKrwText(day.cashForTwo, fx.eurToKrw)})`
-                  : '불필요'}
-              </strong>
-              <span className="cash-line-rest">· 나머지는 카드 결제 OK</span>
-            </div>
-            {day.cashNote && <div className="cash-line-note">{day.cashNote}</div>}
-          </div>
-        )}
-      </div>
-
-      <AlertCard alerts={day.alerts} />
+      {/* 주의사항·비용·현금·숙소 — 접힌 한 줄로 시작, Day 가 바뀌면 다시 접힘 */}
+      <DayBrief key={day.day} day={day} fx={fx} />
 
       <div className="card-list">
         {day.items.map((item) => (
