@@ -24,7 +24,9 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,json,ico,png,svg,woff2}'],
+        // bin = 암호화된 내장 첨부. 현지에서 데이터가 안 터져도 티켓을 열 수 있도록 미리 캐시한다.
+        globPatterns: ['**/*.{js,css,html,json,ico,png,svg,woff2,bin}'],
+        maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/(maps\.googleapis\.com|maps\.gstatic\.com)\/.*/i,

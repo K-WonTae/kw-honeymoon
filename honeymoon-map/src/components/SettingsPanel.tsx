@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import type { FxSetting } from '../lib/money'
 import { createBackup, downloadBackupFile, parseBackupFile, restoreBackup } from '../lib/backup'
+import { lock, useAttachmentLock } from '../lib/builtinAttachments'
+import { AttachmentLock } from './AttachmentLock'
 
 interface Props {
   open: boolean
@@ -13,6 +15,7 @@ export function SettingsPanel({ open, fx, onSaveRate, onClose }: Props) {
   const [rateDraft, setRateDraft] = useState(String(fx.eurToKrw))
   const [busy, setBusy] = useState(false)
   const fileRef = useRef<HTMLInputElement>(null)
+  const { unlocked, total: builtinTotal } = useAttachmentLock()
 
   useEffect(() => {
     if (open) setRateDraft(String(fx.eurToKrw))
@@ -94,6 +97,26 @@ export function SettingsPanel({ open, fx, onSaveRate, onClose }: Props) {
           <p className="settings-help warn">환율은 참고용입니다. 출발 전 최신 환율로 갱신하세요.</p>
         </section>
 
+        {builtinTotal > 0 && (
+          <section className="settings-section">
+            <h3>내장 첨부 잠금</h3>
+            <p className="settings-help">
+              티켓·바우처 {builtinTotal}개는 앱에 함께 들어 있어 어느 기기에서 열어도 보입니다.
+              암호로 잠겨 있어 사이트 주소만으로는 열 수 없습니다.
+            </p>
+            {unlocked ? (
+              <div className="settings-actions">
+                <span className="settings-help">🔓 이 기기에서는 열려 있습니다.</span>
+                <button className="btn btn-ghost" onClick={lock}>
+                  이 기기에서 잠그기
+                </button>
+              </div>
+            ) : (
+              <AttachmentLock total={builtinTotal} />
+            )}
+          </section>
+        )}
+
         <section className="settings-section">
           <h3>백업 / 가져오기</h3>
           <p className="settings-help">
@@ -107,10 +130,11 @@ export function SettingsPanel({ open, fx, onSaveRate, onClose }: Props) {
             <button className="btn btn-ghost" onClick={() => fileRef.current?.click()} disabled={busy}>
               백업 가져오기
             </button>
+            {/* accept 를 걸면 폰 파일 선택창에서 백업 JSON 이 회색으로 잠겨 못 고르는 일이 있어
+                형식 제한은 두지 않고 parseBackupFile 에서 내용으로 검사한다. */}
             <input
               ref={fileRef}
               type="file"
-              accept="application/json"
               hidden
               onChange={(e) => importBackup(e.target.files?.[0])}
             />

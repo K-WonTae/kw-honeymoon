@@ -1,7 +1,14 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Trip } from '../types/trip'
-import type { AttachmentMeta, UserDataApi } from '../hooks/useUserData'
-import { deleteBlob, getBlob } from '../lib/attachments'
+import type { UserDataApi } from '../hooks/useUserData'
+import { deleteBlob } from '../lib/attachments'
+import {
+  loadAttachmentBlob,
+  mergeAttachments,
+  useAttachmentLock,
+  type AnyAttachmentMeta,
+} from '../lib/builtinAttachments'
+import { AttachmentLock } from './AttachmentLock'
 import { AttachmentViewer, useAttachmentViewer } from './AttachmentViewer'
 
 interface Props {
@@ -18,7 +25,7 @@ interface AttachmentEntry {
   itemId: string
   itemTitle: string
   time: string
-  meta: AttachmentMeta
+  meta: AnyAttachmentMeta
 }
 
 function iconFor(type: string): string {
@@ -38,10 +45,12 @@ function itemTime(startTime: string, endTime?: string): string {
 }
 
 export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
+  const { unlocked, total: builtinTotal } = useAttachmentLock()
+
   const entries = useMemo<AttachmentEntry[]>(() => {
     return trip.days.flatMap((day) =>
       day.items.flatMap((item) =>
-        user.getAttachments(item.id).map((meta) => ({
+        mergeAttachments(item.id, user.getAttachments(item.id)).map((meta) => ({
           day: day.day,
           date: day.date,
           weekday: day.weekday,
@@ -53,7 +62,8 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
         })),
       ),
     )
-  }, [trip, user])
+    // unlocked: 암호가 풀리면 내장 첨부가 목록에 합류한다
+  }, [trip, user, unlocked])
 
   const [thumbs, setThumbs] = useState<Record<string, string>>({})
   const attachmentKey = entries.map((entry) => entry.meta.id).join(',')
@@ -66,7 +76,7 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
       for (const entry of entries) {
         const meta = entry.meta
         if (!meta.type.startsWith('image/')) continue
-        const blob = await getBlob(meta.id)
+        const blob = await loadAttachmentBlob(meta)
         if (cancelled) break
         if (blob) {
           const url = URL.createObjectURL(blob)
@@ -86,9 +96,9 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
   // 보기는 앱 안 뷰어로 (새 탭은 팝업 차단·PWA·모바일에서 안 열림)
   const { viewing, view, closeViewer } = useAttachmentViewer(thumbs)
 
-  async function downloadBlob(meta: AttachmentMeta) {
+  async function downloadBlob(meta: AnyAttachmentMeta) {
     const cached = thumbs[meta.id]
-    const blob = cached ? null : await getBlob(meta.id)
+    const blob = cached ? null : await loadAttachmentBlob(meta)
     const url = cached ?? (blob ? URL.createObjectURL(blob) : null)
     if (!url) {
       alert('파일을 찾을 수 없습니다.')
@@ -130,7 +140,9 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
         </p>
       </div>
 
-      {grouped.length === 0 ? (
+      {!unlocked && builtinTotal > 0 && <AttachmentLock total={builtinTotal} />}
+
+      {grouped.length === 0 && (unlocked || builtinTotal === 0) ? (
         <div className="attachment-empty-state">
           <strong>아직 올린 첨부파일이 없습니다.</strong>
           <span>각 일정 카드의 메모 버튼을 열어 티켓, 바우처, QR, PDF를 추가해두면 여기서 모아볼 수 있습니다.</span>
@@ -194,14 +206,16 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
                       >
                         일정
                       </button>
-                      <button
-                        type="button"
-                        className="attach-btn danger"
-                        onClick={() => onRemove(entry)}
-                        title="삭제"
-                      >
-                        삭제
-                      </button>
+                      {!entry.meta.builtin && (
+                        <button
+                          type="button"
+                          className="attach-btn danger"
+                          onClick={() => onRemove(entry)}
+                          title="삭제"
+                        >
+                          삭제
+                        </button>
+                      )}
                     </div>
                   </article>
                 ))}

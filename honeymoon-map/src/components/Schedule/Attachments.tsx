@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import type { AttachmentMeta, UserDataApi } from '../../hooks/useUserData'
-import { deleteBlob, getBlob, putBlob } from '../../lib/attachments'
+import type { UserDataApi } from '../../hooks/useUserData'
+import { deleteBlob, putBlob } from '../../lib/attachments'
+import {
+  loadAttachmentBlob,
+  mergeAttachments,
+  useAttachmentLock,
+  type AnyAttachmentMeta,
+} from '../../lib/builtinAttachments'
 import { AttachmentViewer, useAttachmentViewer } from '../AttachmentViewer'
 
 interface Props {
@@ -22,7 +28,9 @@ function fmtSize(bytes: number): string {
 
 /** 항목별 첨부파일: 업로드(이미지/PDF) → 썸네일·보기·다운로드·삭제. 바이너리는 IndexedDB 영속화. */
 export function Attachments({ itemId, user }: Props) {
-  const metas = user.getAttachments(itemId)
+  const { unlocked, total: builtinTotal } = useAttachmentLock()
+  // 내장 첨부(암호 풀렸을 때) + 이 기기에서 올린 첨부
+  const metas = mergeAttachments(itemId, user.getAttachments(itemId))
   const fileRef = useRef<HTMLInputElement>(null)
   const [thumbs, setThumbs] = useState<Record<string, string>>({})
   const [busy, setBusy] = useState(false)
@@ -37,7 +45,7 @@ export function Attachments({ itemId, user }: Props) {
       const next: Record<string, string> = {}
       for (const m of metas) {
         if (!m.type.startsWith('image/')) continue
-        const blob = await getBlob(m.id)
+        const blob = await loadAttachmentBlob(m)
         if (cancelled) break
         if (blob) {
           const url = URL.createObjectURL(blob)
@@ -82,9 +90,9 @@ export function Attachments({ itemId, user }: Props) {
   // 보기는 앱 안 뷰어로 (새 탭은 팝업 차단·PWA·모바일에서 안 열림)
   const { viewing, view, closeViewer } = useAttachmentViewer(thumbs)
 
-  async function downloadBlob(m: AttachmentMeta) {
+  async function downloadBlob(m: AnyAttachmentMeta) {
     const cached = thumbs[m.id]
-    const blob = cached ? null : await getBlob(m.id)
+    const blob = cached ? null : await loadAttachmentBlob(m)
     const url = cached ?? (blob ? URL.createObjectURL(blob) : null)
     if (!url) {
       alert('파일을 찾을 수 없습니다.')
@@ -99,7 +107,7 @@ export function Attachments({ itemId, user }: Props) {
     if (!cached) window.setTimeout(() => URL.revokeObjectURL(url), 8000)
   }
 
-  async function onRemove(m: AttachmentMeta) {
+  async function onRemove(m: AnyAttachmentMeta) {
     try {
       await deleteBlob(m.id)
     } catch {
@@ -130,6 +138,13 @@ export function Attachments({ itemId, user }: Props) {
         />
       </div>
 
+      {!unlocked && builtinTotal > 0 && (
+        <p className="attach-locked-hint">
+          🔒 내장 티켓·바우처 {builtinTotal}개가 잠겨 있습니다 — 「📎 첨부」 탭에서 암호를 한 번
+          입력하면 여기에도 나타납니다.
+        </p>
+      )}
+
       {metas.length > 0 ? (
         <ul className="attach-list">
           {metas.map((m) => (
@@ -156,14 +171,16 @@ export function Attachments({ itemId, user }: Props) {
               >
                 ⬇
               </button>
-              <button
-                type="button"
-                className="attach-btn danger"
-                onClick={() => onRemove(m)}
-                title="삭제"
-              >
-                ✕
-              </button>
+              {!m.builtin && (
+                <button
+                  type="button"
+                  className="attach-btn danger"
+                  onClick={() => onRemove(m)}
+                  title="삭제"
+                >
+                  ✕
+                </button>
+              )}
             </li>
           ))}
         </ul>

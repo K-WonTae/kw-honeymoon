@@ -2375,3 +2375,53 @@ code {
     print-color-adjust: exact !important;
   }
 }
+
+/* ── 내장 첨부 잠금 ───────────────────────────────────── */
+.attach-lock {
+  margin: 12px 0;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-soft, rgba(0, 0, 0, 0.03));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.attach-lock-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.attach-lock-main strong {
+  font-size: 0.92rem;
+}
+.attach-lock-main span {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.attach-lock-row {
+  display: flex;
+  gap: 8px;
+}
+.attach-lock-input {
+  flex: 1;
+  min-width: 0;
+  padding: 9px 11px;
+  font-size: 1rem; /* 16px 미만이면 iOS 가 입력 시 화면을 확대한다 */
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface, #fff);
+  color: inherit;
+}
+.attach-lock-error {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--danger, #c0392b);
+}
+.attach-locked-hint {
+  margin: 8px 0 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.45;
+}

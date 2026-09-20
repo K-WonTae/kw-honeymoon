@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { AttachmentMeta } from '../hooks/useUserData'
-import { getBlob } from '../lib/attachments'
+import { loadAttachmentBlob, type AnyAttachmentMeta } from '../lib/builtinAttachments'
 
 // 첨부 「보기」는 새 탭(window.open + blob: URL)에 기대지 않고 앱 안에서 바로 띄운다.
 // 팝업 차단·설치형(PWA) 창·모바일 브라우저에서 새 탭 방식은 열리지 않거나 빈 화면이 되기 때문.
@@ -12,18 +12,18 @@ interface Viewing {
   owned: boolean
 }
 
-/** 보기 상태 관리. thumbs 에 이미 object URL 이 있으면 재사용하고, 없으면 IndexedDB 에서 꺼내 만든다. */
+/** 보기 상태 관리. thumbs 에 이미 object URL 이 있으면 재사용하고, 없으면 원본(IndexedDB·내장)에서 꺼내 만든다. */
 export function useAttachmentViewer(thumbs: Record<string, string>) {
   const [viewing, setViewing] = useState<Viewing | null>(null)
 
   const view = useCallback(
-    async (meta: AttachmentMeta) => {
+    async (meta: AnyAttachmentMeta) => {
       const cached = thumbs[meta.id]
       if (cached) {
         setViewing({ meta, url: cached, owned: false })
         return
       }
-      const blob = await getBlob(meta.id)
+      const blob = await loadAttachmentBlob(meta)
       if (!blob) {
         alert('파일을 찾을 수 없습니다.')
         return
