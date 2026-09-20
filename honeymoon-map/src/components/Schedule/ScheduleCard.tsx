@@ -10,6 +10,7 @@ import { formatDistance, formatDuration } from '../../lib/routes'
 import type { FxSetting } from '../../lib/money'
 import { eurToKrwText } from '../../lib/money'
 import type { UserDataApi } from '../../hooks/useUserData'
+import { mergeAttachments, useAttachmentLock } from '../../lib/builtinAttachments'
 import { Attachments } from './Attachments'
 
 interface Props {
@@ -61,7 +62,10 @@ export function ScheduleCard({
 
   const timeLabel = item.endTime ? `${item.startTime}–${item.endTime}` : item.startTime
 
-  const attachments = user.getAttachments(item.id)
+  // 첨부 = 배포에 내장된 것(암호 풀렸을 때) + 이 기기에서 올린 것.
+  // 잠금이 풀리면 다시 그려서 빨간 점이 폰에서도 뜨게 한다 (기억한 암호로 자동 해제도 여기서 시작).
+  useAttachmentLock()
+  const attachments = mergeAttachments(item.id, user.getAttachments(item.id))
   const hasMemo = !!memo || checklist.length > 0 || attachments.length > 0
   const num = point?.markerNumber ?? markerNumber
 

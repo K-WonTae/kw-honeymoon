@@ -171,17 +171,23 @@ export function lock() {
   notify()
 }
 
-/** 앱 시작 시 기억해둔 암호로 자동 해제 (실패하면 조용히 잠긴 채로 둔다) */
-export async function tryAutoUnlock(): Promise<boolean> {
-  if (isUnlocked()) return true
+/** 앱 시작 시 기억해둔 암호로 자동 해제 (실패하면 조용히 잠긴 채로 둔다).
+ *  일정 카드마다 호출돼도 PBKDF2 는 한 번만 돌도록 진행 중인 약속을 공유한다. */
+let autoUnlocking: Promise<boolean> | null = null
+export function tryAutoUnlock(): Promise<boolean> {
+  if (isUnlocked()) return Promise.resolve(true)
+  if (autoUnlocking) return autoUnlocking
   let saved: string | null = null
   try {
     saved = localStorage.getItem(PW_STORAGE_KEY)
   } catch {
-    return false
+    return Promise.resolve(false)
   }
-  if (!saved) return false
-  return unlock(saved, false)
+  if (!saved) return Promise.resolve(false)
+  autoUnlocking = unlock(saved, false).finally(() => {
+    autoUnlocking = null
+  })
+  return autoUnlocking
 }
 
 /** 내장 첨부 1개를 내려받아 복호화한다. 잠겨 있으면 null. */
