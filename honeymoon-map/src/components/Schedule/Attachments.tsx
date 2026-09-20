@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { AttachmentMeta, UserDataApi } from '../../hooks/useUserData'
 import { deleteBlob, getBlob, putBlob } from '../../lib/attachments'
+import { AttachmentViewer, useAttachmentViewer } from '../AttachmentViewer'
 
 interface Props {
   itemId: string
@@ -78,7 +79,10 @@ export function Attachments({ itemId, user }: Props) {
     if (fileRef.current) fileRef.current.value = ''
   }
 
-  async function openBlob(m: AttachmentMeta, download: boolean) {
+  // 보기는 앱 안 뷰어로 (새 탭은 팝업 차단·PWA·모바일에서 안 열림)
+  const { viewing, view, closeViewer } = useAttachmentViewer(thumbs)
+
+  async function downloadBlob(m: AttachmentMeta) {
     const cached = thumbs[m.id]
     const blob = cached ? null : await getBlob(m.id)
     const url = cached ?? (blob ? URL.createObjectURL(blob) : null)
@@ -86,16 +90,12 @@ export function Attachments({ itemId, user }: Props) {
       alert('파일을 찾을 수 없습니다.')
       return
     }
-    if (download) {
-      const a = document.createElement('a')
-      a.href = url
-      a.download = m.name
-      document.body.appendChild(a)
-      a.click()
-      a.remove()
-    } else {
-      window.open(url, '_blank', 'noopener')
-    }
+    const a = document.createElement('a')
+    a.href = url
+    a.download = m.name
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
     if (!cached) window.setTimeout(() => URL.revokeObjectURL(url), 8000)
   }
 
@@ -145,13 +145,13 @@ export function Attachments({ itemId, user }: Props) {
                 {m.name}
               </span>
               <span className="attach-size">{fmtSize(m.size)}</span>
-              <button type="button" className="attach-btn" onClick={() => openBlob(m, false)}>
+              <button type="button" className="attach-btn" onClick={() => view(m)}>
                 보기
               </button>
               <button
                 type="button"
                 className="attach-btn"
-                onClick={() => openBlob(m, true)}
+                onClick={() => downloadBlob(m)}
                 title="다운로드"
               >
                 ⬇
@@ -170,6 +170,8 @@ export function Attachments({ itemId, user }: Props) {
       ) : (
         <p className="attach-empty">예매 티켓·바우처 QR·PDF를 올려두면 현장에서 바로 열어볼 수 있어요.</p>
       )}
+
+      {viewing && <AttachmentViewer meta={viewing.meta} url={viewing.url} onClose={closeViewer} />}
     </div>
   )
 }

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import type { Trip } from '../types/trip'
 import type { AttachmentMeta, UserDataApi } from '../hooks/useUserData'
 import { deleteBlob, getBlob } from '../lib/attachments'
+import { AttachmentViewer, useAttachmentViewer } from './AttachmentViewer'
 
 interface Props {
   trip: Trip
@@ -82,7 +83,10 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [attachmentKey])
 
-  async function openBlob(meta: AttachmentMeta, download: boolean) {
+  // 보기는 앱 안 뷰어로 (새 탭은 팝업 차단·PWA·모바일에서 안 열림)
+  const { viewing, view, closeViewer } = useAttachmentViewer(thumbs)
+
+  async function downloadBlob(meta: AttachmentMeta) {
     const cached = thumbs[meta.id]
     const blob = cached ? null : await getBlob(meta.id)
     const url = cached ?? (blob ? URL.createObjectURL(blob) : null)
@@ -90,16 +94,12 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
       alert('파일을 찾을 수 없습니다.')
       return
     }
-    if (download) {
-      const a = document.createElement('a')
-      a.href = url
-      a.download = meta.name
-      document.body.appendChild(a)
-      a.click()
-      a.remove()
-    } else {
-      window.open(url, '_blank', 'noopener')
-    }
+    const a = document.createElement('a')
+    a.href = url
+    a.download = meta.name
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
     if (!cached) window.setTimeout(() => URL.revokeObjectURL(url), 8000)
   }
 
@@ -176,13 +176,13 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
                     </div>
 
                     <div className="attachment-file-actions">
-                      <button type="button" className="attach-btn" onClick={() => openBlob(entry.meta, false)}>
+                      <button type="button" className="attach-btn" onClick={() => view(entry.meta)}>
                         보기
                       </button>
                       <button
                         type="button"
                         className="attach-btn"
-                        onClick={() => openBlob(entry.meta, true)}
+                        onClick={() => downloadBlob(entry.meta)}
                         title="다운로드"
                       >
                         저장
@@ -210,6 +210,8 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
           ))}
         </div>
       )}
+
+      {viewing && <AttachmentViewer meta={viewing.meta} url={viewing.url} onClose={closeViewer} />}
     </div>
   )
 }
