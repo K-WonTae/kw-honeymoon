@@ -143,7 +143,7 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
             </li>
             <li>
               <strong>카드로 충분한 곳</strong> — 호텔·기차(Frecciarossa/Italo)·가이드투어 투어비(마이리얼트립
-              결제분)·박물관 사전예매·대부분의 식당(Armando는 카드 보증 필수)·짐보관·면세점.
+              결제분)·박물관 사전예매·대부분의 식당·짐보관·면세점.
             </li>
             <li>
               지폐는 <strong>€20·€10 위주</strong>로 받으세요. €100·€200권은 택시·소상공인이 거부합니다.
