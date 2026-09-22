@@ -6,6 +6,8 @@ import { CopyButton } from '../CopyButton'
 interface Props {
   reservations: Reservation[]
   user: UserDataApi
+  /** true 면 제목·바깥 section 없이 목록만 — DayBrief 접이식 안에 넣을 때 */
+  embedded?: boolean
 }
 
 const MEAL_LABEL: Record<string, string> = {
@@ -15,11 +17,9 @@ const MEAL_LABEL: Record<string, string> = {
 }
 
 /** 예약 멘트 박스: EN/IT 복사 버튼 + 예약 필요도/시점 */
-export function ReservationBox({ reservations, user }: Props) {
+export function ReservationBox({ reservations, user, embedded = false }: Props) {
   if (!reservations.length) return null
-  return (
-    <section className="reservation-section">
-      <h3 className="section-title">📒 예약 & 멘트</h3>
+  const list = (
       <div className="reservation-list">
         {reservations.map((r) => {
           const meta = RESERVATION_META[r.reservationLevel]
@@ -103,6 +103,12 @@ export function ReservationBox({ reservations, user }: Props) {
           )
         })}
       </div>
+  )
+  if (embedded) return list
+  return (
+    <section className="reservation-section">
+      <h3 className="section-title">📒 예약 & 멘트</h3>
+      {list}
     </section>
   )
 }

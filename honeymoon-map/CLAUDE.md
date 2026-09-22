@@ -64,7 +64,8 @@ https://www.google.com/maps/dir/?api=1&destination={lat,lng | 인코딩 주소}
 
 - `완벽가이드/D* … 완벽 가이드.md` 는 **타임라인만 `items[]` 로**, 나머지(투어 정보·확인 목록·변동 대응표·
   이동수단·상세·예산·꿀팁·이탈리아어·체크리스트·출처)는 **전부 `DayPlan.guide.sections[]`** 에 넣습니다.
-  일정 탭에서 일정 카드 외의 모든 안내는 `DayBrief`(주의·비용·현금·숙소·📖 가이드) 한 곳에만 둡니다.
+  일정 탭에서 일정 카드 외의 모든 안내는 `DayBrief`(주의·비용·현금·숙소·📒 예약&멘트·📖 가이드) 한 곳에만
+  둡니다. 예약&멘트(`ReservationBox embedded`)는 가이드가 없는 날에도 모든 날에 접이식 한 칸으로 들어갑니다.
 - `GuideSection { id, icon, title, summary, blocks[] }` · `GuideBlock { title?, paragraphs?, bullets?, checklist?, table? }`.
   표는 `columns` 길이와 모든 `rows[i]` 길이가 같아야 하고, 문장 안의 `[텍스트](url)`·`**굵게**` 만 렌더됩니다.
   원문의 인라인 「([출처](url))」 표기는 본문에서 빼고 `sources` 섹션에 링크로 모읍니다.

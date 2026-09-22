@@ -3,7 +3,6 @@ import type { DayPlan, MappablePoint, RouteSummary, TransportMode } from '../../
 import type { UserDataApi } from '../../hooks/useUserData'
 import type { FxSetting } from '../../lib/money'
 import { DayBrief } from './DayBrief'
-import { ReservationBox } from './ReservationBox'
 import { ScheduleCard } from './ScheduleCard'
 
 export interface LegSelection {
@@ -71,8 +70,8 @@ export function ScheduleList({
 
   return (
     <div className="schedule" ref={listRef}>
-      {/* 주의사항·비용·현금·숙소 — 접힌 한 줄로 시작, Day 가 바뀌면 다시 접힘 */}
-      <DayBrief key={day.day} day={day} fx={fx} />
+      {/* 주의사항·비용·현금·숙소·예약&멘트·가이드 — 일정 카드 밖의 모든 안내. 접힌 한 줄로 시작, Day 가 바뀌면 다시 접힘 */}
+      <DayBrief key={day.day} day={day} fx={fx} user={user} />
 
       <div className="card-list">
         {day.items.map((item) => (
@@ -93,8 +92,6 @@ export function ScheduleList({
           />
         ))}
       </div>
-
-      <ReservationBox reservations={day.reservations} user={user} />
     </div>
   )
 }

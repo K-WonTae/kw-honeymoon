@@ -623,6 +623,26 @@ code {
   background: var(--accent-50);
   color: var(--accent-700);
 }
+.brief-chip.res {
+  background: var(--success-50);
+  color: #15803d;
+}
+.brief-chip.res.pending {
+  background: var(--warn-50);
+  color: #b45309;
+}
+/* 예약&멘트 — 가이드 섹션과 같은 접이식 한 칸, 단독 상자 */
+.res-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.res-panel .reservation-box {
+  padding: 11px;
+  box-shadow: none;
+}
 .cash-line-ratio {
   margin-left: 6px;
   font-weight: 700;
