@@ -49,29 +49,70 @@ export function useRouteSummary(
       return
     }
 
+    function summarize(legs: RouteLeg[]): RouteSummary {
+      const counted = legs.filter((l) => !l.excluded)
+      return {
+        legs,
+        totalDistanceMeters: counted.reduce((s, l) => s + (l.distanceMeters ?? 0), 0),
+        totalDurationSeconds: counted.reduce((s, l) => s + (l.durationSeconds ?? 0), 0),
+        hasEstimate: counted.some((l) => l.estimated),
+        unavailable: false,
+      }
+    }
+
+    /** 구간의 실제 이동수단 — 고정 구간(열차·수상버스·항공)은 토글 무시, 나머지는 현재 토글(mode) */
+    function effectiveTransport(b: MappablePoint): ItemTransport {
+      const hint = b.item.transportFromPrevious
+      return hint && FIXED_TRANSPORTS.includes(hint) ? hint : mode
+    }
+
+    function flightLeg(a: MappablePoint, b: MappablePoint): RouteLeg {
+      // 항공 구간은 거리/시간 합산에서 제외 (걸어서/차로 잴 수 없음)
+      return {
+        fromId: a.item.id,
+        toId: b.item.id,
+        mode: 'transit',
+        transport: 'flight',
+        distanceMeters: null,
+        durationSeconds: null,
+        estimated: false,
+        excluded: true,
+      }
+    }
+
+    // Day 를 바꾸면 Routes API 응답을 기다리는 동안 이전 Day 의 합계가 그대로 남아
+    // "피렌체 도보 날에 43km" 처럼 보였다 → 먼저 직선거리 추정으로 채워 두고 API 결과로 바꾼다.
+    setSummary(
+      summarize(
+        points.slice(0, -1).map((a, i) => {
+          const b = points[i + 1]
+          if (b.item.transportFromPrevious === 'flight') return flightLeg(a, b)
+          const effective = effectiveTransport(b)
+          const est = estimateLeg({ lat: a.lat, lng: a.lng }, { lat: b.lat, lng: b.lng }, effective)
+          return {
+            fromId: a.item.id,
+            toId: b.item.id,
+            mode: toTravelMode(effective),
+            transport: effective,
+            distanceMeters: est.distanceMeters,
+            durationSeconds: est.durationSeconds,
+            estimated: true,
+            excluded: false,
+          }
+        }),
+      ),
+    )
+
     async function run() {
       const legs: RouteLeg[] = []
       for (let i = 0; i < points.length - 1; i++) {
         const a = points[i]
         const b = points[i + 1]
         const hint = b.item.transportFromPrevious
-        // 고정 구간(열차·수상버스·항공)은 토글 무시하고 데이터 그대로,
-        // 그 외 국지 이동(도보/택시/지하철 등)은 현재 이동수단 토글(mode)을 따른다.
-        const effective: ItemTransport =
-          hint && FIXED_TRANSPORTS.includes(hint) ? hint : mode
+        const effective = effectiveTransport(b)
 
-        // 항공 구간은 거리/시간 합산에서 제외 (걸어서/차로 잴 수 없음)
         if (hint === 'flight') {
-          legs.push({
-            fromId: a.item.id,
-            toId: b.item.id,
-            mode: 'transit',
-            transport: 'flight',
-            distanceMeters: null,
-            durationSeconds: null,
-            estimated: false,
-            excluded: true,
-          })
+          legs.push(flightLeg(a, b))
           continue
         }
 
@@ -104,17 +145,7 @@ export function useRouteSummary(
       }
 
       if (cancelled) return
-
-      const counted = legs.filter((l) => !l.excluded)
-      const totalDistanceMeters = counted.reduce((s, l) => s + (l.distanceMeters ?? 0), 0)
-      const totalDurationSeconds = counted.reduce((s, l) => s + (l.durationSeconds ?? 0), 0)
-      setSummary({
-        legs,
-        totalDistanceMeters,
-        totalDurationSeconds,
-        hasEstimate: counted.some((l) => l.estimated),
-        unavailable: false,
-      })
+      setSummary(summarize(legs))
     }
 
     run()

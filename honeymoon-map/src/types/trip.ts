@@ -65,6 +65,43 @@ export interface Reservation {
   note?: string
 }
 
+/** 완벽 가이드의 표 — 열 이름 + 행 (행 길이는 열 개수와 같아야 한다) */
+export interface GuideTable {
+  columns: string[]
+  rows: string[][]
+}
+
+/**
+ * 가이드 섹션 안의 한 덩어리. 소제목 아래에 문단·불릿·체크리스트·표 중 있는 것만 순서대로 그린다.
+ * 문자열 안의 `[텍스트](url)` 은 링크로, `**굵게**` 는 강조로 렌더된다.
+ */
+export interface GuideBlock {
+  title?: string
+  paragraphs?: string[]
+  bullets?: string[]
+  /** 체크 상태는 기기별 localStorage(honeymoon:guidecheck:v1)에 저장 */
+  checklist?: string[]
+  table?: GuideTable
+}
+
+/** 완벽 가이드의 큰 섹션 — 일정 위 접이식 요약 안에서 아코디언 한 칸 */
+export interface GuideSection {
+  /** 그 날 안에서 유일. 체크리스트 저장 키에도 쓴다 (예: "transport") */
+  id: string
+  icon: string
+  title: string // "이동수단 총정리"
+  /** 접힌 상태에서 제목 옆에 보이는 한 줄 요약 */
+  summary?: string
+  blocks: GuideBlock[]
+}
+
+/** 완벽가이드/*.md 를 그대로 옮긴 것 — 타임라인은 items 로, 나머지 전부가 여기 */
+export interface DayGuide {
+  /** 원문 파일·작성일 */
+  source?: string
+  sections: GuideSection[]
+}
+
 export interface DayPlan {
   day: number // 1~9
   date: string // "2026-10-20"
@@ -81,6 +118,8 @@ export interface DayPlan {
   alerts: string[] // 경고 카드 문구
   items: ScheduleItem[]
   reservations: Reservation[]
+  /** 완벽 가이드 (있으면 일정 위 접이식 요약 안에 섹션별 아코디언으로 표시) */
+  guide?: DayGuide
 }
 
 /** 식당 공통 가이드(날짜 비종속). 식당 탭 하단에 렌더 — 참고문서(식당 가이드) 반영 */

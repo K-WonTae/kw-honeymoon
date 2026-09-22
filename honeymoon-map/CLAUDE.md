@@ -60,6 +60,20 @@ https://www.google.com/maps/dir/?api=1&destination={lat,lng | 인코딩 주소}
    `cashForTwo >= 100`이면 UI가 자동으로 주황 경고색으로 승격합니다.
 5. 타입이 맞는지 `npm run build`(= `tsc -b && vite build`)로 확인.
 
+## 완벽 가이드 — `guide` (일정 위 접이식 요약 안)
+
+- `완벽가이드/D* … 완벽 가이드.md` 는 **타임라인만 `items[]` 로**, 나머지(투어 정보·확인 목록·변동 대응표·
+  이동수단·상세·예산·꿀팁·이탈리아어·체크리스트·출처)는 **전부 `DayPlan.guide.sections[]`** 에 넣습니다.
+  일정 탭에서 일정 카드 외의 모든 안내는 `DayBrief`(주의·비용·현금·숙소·📖 가이드) 한 곳에만 둡니다.
+- `GuideSection { id, icon, title, summary, blocks[] }` · `GuideBlock { title?, paragraphs?, bullets?, checklist?, table? }`.
+  표는 `columns` 길이와 모든 `rows[i]` 길이가 같아야 하고, 문장 안의 `[텍스트](url)`·`**굵게**` 만 렌더됩니다.
+  원문의 인라인 「([출처](url))」 표기는 본문에서 빼고 `sources` 섹션에 링크로 모읍니다.
+- 가이드 체크리스트의 체크 상태는 `localStorage` `honeymoon:guidecheck:v1`
+  (`{day}/{sectionId}/{blockIdx}/{itemIdx}` → boolean). 섹션 `id` 를 바꾸면 체크가 초기화됩니다.
+- **item `id` 는 내장 첨부의 키**입니다(`attachments.json` 은 암호화돼 있어 재패킹 없이는 못 고침).
+  현재 첨부가 걸린 id: `D1-01 D1-19 D4-08 D5-22 D6-07 D7-18 D9-02`. 일정을 재구성할 때 이 id 의
+  의미(D4-08 = 피렌체 호텔 도착, D5-22 = La Giostra)가 유지되게 항목을 합치거나 나눕니다.
+
 ## 충돌 시 우선순위 (지시서 §10)
 
 - **모델·범위**: 지시서_00 → **기능 동작**: `개발.md` → **데이터 값·문구·금액**: `참고문서.md`.
