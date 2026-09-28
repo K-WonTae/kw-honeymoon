@@ -4283,143 +4283,2367 @@
       "date": "2026-10-24",
       "weekday": "토",
       "city": "Florence → Venice/Mestre",
-      "title": "오전 피렌체→베네치아 + 부라노 스냅(골든아워) · 카나레지오 저녁",
+      "title": "피렌체→메스트레 + 부라노 스냅 16:00(60분·골든아워) · 카나레지오 산책 · Alla Fontana 저녁",
       "hotel": "BW Plus Hotel Bologna (Mestre)",
       "defaultTransportMode": "transit",
-      "estimatedCostForTwo": 200,
-      "cashForTwo": 90,
-      "cashNote": "부라노 스냅 작가 잔금(현지 정산이면 현금 — 출발 전 결제 방식 확인 필수) · 바포레토 12번 왕복 자판기 · 부라노 레이스 상점(가족 가게라 카드 거부 잦음) · 메스트레역 근처 간단 점심.",
+      "estimatedCostForTwo": 170,
+      "cashForTwo": 80,
+      "cashNote": "현금 €60~80을 부라노 크로스백에 — 카페 화장실용 음료·bussolà·레이스 상점 같은 소액. Daily Pass(€25×2)·역 앞 점심·Alla Fontana(2인 €70~90)는 카드. 스냅은 마이리얼트립 상품(100,000원~)이라 현지 추가 정산이 있는지 예약 내역에서 확인.",
       "alerts": [
-        "🎫 예매 완료 — Firenze S. M. Novella 10:20 → Venezia Mestre 12:23 (직통). Trenitalia 앱 'My Journeys'에 티켓 있음.",
-        "베네치아는 Mestre 하차! 본섬 산타루치아역까지 가지 말 것 (호텔이 Mestre).",
-        "B&B Laurus 체크아웃 12:00 엄수 — 일찍 출발.",
-        "부라노 스냅 촬영(베네베네스냅): 작가 미팅 15:30(확정 예약, 지각 불가) · 토요일 일몰 약 18:15라 빛 충분. 미팅 장소(부라노 'C' 선착장)·시간 사전 확정.",
-        "★ 미팅 버퍼: Vaporetto 12번(부라노行)은 약 30분 간격 — F.te Nove에서 14:40 편 승선 목표(놓치면 15:10라 아슬아슬). 시간표 미리 캡처, 1일권 €25/인 권장(Mestre↔S.Lucia 기차는 별도 €1.55/인). 기차가 늦으면 점심은 착석 대신 파니니 테이크아웃으로 빠르게 — 미팅 시간 사수 우선.",
-        "저녁은 산마르코까지 안 가고 카나레지오(역 근처)에서 — Alla Fontana 또는 Bar Pontini로 가볍게 후 일찍 귀가. 컨디션 밸브: 부라노 레이스 상점 구경(16:45)·카나레지오 야경 산책은 빛·체력 상황 봐서 줄이기."
+        "⏰ 이날 고정은 두 개뿐 — 10:20 Frecciarossa(예매 완료, 12:23 Venezia Mestre 하차)와 19:15 Alla Fontana 저녁. 유일한 마감은 스냅 시작 10분 전 부라노 'C' 선착장 도착(15:50) — 늦으면 촬영 시간이 깎이고 연장 없음.",
+        "📸 부라노 스냅(마이리얼트립 '베네베네스냅' 1시간) 16:00 시작은 작가 확정 필요 — 미팅=촬영 시작인지, 우천 방침, 강풍·안개 때 본섬 대체, 당일 왓츠앱·전화를 문자로 못 박기. 10/4까지 정하면 취소 공제 10%. 시각이 15:30·16:30으로 정해지면 📖 가이드 '스냅 시각 변형표'대로 밀거나 당김.",
+        "🚤 배를 놓치면 다음 배를 알아보기 전에 작가에게 먼저 문자. 12번선은 F.te Nove :00·:20·:40 출발, 부라노 C까지 41분(2026-04-22 시행 시간표). 동계 시간표(30분 간격)는 예년 11월 초 시작 — 10/22~23에 orari.actv.it 재확인.",
+        "🎫 Venezia Daily Pass €25/인(24시간) — 지역열차·수상버스 모두 포함, 25일 오전까지 이어 씀. 14:10 시작 → 25일 13:10 만료(서머타임 종료 뒤 현지 시각). 2인 약 €16 절약. 수상버스는 탈 때마다 선착장 입구 개찰기에 태그.",
+        "🏨 BW Plus Hotel Bologna(Via Piave 214, 역 앞 2분) — 아고다 확정서 기준 조식 미포함(포함 서비스는 무료 Wi-Fi뿐), 도시세는 현장 결제. 얼리 체크인 요청 메일(도착 12:35, 사유: 촬영 준비) — 안 되면 로비 화장실 환복 20분이라 촬영복 파우치는 캐리어 맨 위.",
+        "🌅 일몰 18:13 전후, 골든아워 17:15부터 — 17:32 배에서 석호 위 일몰. 서머타임은 25일 03:00에 끝나므로 이날 밤까지 시계 그대로. 10월 말 석호 바람은 부산 겨울 바닷바람 수준 — 겉옷 한 벌, 걷는 거리 6~7 km.",
+        "👗 부라노는 집마다 원색이라 옷은 흰색·크림·베이지·네이비 단색. 이동용 운동화와 촬영용 구두 분리(골목 바닥은 돌, 운하 가장자리 난간 없음). 크로스백: 여권 사본·카드 1장·현금 €60~80·보조배터리·립·미니 빗·물티슈·반창고·헤어 스프레이·핀.",
+        "🍝 Trattoria Alla Fontana 19:15 2인 + 운하 야외석 예약(041 715077 또는 trattoriaallafontana.shop) — 토요일 19시는 예약 없으면 돌아가는 경우가 많음. 늦으면 도착 20분 전 전화."
       ],
       "items": [
-        { "id": "D6-01", "sequence": 1, "startTime": "07:30", "endTime": "08:00", "title": "기상·준비·짐 정리", "mappable": false },
-        { "id": "D6-02", "sequence": 2, "startTime": "08:00", "endTime": "09:00", "title": "호텔 조식 (마지막 피렌체)", "mappable": true, "type": "hotel", "placeName": "B&B Hotel Firenze Laurus al Duomo", "placeId": "ChIJl2RFCQJUKhMR49JBM4bY2tA", "lat": null, "lng": null },
-        { "id": "D6-03", "sequence": 3, "startTime": "09:00", "endTime": "09:30", "title": "체크아웃", "note": "12:00 엄수 · 일찍 출발", "mappable": true, "type": "hotel", "placeName": "B&B Hotel Firenze Laurus al Duomo", "placeId": "ChIJl2RFCQJUKhMR49JBM4bY2tA", "lat": null, "lng": null },
-        { "id": "D6-04", "sequence": 4, "startTime": "09:30", "endTime": "10:20", "title": "산타 마리아 노벨라역 도보 9분", "note": "역 도착·플랫폼 대기", "mappable": true, "type": "station", "placeName": "Firenze Santa Maria Novella", "placeId": "ChIJk_t4QpFWKhMRFdiSiZZjCqg", "lat": 43.7753392, "lng": 11.2476522, "transportFromPrevious": "walking" },
-        { "id": "D6-05", "sequence": 5, "startTime": "10:20", "endTime": "12:23", "title": "Frecciarossa 출발 → 베네치아 (2h 3m)", "note": "🎫 예매 완료 (10:20 → 12:23 직통)", "mappable": false, "transportFromPrevious": "train" },
-        { "id": "D6-06", "sequence": 6, "startTime": "12:23", "endTime": "12:40", "title": "베네치아 메스트레 하차", "note": "본섬 가기 전 정차 — 여기서 하차!", "mappable": true, "type": "station", "placeName": "Stazione di Venezia Mestre, Viale Stazione, 30171 Venezia", "placeId": "ChIJj4rg9iS0fkcRlo4qoF69ajY", "lat": 45.4824787, "lng": 12.2317675, "transportFromPrevious": "train" },
-        { "id": "D6-07", "sequence": 7, "startTime": "12:40", "endTime": "12:55", "title": "BW Plus Hotel Bologna 짐 보관", "note": "짐만 맡기기 · 체크인은 저녁 귀가 후", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null, "transportFromPrevious": "walking" },
-        { "id": "D6-08", "sequence": 8, "startTime": "12:55", "endTime": "13:50", "title": "점심: 메스트레역 근처에서 가볍게·빠르게 (약 55분)", "note": "역사 안·앞 바(bar)에서 파니니+커피로 가볍게 · 15:30 스냅 촬영 전 과식 금지! · 기차 늦으면 테이크아웃 · 예: PASTA & PIZZA e non solo", "mappable": false, "transportFromPrevious": "walking", "estimatedCost": 20 },
-        { "id": "D6-09", "sequence": 9, "startTime": "13:50", "endTime": "14:10", "title": "기차 Mestre → S.Lucia (10분)", "note": "€1.55/인", "mappable": true, "type": "station", "placeName": "Venezia Santa Lucia", "placeId": "ChIJ8dEcUcexfkcRCZPKgPIBfPw", "lat": 45.4410697, "lng": 12.3210436, "transportFromPrevious": "train" },
-        { "id": "D6-10", "sequence": 10, "startTime": "14:10", "endTime": "14:40", "title": "S.Lucia → F.te Nove(폰다멘테 노베) 도보 20분", "mappable": false, "transportFromPrevious": "walking" },
-        { "id": "D6-11", "sequence": 11, "startTime": "14:40", "endTime": "15:30", "title": "Vaporetto 12번 → 부라노 (약 45분)", "note": "12번은 약 30분 간격 — 시간표 미리 캡처 · 1일권 €25/인 권장", "mappable": false, "transportFromPrevious": "vaporetto", "estimatedCost": 50 },
-        { "id": "D6-12", "sequence": 12, "startTime": "15:30", "endTime": "15:45", "title": "부라노 스냅 작가 미팅 (베네베네스냅)", "note": "부라노 'C' 선착장 앞 · 10분 전 도착", "mappable": true, "type": "tour_meeting", "placeName": "Burano, Venezia", "placeId": "ChIJpZAw91KsfkcR0hexUsNgxn0", "lat": 45.4853906, "lng": 12.4166562, "transportFromPrevious": "vaporetto" },
-        { "id": "D6-13", "sequence": 13, "startTime": "15:45", "endTime": "16:45", "title": "부라노 스냅 촬영 — 컬러풀 운하", "note": "토요일 일몰 약 18:15라 빛 충분 · 알록달록 골목 인생샷 · 스냅 패키지 별도", "mappable": false },
-        { "id": "D6-14", "sequence": 14, "startTime": "16:45", "endTime": "17:15", "title": "부라노 골목·레이스 상점 잠깐 구경", "note": "merletti(레이스) 상점", "mappable": false, "transportFromPrevious": "walking" },
-        { "id": "D6-15", "sequence": 15, "startTime": "17:15", "endTime": "18:15", "title": "Vaporetto 12번 → F.te Nove (약 45분)", "mappable": false, "transportFromPrevious": "vaporetto" },
-        { "id": "D6-16", "sequence": 16, "startTime": "18:15", "endTime": "18:45", "title": "카나레지오 운하 산책하며 역 방향으로 (약 20분)", "note": "카나레지오 운하 야경 산책", "mappable": false, "transportFromPrevious": "walking" },
-        { "id": "D6-17", "sequence": 17, "startTime": "18:45", "endTime": "20:15", "title": "저녁: Trattoria Alla Fontana (운하뷰·역 근처)", "note": "Fondamenta Cannaregio 1102 · 부라노 복귀 후 역으로 걷는 운하 산책 동선 · 매일 영업·자정 무렵 마감 · ⭐4.5 · +39 041 715077 또는 온라인 예약(trattoriaallafontana.shop)(작은 로컬) · 주방이 작아 느릴 수 있으니 착석 즉시 주문(20:15 기차 복귀) · 대안 Trattoria Bar Pontini(한국인 후기 多·캐주얼)", "recommendedMenu": ["파스타 알 마레(해산물 파스타)", "봉골레", "먹물(seppia) 파스타", "티라미수"], "mappable": true, "type": "restaurant", "placeName": "Trattoria Alla Fontana, Fondamenta Cannaregio 1102, Venezia", "lat": null, "lng": null, "reservationLevel": "recommended", "transportFromPrevious": "walking", "estimatedCost": 65 },
-        { "id": "D6-18", "sequence": 18, "startTime": "20:15", "endTime": "20:30", "title": "S.Lucia역 도보 8분", "mappable": false, "transportFromPrevious": "walking" },
-        { "id": "D6-19", "sequence": 19, "startTime": "20:30", "endTime": "21:00", "title": "S.Lucia → Mestre 기차 (10분)", "note": "€1.55/인", "mappable": false, "transportFromPrevious": "train" },
-        { "id": "D6-20", "sequence": 20, "startTime": "21:00", "endTime": "22:00", "title": "BW Plus Hotel Bologna 체크인·짐 풀기 (일찍 휴식)", "note": "야간 체크인 (낮에 짐 보관 후) · 일찍 쉬기", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null, "transportFromPrevious": "train" },
-        { "id": "D6-21", "sequence": 21, "startTime": "22:00", "title": "취침", "mappable": false }
+        { "id": "D6-01", "sequence": 1, "startTime": "07:30", "endTime": "08:00", "title": "기상, 짐 마무리", "note": "촬영복·촬영용 신발·액세서리 파우치는 캐리어 맨 위(얼리 체크인이 안 되면 호텔 로비에서 갈아입음) · 체크아웃 09:00 목표", "mappable": false },
+        { "id": "D6-02", "sequence": 2, "startTime": "08:00", "endTime": "09:00", "title": "조식 (B&B Laurus)", "note": "마지막으로 방 안 충전기·세면대 확인", "mappable": true, "type": "hotel", "placeName": "B&B Hotel Firenze Laurus al Duomo", "placeId": "ChIJl2RFCQJUKhMR49JBM4bY2tA", "lat": null, "lng": null },
+        { "id": "D6-03", "sequence": 3, "startTime": "09:00", "endTime": "09:30", "title": "체크아웃 → SMN역 (도보 9분)", "note": "09:30 SMN역 도착 목표", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D6-04", "sequence": 4, "startTime": "09:30", "endTime": "10:20", "title": "SMN역 도착, 전광판에서 10:20 열차 플랫폼 확인 (여유 50분)", "note": "역 안 카페에서 커피 · 기차 안에서 할 일: Daily Pass 구매 방식 결정, 부라노 코스 사진 몇 장 저장, 저녁 식당 예약 확인 메일 캡처", "mappable": true, "type": "station", "placeName": "Firenze Santa Maria Novella", "placeId": "ChIJk_t4QpFWKhMRFdiSiZZjCqg", "lat": 43.7753392, "lng": 11.2476522, "transportFromPrevious": "walking" },
+        { "id": "D6-05", "sequence": 5, "startTime": "10:20", "endTime": "12:23", "title": "🎫 Frecciarossa 피렌체 SMN → Venezia Mestre (예매 완료 · 고정)", "note": "여유 0 — 늦으면 안 되는 지점 · 짐은 객차 끝 선반 · 열차 종점은 Venezia S.Lucia이고 Mestre는 종점 한 정거장 앞 → 12:15부터 짐 내릴 준비, 안내 방송에 'Venezia Mestre'가 나오면 하차", "mappable": false, "transportFromPrevious": "train" },
+        { "id": "D6-06", "sequence": 6, "startTime": "12:23", "endTime": "12:35", "title": "Venezia Mestre 하차 — 종점 S.Lucia까지 가지 말 것", "note": "실수로 S.Lucia까지 가면 되돌아오는 열차가 10분 간격이라 20~25분 손해로 끝남", "mappable": true, "type": "station", "placeName": "Stazione di Venezia Mestre, Viale Stazione, 30171 Venezia", "placeId": "ChIJj4rg9iS0fkcRlo4qoF69ajY", "lat": 45.4824787, "lng": 12.2317675, "transportFromPrevious": "train" },
+        { "id": "D6-07", "sequence": 7, "startTime": "12:35", "endTime": "12:55", "title": "BW Plus Hotel Bologna 도착 (역 앞 도보 2분) — 얼리 체크인 시도", "note": "얼리 체크인 요청, 안 되면 짐 보관 + 촬영복 파우치만 꺼내기 · 체크인 때 여권(예약자 본인 사진 신분증) · 호텔 +39 041 931000 · 아고다 확정서(이 일정 첨부): 10/24~26 2박, 후지불, 도시세 별도(현장 결제), 조식 미포함", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null, "transportFromPrevious": "walking" },
+        { "id": "D6-08", "sequence": 8, "startTime": "12:55", "endTime": "13:35", "title": "점심: 역 앞 Via Piave·Corso del Popolo 쪽에서 40분 컷 (여유 15분)", "note": "피자 한 조각·파니니 수준으로 가볍게 · 기차가 15~30분 늦으면 역 안 파니니 테이크아웃으로 15분 확보", "mappable": false, "transportFromPrevious": "walking", "estimatedCost": 20 },
+        { "id": "D6-09", "sequence": 9, "startTime": "13:35", "endTime": "14:00", "title": "환복·헤어·메이크업 (여유 35분)", "note": "객실이면 여유, 로비 화장실이면 20분 · 옷은 흰색·크림·베이지·네이비 단색 · 이동은 운동화, 촬영용 구두는 가방에 · 걸칠 카디건이나 코트 한 벌", "mappable": false },
+        { "id": "D6-10", "sequence": 10, "startTime": "14:00", "endTime": "14:10", "title": "Mestre역 이동 · 🎫 Venezia Daily Pass 활성화 (€25/인)", "note": "열차 타기 전 개찰 · 24시간 동안 지역열차·수상버스 모두 포함 · 14:10 시작이면 만료는 25일 13:10(서머타임 종료 뒤 현지 시각) · Trenitalia 앱으로 사면 시작 시각 14:10 지정", "mappable": false, "transportFromPrevious": "walking", "estimatedCost": 50 },
+        { "id": "D6-11", "sequence": 11, "startTime": "14:10", "endTime": "14:22", "title": "지역열차 Mestre → S.Lucia (10~12분)", "note": "10분 간격 · Daily Pass 포함", "mappable": true, "type": "station", "placeName": "Venezia Santa Lucia", "placeId": "ChIJ8dEcUcexfkcRCZPKgPIBfPw", "lat": 45.4410697, "lng": 12.3210436, "transportFromPrevious": "train" },
+        { "id": "D6-12", "sequence": 12, "startTime": "14:22", "endTime": "14:45", "title": "S.Lucia → Fondamente Nove 도보", "note": "역 정문에서 왼쪽 Lista di Spagna → Rio Terà San Leonardo → Strada Nova 직진 → Campo Santi Apostoli에서 왼쪽으로 꺾어 북쪽 · 구글맵 목적지는 'Fondamente Nove A' · 다리 4~5개, 인파 · ⚠️ 구글 도보 기준 2.2 km·30분이라 14:52경 도착할 수 있음 — 15분 여유를 거의 다 씀. 여유를 원하면 14:00 열차", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D6-13", "sequence": 13, "startTime": "14:45", "endTime": "15:00", "title": "F.te Nove 'A' 선착장 도착, 개찰기 태그 (여유 15분)", "note": "12번 표시 확인 · 화장실은 여기서", "mappable": true, "type": "station", "placeName": "Fondamente Nove, Venezia", "placeId": "ChIJl4zUQ96xfkcRE6gd7ShuZnE", "lat": 45.4425186, "lng": 12.3415122, "transportFromPrevious": "walking" },
+        { "id": "D6-14", "sequence": 14, "startTime": "15:00", "endTime": "15:41", "title": "🚤 12번선 F.te Nove 'A' → 부라노 'C' (41분 · 예비 15:20)", "note": "여유 0 · 무라노 Faro·마조르보 경유 · 좌현 창가 자리가 무라노 쪽 뷰 · 놓치면 다음 배를 알아보기 전에 작가에게 먼저 문자 → 15:20 배(16:01 도착, 11분 지각)", "mappable": false, "transportFromPrevious": "vaporetto" },
+        { "id": "D6-15", "sequence": 15, "startTime": "15:41", "endTime": "16:00", "title": "부라노 'C' 하차 → 15:50 스냅 작가 미팅 (베네베네스냅)", "note": "미팅 장소: 부라노섬 수상버스 'C' 정거장 앞 · 여유 0 — 10분 전 도착 원칙(늦으면 촬영 시간이 그만큼 깎이고 연장 없음) · 선착장 근처 카페 화장실에서 마지막 점검(음료 하나 시키고)", "mappable": true, "type": "tour_meeting", "placeName": "Burano, Venezia", "placeId": "ChIJpZAw91KsfkcR0hexUsNgxn0", "lat": 45.4853906, "lng": 12.4166562, "transportFromPrevious": "vaporetto" },
+        { "id": "D6-16", "sequence": 16, "startTime": "16:00", "endTime": "17:00", "title": "📸 부라노 스냅 촬영 60분 (16:00 시작 — 작가 확정 필요 · 연장 없음)", "note": "작가가 코스를 이끔: 선착장 가까운 운하변 → 좁은 골목의 원색 벽 → 광장이나 다리, 한 장소 10~15분 · 꼭 찍고 싶은 장면 두 개를 미리 말하기(운하에 두 사람 반영 컷, 색색 집 앞 전신 컷) · 마지막 10분(골든아워 초입)에 역광 실루엣·운하변 컷 · 소지품은 작가 근처 한곳에, 가방 메고 찍지 않기 · 문 앞·빨래·창문 안은 찍지 않기 · 운하 가장자리 난간 없음 — 뒷걸음질 컷은 작가가 위치 잡아 준 뒤에만 · 바람: 헤어 스프레이·작은 핀·옷핀 두 개 · 끝나면 원본 전달 예정일·링크 방식 확인, 마이리얼트립 채팅에 '촬영 완료'", "mappable": false },
+        { "id": "D6-17", "sequence": 17, "startTime": "17:00", "endTime": "17:20", "title": "자유 시간 — Via Baldassarre Galuppi (레이스 상점·골든아워 셀프 사진)", "note": "부라노의 중심 거리, 레이스 상점과 카페 · 부라노 버터 쿠키(bussolà) 한 봉지 — 기념품 겸 25일 아침 간식 · 골든아워 17:15부터, 두 사람이 서로 찍어 주는 컷 · 17:20에는 선착장 줄로", "mappable": true, "type": "shopping", "placeName": "Via Baldassarre Galuppi, Burano, Venezia", "placeId": "ChIJDbYVWlKsfkcRhKJqQeA1Gwc", "lat": 45.4851877, "lng": 12.417886, "transportFromPrevious": "walking", "estimatedCost": 10 },
+        { "id": "D6-18", "sequence": 18, "startTime": "17:20", "endTime": "17:32", "title": "부라노 'C' 선착장 줄 서기", "note": "토요일 귀환 피크 — 출발 12~15분 전 · 배 위는 바람이 강하니 겉옷 입고 탑승 · 화장실은 배 타기 전 한 번", "mappable": false },
+        { "id": "D6-19", "sequence": 19, "startTime": "17:32", "endTime": "18:13", "title": "🚤 12번선 부라노 C → F.te Nove (일몰 18:13을 배 위에서)", "note": "진행 방향 오른쪽(우현) 뒤쪽 자리가 해 지는 쪽 · 골든아워를 더 찍고 싶으면 17:52편(18:33 도착, 산책 25분) · 18:12편부터는 19:15 저녁이 빠듯(식당에 5분 늦는다고 문자한 뒤에만)", "mappable": true, "type": "station", "placeName": "Fondamente Nove, Venezia", "placeId": "ChIJl4zUQ96xfkcRE6gd7ShuZnE", "lat": 45.4425186, "lng": 12.3415122, "transportFromPrevious": "vaporetto" },
+        { "id": "D6-20", "sequence": 20, "startTime": "18:15", "endTime": "19:15", "title": "카나레지오 산책 — Gesuiti → Ghetto Nuovo → Fondamenta di Cannaregio (여유 35분)", "note": "걷는 시간 25분, 사진 찍으며 천천히 · Campo dei Gesuiti → Strada Nova로 내려와 Ghetto Nuovo 광장 → 운하변 · 해가 진 뒤 운하에 조명이 켜지는 18:30~18:45가 카나레지오가 가장 예쁜 시간 · 게토 광장 나무 아래 벤치", "mappable": true, "type": "sightseeing", "placeName": "Campo del Ghetto Nuovo, Venezia", "placeId": "ChIJizZw3sGxfkcRvnZphv5s4kM", "lat": 45.4454132, "lng": 12.3269568, "transportFromPrevious": "walking" },
+        { "id": "D6-21", "sequence": 21, "startTime": "19:15", "endTime": "20:45", "title": "저녁: Trattoria Alla Fontana 19:15 (예약 필요) — 운하 야외석", "note": "Fondamenta Cannaregio 1102 · 전화 041 715077 · 토요일 19시가 가장 붐비는 시간, 예약 없이 온 손님이 돌아간다는 후기 많음 · 해산물 파스타·오징어먹물 파스타·그날의 생선이 주력 · 2인 €70~90 · 밤 기온 12~14도라 야외석이면 겉옷을 벗지 않기 · 늦으면 도착 20분 전 전화(15분 이내 지연은 보통 자리 유지) · 20:45에 일어나면 21:00 열차", "recommendedMenu": ["해산물 파스타", "오징어먹물 파스타", "그날의 생선"], "mappable": true, "type": "restaurant", "placeName": "Trattoria Alla Fontana, Fondamenta Cannaregio 1102, Venezia", "placeId": "ChIJ9wejcJWxfkcRVsZ54M2dJUA", "lat": 45.4445646, "lng": 12.3241248, "reservationLevel": "required", "transportFromPrevious": "walking", "estimatedCost": 80 },
+        { "id": "D6-22", "sequence": 22, "startTime": "20:45", "endTime": "21:00", "title": "S.Lucia역 도보 8분", "mappable": true, "type": "station", "placeName": "Venezia Santa Lucia", "placeId": "ChIJ8dEcUcexfkcRCZPKgPIBfPw", "lat": 45.4410697, "lng": 12.3210436, "transportFromPrevious": "walking" },
+        { "id": "D6-23", "sequence": 23, "startTime": "21:00", "endTime": "21:20", "title": "열차 S.Lucia → Mestre", "note": "10분 간격이라 시간표 볼 필요 없음 · 놓쳐도 10분 뒤 다음 편 · Daily Pass 포함", "mappable": false, "transportFromPrevious": "train" },
+        { "id": "D6-24", "sequence": 24, "startTime": "21:20", "endTime": "22:00", "title": "호텔 복귀 — 캐리어 정리, 25일 크로스백 미리 꾸리기", "note": "메스트레역 앞은 밤에 분위기가 거친 편 — 역 정문에서 바로 호텔로 · 25일 크로스백(대성당은 큰 배낭 반입 불가) · Daily Pass 만료 시각 25일 13:10 메모", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null, "transportFromPrevious": "train" },
+        { "id": "D6-25", "sequence": 25, "startTime": "22:00", "title": "취침", "note": "25일 새벽 03:00에 서머타임 종료 — 1시간 더 잘 수 있음 · 폰 시계 자동 변경이면 알람은 그대로 두면 됨", "mappable": false }
       ],
       "reservations": [
+        { "id": "RES-D6-SNAP", "placeName": "부라노 스냅 (베네베네스냅 · 마이리얼트립)", "reservationLevel": "required", "recommendedTiming": "지금 — 예약 여부 확인, 미예약이면 즉시 예약 · 16:00 시작 요청 (10/4까지 정하면 취소 공제 10%)", "note": "마이리얼트립 '베네베네스냅' 부라노 1시간 촬영(100,000원~). 미팅 장소: 부라노섬 수상버스 'C' 정거장 앞. 60분, 도착 지연 시 촬영 시간 그만큼 단축·연장 없음. 결과물: 원본 350장 이상, 색감보정 30장, 정밀보정 5장. 원본은 촬영 후 5일 안에 링크로, 보정본은 그 뒤. 의상·헤어·메이크업·교통비 등 개인 경비 미제공. 보정본 일부를 작가 홍보용으로 씀 — 원치 않으면 예약 때 미리 말할 것(가격이 달라질 수 있음). 취소: 10/4까지 10% 공제, 10/5~18은 15%, 10/19~23은 20%, 당일·노쇼 50%. 23일 밤에는 \"내일 15:50 부라노 C 선착장 앞에서 뵙겠습니다\" 확인 문자를 보내고 답장 받기. 당일 연락은 왓츠앱 우선.", "messageKO": "안녕하세요 작가님, 10월 24일(토) 부라노 1시간 스냅을 예약한 [이름]입니다. 몇 가지 여쭤보고 싶어요. ① 16:00 촬영 시작(15:50 부라노 C 선착장 앞 미팅)으로 잡을 수 있을까요? 예약 시각이 '미팅'인지 '촬영 시작'인지도 알려 주세요. ② 10월 말 부라노에서 몇 시 빛이 제일 좋은지 추천해 주시면 감사하겠습니다. ③ 비가 올 때(가랑비·본비) 진행 방침과 환불 규정이 궁금합니다. ④ 강풍·안개로 12번선이 끊기면 베네치아 본섬(예: 카나레지오 운하변)에서 대신 촬영이 가능할까요? ⑤ 당일 연락용 왓츠앱이나 전화번호를 받을 수 있을까요? 감사합니다!" },
         { "id": "RES-D6-HOTEL-HONEYMOON", "placeName": "BW Plus Hotel Bologna", "reservationLevel": "recommended", "recommendedTiming": "예약 직후", "note": "허니문 어필. 조용하고 편한 방을 정중히 요청.", "messageEN": "Dear Best Western Plus Hotel Bologna team, we have a reservation under [이름] for 24–26 October, and we're celebrating our honeymoon. A quiet, comfortable room would be wonderful if that's possible. No pressure at all — thank you so much, and we look forward to our stay!", "messageKO": "안녕하세요 Best Western Plus Hotel Bologna 팀, [이름] 이름으로 10월 24–26일 예약했습니다. 저희는 신혼여행을 기념하고 있습니다. 가능하다면 조용하고 편안한 방이면 정말 좋겠습니다. 전혀 부담 갖지 않으셔도 됩니다. 정말 감사드리고 숙박을 기대하고 있습니다!" },
-        { "id": "RES-D6-HOTEL-LUGGAGE", "placeName": "BW Plus Hotel Bologna", "reservationLevel": "recommended", "recommendedTiming": "도착일 당일", "note": "낮에 짐만 맡기고 부라노 스냅·관람 후 저녁에 체크인.", "messageEN": "Hello, our train reaches Venezia Mestre at 12:23 on 24 October. Would it be possible to drop off our luggage on arrival and check in later in the evening? Thank you!", "messageKO": "안녕하세요, 저희 열차는 10월 24일 12:23 Venezia Mestre에 도착합니다. 도착 시 짐을 맡기고 저녁에 체크인할 수 있을까요? 감사합니다!" },
-        { "id": "RES-D6-DINNER", "placeName": "Trattoria Alla Fontana", "meal": "dinner", "reservationLevel": "recommended", "recommendedTiming": "출발 1주 전", "note": "Fondamenta Cannaregio 1102, 산타루치아역 근처(카나레지오·운하뷰). ⭐4.5. 전화 +39 041 715077(작은 로컬이라 전화가 확실) 또는 온라인 예약(trattoriaallafontana.shop). 매일 영업·자정 무렵 마감. 주방이 작아 음식이 느릴 수 있어 착석 즉시 주문(20:15 기차 복귀). 대안 Trattoria Bar Pontini. 토요일 영업.", "messageEN": "Hello, I'd like to book a table for 2 on Saturday 24 October at 18:45, under [이름]. We're on our honeymoon — a canal-side table would be lovely if possible. Thank you so much!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone sabato 24 ottobre alle 18:45, a nome [이름]. Siamo in luna di miele — se possibile un tavolo vista canale. Grazie mille!", "messageKO": "안녕하세요, [이름] 이름으로 10월 24일 토요일 18:45 2인 테이블을 예약하고 싶습니다. 저희는 신혼여행 중이라 가능하면 운하뷰 자리면 좋겠습니다. 정말 감사합니다!" }
-      ]
+        { "id": "RES-D6-HOTEL-LUGGAGE", "placeName": "BW Plus Hotel Bologna — 얼리 체크인", "reservationLevel": "recommended", "recommendedTiming": "출발 전 메일 (도착 12:35, 사유: 촬영 준비)", "note": "Via Piave 214, 메스트레역 정문 앞(도보 2분). 호텔 +39 041 931000(아고다 확정서). 얼리 체크인이 안 되면 짐 보관 후 로비 화장실에서 환복 20분 — 촬영복 파우치는 캐리어 맨 위. 프런트에서 15:00 이후라고 하면 헤어는 간단히, 촬영 신발은 가방에.", "messageEN": "Hello, we have a reservation for 24–26 October under [이름]. Our train arrives at Venezia Mestre at 12:23 on 24 October, so we'll be at the hotel around 12:35. We have a photo shoot in Burano that afternoon — would an early check-in be possible so we can get ready? If not, could we leave our luggage with you and change before heading out? Thank you so much!", "messageKO": "안녕하세요, [이름] 이름으로 10월 24–26일 예약했습니다. 10월 24일 12:23 Venezia Mestre에 도착해 12:35쯤 호텔에 갑니다. 그날 오후 부라노에서 사진 촬영이 있어 준비할 수 있게 얼리 체크인이 가능할까요? 어렵다면 짐을 맡기고 옷만 갈아입고 나가도 될까요? 정말 감사합니다!" },
+        { "id": "RES-D6-DINNER", "placeName": "Trattoria Alla Fontana", "meal": "dinner", "reservationLevel": "required", "recommendedTiming": "지금 — 10/24(토) 19:15 2인 · 운하 야외석 요청", "note": "Fondamenta Cannaregio 1102(카나레지오 운하변, S.Lucia역 도보 8분). 전화 041 715077 또는 trattoriaallafontana.shop. 영업시간은 검색 결과 기준 매일 11:30~23:45 — 출발 전 한 번 더 확인. 토요일 19시가 가장 붐비는 시간이고 예약 없이 온 손님이 돌아간다는 후기가 많음. 해산물 파스타·오징어먹물 파스타·그날의 생선, 2인 €70~90. 예약이 안 되면 저녁 이른 시각에 가서 대기하거나 같은 운하변의 다른 트라토리아로. 늦으면 도착 20분 전 전화.", "messageEN": "Hello, I'd like to book a table for 2 on Saturday 24 October at 19:15, under [이름]. We're on our honeymoon — a canal-side outdoor table would be lovely if possible. Thank you so much!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone sabato 24 ottobre alle 19:15, a nome [이름]. Siamo in luna di miele — se possibile un tavolo all'aperto sul canale. Grazie mille!", "messageKO": "안녕하세요, [이름] 이름으로 10월 24일 토요일 19:15 2인 테이블을 예약하고 싶습니다. 신혼여행 중이라 가능하면 운하 쪽 야외석이면 좋겠습니다. 정말 감사합니다!" }
+      ],
+      "guide": {
+        "source": "완벽가이드/10 24(토) 밀라노→베네치아 완벽 가이드.md (2026-09-28 · @하늘이)",
+        "sections": [
+          {
+            "id": "overview",
+            "icon": "🗓️",
+            "title": "한눈에 보는 하루",
+            "summary": "고정은 10:20 기차·19:15 저녁 두 개 · 스냅 16:00 기준 · 원칙 네 가지",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "10/24는 피렌체를 떠나 메스트레에 짐을 풀고, 오후 부라노에서 60분 스냅을 찍고, 카나레지오 운하 옆에서 저녁을 먹는 날입니다. 고정된 것은 10:20 기차와 19:15 저녁 두 개뿐이고, 나머지는 스냅 시각에 맞춰 움직입니다. 아래 시각은 스냅 16:00 시작 기준이며, 작가와 시각이 달리 정해지면 '스냅 시각이 다르면' 변형표대로 밀거나 당깁니다."
+                ],
+                "table": {
+                  "columns": [
+                    "시각",
+                    "무엇",
+                    "성격"
+                  ],
+                  "rows": [
+                    [
+                      "10:20",
+                      "Frecciarossa 피렌체 SMN 출발 → 12:23 Venezia Mestre 하차",
+                      "고정(예매)"
+                    ],
+                    [
+                      "12:35",
+                      "BW Plus Hotel Bologna 짐 맡기기·얼리 체크인 시도",
+                      "유동"
+                    ],
+                    [
+                      "14:10",
+                      "Mestre → S.Lucia 지역열차(10분)",
+                      "유동"
+                    ],
+                    [
+                      "15:00",
+                      "F.te Nove 'A' 선착장 12번 탑승(예비 15:20)",
+                      "유동"
+                    ],
+                    [
+                      "15:50",
+                      "부라노 'C' 선착장 앞 작가 미팅",
+                      "확정 필요"
+                    ],
+                    [
+                      "16:00~17:00",
+                      "스냅 촬영 60분",
+                      "확정 필요"
+                    ],
+                    [
+                      "17:32",
+                      "부라노 C 출발 → 18:13 F.te Nove(예비 17:52)",
+                      "유동"
+                    ],
+                    [
+                      "19:15",
+                      "Trattoria Alla Fontana 저녁",
+                      "예약 필요"
+                    ],
+                    [
+                      "21:00",
+                      "S.Lucia → Mestre 열차, 21:20 호텔",
+                      "유동"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "오늘의 원칙 네 가지",
+                "bullets": [
+                  "1. 스냅 시작 10분 전 도착이 이 날의 유일한 마감입니다. 늦으면 촬영 시간이 그만큼 깎이고 연장은 없습니다.",
+                  "2. 부라노행 배를 놓치면 다음 배를 알아보기 전에 작가에게 먼저 문자를 보냅니다.",
+                  "3. 일몰은 18:13 전후, 골든아워는 17:15부터입니다. 서머타임은 25일 새벽 03:00에 끝나므로 이날 밤까지는 시계가 그대로입니다.",
+                  "4. 이날 걷는 거리는 6~7 km입니다. 이동은 편한 신발, 촬영용 신발은 가방에 넣어 다닙니다."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "prep",
+            "icon": "🧳",
+            "title": "전날 밤·아침 준비",
+            "summary": "짐을 두 덩어리로 · 23일 밤 6 · 24일 아침 3 · 복장 기준",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "이날의 핵심은 짐을 두 덩어리로 나누는 것입니다. 큰 캐리어는 메스트레 호텔에 두고, 부라노에는 작은 가방 하나만 들고 갑니다. 얼리 체크인이 안 되면 호텔 로비에서 갈아입어야 하므로 촬영복은 캐리어 맨 위, 꺼내기 쉬운 곳에 둡니다."
+                ]
+              },
+              {
+                "title": "23일 밤 (피렌체 B&B Laurus에서)",
+                "checklist": [
+                  "촬영복·촬영용 신발·액세서리를 따로 담은 파우치를 캐리어 맨 위에 넣기",
+                  "부라노용 크로스백 꾸리기: 여권 사본, 카드 1장, 현금 €60~80, 보조배터리, 립·미니 빗, 물티슈, 반창고",
+                  "휴대폰 앱 확인: Trenitalia(기차표), AVM Venezia Official(수상버스 실시간), Google Maps 베네치아 오프라인 지도, 마이리얼트립 채팅",
+                  "작가에게 \"내일 15:50 부라노 C 선착장 앞에서 뵙겠습니다\" 확인 문자 보내고 답장 받기",
+                  "일기예보·풍속 확인(강풍·안개면 '상황별 대응 매뉴얼' 날씨 표 참고), 25일 조석 예보도 함께 확인",
+                  "알람 07:30, 체크아웃 09:00 목표"
+                ]
+              },
+              {
+                "title": "24일 아침",
+                "checklist": [
+                  "조식 08:00, 마지막으로 방 안 충전기·세면대 확인",
+                  "09:00 체크아웃, 09:30 SMN역 도착(도보 9분), 전광판에서 10:20 열차 플랫폼 확인",
+                  "기차 안에서 할 일: Daily Pass 구매 방식 결정('이동 상세' 참고), 부라노 코스 사진 몇 장 저장, 저녁 식당 예약 확인 메일 캡처"
+                ]
+              },
+              {
+                "title": "복장 기준",
+                "paragraphs": [
+                  "부라노는 집마다 원색이라 사람 옷은 단색이 잘 나옵니다. 흰색·크림·베이지·네이비처럼 무늬 없는 옷이 배경과 싸우지 않습니다. 10월 말 석호 위 바람은 부산 겨울 바닷바람에 가깝습니다. 촬영 전후에 걸칠 카디건이나 코트를 한 벌 챙기고, 촬영 중에는 벗습니다. 이동용 운동화와 촬영용 구두를 분리하고, 구두는 바닥이 미끄럽지 않은 것으로 고릅니다. 부라노 골목 바닥은 돌이고 운하 가장자리에 난간이 없습니다."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "variants",
+            "icon": "⏱️",
+            "title": "스냅 시각이 다르면 이렇게 밉니다",
+            "summary": "15:30 · 16:00(기본) · 16:30 시작별 배·열차·귀환편",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "일정 카드는 플랜 A(스냅 16:00 시작) 기준입니다. 모든 구간에 10~20분 여유를 넣어 두었습니다. 여유가 남으면 그 자리에서 쉬고, 여유를 다 써도 다음 항목은 그대로 맞습니다. 카드에 '여유 0'이라고 적힌 곳(10:20 기차, 15:00 배, 15:50 미팅, 19:15 저녁)이 이날 늦으면 안 되는 지점입니다."
+                ],
+                "table": {
+                  "columns": [
+                    "촬영 시작",
+                    "미팅",
+                    "타야 할 배 (F.te Nove)",
+                    "열차 (Mestre)",
+                    "귀환편 (부라노 C)",
+                    "저녁 도착"
+                  ],
+                  "rows": [
+                    [
+                      "15:30",
+                      "15:20",
+                      "14:20 (15:01 도착) · 예비 14:40 (15:21 도착, 1분 지각)",
+                      "13:30",
+                      "17:12 또는 17:32",
+                      "18:30~19:15"
+                    ],
+                    [
+                      "16:00",
+                      "15:50",
+                      "15:00 (15:41 도착) · 예비 15:20 (16:01 도착, 11분 지각)",
+                      "14:10",
+                      "17:32",
+                      "19:00~19:15"
+                    ],
+                    [
+                      "16:30",
+                      "16:20",
+                      "15:20 (16:01 도착) · 예비 15:40 (16:21 도착, 1분 지각)",
+                      "14:30",
+                      "17:52",
+                      "19:15"
+                    ]
+                  ]
+                },
+                "bullets": [
+                  "15:30 시작은 점심과 환복 중 하나를 포기해야 성립합니다. 작가가 15:30만 된다고 하면 점심을 기차 안 샌드위치로 바꾸고, 호텔에서는 짐만 맡긴 뒤 바로 출발합니다."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "transport",
+            "icon": "🚆",
+            "title": "이동 상세",
+            "summary": "기차 2 · 수상버스 2 · 도보 4 · Daily Pass €25 · 12번선 시간표",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "이날 이동은 기차 2번, 수상버스 2번, 도보 4구간입니다. 교통권은 Venezia Daily Pass 한 장으로 기차·수상버스를 모두 덮고, 25일 오전까지 이어 씁니다. 아래 수상버스 시각은 2026년 4월 22일부터 시행 중인 ACTV 공식 12번선 시간표 기준입니다."
+                ]
+              },
+              {
+                "title": "피렌체 → 메스트레 (Frecciarossa 10:20 → 12:23)",
+                "paragraphs": [
+                  "열차 종점은 Venezia S.Lucia이고 Mestre는 종점 한 정거장 앞입니다. 12:15부터 짐을 내릴 준비를 하고, 안내 방송에 'Venezia Mestre'가 나오면 내립니다. 실수로 S.Lucia까지 가면 되돌아오는 열차가 10분 간격이라 20~25분 손해로 끝납니다."
+                ]
+              },
+              {
+                "title": "메스트레 ↔ 산타루치아 지역열차",
+                "paragraphs": [
+                  "낮에는 약 10분 간격, 10~12분 걸립니다. 편도 요금은 약 €1.55(발매기에서 확인)이고, 종이 승차권은 탑승 전 초록색 개찰기에 각인해야 합니다. Daily Pass를 쓰면 이 구간이 포함됩니다. 밤 21시대에도 10분 간격이라 저녁 후 귀환은 시간표를 볼 필요가 없습니다."
+                ]
+              },
+              {
+                "title": "교통권: Venezia Daily Pass €25",
+                "paragraphs": [
+                  "Trenitalia 안내에 따르면 이 패스는 24시간 동안 베네치아 시 관내 지역열차(S.Lucia·Mestre 등)와 ACTV 수상버스·메스트레 시내버스를 모두 탈 수 있고, Trenitalia 사이트·앱·역 발매기·창구와 ACTV 판매처에서 삽니다. Trenitalia 채널에서 사면 구매 때 고른 날짜·시각부터, ACTV에서 사면 첫 개찰부터 24시간입니다."
+                ],
+                "table": {
+                  "columns": [
+                    "구간 (1인)",
+                    "개별 구매",
+                    "Daily Pass"
+                  ],
+                  "rows": [
+                    [
+                      "24일 Mestre → S.Lucia 열차",
+                      "€1.55",
+                      "포함"
+                    ],
+                    [
+                      "24일 부라노 왕복 수상버스 (75분권 ×2)",
+                      "€19.00",
+                      "포함"
+                    ],
+                    [
+                      "24일 S.Lucia → Mestre 열차",
+                      "€1.55",
+                      "포함"
+                    ],
+                    [
+                      "25일 Mestre → S.Lucia 열차",
+                      "€1.55",
+                      "포함 (13:10 전까지)"
+                    ],
+                    [
+                      "25일 Ferrovia → 자르디니 수상버스",
+                      "€9.50",
+                      "포함"
+                    ],
+                    [
+                      "25일 밤 S.Lucia → Mestre 열차",
+                      "€1.55",
+                      "별도 €1.55"
+                    ],
+                    [
+                      "합계",
+                      "€34.70",
+                      "€26.55"
+                    ]
+                  ]
+                },
+                "bullets": [
+                  "2인이면 약 €16 절약입니다. 시작 시각을 24일 14:10으로 잡으면 만료는 25일 14:10 CEST, 즉 서머타임이 끝난 뒤 현지 시각 13:10입니다. 25일 09:00 열차와 09:20 1번선(10/25 가이드 기준)까지 넉넉히 들어옵니다. 수상버스는 탈 때마다 선착장 입구 개찰기에 태그합니다."
+                ]
+              },
+              {
+                "title": "산타루치아역 → Fondamente Nove 도보 (구글 기준 약 2.2 km, 30분)",
+                "paragraphs": [
+                  "역 정문에서 왼쪽으로 Lista di Spagna → Rio Terà San Leonardo → Strada Nova로 계속 직진합니다. Campo Santi Apostoli에서 왼쪽으로 꺾어 북쪽으로 올라가면 석호가 보이는 Fondamente Nove입니다. 구글맵 목적지는 'Fondamente Nove A'로 저장해 두세요. 다리 4~5개를 건너고 인파가 있습니다."
+                ],
+                "bullets": [
+                  "원문은 '약 1.8 km, 20~25분(지도상 18분 + 5분)'인데, 구글 도보 경로는 2.2 km·30분으로 나옵니다. 14:22에 역을 나서면 14:52경 도착해 15:00 배는 타지만 15분 여유를 거의 다 씁니다. 여유를 지키려면 Mestre에서 14:00 열차를 타세요(10분 간격)."
+                ]
+              },
+              {
+                "title": "12번선 Fondamente Nove 'A' → 부라노 'C'",
+                "paragraphs": [
+                  "ACTV 12번선 시간표 기준으로 낮에는 20분 간격이고, 무라노 Faro·마조르보를 거쳐 41분 걸립니다. 내리는 곳 부라노 'C'가 작가 미팅 장소입니다."
+                ],
+                "table": {
+                  "columns": [
+                    "F.te Nove 출발",
+                    "부라노 C 도착"
+                  ],
+                  "rows": [
+                    [
+                      "14:20",
+                      "15:01"
+                    ],
+                    [
+                      "14:40",
+                      "15:21"
+                    ],
+                    [
+                      "15:00",
+                      "15:41"
+                    ],
+                    [
+                      "15:20",
+                      "16:01"
+                    ],
+                    [
+                      "15:40",
+                      "16:21"
+                    ],
+                    [
+                      "16:00",
+                      "16:41"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "부라노 'C' → Fondamente Nove",
+                "table": {
+                  "columns": [
+                    "부라노 C 출발",
+                    "F.te Nove 도착",
+                    "메모"
+                  ],
+                  "rows": [
+                    [
+                      "16:52",
+                      "17:33",
+                      "촬영 종료 직후, 여유 없음"
+                    ],
+                    [
+                      "17:12",
+                      "17:53",
+                      "자유 시간 10분"
+                    ],
+                    [
+                      "17:32",
+                      "18:13",
+                      "플랜 A, 일몰을 배 위에서"
+                    ],
+                    [
+                      "17:52",
+                      "18:33",
+                      "16:30 촬영 시 기본편"
+                    ],
+                    [
+                      "18:12",
+                      "18:53",
+                      "19:15 저녁에 빠듯"
+                    ],
+                    [
+                      "18:25",
+                      "19:08",
+                      "토르첼로 경유, 저녁 늦음"
+                    ]
+                  ]
+                },
+                "bullets": [
+                  "동계 시간표는 예년에 11월 1~4일에 시작했고 그때는 F.te Nove 출발이 10분·40분(30분 간격)으로 줄어듭니다. 10/24는 현행 시간표일 가능성이 높지만, 22~23일에 orari.actv.it에서 한 번 확인합니다. 토요일 오후 귀환편은 관광객이 몰리므로 출발 15분 전에 줄을 섭니다."
+                ]
+              },
+              {
+                "title": "Fondamente Nove → Trattoria Alla Fontana 도보 (약 25분)",
+                "paragraphs": [
+                  "Fondamente Nove에서 서쪽으로 Campo dei Gesuiti → Strada Nova 방향으로 내려와 Ghetto Nuovo를 지나 Fondamenta di Cannaregio 운하변에 닿습니다. 식당 주소는 Fondamenta Cannaregio 1102이고, 식당에서 S.Lucia역까지는 8분입니다."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "snap",
+            "icon": "📸",
+            "title": "부라노 스냅",
+            "summary": "베네베네스냅 1시간 · C 정거장 앞 미팅 · 작가에게 확인할 다섯 가지 · 촬영 흐름 · 현장 팁",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "스냅은 이날의 유일한 '늦으면 안 되는' 약속이고, 시작 시각과 우천 방침 두 가지는 작가와 미리 문자로 못 박아야 합니다. 상품은 마이리얼트립 '베네베네스냅' 부라노 1시간 촬영(100,000원~)이고, 상세페이지 기준 조건은 아래와 같습니다."
+                ],
+                "table": {
+                  "columns": [
+                    "항목",
+                    "내용"
+                  ],
+                  "rows": [
+                    [
+                      "미팅 장소",
+                      "부라노섬 수상버스 'C' 정거장 앞"
+                    ],
+                    [
+                      "소요",
+                      "60분, 도착 지연 시 촬영 시간 그만큼 단축, 연장 없음"
+                    ],
+                    [
+                      "결과물",
+                      "원본 350장 이상, 색감보정 30장, 정밀보정 5장"
+                    ],
+                    [
+                      "전달",
+                      "원본은 촬영 후 5일 안에 링크로, 보정본은 그 뒤"
+                    ],
+                    [
+                      "미제공",
+                      "의상·헤어·메이크업, 교통비 등 개인 경비"
+                    ],
+                    [
+                      "홍보 사용",
+                      "보정본 일부를 작가 홍보용으로 씀. 원치 않으면 예약 때 미리 말할 것 (가격이 달라질 수 있음)"
+                    ],
+                    [
+                      "취소 규정",
+                      "10/4까지 취소 시 10% 공제, 10/5~18은 15%, 10/19~23은 20%, 당일·노쇼 50%"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "작가에게 미리 확인할 다섯 가지",
+                "bullets": [
+                  "1. 예약된 시각이 '미팅'인지 '촬영 시작'인지. 상세페이지는 10분 전 도착을 요구하므로 둘은 다릅니다.",
+                  "2. 16:00 시작(또는 16:30)으로 잡을 수 있는지. 10월 말 부라노에서 몇 시 빛이 제일 좋은지도 함께 묻습니다. 현지 작가가 운하 그림자 시간을 가장 잘 압니다.",
+                  "3. 비가 올 때의 방침. 가랑비면 진행하는지, 본비면 어떻게 하는지, 그 경우 환불 규정이 어떻게 적용되는지.",
+                  "4. 강풍·안개로 12번선이 끊길 때 베네치아 본섬(예: 카나레지오 운하변)에서 대신 찍어 줄 수 있는지.",
+                  "5. 당일 연락 수단. 마이리얼트립 채팅 외에 왓츠앱이나 전화번호를 받아 둡니다."
+                ]
+              },
+              {
+                "title": "촬영 흐름 (60분)",
+                "paragraphs": [
+                  "미팅 후 작가가 코스를 이끕니다. 보통 선착장에서 가까운 운하변 → 좁은 골목의 원색 벽 → 광장이나 다리 순서로 움직이고, 한 장소에서 10~15분씩 찍습니다. 부부가 정할 것은 세 가지입니다."
+                ],
+                "bullets": [
+                  "꼭 찍고 싶은 장면 두 개를 미리 말합니다(예: 운하에 두 사람 반영이 비치는 컷, 색색 집 앞 전신 컷). 나머지는 작가에게 맡깁니다.",
+                  "마지막 10분은 골든아워 초입(17:00 전후)이므로 역광 실루엣이나 운하변 컷을 이때로 미룹니다.",
+                  "촬영 중 소지품은 작가 근처 한곳에 모아 두고, 한 사람이 가방을 메고 찍지 않습니다."
+                ]
+              },
+              {
+                "title": "현장 팁",
+                "bullets": [
+                  "부라노 골목은 폭이 1~2 m이고 주민이 삽니다. 문 앞·빨래·창문 안은 찍지 않고, 집 벽에 기대는 컷은 작가가 안내하는 곳에서만 합니다.",
+                  "운하 가장자리에 난간이 없습니다. 뒷걸음질 컷은 작가가 위치를 잡아 준 뒤에만 합니다.",
+                  "바람이 강하면 머리와 치맛단이 계속 날립니다. 헤어 스프레이와 작은 핀, 옷핀 두 개를 크로스백에 넣어 둡니다.",
+                  "화장실은 선착장 근처 카페에서 음료 하나 시키고 씁니다. 촬영 직전 한 번, 촬영 후 배 타기 전 한 번입니다.",
+                  "촬영이 끝나면 그 자리에서 작가에게 원본 전달 예정일과 링크 방식을 한 번 더 확인하고, 마이리얼트립 채팅에 '촬영 완료'를 남겨 둡니다."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "evening",
+            "icon": "🌅",
+            "title": "부라노에서 저녁까지",
+            "summary": "자유 시간 · 귀환편 17:32 기본 · 카나레지오 산책 · Alla Fontana 19:15 · 호텔 복귀",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "촬영이 끝나면 17:32 배로 돌아오는 것이 기본이고, 골든아워를 더 보고 싶으면 17:52까지 한 편 미룰 수 있습니다. 18:12편부터는 19:15 저녁이 빠듯해지므로 그 뒤 편은 저녁 시각을 옮길 때만 씁니다."
+                ]
+              },
+              {
+                "title": "자유 시간 17:00~17:20",
+                "paragraphs": [
+                  "선착장에서 가까운 Via Baldassarre Galuppi가 부라노의 중심 거리입니다. 레이스 상점과 카페가 이 길에 몰려 있고, 부라노 버터 쿠키(bussolà)는 봉지 하나가 기념품 겸 25일 아침 간식으로 알맞습니다. 골든아워는 17:15부터라 촬영이 끝난 뒤 두 사람이 서로 찍어 주는 컷 몇 장을 여기서 남깁니다. 17:20에는 선착장 줄로 갑니다."
+                ]
+              },
+              {
+                "title": "귀환편 선택",
+                "table": {
+                  "columns": [
+                    "부라노 C 출발",
+                    "F.te Nove 도착",
+                    "이후 흐름",
+                    "고르는 경우"
+                  ],
+                  "rows": [
+                    [
+                      "17:32",
+                      "18:13",
+                      "산책 45분 + 저녁 19:15",
+                      "기본. 일몰 18:13을 석호 위에서 봄"
+                    ],
+                    [
+                      "17:52",
+                      "18:33",
+                      "산책 25분 + 저녁 19:15",
+                      "골든아워 사진을 더 찍고 싶을 때"
+                    ],
+                    [
+                      "18:12",
+                      "18:53",
+                      "바로 이동, 저녁 19:20",
+                      "식당에 5분 늦는다고 문자한 뒤에만"
+                    ]
+                  ]
+                },
+                "bullets": [
+                  "배에서는 진행 방향 오른쪽(우현) 뒤쪽 자리가 부라노와 무라노를 등지고 해 지는 쪽을 봅니다. 배 위는 바람이 강하니 겉옷을 입고 탑니다."
+                ]
+              },
+              {
+                "title": "카나레지오 산책 (18:13~19:00)",
+                "paragraphs": [
+                  "Fondamente Nove에서 서쪽으로 걷습니다. Campo dei Gesuiti를 지나 Strada Nova로 내려온 뒤 Ghetto Nuovo 광장을 거쳐 Fondamenta di Cannaregio 운하변에 닿으면 식당이 보입니다. 걷는 시간은 25분이고, 해가 진 뒤 운하에 조명이 켜지는 18:30~18:45가 카나레지오가 가장 예쁜 시간입니다. 게토 광장의 나무 아래 벤치가 쉬어 가기 좋습니다."
+                ]
+              },
+              {
+                "title": "저녁: Trattoria Alla Fontana 19:15",
+                "paragraphs": [
+                  "주소는 Fondamenta Cannaregio 1102, 전화 041 715077, 매일 11:30~23:45 영업입니다(검색 결과 기준, 출발 전 확인). 토요일 19시가 이 식당의 가장 붐비는 시간이고 예약 없이 온 손님이 돌아간다는 후기가 많습니다. 예약하면서 운하 쪽 야외석을 요청하고, 밤 기온이 12~14도라 야외석이면 겉옷을 벗지 않습니다. 해산물 파스타와 오징어먹물 파스타, 그날의 생선이 주력이고 2인 €70~90 선입니다. 20:45에 일어나면 21:00 열차에 맞습니다."
+                ]
+              },
+              {
+                "title": "호텔 복귀",
+                "paragraphs": [
+                  "식당에서 S.Lucia역까지 8분입니다. 열차는 10분 간격이라 시간표를 볼 필요가 없고, Mestre 도착 후 호텔까지 2분입니다. 메스트레역 앞은 밤에 분위기가 거친 편이라 역 정문에서 바로 호텔로 들어갑니다. 방에 들어오면 25일 크로스백(대성당은 배낭 반입 불가)을 먼저 꾸리고, Daily Pass 만료 시각 13:10을 메모해 둡니다. 25일 새벽 03:00에 서머타임이 끝나므로 휴대폰 알람은 그대로 두면 됩니다."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "contingency",
+            "icon": "🔀",
+            "title": "상황별 대응 매뉴얼",
+            "summary": "이동 9 · 날씨 6 · 사람·예약 5 · 몸·소지품 6 · 최종 선택지",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "원칙은 하나입니다. 무엇이 어긋나든 먼저 '스냅 시작 시각을 지킬 수 있는가'를 보고, 못 지키면 다음 배를 찾기 전에 작가에게 문자부터 보냅니다. 아래 표는 '판단 기준'에 해당하면 그 줄의 대응을 그대로 실행하면 되도록 썼습니다."
+                ]
+              },
+              {
+                "title": "이동이 어긋날 때",
+                "table": {
+                  "columns": [
+                    "상황",
+                    "판단 기준",
+                    "대응"
+                  ],
+                  "rows": [
+                    [
+                      "Frecciarossa 15~30분 지연",
+                      "Mestre 도착 12:40~12:55",
+                      "점심을 역 안 파니니 테이크아웃으로 바꾸고 15분 확보. 환복은 호텔 로비. 14:10 열차와 15:00 배는 그대로"
+                    ],
+                    [
+                      "Frecciarossa 30~60분 지연",
+                      "Mestre 도착 13:00~13:25",
+                      "점심 생략, 호텔에 짐만 맡기고 촬영복 파우치 들고 14:20 열차. F.te Nove 15:20 배 → 16:01 도착. 작가에게 \"16:10 도착\" 문자"
+                    ],
+                    [
+                      "Frecciarossa 60분 이상 지연",
+                      "Mestre 도착 13:30 이후",
+                      "작가에게 16:30 시작 요청. 15:40 배 → 16:21 도착. 귀환 17:52, 저녁 19:15 유지"
+                    ],
+                    [
+                      "15:00 배 놓침",
+                      "F.te Nove 15:00 이후 도착",
+                      "15:20 배로 16:01 도착. 작가에게 \"10분 늦음\" 문자. 촬영은 16:10~17:00 (10분 손해)"
+                    ],
+                    [
+                      "15:20 배도 놓침",
+                      "15:20 이후 도착",
+                      "15:40 배 → 16:21. 작가에게 16:30 시작 요청. 귀환 17:52로 변경"
+                    ],
+                    [
+                      "12번선 20분 이상 지연·결항 표시",
+                      "AVM 앱 알림 또는 선착장 전광판",
+                      "작가에게 상황 공유. 40분 이상 불투명하면 그날 촬영 취소 여부를 작가와 결정 (취소 규정은 작가 측 귀책 여부에 따라 협의)"
+                    ],
+                    [
+                      "S.Lucia에서 길을 잃음",
+                      "도보 15분 지나도 석호가 안 보임",
+                      "구글맵 'Fondamente Nove A' 재검색. 어느 골목이든 북쪽으로 가면 석호변에 닿음. 20분 더 걸리면 15:20 배로"
+                    ],
+                    [
+                      "귀환편 17:32 만석",
+                      "선착장에서 탑승 거부",
+                      "17:52편. 저녁 도착 19:15 그대로. 18:12편이 되면 식당에 문자"
+                    ],
+                    [
+                      "밤 열차 놓침",
+                      "21:00 열차 출발 후 도착",
+                      "다음 열차 10분 뒤. 마지막 열차는 자정 넘어서까지 있어 문제 없음"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "날씨",
+                "table": {
+                  "columns": [
+                    "상황",
+                    "판단 기준",
+                    "대응"
+                  ],
+                  "rows": [
+                    [
+                      "흐림·약한 비 (시간당 1 mm 이하)",
+                      "우산 없이 5분 걸을 수 있음",
+                      "그대로 진행. 부라노 색은 흐린 날 오히려 진하게 나옴. 투명 우산 하나를 소품으로"
+                    ],
+                    [
+                      "본비 (시간당 2 mm 이상, 3시간 이상 예보)",
+                      "전날 밤 예보에서 확인",
+                      "작가와 아침 9시까지 결정: (1) 그대로 진행하되 처마·아케이드 위주, (2) 작가 측 제안으로 시각 변경, (3) 취소. 대체일이 사실상 없으므로 (1)을 우선"
+                    ],
+                    [
+                      "강풍 (풍속 10 m/s 이상)",
+                      "예보 또는 F.te Nove에서 흰 파도",
+                      "12번선은 보통 운항. 머리·치마 대비(핀·스프레이), 촬영은 골목 위주로"
+                    ],
+                    [
+                      "짙은 안개",
+                      "아침 시정 200 m 이하",
+                      "10월 베네치아에 잦음. 12번선 지연·결항 가능. 12:00 전에 AVM 앱 확인, 결항이면 작가와 본섬 대체 촬영 협의"
+                    ],
+                    [
+                      "아쿠아 알타",
+                      "Centro Maree 예보 100 cm 이상",
+                      "부라노와 카나레지오는 영향이 적음. F.te Nove 선착장은 정상. 110 cm 이상이면 MOSE 가동, 산마르코 쪽만 피하면 됨. 방수 신발이 편함"
+                    ],
+                    [
+                      "추위",
+                      "낮 최고 14도 이하 예보",
+                      "촬영 사이 걸칠 코트, 저녁 야외석용 목도리. 호텔에서 핫팩 두 개 챙기기"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "사람·예약",
+                "table": {
+                  "columns": [
+                    "상황",
+                    "판단 기준",
+                    "대응"
+                  ],
+                  "rows": [
+                    [
+                      "작가가 미팅 장소에 없음",
+                      "미팅 시각 10분 경과",
+                      "왓츠앱·전화 → 마이리얼트립 채팅 순으로 연락. 30분 경과 시 앱 고객센터에 노쇼 접수하고, 두 사람끼리 셀프 촬영으로 전환"
+                    ],
+                    [
+                      "작가가 시각 변경을 거절",
+                      "15:30만 가능하다고 함",
+                      "점심을 기차 안에서 해결하고 호텔 짐 맡긴 뒤 13:30 열차, 14:20 배(15:01 도착). 환복은 로비"
+                    ],
+                    [
+                      "얼리 체크인 불가",
+                      "프런트에서 15:00 이후라고 함",
+                      "짐 보관 후 로비 화장실에서 환복 20분. 헤어는 간단히, 촬영 신발은 가방에"
+                    ],
+                    [
+                      "저녁 예약이 안 됨",
+                      "전화·사이트 모두 실패",
+                      "저녁 이른 시각(18:30경)에 방문해 대기. 안 되면 같은 운하변의 다른 트라토리아로. 카나레지오 운하변에 선택지가 많음"
+                    ],
+                    [
+                      "식당에 늦음",
+                      "19:15 이후 도착 예상",
+                      "도착 20분 전에 전화(041 715077). 15분 이내 지연은 보통 자리를 지켜 줌"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "몸·소지품",
+                "table": {
+                  "columns": [
+                    "상황",
+                    "판단 기준",
+                    "대응"
+                  ],
+                  "rows": [
+                    [
+                      "발 통증·피로",
+                      "촬영 후 걷기 힘듦",
+                      "자유 시간 생략, 17:12편으로 조기 귀환, 카나레지오 산책 대신 F.te Nove에서 수상버스 4.1·5.1로 Guglie까지 이동 후 식당까지 5분"
+                    ],
+                    [
+                      "컨디션 난조 (두통·복통)",
+                      "촬영 전",
+                      "촬영은 60분이라 진행 가능. 촬영 후 저녁을 호텔 근처로 바꾸고 20:00 전 복귀. 약은 부라노에 약국이 없으니 크로스백에 상비약"
+                    ],
+                    [
+                      "휴대폰 배터리",
+                      "30% 이하",
+                      "보조배터리 연결. 마이리얼트립 채팅·지도·기차표가 모두 폰에 있으므로 20% 밑으로 두지 않음"
+                    ],
+                    [
+                      "지갑·여권 분실",
+                      "없어진 것을 확인",
+                      "여권은 호텔 금고에 두고 사본만 지참. 카드는 즉시 앱에서 정지. 현금은 두 사람이 나눠 소지"
+                    ],
+                    [
+                      "카메라·소지품을 부라노에 두고 옴",
+                      "배 탄 뒤 확인",
+                      "작가에게 연락(촬영 장소 근처). 12번선 분실물은 ACTV 콜센터 041 041"
+                    ],
+                    [
+                      "승차권 미개찰 검표",
+                      "지역열차에서 검표",
+                      "Daily Pass는 첫 사용 전 반드시 활성화. 미개찰 벌금은 현장 납부가 가장 저렴"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "그래도 안 될 때의 최종 선택지",
+                "paragraphs": [
+                  "스냅이 취소되면 이날은 '베네치아 본섬 골든아워' 날로 바꿉니다. 14:10 열차 → S.Lucia에서 1번선을 타고 대운하를 천천히 내려가 산마르코까지(45분) → 리알토 다리 근처에서 두 사람이 서로 찍어 주기 → 18:00 카나레지오로 걸어 올라와 19:15 저녁. 마라톤 준비로 25일부터 산마르코 접근이 불편해지므로, 24일 오후에 대운하와 리알토를 보는 것도 나쁘지 않은 대안입니다."
+                ],
+                "bullets": [
+                  "다만 작년(2025) 마라톤 교통 공지대로면 1번선은 토요일 첫차부터 S. Marco Vallaresso에 서지 않습니다. 산마르코로 갈 때는 다음 정류장 San Zaccaria에서 내리거나 Rialto에서 내려 걸으세요(올해 공지는 10/22~23에 확인)."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "booking",
+            "icon": "✅",
+            "title": "예약·확인 현황과 연락처",
+            "summary": "결정·예약 7 · 연락처 7 — 스냅 예약 여부가 첫 번째(10/4까지)",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "이 문서가 완성되려면 아래 항목이 확정되어야 합니다. 스냅 예약 여부가 첫 번째이고, 10/4까지 정하면 취소 공제가 10%에서 멈춥니다."
+                ]
+              },
+              {
+                "title": "결정·예약 체크리스트",
+                "checklist": [
+                  "부라노 스냅: 예약 여부 확인 → 미예약이면 즉시 예약, 시작 시각 16:00 요청 (10/4까지)",
+                  "작가와 문자로 확인: 미팅=촬영 시작인지, 우천 방침, 본섬 대체 가능 여부, 당일 연락처",
+                  "Trattoria Alla Fontana 19:15 2인 예약, 운하 야외석 요청 (전화 041 715077 또는 trattoriaallafontana.shop)",
+                  "BW Plus Hotel Bologna에 얼리 체크인 요청 메일 (도착 12:35, 사유: 촬영 준비)",
+                  "피렌체 → Venezia Mestre 10:20 Frecciarossa 예매 확인 (하차역이 Mestre인지)",
+                  "Daily Pass 구매 방식 결정: Trenitalia 앱(시작 14:10 지정) 또는 메스트레역 발매기",
+                  "10/22~23: orari.actv.it 12번선 시간표, 날씨·풍속, Centro Maree 조석 확인"
+                ]
+              },
+              {
+                "title": "연락처",
+                "table": {
+                  "columns": [
+                    "대상",
+                    "연락처",
+                    "메모"
+                  ],
+                  "rows": [
+                    [
+                      "스냅 작가 (베네베네스냅)",
+                      "마이리얼트립 채팅 + 예약 후 받은 왓츠앱·전화",
+                      "당일 연락은 왓츠앱 우선"
+                    ],
+                    [
+                      "Trattoria Alla Fontana",
+                      "041 715077",
+                      "Fondamenta Cannaregio 1102"
+                    ],
+                    [
+                      "BW Plus Hotel Bologna",
+                      "+39 041 931000 (아고다 확정서)",
+                      "Via Piave 214, Mestre역 정문 앞"
+                    ],
+                    [
+                      "ACTV 콜센터 (DIME)",
+                      "041 041",
+                      "수상버스 운항·분실물"
+                    ],
+                    [
+                      "Trenitalia 콜센터",
+                      "892021",
+                      "열차 지연·환불"
+                    ],
+                    [
+                      "이탈리아 긴급",
+                      "112",
+                      "경찰·구급 통합"
+                    ],
+                    [
+                      "외교부 영사콜센터",
+                      "+82-2-3210-0404",
+                      "24시간, 여권 분실 시"
+                    ]
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "fixes",
+            "icon": "🛠️",
+            "title": "원문에서 바로잡은 것",
+            "summary": "Daily Pass 25일 시각 · 도보 30분 · 호텔 번호·조식 · 토요일 Vallaresso · 파일명",
+            "blocks": [
+              {
+                "bullets": [
+                  "**Daily Pass 문단:** 원문은 '25일 10:00 열차와 10:15 1번선'인데, 10/25 가이드는 09:00 열차·09:20 1번선이라 그 시각으로 맞췄어요. 만료 13:10은 그대로 들어옵니다.",
+                  "**S.Lucia → Fondamente Nove:** 원문 '약 1.8 km, 20~25분'을 구글 도보 경로(2.2 km, 30분)로 고쳤어요. 계획은 그대로지만 15:00 배 앞 여유가 거의 없어져요.",
+                  "**호텔:** 연락처 '예약 확인 메일의 번호'를 아고다 확정서의 +39 041 931000으로 채웠어요. 같은 확정서에 포함 서비스는 무료 Wi-Fi뿐이라 조식은 미포함이에요(10/25·10/26 호텔 조식은 현장 유료나 역 앞 바).",
+                  "**최종 선택지의 1번선 → 산마르코:** 작년 공지대로면 토요일부터 S. Marco Vallaresso 미정차라 San Zaccaria·Rialto 하선을 덧붙였어요.",
+                  "**식당 대기 시각:** 원문 '18:30 오픈 직후 방문'은 같은 문서의 '매일 11:30~23:45 영업'과 맞지 않아 '저녁 이른 시각(18:30경)'으로 적었어요. 영업시간은 출처마다 달라 확인이 필요해요.",
+                  "**파일 이름:** '밀라노→베네치아'로 되어 있지만 내용은 피렌체→베네치아(메스트레)예요. 앱에는 내용 기준으로 넣었어요.",
+                  "**앱에서 바뀐 값:** 12번선 간격(약 30분 → 20분), 스냅 미팅(15:30 → 16:00 시작·15:50 미팅, 확정 필요), 저녁(18:45 → 19:15)."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sources",
+            "icon": "🔗",
+            "title": "출처",
+            "summary": "ACTV 12번선 · Trenitalia Daily Pass · 마이리얼트립 상세 · 동선 PDF",
+            "blocks": [
+              {
+                "bullets": [
+                  "[ACTV 12번선 시간표 (2026-04-22 시행)](https://actv.avmspa.it/sites/default/files/avm/navigazione/Actv_nav_linea_12.pdf) — 출발·도착 시각",
+                  "[Trenitalia Venezia Daily Pass](https://www.trenitalia.com/it/regionale/i-nostri-partner/venezia-daily-pass.html) — 요금·유효 조건·구매처",
+                  "마이리얼트립 '베네베네스냅' 상품 상세페이지 캡처 — 미팅 장소, 포함 사항, 취소 규정",
+                  "이탈리아 허니문 9일 여행 동선 PDF — 기존 일정과 예약 상태",
+                  "아고다 예약 확정서 (Best Western Plus Hotel Bologna, 이 날 호텔 일정 첨부) — 호텔 번호·포함 서비스·도시세",
+                  "식당 영업시간과 지역열차 요금은 검색 결과 기준이며, 출발 전 한 번 더 확인합니다."
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "day": 7,
       "date": "2026-10-25",
       "weekday": "일",
       "city": "Venice",
-      "title": "베네치아: 비엔날레 + 산마르코·두칼레 · DST 종료",
+      "title": "베네치아: 마라톤·서머타임 종료 · 비엔날레 → 산마르코 대성당 15:15 · 두칼레 17:00 · Ca' Dolfin 19:30",
       "hotel": "BW Plus Hotel Bologna",
-      "defaultTransportMode": "transit",
-      "estimatedCostForTwo": 400,
-      "cashForTwo": 60,
-      "cashNote": "바포레토 1번 티켓·Mestre↔S.Lucia 기차 자판기(줄·고장 대비 현금) · 비엔날레 기념품숍 · 산마르코 골목 기념품. Dallo Zio·Ca' Dolfin·광장 카페 아페리티보는 카드 OK.",
+      "defaultTransportMode": "walking",
+      "estimatedCostForTwo": 350,
+      "cashForTwo": 80,
+      "cashNote": "현금은 €60~80 정도 — 저녁 기차표 자판기(약 €1.5×2), 뒷골목 바 스프리츠, 소액 팁. 비엔날레·대성당·두칼레는 온라인 선결제, Dallo Zio·Ca' Dolfin·비엔날레 안 카페·서점은 카드.",
       "alerts": [
-        "DST 종료(서머타임 해제) — 간밤 시계 1시간 뒤로. 휴대폰 자동 변경·호텔 알람 확인. 몸은 1시간 이득이라 조식은 느긋하되 09:45 출발로 비엔날레를 일찍 시작합니다. 일몰 약 17:08로 빨라져 오후는 실내(대성당·두칼레) 위주.",
-        "베네치아 비엔날레(Giardini) 온라인 사전 예매 €30/인 · 11:00 입장해 한국·일본·독일 3개 국가관 + 중앙관(또는 프랑스·북유럽관)까지 4곳 여유. 관람 우선순위 미리 정하기 · 일요일 운영시간 확인.",
-        "일요일 산마르코 대성당은 14:00부터 입장(마지막 16:45) — 15:15 입장. 두칼레 궁전은 16:00 시간지정으로 예약하면 마지막 입장 변동과 무관하게 안전.",
-        "🚨 점심 Dallo Zio는 'San Marco'(Spadaria 676) 지점! 구글맵에 'Santa Margherita' 지점(도르소두로)이 먼저 떠서 잘못 가면 왕복 40분 손실 → 대성당·두칼레 붕괴. 지도 즐겨찾기를 San Marco 지점으로 미리 저장.",
-        "저녁 Ristorante Ca' Dolfin은 예약 필수 — WhatsApp +39 041 528 5299로 1~2일 전 메시지. 구글맵 'Ca' Dolfin Venezia' 핀 미리 저장(주소가 소스마다 달라 지도 핀이 확실). ⭐4.8(8,300+) 전체 일정 중 최고 평점. 화~일 18:00~22:00·월요일 휴무(일요일 저녁 OK, 마감 22:00이니 19:15 착석 여유).",
-        "★ 컨디션 밸브: 비엔날레 4번째 관(12:40)이 조절 밸브 — 피곤하면 3개관만 보고 나와도 일정에 여유. 리바 해안 산책(13:45)도 지치면 Vaporetto 1·2번으로 대체."
+        "⏰ 오늘의 세 조건 — 베니스 마라톤(결승이 비엔날레 옆 리바 세테 마르티리) · 서머타임 종료(03:00→02:00) · 일요일 대성당은 14:00부터. 고정점: 13:00 비엔날레 퇴장 · 15:15 대성당 · 17:00 두칼레 · 19:30 Ca' Dolfin.",
+        "🏃 마라톤: 11시부터 16시 반경까지 자테레·몰로·산마르코 광장·리바 전체가 코스. 해안길 대신 안쪽 골목으로 걷고, 대성당은 북쪽 입구(Porta San Pietro)라 코스를 건너지 않음. 두칼레만 코스 해제(16:30경) 뒤 진행요원 지점에서 피아제타 횡단.",
+        "🚤 바포레토 조정은 2025년 공지 기준 — 1번선 토요일 첫차~일요일 21:00 S. Marco Vallaresso 미정차, 일요일 08:30~16:30 Giardini Centro 대신 Giardini Biennale 정차, S. Basilio·Spirito Santo·Giardini Centro 선착장 중단. 올해 공지는 대회 2~3일 전(10/22~23) actv.avmspa.it·venicemarathon.it에서 확인.",
+        "⏱️ 서머타임 종료: 폰 시계 자동 변경 확인, 알람은 새 시각 07:30. 일출 약 06:40, 일몰 약 17:10. 한국과 8시간 차(한국 정오 = 베네치아 04:00).",
+        "🎫 티켓 3장 PDF 오프라인 저장+스크린샷: 비엔날레 통합권(€30+€0.50, 자르디니 1회 입장·재입장 불가) · 대성당+팔라 도로(€20, 15:15 슬롯, 환불·변경 불가) · 두칼레(€35, 표 시각이 16:00인지 17:00인지 확인 — 16:00이면 📖 대체 타임라인).",
+        "🍝 Ca' Dolfin ✅ 19:30 2인 예약 확정(확정 화면은 저녁 일정 첨부) — 예약 시각 10분이 지나면 자리 해제. 19:10에는 광장을 떠나기. 늦으면 19:25 전에 +39 041 528 5299 전화·왓츠앱.",
+        "🚨 점심 Dallo Zio는 'San Marco'(Spadaria 676) 지점 — 구글맵에 'Santa Margherita'(도르소두로) 지점이 먼저 뜸. 일요일 14시 만석 가능 → 13:45 예약 권장(+39 041 520 2144 · TheFork).",
+        "🎒 작은 크로스백 하나씩(대성당 40×30×20cm 초과 배낭·트롤리 불가) · 어깨·무릎 가림 · 방수 신발 또는 덧신. Daily Pass는 13:10 만료 — 오후는 전부 도보라 영향 없고, 저녁 기차표(약 €1.5/인)만 자판기에서 사서 개찰.",
+        "🌊 D-3(10/22~23)에 10/25 오후 조수 예보(Centro Maree, hi!tide 앱) — 100cm 이상이면 광장 일부 침수·대성당 입장 지연 가능, 110cm 이상이면 광장 대부분 침수. 호텔 조식은 예약에 미포함."
       ],
       "items": [
-        { "id": "D7-01", "sequence": 1, "startTime": "08:30", "endTime": "09:00", "title": "기상 — 느지막이 (서머타임 종료로 1시간 이득)", "note": "⚠️ 폰 시계 1시간 뒤로 자동 변경 확인", "mappable": false },
-        { "id": "D7-02", "sequence": 2, "startTime": "09:00", "endTime": "09:45", "title": "호텔 조식 — 느긋하게", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null },
-        { "id": "D7-03", "sequence": 3, "startTime": "09:45", "endTime": "10:00", "title": "호텔 → Mestre역 도보", "note": "역 앞 숙소 — 짐 없이 가볍게", "mappable": false, "transportFromPrevious": "walking" },
-        { "id": "D7-04", "sequence": 4, "startTime": "10:00", "endTime": "10:10", "title": "기차 Mestre → S.Lucia (10분)", "note": "€1.55/인", "mappable": true, "type": "station", "placeName": "Venezia Santa Lucia", "placeId": "ChIJ8dEcUcexfkcRCZPKgPIBfPw", "lat": 45.4410697, "lng": 12.3210436, "transportFromPrevious": "train" },
-        { "id": "D7-05", "sequence": 5, "startTime": "10:15", "endTime": "11:00", "title": "Vaporetto 1번 (Ferrovia 선착장) → 자르디니 (대운하 감상 약 45분)", "note": "1일권 €25/인 · 대운하 전체를 훑는 노선이라 이 45분 자체가 관광 · 신혼여행 무드", "mappable": false, "transportFromPrevious": "vaporetto", "estimatedCost": 50 },
-        { "id": "D7-06", "sequence": 6, "startTime": "11:00", "endTime": "11:05", "title": "비엔날레 자르디니 입장 → 석호 끝 클러스터 직행", "note": "온라인 사전 예매 €30/인 · 11:00 입장으로 관람 시간 최대 확보", "mappable": true, "type": "sightseeing", "placeName": "Giardini della Biennale, Venezia", "placeId": "ChIJqzZkRzGufkcRiabs3CYIiBk", "lat": 45.4290703, "lng": 12.3580118, "transportFromPrevious": "vaporetto", "estimatedCost": 60 },
-        { "id": "D7-07", "sequence": 7, "startTime": "11:05", "endTime": "11:40", "title": "🇰🇷 한국관 《해방공간: 요새/둥지》", "note": "천천히 · 노혜리·한강 애도 스테이션·최고은", "mappable": false },
-        { "id": "D7-08", "sequence": 8, "startTime": "11:40", "endTime": "12:10", "title": "🇯🇵 일본관 'Grass, Moon and Babies'", "note": "한국관 바로 옆", "mappable": false },
-        { "id": "D7-09", "sequence": 9, "startTime": "12:10", "endTime": "12:40", "title": "🇩🇪 독일관", "note": "인접", "mappable": false },
-        { "id": "D7-10", "sequence": 10, "startTime": "12:40", "endTime": "13:20", "title": "중앙관(Padiglione Centrale) 또는 프랑스·북유럽관 등 1~2곳 추가", "note": "★ 아침을 앞당겨 확보한 시간 — 우선순위 미리 정하기 · 피곤하면 생략 가능(조절 밸브)", "mappable": false, "transportFromPrevious": "walking" },
-        { "id": "D7-11", "sequence": 11, "startTime": "13:20", "endTime": "13:45", "title": "정원 산책·기념품숍 둘러보고 퇴장", "mappable": false, "transportFromPrevious": "walking" },
-        { "id": "D7-12", "sequence": 12, "startTime": "13:45", "endTime": "14:00", "title": "리바 데글리 스키아보니 해안 산책 → 산마르코 (약 15~20분)", "note": "햇빛 좋으면 산책 / 피곤하면 Vaporetto 1·2번(약 15분)", "mappable": false, "transportFromPrevious": "walking" },
-        { "id": "D7-13", "sequence": 13, "startTime": "14:00", "endTime": "15:00", "title": "점심: Dallo Zio 'San Marco' 지점 — 1시간 컷", "note": "Spadaria 676, 산마르코 광장 도보 2~3분 · ⚠️구글맵의 'Santa Margherita'(도르소두로) 지점 아님! 즐겨찾기 San Marco 지점(Spadaria 676) 미리 저장 · 매일 영업·TheFork 평점 8.7(평균 €40) · TheFork 앱 또는 sanmarco.dallozio.com 예약(워크인도 가능) · 1시간 컷(15:15 대성당→16:00 두칼레), 착석 즉시 주문·디저트는 광장 아페리티보로 미룸 · 자리 없으면 근처 바카로(cicchetti)로 전환", "recommendedMenu": ["오징어먹물 파스타(al nero di seppia)", "봉골레", "해산물 리조토"], "mappable": true, "type": "restaurant", "placeName": "Ristorante Dallo Zio, Spadaria 676, San Marco, Venezia", "lat": null, "lng": null, "reservationLevel": "recommended", "transportFromPrevious": "walking", "estimatedCost": 55 },
-        { "id": "D7-14", "sequence": 14, "startTime": "15:15", "endTime": "16:00", "title": "산마르코 대성당 — 황금 모자이크·팔라 도로", "note": "일요일 14:00 입장·마지막 16:45 · 약 45분 · Dallo Zio에서 도보 5분", "mappable": true, "type": "sightseeing", "placeName": "Basilica di San Marco, Venezia", "placeId": "ChIJv2xSZNexfkcRBaKsgyfVEgo", "lat": 45.4345606, "lng": 12.3397125, "transportFromPrevious": "walking", "estimatedCost": 12 },
-        { "id": "D7-15", "sequence": 15, "startTime": "16:00", "endTime": "17:45", "title": "두칼레 궁전 — 대회의실·황금계단·탄식의 다리", "note": "★ 예약 시 16:00 시간대 지정 필수 · 마지막 입장 18:00 · 천천히 1.5~2시간 · €30/인 · 실내라 해질녘에 딱", "mappable": true, "type": "sightseeing", "placeName": "Palazzo Ducale, Venezia", "placeId": "ChIJiYRBbtexfkcR0XTK3ATSCbg", "lat": 45.4337035, "lng": 12.3403894, "transportFromPrevious": "walking", "estimatedCost": 60 },
-        { "id": "D7-16", "sequence": 16, "startTime": "17:50", "endTime": "18:45", "title": "산마르코 광장 카페 아페리티보 + 야경 — 스프리츠 한 잔", "note": "일몰 약 17:08라 이미 야경 · 불 켜진 광장 보며 스프리츠 + 인증샷 · 라이브 시 자릿세", "mappable": true, "type": "sightseeing", "placeName": "Piazza San Marco, Venezia", "placeId": "ChIJiYRBbtexfkcRG_b_RJa70AI", "lat": 45.4341668, "lng": 12.3384717, "transportFromPrevious": "walking", "estimatedCost": 25 },
-        { "id": "D7-17", "sequence": 17, "startTime": "18:45", "endTime": "19:15", "title": "리알토 거쳐 카나레지오로 도보 (약 30분)", "note": "리알토 다리 경유 야경", "mappable": false, "transportFromPrevious": "walking" },
-        { "id": "D7-18", "sequence": 18, "startTime": "19:15", "endTime": "21:00", "title": "저녁: Ristorante Ca' Dolfin (카나레조)", "note": "리알토 근처 카나레조 초입(야경 도보 동선) · 구글맵 'Ca' Dolfin Venezia' 핀 미리 저장(주소 표기가 소스마다 달라 지도 핀이 가장 확실) · 화~일 12:00~15:00/18:00~22:00·월요일 휴무(일요일 저녁 OK) · 마감 22:00이라 19:15 착석 딱 좋음 · ⭐4.8(8,300+) 전체 일정 중 최고 평점 · WhatsApp +39 041 528 5299로 1~2일 전 예약 · 작고 아늑한 허니문 마지막 베네치아 밤에 딱", "recommendedMenu": ["카르보나라", "새우 전채", "브루스케타", "그날의 해산물 스페셜(직원 추천)"], "mappable": true, "type": "restaurant", "placeName": "Ristorante Ca' Dolfin, Salizada San Canzian 5903, Venezia", "lat": null, "lng": null, "reservationLevel": "required", "transportFromPrevious": "walking", "estimatedCost": 75 },
-        { "id": "D7-19", "sequence": 19, "startTime": "21:00", "endTime": "21:15", "title": "스트라다 노바 따라 S.Lucia로 도보", "note": "스트라다 노바 경유", "mappable": false, "transportFromPrevious": "walking" },
-        { "id": "D7-20", "sequence": 20, "startTime": "21:15", "endTime": "21:25", "title": "기차 S.Lucia → Mestre (10분)", "note": "€1.55/인", "mappable": false, "transportFromPrevious": "train" },
-        { "id": "D7-21", "sequence": 21, "startTime": "21:25", "endTime": "22:00", "title": "BW Plus Hotel Bologna 복귀·휴식", "note": "호텔 도보", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null, "transportFromPrevious": "walking" },
-        { "id": "D7-22", "sequence": 22, "startTime": "22:00", "title": "취침", "mappable": false }
+        { "id": "D7-01", "sequence": 1, "startTime": "07:30", "endTime": "08:00", "title": "기상 — 서머타임 종료 (몸은 08:30)", "note": "새벽 03:00 → 02:00 · 알람은 새 시각 기준 07:30 · 폰 시각과 역 전광판 대조 · ACTV 앱으로 1번선 운행 상태 확인 · 물 한 병, 간식(비엔날레 안에 바·레스토랑 있음)", "mappable": false },
+        { "id": "D7-02", "sequence": 2, "startTime": "08:00", "endTime": "08:45", "title": "조식", "note": "호텔 조식은 07:00~10:00이지만 아고다 예약에 조식 미포함(포함 서비스는 무료 Wi-Fi뿐) — 호텔에서 현장 결제하거나 역 앞 바 · 마라톤 주말이라 선수들로 이른 시간 붐빔", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null },
+        { "id": "D7-03", "sequence": 3, "startTime": "08:45", "endTime": "09:10", "title": "호텔 → 메스트레역 (도보 2분) → 09:00 기차 → S. Lucia (10분)", "note": "하프마라톤 08:45 메스트레 페레토 광장 출발 — 메스트레·마르게라 도로 05:30~16:30경 통제, 택시·버스 기대 X · Daily Pass 개찰(만료 13:10 전)", "mappable": true, "type": "station", "placeName": "Venezia Santa Lucia", "placeId": "ChIJ8dEcUcexfkcRCZPKgPIBfPw", "lat": 45.4410697, "lng": 12.3210436, "transportFromPrevious": "train" },
+        { "id": "D7-04", "sequence": 4, "startTime": "09:20", "endTime": "10:10", "title": "🚤 1번선 Ferrovia → Giardini Biennale (약 45분, 12분 간격)", "note": "대운하 조망은 배 앞쪽 야외석 · Ferrovia~Rialto 붐비고 Rialto 이후 자리 남 · Arsenale 지나면 다음 — 미리 출구 쪽 · 정류장 폐쇄면 Sant'Elena 하선(비엔날레 Sant'Elena 입구, 도보 5분) · 줄이 길어 10:45 넘을 것 같으면 5.1번 외곽선 · Daily Pass 포함", "mappable": false, "transportFromPrevious": "vaporetto" },
+        { "id": "D7-05", "sequence": 5, "startTime": "10:10", "endTime": "10:20", "title": "🎫 비엔날레 자르디니 입장 (Viale Trento 1260)", "note": "통합권 vivaticket €30+수수료 €0.50 · 자르디니 1회 입장, 나가면 재입장 X(아르세날레 입장권도 포함이지만 이번엔 안 씀) · 큰 가방·캐리어 불가, 소품 보관소 무료 · 화장실 먼저 · 10:00~18:00, 마지막 입장 17:45", "mappable": true, "type": "sightseeing", "placeName": "Giardini della Biennale, Venezia", "placeId": "ChIJqzZkRzGufkcRiabs3CYIiBk", "lat": 45.4290703, "lng": 12.3580118, "transportFromPrevious": "vaporetto", "estimatedCost": 61 },
+        { "id": "D7-06", "sequence": 6, "startTime": "10:20", "endTime": "11:00", "title": "🇰🇷 한국관 《해방공간: 요새와 둥지》 → 최고은 〈메르디앙〉 (40분)", "note": "예술감독 최빛나, 작가 최고은·노혜리 · 한국관을 살아 있는 기념비로 다룬 설치 · 『작별하지 않는다』 첫 장면에서 출발한 조각 〈더 퓨너럴〉(애도하는 스테이션) · 매일 베어러 한 명이 두 차례 스테이션을 도는 퍼포먼스 · 〈메르디앙〉은 사상 첫 한일 국가관 협업 — 두 관 경계의 수풀을 가로질러 일본관 부지까지 (10분)", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D7-07", "sequence": 7, "startTime": "11:00", "endTime": "11:35", "title": "🇯🇵 일본관 《Grass Babies, Moon Babies》 (30~40분 · 참여형)", "note": "아라카와-나시 · 아기 인형 208개 중 하나를 안고 필로티·정원·내부를 돈 뒤 기저귀를 갈면 QR로 생일별 시가 옴 · 두 분 사진 포인트", "mappable": false },
+        { "id": "D7-08", "sequence": 8, "startTime": "11:35", "endTime": "12:00", "title": "🇩🇪 독일관 《Ruin》 (25분)", "note": "Sung Tieu·Henrike Naumann, 큐레이터 Kathleen Reinhardt · 파사드를 300만 개 대리석 조각 모자이크로 덮어 GERMANIA 명문을 가림", "mappable": false },
+        { "id": "D7-09", "sequence": 9, "startTime": "12:00", "endTime": "12:40", "title": "중앙관 본전시 《In Minor Keys》 (가볍게 40분)", "note": "피곤하면 생략 · 서점도 이 안", "mappable": false },
+        { "id": "D7-10", "sequence": 10, "startTime": "12:40", "endTime": "13:00", "title": "기념품·화장실·물", "note": "퇴장 후엔 광장까지 화장실 없음 — 점심 전 화장실은 안에서", "mappable": false },
+        { "id": "D7-11", "sequence": 11, "startTime": "13:00", "endTime": "13:40", "title": "퇴장 → 안쪽 골목으로 Spadaria (30~35분) — 리바 진입 금지", "note": "출구 나와 바로 왼쪽 공원(Giardini Pubblici) 안 Viale Garibaldi → Via Garibaldi → Campo Bandiera e Moro → Salizada dei Greci → Campo SS. Filippo e Giacomo → Calle Canonica → Spadaria · 리바 세테 마르티리는 결승 구역, 리바 전체가 코스 · 13:00~14:30 완주자·응원 인파 절정 — 멈추지 말고 북쪽 골목으로(점심 10분 지연 허용)", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D7-12", "sequence": 12, "startTime": "13:40", "endTime": "14:45", "title": "점심: Dallo Zio San Marco (Spadaria 676)", "note": "⚠️ 구글맵에 'Santa Margherita'(도르소두로) 지점이 먼저 뜸 — San Marco 지점 저장 · 매일 11:00~23:00 · +39 041 520 2144 / TheFork · 일요일 14시 만석 가능 — 예약 권장 · 14:45에는 일어나기 · 13:20 넘어 퇴장했으면 30분 컷(피자 한 판 나눠 먹기)", "recommendedMenu": ["오징어먹물 파스타(al nero di seppia)", "봉골레", "해산물 리조토"], "mappable": true, "type": "restaurant", "placeName": "Ristorante Dallo Zio, Spadaria 676, San Marco, Venezia", "placeId": "ChIJ9d7HNtexfkcR0hzPtTFWAo4", "lat": 45.435565, "lng": 12.3387472, "reservationLevel": "recommended", "transportFromPrevious": "walking", "estimatedCost": 60 },
+        { "id": "D7-13", "sequence": 13, "startTime": "14:45", "endTime": "15:15", "title": "대성당 Porta San Pietro 앞 (14:55 도착) · 보안검색 줄", "note": "정면을 보고 왼쪽(북쪽) Piazzetta dei Leoncini — Spadaria에서 2분, 광장·마라톤 코스를 건너지 않음 · 슬롯 20분 전 도착 · 14:40에 아직 식사 중이면 디저트·커피 생략", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D7-14", "sequence": 14, "startTime": "15:15", "endTime": "16:20", "title": "🎫 산마르코 대성당 + 팔라 도로 (15:15 슬롯 · 약 1시간)", "note": "tickets.basilicasanmarco.it €20/인 · 슬롯 시간에만 입장, 환불·변경 불가 · 일요일 관광 입장 14:00~17:15(마지막 16:45) · 배낭 40×30×20cm 초과·트롤리 불가 · 어깨·무릎 가림 · 플래시·삼각대 금지 · 나르텍스 모자이크 → 본당 → 제단 뒤 팔라 도로(별도 검표, 10분) → 출구 · 박물관·로자는 이 티켓에 없음 · 예배 사유로 입장 일시 중단 가능", "mappable": true, "type": "sightseeing", "placeName": "Basilica di San Marco, Venezia", "placeId": "ChIJv2xSZNexfkcRBaKsgyfVEgo", "lat": 45.4345606, "lng": 12.3397125, "transportFromPrevious": "walking", "estimatedCost": 40 },
+        { "id": "D7-15", "sequence": 15, "startTime": "16:20", "endTime": "17:00", "title": "광장 카페 스프리츠 → 피아제타·몰로 골든아워 → 16:45 두칼레 Porta del Frumento 앞", "note": "일몰 약 17:10 · 코스 해제(16:30경) 후 몰로로 — 산조르조 마조레·곤돌라 방향 · 해제 전이면 광장 안쪽 아케이드 카페에서 대기 · 광장 정면 카페(Florian·Quadri 등)는 음악료 포함 1잔 €15~20, 뒷골목 바 €4~6 · 피아제타 횡단은 진행요원 지점에서, 10분 대기 반영 · 16:45에도 바리케이드면 광장 카페에서 15분 더", "mappable": true, "type": "sightseeing", "placeName": "Piazzetta San Marco, Venezia", "placeId": "ChIJ2yyuYMWxfkcRbsMFeL-4mqc", "lat": 45.4340207, "lng": 12.3397778, "transportFromPrevious": "walking", "estimatedCost": 12 },
+        { "id": "D7-16", "sequence": 16, "startTime": "17:00", "endTime": "19:00", "title": "🎫 두칼레 궁전 (17:00 슬롯 · 약 2시간)", "note": "€35/인(I Musei di Piazza San Marco) · 황금계단 → 대회의실(틴토레토 〈천국〉) → 탄식의 다리 → 감옥 순(안뜰 → 거인의 계단부터) · 피곤하면 대회의실·탄식의 다리만 1시간 · 마지막 입장 18:00, 폐관 작업 18:30 시작 · 표 시각이 16:00이면 📖 가이드 '두칼레 16:00 대체 타임라인'", "mappable": true, "type": "sightseeing", "placeName": "Palazzo Ducale, Venezia", "placeId": "ChIJiYRBbtexfkcR0XTK3ATSCbg", "lat": 45.4337035, "lng": 12.3403894, "transportFromPrevious": "walking", "estimatedCost": 70 },
+        { "id": "D7-17", "sequence": 17, "startTime": "19:00", "endTime": "19:30", "title": "광장 야경 사진 (10분) → 도보 Ca' Dolfin (구글 12분)", "note": "조명 켜진 광장·종탑·대성당 · Mercerie → Campo S. Bartolomeo(리알토 다리 앞, 다리는 건너지 않음) → Salizada S. Giovanni Grisostomo → Salizada S. Canzian · 19:10에는 출발 — 예약은 10분만 유지", "mappable": false, "transportFromPrevious": "walking" },
+        { "id": "D7-18", "sequence": 18, "startTime": "19:30", "endTime": "21:30", "title": "저녁: Ca' Dolfin ✅ 19:30 예약 확정", "note": "Campiello Dolfin 5903 (Salizada S. Canzian) · +39 041 528 5299 (전화·왓츠앱) · 예약 확정 화면(이 일정 첨부): 예약 시각 10분이 지나면 자리 해제 · 매일 11:30~22:30(공식 사이트) · 카드 가능, 코페르토 별도 · 2인 약 €100", "recommendedMenu": ["스파게티 알로 스콜리오 (해산물)", "프리토 미스토 (해산물 튀김)"], "mappable": true, "type": "restaurant", "placeName": "Ristorante Ca' Dolfin, Salizada San Canzian 5903, Venezia", "placeId": "ChIJb1zWBtyxfkcRvMu_T_lDtMM", "lat": 45.4396253, "lng": 12.3372992, "reservationLevel": "required", "transportFromPrevious": "walking", "estimatedCost": 100 },
+        { "id": "D7-19", "sequence": 19, "startTime": "21:30", "endTime": "22:00", "title": "출발 → Strada Nova → S. Lucia (25~30분)", "note": "기차표 자판기 구매 + 개찰(Daily Pass 만료 후라 편도 약 €1.5/인) · 1번선 Ca' d'Oro → Ferrovia 1회권 €9.50/인도 있지만 시간 이득 거의 없음 · 1번선·Rialto는 소매치기 주의", "mappable": true, "type": "station", "placeName": "Venezia Santa Lucia", "placeId": "ChIJ8dEcUcexfkcRCZPKgPIBfPw", "lat": 45.4410697, "lng": 12.3210436, "transportFromPrevious": "walking", "estimatedCost": 3 },
+        { "id": "D7-20", "sequence": 20, "startTime": "22:00", "endTime": "22:10", "title": "기차 S. Lucia → Mestre (10분)", "note": "자정 무렵까지 수시(당일 앱 확인) · 놓치면 다음 열차, 최후 수단은 Piazzale Roma 택시", "mappable": false, "transportFromPrevious": "train" },
+        { "id": "D7-21", "sequence": 21, "startTime": "22:25", "title": "호텔 도착 — 짐 정리 · 10/26 알람 07:00", "note": "10/26은 09:00 Frecciarossa · 캐리어 재정리(택스리펀 물건은 맨 위) · 대한항공 온라인 체크인(출발 48시간 전부터)", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null, "transportFromPrevious": "train" }
       ],
       "reservations": [
-        { "id": "RES-D7-LUNCH", "placeName": "Ristorante Dallo Zio", "meal": "lunch", "reservationLevel": "recommended", "recommendedTiming": "여행 중 (선택·TheFork)", "note": "Spadaria 676, 산마르코 광장 도보 2~3분. ⚠️구글맵 검색 시 'Santa Margherita' 지점(도르소두로)이 먼저 뜸 — 절대 그쪽 아님! 잘못 가면 왕복 40분 손실로 대성당·두칼레 일정 붕괴. 지도 즐겨찾기를 San Marco 지점(Spadaria 676)으로 미리 저장. TheFork 앱(평점 8.7·평균 €40) 또는 sanmarco.dallozio.com 예약 가능(워크인도 가능). 1시간 컷 필수, 자리 없으면 근처 바카로(cicchetti)로 즉시 전환.", "messageEN": "Hello, I'd like to book a table for 2 on Sunday 25 October at 14:00, under the name [이름]. We're on our honeymoon — thank you so much!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone domenica 25 ottobre alle 14:00, a nome [이름]. Siamo in luna di miele — grazie mille!", "messageKO": "안녕하세요, [이름] 이름으로 10월 25일 일요일 14:00 2인 테이블을 예약하고 싶습니다. 신혼여행 중입니다 — 정말 감사합니다!" },
-        { "id": "RES-D7-DINNER", "placeName": "Ristorante Ca' Dolfin", "meal": "dinner", "reservationLevel": "required", "recommendedTiming": "여행 중 1~2일 전 (WhatsApp)", "note": "리알토 근처 카나레조 초입. 구글맵 'Ca' Dolfin Venezia' 핀 미리 저장(주소 표기가 소스마다 달라 지도 핀이 가장 확실). WhatsApp +39 041 528 5299로 메시지 전송(리뷰 검증된 공식 루트) → 답장 받으면 확정. ⭐4.8(8,300+) 최고 평점, 작은 가게라 예약 필수. 화~일 12:00~15:00/18:00~22:00·월요일 휴무(마감 22:00이라 19:15 착석 딱). 아래 EN 템플릿 복붙.", "messageEN": "Hello! I would like to reserve a table for 2 people on Sunday, October 25th at 7:15 pm. Name: [이름]. We are on our honeymoon from Korea. Thank you! 😊", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone domenica 25 ottobre alle 19:15, a nome [이름]. Siamo in luna di miele e un tavolo tranquillo sarebbe perfetto. Grazie mille!", "messageKO": "안녕하세요, [이름] 이름으로 10월 25일 일요일 19:15 2인 테이블을 예약하고 싶습니다. 저희는 신혼여행을 기념하고 있어 조용한 자리면 정말 좋겠습니다. 정말 감사합니다!" }
-      ]
+        { "id": "RES-D7-LUNCH", "placeName": "Ristorante Dallo Zio (San Marco)", "meal": "lunch", "reservationLevel": "recommended", "recommendedTiming": "D-3 (10/22~23) — 일요일 14시 만석 가능 · 13:45 2인", "note": "Spadaria 676(산마르코 광장 북쪽, 대성당 Porta San Pietro까지 2분) · 매일 11:00~23:00 · +39 041 520 2144 / TheFork · ⚠️ 구글맵 검색 시 'Santa Margherita'(도르소두로) 지점이 먼저 뜸 — San Marco 지점으로 저장. 비엔날레 13:00 퇴장 → 골목 30~35분이라 도착은 13:35~13:40 — 가이드는 '예약 14:00이면 그 시각'이라고만 적었는데, 14:45에 일어나야 하므로 13:45 예약이 가장 맞음(14:00이면 45분 컷). 퇴장이 13:20 넘으면 30분 컷.", "messageEN": "Hello, I'd like to book a table for 2 on Sunday 25 October at 13:45, under the name [이름]. We need to leave by 14:45 for our basilica slot. We're on our honeymoon — thank you so much!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone domenica 25 ottobre alle 13:45, a nome [이름]. Dobbiamo andare via alle 14:45 per la visita alla Basilica. Siamo in luna di miele — grazie mille!", "messageKO": "안녕하세요, [이름] 이름으로 10월 25일 일요일 13:45 2인 테이블을 예약하고 싶습니다. 대성당 입장 때문에 14:45에는 나가야 합니다. 신혼여행 중입니다 — 정말 감사합니다!" },
+        { "id": "RES-D7-DINNER", "placeName": "Ristorante Ca' Dolfin", "meal": "dinner", "reservationLevel": "required", "recommendedTiming": "✅ 예약 완료 — 10/25(일) 19:30 · 2인 (확정 화면은 저녁 일정 첨부)", "note": "🎫 예약 확정: Sunday 25 October · 19:30 · 2명. 확정 화면 문구: 예약 시각에서 10분까지만 테이블을 잡아 둠(따로 합의하지 않으면). Campiello Dolfin 5903 (Salizada S. Canzian), 두칼레에서 도보 12분(구글). +39 041 528 5299 — 전화·왓츠앱·이메일 모두 확정 화면에서 가능. 매일 11:30~22:30(공식 사이트, 휴무일 없음). 스파게티 알로 스콜리오, 프리토 미스토. 2인 약 €100, 카드 가능, 코페르토 별도. 늦을 것 같으면 19:25 전에 아래 멘트로 연락. 예약 코드는 확정 화면(첨부)에서 확인.", "messageEN": "Hello, this is [이름] with a table for 2 tonight at 19:30. We're running about 10 minutes late — could you please keep our table? Thank you so much!", "messageIT": "Buonasera, sono [이름], abbiamo un tavolo per 2 stasera alle 19:30. Siamo in ritardo di circa 10 minuti — potete tenerci il tavolo, per favore? Grazie mille!", "messageKO": "안녕하세요, 오늘 19:30 2인 예약한 [이름]입니다. 10분 정도 늦을 것 같은데 자리를 잡아 주실 수 있을까요? 정말 감사합니다!" }
+      ],
+      "guide": {
+        "source": "완벽가이드/10 25(일) 베네치아 완벽 가이드 — 마라톤·서머타임 종료·비엔날레·산마르코.md (2026-09-28 · @하늘이)",
+        "sections": [
+          {
+            "id": "overview",
+            "icon": "🗓️",
+            "title": "오늘 한눈에",
+            "summary": "마라톤 · 서머타임 종료 · 일요일 대성당 14시 — 고정점 13:00 퇴장·15:15 대성당",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "10/25(일)은 베니스 마라톤 날이자 서머타임이 끝나는 날이고, 산마르코 대성당은 오후 2시부터만 관광 입장이 됩니다. 이 세 가지만 지키면 나머지는 평소처럼 움직여도 됩니다."
+                ],
+                "bullets": [
+                  "**마라톤:** 결승선이 비엔날레 바로 옆 리바 세테 마르티리. 11시부터 16시 반경까지 자테레·몰로·산마르코 광장·리바 전체가 코스. 대응은 두 가지. 해안길 대신 안쪽 골목으로 걷고, 대성당은 북쪽 입구라 코스를 건너지 않는다.",
+                  "**서머타임 종료:** 새벽 03:00이 02:00으로. 몸은 1시간 이득, 대신 일몰이 약 17:10으로 당겨짐. 한국과 시차 8시간.",
+                  "**일요일 대성당:** 관광 입장 14:00~17:15, 마지막 입장 16:45. 예매 슬롯은 환불·변경 불가."
+                ]
+              },
+              {
+                "paragraphs": [
+                  "기준 동선은 메스트레 → 비엔날레(10:10~13:00) → 골목으로 산마르코 → 점심 → 15:15 대성당 → 17:00 두칼레 → 야경 → 카나레조 저녁(19:30 예약 확정) → 22시대 호텔입니다. 하루의 두 고정점은 13:00 비엔날레 퇴장과 15:15 대성당 슬롯이고, 나머지는 모두 여기에 맞춰 늘리거나 줄이면 됩니다."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fixed",
+            "icon": "📌",
+            "title": "고정 변수",
+            "summary": "마라톤 코스·교통 조정(2025 패턴) · 서머타임 · 운영시간 6곳",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "아래는 바꿀 수 없는 조건입니다. 마라톤 교통 조정은 작년 공지 기준이고, 올해 공지는 대회 2~3일 전(작년은 10/23)에 나옵니다."
+                ],
+                "table": {
+                  "columns": [
+                    "항목",
+                    "내용"
+                  ],
+                  "rows": [
+                    [
+                      "풀마라톤",
+                      "스트라 빌라 피사니 09:40 출발, 완주 제한 6시간(후미 15:40경). 코스: 자테레 → 푼타 델라 도가나 임시 부교로 대운하 횡단 → 조르디니 엑스 레알리 → 몰로 → 산마르코 광장·피아제타 → 리바 델리 스키아보니 → 리바 카 디 디오 → 리바 산 비아조 → 리바 세테 마르티리 결승"
+                    ],
+                    [
+                      "하프마라톤",
+                      "메스트레 페레토 광장 08:45 출발. 메스트레·마르게라 시내 도로는 05:30~16:30경 통제, 버스 우회"
+                    ],
+                    [
+                      "바포레토 조정(작년 패턴)",
+                      "1번선: 토요일 첫차부터 일요일 21:00까지 S. Marco Vallaresso 미정차, 일요일 08:30~16:30에는 Giardini Centro 대신 Giardini Biennale 정차. S. Basilio·Spirito Santo·Giardini Centro 선착장 08:30~16:30 중단. 2번선: Vallaresso B에서 출발, Salute 임시 정차"
+                    ],
+                    [
+                      "서머타임 종료",
+                      "10/25 03:00 → 02:00. 일출 약 06:40, 일몰 약 17:10(CET). 한국과 8시간 차(한국 정오 = 베네치아 04:00)"
+                    ],
+                    [
+                      "비엔날레 자르디니",
+                      "10:00~18:00, 마지막 입장 17:45. 입구 2곳: Viale Trento 1260, Sant'Elena(Viale IV Novembre)"
+                    ],
+                    [
+                      "산마르코 대성당",
+                      "일요일 관광 입장 14:00~17:15, 마지막 입장 16:45. 오전은 미사(박물관만 09:30~14:00). 예배 사유로 입장이 일시 중단될 수 있음"
+                    ],
+                    [
+                      "두칼레 궁전",
+                      "10/31까지 09:00~19:00, 마지막 입장 18:00, 폐관 작업은 30분 전 시작. 공개 입구 Porta del Frumento(피아제타·몰로 쪽)"
+                    ],
+                    [
+                      "Dallo Zio San Marco",
+                      "매일 11:00~23:00, Spadaria 676"
+                    ],
+                    [
+                      "Ca' Dolfin",
+                      "매일 11:30~22:30(공식 사이트, 휴무일 없음), Campiello Dolfin 5903 — ✅ 19:30 예약 확정, 10분 지나면 자리 해제"
+                    ],
+                    [
+                      "호텔 조식",
+                      "07:00~10:00 — 단, 아고다 예약에 조식 미포함(현장 유료 또는 역 앞 바)"
+                    ]
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "checklist",
+            "icon": "✅",
+            "title": "출발 전 체크리스트",
+            "summary": "D-3 5 · 전날 밤 6 · 당일 아침 4 — D-3 결과에 따라 타임라인이 바뀜",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "세 시점으로 나눠 확인합니다. D-3 항목은 결과에 따라 타임라인이 바뀔 수 있으니 가장 먼저 보세요."
+                ]
+              },
+              {
+                "title": "D-3 (10/22~23, 피렌체에서)",
+                "checklist": [
+                  "ACTV 마라톤 운행 공지 확인: 1번선이 Giardini Biennale에 서는지, 08:30~16:30 중단 정류장이 무엇인지 (actv.avmspa.it 또는 venicemarathon.it 뉴스)",
+                  "10/25 오후 조수 예보 확인 (Centro Maree, hi!tide 앱). 100cm 이상이면 광장 일부 침수",
+                  "날씨 예보: 비·바람 여부에 따라 우산·방수 신발 결정",
+                  "Ca' Dolfin 19:30 예약 확정 화면 확인 (예약 완료 · 전화 +39 041 528 5299)",
+                  "Dallo Zio 점심 예약 (일요일 14시 만석 가능 — 13:45 권장)"
+                ]
+              },
+              {
+                "title": "전날 밤 (10/24, 메스트레)",
+                "checklist": [
+                  "폰 시계 자동 변경 설정 확인. 알람은 서머타임 종료 후 기준 07:30으로 새로 설정",
+                  "티켓 PDF 오프라인 저장 + 스크린샷: 비엔날레, 대성당, 두칼레",
+                  "가방은 작은 크로스백 하나씩. 대성당은 40×30×20cm 초과 배낭 반입 불가",
+                  "복장: 어깨·무릎 가림(대성당). 방수 신발 또는 덧신",
+                  "Venezia Daily Pass 만료 시각 확인 (10/24 14:10 개시면 10/25 13:10 만료)",
+                  "보조배터리 완충. 저녁 기차표 현금 준비"
+                ]
+              },
+              {
+                "title": "당일 아침",
+                "checklist": [
+                  "폰 시각과 역 전광판 시각 대조 (08:30 = 몸 시계로 09:30)",
+                  "ACTV 앱으로 1번선 운행 상태 확인",
+                  "호텔에서 역까지 도보(2분). 메스트레 도로 통제로 택시·버스는 기대하지 말 것",
+                  "물 한 병, 간식 (비엔날레 안에 바·레스토랑 있음)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "tickets",
+            "icon": "🎫",
+            "title": "티켓·예약 상태표",
+            "summary": "비엔날레 · 대성당 · 두칼레 · Dallo Zio · Ca' Dolfin(확정) · 교통",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "오늘 쓰는 티켓·예약은 규정이 다 달라서 한 표에 모았습니다. 가격은 성인 1인, 2026년 9월 기준입니다."
+                ],
+                "table": {
+                  "columns": [
+                    "항목",
+                    "구매처·가격",
+                    "규정",
+                    "확인할 것"
+                  ],
+                  "rows": [
+                    [
+                      "비엔날레 통합권",
+                      "vivaticket, €30 + 예매수수료 €0.50",
+                      "날짜·시간 지정 없음. 전시장(자르디니·아르세날레)별 1회 입장, 나갔다 재입장 불가. 큰 가방·캐리어 반입 불가, 소품 보관소 무료",
+                      "PDF 저장. 아르세날레 입장권도 포함되지만 이번엔 안 씀"
+                    ],
+                    [
+                      "대성당 + 팔라 도로",
+                      "tickets.basilicasanmarco.it, €20",
+                      "시간 슬롯제. 환불·변경 불가. 배낭 40×30×20cm 초과 불가, 트롤리 불가. 어깨·무릎 가림. 개인 예매 입구는 Porta San Pietro",
+                      "슬롯 시각(15:15 권장). 같은 티켓으로 토르첼로 대성당·살루테 성물실도 방문 가능(이번엔 안 씀)"
+                    ],
+                    [
+                      "두칼레 궁전 (I Musei di Piazza San Marco)",
+                      "palazzoducale.visitmuve.it, €35 (30일 전 구매 €30, 10/25분은 기한 지남)",
+                      "시간 슬롯제. 슬롯 없는 표는 12:00부터 입장. 마지막 입장 18:00. 코레르 박물관 등 3곳 포함(안 씀)",
+                      "표에 적힌 시각이 16:00인지 17:00인지. 16:00이면 아래 대체 타임라인"
+                    ],
+                    [
+                      "Dallo Zio 점심",
+                      "예약 권장 (TheFork 또는 전화 +39 041 5202144)",
+                      "매일 11:00~23:00",
+                      "13:45 예약 여부"
+                    ],
+                    [
+                      "Ca' Dolfin 저녁",
+                      "✅ 예약 완료 (+39 041 5285299)",
+                      "10분 지나면 자리 해제(확정 화면). 테이블 적음, 일요일 저녁 인기",
+                      "19:30 확정 화면 저장(저녁 일정 첨부)"
+                    ],
+                    [
+                      "교통",
+                      "Venezia Daily Pass 24시간 €25 (바포레토 + 메스트레~산타루치아 열차 포함)",
+                      "10/24 14:10 개시 시 10/25 13:10 만료. 이후 기차 편도 약 €1.5, 바포레토 1회 €9.50",
+                      "저녁 기차표는 별도 구매·개찰"
+                    ]
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "transport",
+            "icon": "🚆",
+            "title": "구간별 이동 상세",
+            "summary": "배는 오전 한 번 · 오후 전부 도보 · 저녁 기차표만 따로",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "오늘 배는 오전에 한 번만 타고 오후는 전부 도보입니다. Daily Pass가 13:10에 만료돼도 오후 동선에는 영향이 없습니다."
+                ],
+                "table": {
+                  "columns": [
+                    "구간",
+                    "수단",
+                    "소요",
+                    "요금",
+                    "대안"
+                  ],
+                  "rows": [
+                    [
+                      "호텔(Via Piave 214) → 메스트레역",
+                      "도보",
+                      "약 2분",
+                      "0",
+                      "없음. 하프마라톤 08:45 출발로 시내 통제"
+                    ],
+                    [
+                      "Mestre → S. Lucia",
+                      "지역열차",
+                      "10분, 수시",
+                      "Daily Pass 포함(만료 전)",
+                      "개찰 필수. 미개찰 시 벌금"
+                    ],
+                    [
+                      "Ferrovia → Giardini Biennale",
+                      "1번선 (대운하 경유)",
+                      "약 45분, 12분 간격",
+                      "Daily Pass 포함",
+                      "5.1·4.1 외곽선(더 빠름, 대운하 안 봄). 정류장 폐쇄 시 Sant'Elena 하선"
+                    ],
+                    [
+                      "비엔날레 → Spadaria",
+                      "도보, 안쪽 골목",
+                      "30~35분",
+                      "0",
+                      "리바는 코스. 공원 안 Viale Garibaldi로 나가면 리바를 한 발도 안 밟음"
+                    ],
+                    [
+                      "대성당 → 두칼레",
+                      "도보",
+                      "5분",
+                      "0",
+                      "피아제타 횡단은 진행요원 지점에서. 16:30 전이면 대기"
+                    ],
+                    [
+                      "두칼레 → Ca' Dolfin",
+                      "도보",
+                      "구글 12분 (여유 두고 20분)",
+                      "0",
+                      "Mercerie → Campo S. Bartolomeo(리알토 다리 앞) → Salizada S. Giovanni Grisostomo → Salizada S. Canzian"
+                    ],
+                    [
+                      "Ca' Dolfin → S. Lucia",
+                      "도보 Strada Nova",
+                      "25~30분",
+                      "0",
+                      "1번선 Ca' d'Oro → Ferrovia 1회권 €9.50/인, 시간 이득 거의 없음"
+                    ],
+                    [
+                      "S. Lucia → Mestre",
+                      "지역열차",
+                      "10분",
+                      "편도 약 €1.5/인",
+                      "자판기 구매 후 개찰. 자정 무렵까지 수시 운행(당일 앱 확인)"
+                    ]
+                  ]
+                },
+                "bullets": [
+                  "1번선 대운하 구간은 Ferrovia에서 Rialto까지 붐비고 Rialto 이후 자리가 납니다. Giardini 도착 전 Arsenale 정류장을 지나면 다음이니 미리 출구 쪽으로 이동하세요."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "biennale",
+            "icon": "🎨",
+            "title": "비엔날레 관람 가이드",
+            "summary": "한국관 → 메르디앙 → 일본관 → 독일관 → 중앙관 · 1회 입장 규정",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "한국관·일본관·독일관은 자르디니 안쪽 석호 끝 클러스터에 붙어 있어 입장 후 곧장 가면 됩니다. 세 곳에 1시간 반, 중앙관까지 넣어도 2시간 40분이면 끝납니다."
+                ],
+                "table": {
+                  "columns": [
+                    "순서",
+                    "관",
+                    "전시",
+                    "볼 것·소요"
+                  ],
+                  "rows": [
+                    [
+                      "1",
+                      "한국관",
+                      "《해방공간: 요새와 둥지》 예술감독 최빛나, 작가 최고은·노혜리",
+                      "한국관을 살아 있는 기념비로 다룬 설치. 한강 작가의 『작별하지 않는다』 첫 장면에서 출발한 조각 〈더 퓨너럴〉(애도하는 스테이션). 매일 베어러 한 명이 두 차례 스테이션을 도는 퍼포먼스. 30분"
+                    ],
+                    [
+                      "2",
+                      "한국관과 일본관 사이",
+                      "최고은 〈메르디앙〉 일부",
+                      "사상 첫 한일 국가관 협업. 두 관 경계의 수풀을 가로질러 일본관 부지까지 이어짐. 10분"
+                    ],
+                    [
+                      "3",
+                      "일본관",
+                      "《Grass Babies, Moon Babies》 아라카와-나시",
+                      "참여형. 아기 인형 208개 중 하나를 안고 필로티·정원·내부를 돈 뒤 기저귀를 갈면 QR로 생일별 시가 옴. 두 분 사진 포인트. 30~40분"
+                    ],
+                    [
+                      "4",
+                      "독일관",
+                      "《Ruin》 Sung Tieu·Henrike Naumann, 큐레이터 Kathleen Reinhardt",
+                      "파사드를 300만 개 대리석 조각 모자이크로 덮어 GERMANIA 명문을 가림. 25분"
+                    ],
+                    [
+                      "5",
+                      "중앙관",
+                      "본전시 In Minor Keys",
+                      "시간·체력 남으면 40분. 서점도 이 안"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "규정과 팁",
+                "bullets": [
+                  "통합권은 자르디니 1회 입장. 나가면 끝이니 점심·화장실은 안에서 해결(바·레스토랑 있음).",
+                  "큰 가방·캐리어 반입 불가. 소품 보관소 무료, 짐가방은 맡길 수 없음.",
+                  "네덜란드관은 화요일 휴관이라 일요일은 정상. 오스트리아관도 일요일 정상.",
+                  "13:00 퇴장 시 출구를 나와 바로 왼쪽 공원(Giardini Pubblici) 안으로 들어가 Viale Garibaldi 가로수길로 Via Garibaldi까지. 리바 세테 마르티리는 결승 구역이라 진입하지 않음."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sanmarco",
+            "icon": "⛪",
+            "title": "산마르코 블록 가이드",
+            "summary": "대성당 15:15(북쪽 입구) · 두칼레 17:00(코스 해제 뒤) · 일몰·야경",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "대성당은 북쪽 입구라 마라톤 코스를 건너지 않고 들어가고, 두칼레만 코스가 해제된 뒤 피아제타를 건넙니다. 이 순서가 마라톤 날 오후를 안전하게 만드는 핵심입니다."
+                ]
+              },
+              {
+                "title": "대성당 (15:15 슬롯)",
+                "bullets": [
+                  "**입구:** 개인 예매는 Porta San Pietro. 정면을 보고 왼쪽, Piazzetta dei Leoncini 쪽. Spadaria에서 나오면 바로 앞이라 광장을 가로지를 일이 없음.",
+                  "**도착:** 슬롯 20분 전. 보안검색 후 입장. 슬롯 시간에만 입장 가능하고 환불·변경 불가.",
+                  "**짐:** 배낭 40×30×20cm 초과 불가, 트롤리 불가. 무료 보관소는 대성당 옆 Ateneo San Basso(Calle San Basso, Piazzetta dei Leoncini)로 알려져 있지만 2020년 이후 운영 중단 보도가 있어 현장 확인 필요. 크로스백만 들고 오면 맡길 것 없음.",
+                  "**복장:** 어깨·무릎 가림. 미사 중 촬영 금지, 플래시·삼각대 금지.",
+                  "**동선:** 나르텍스 모자이크 → 본당 → 제단 뒤 팔라 도로(별도 검표) → 출구. 팔라 도로는 10분이면 충분. 박물관·로자는 이 티켓에 없음."
+                ]
+              },
+              {
+                "title": "두칼레 궁전 (17:00 슬롯)",
+                "bullets": [
+                  "**입구:** Porta del Frumento, 피아제타·몰로 쪽(대성당 반대편). 코스 바로 옆이라 16:30 전에는 바리케이드가 남아 있을 수 있음. 진행요원 횡단 지점 이용, 10분 여유.",
+                  "**도착:** 슬롯 15분 전. 마지막 입장 18:00, 폐관 작업 18:30 시작.",
+                  "**동선(2시간):** 안뜰 → 거인의 계단 → 황금계단 → 대회의실(틴토레토 〈천국〉) → 탄식의 다리 → 감옥 → 출구. 피곤하면 대회의실과 탄식의 다리만 1시간."
+                ]
+              },
+              {
+                "title": "일몰과 야경",
+                "bullets": [
+                  "일몰 약 17:10. 16:20~16:45 몰로에서 남동쪽 산조르조 마조레와 곤돌라 정박장을 보면 골든아워. 코스 해제 전이면 광장 카페(피아제타 반대편, 광장 안쪽 아케이드)에서 스프리츠로 대기.",
+                  "광장 정면 카페(Florian·Quadri 등)는 음악료 포함 1잔 €15~20 수준, 뒷골목 바는 €4~6. 사진만 찍고 뒷골목으로 가도 됨.",
+                  "야경: 19:00 두칼레 퇴장 직후 광장·종탑·대성당 조명. 10분 찍고 19:10에는 Ca' Dolfin으로 출발(19:30 예약, 10분만 유지)."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "contingency",
+            "icon": "🔀",
+            "title": "상황별 대응 매뉴얼",
+            "summary": "교통 5 · 마라톤 5 · 날씨 4 · 시간 지연 5 · 예약·컨디션 6",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "판단 원칙은 하나입니다. 15:15 대성당 슬롯은 못 바꾸니 여기에 맞추고, 앞뒤(비엔날레·두칼레)에서 시간을 줄입니다. 상황은 다섯 묶음으로 나눴습니다."
+                ]
+              },
+              {
+                "title": "A. 교통·이동",
+                "table": {
+                  "columns": [
+                    "상황",
+                    "판단 신호",
+                    "대응"
+                  ],
+                  "rows": [
+                    [
+                      "1번선이 Giardini Biennale에 안 서거나 정류장 폐쇄",
+                      "ACTV 공지, 선착장 안내판",
+                      "Sant'Elena까지 가서 하선, 비엔날레 Sant'Elena 입구(Viale IV Novembre)로 입장. 도보 5분"
+                    ],
+                    [
+                      "Ferrovia 선착장 줄이 길어 10:45 넘게 도착 예상",
+                      "배 두 대 이상 대기",
+                      "5.1번 외곽선으로 바꿔 타기(대운하 안 봄, 더 빠름). 관람은 중앙관 생략, 13:00 퇴장 유지"
+                    ],
+                    [
+                      "바포레토 자체가 결항(강풍·안개)",
+                      "ACTV 앱 공지",
+                      "Ferrovia에서 도보 40분(Strada Nova → Rialto → 광장)+Via Garibaldi 20분. 비엔날레 관람을 한·일관 1시간으로 줄임"
+                    ],
+                    [
+                      "Daily Pass 만료(13:10) 후 배를 타야 함",
+                      "-",
+                      "오후는 전부 도보라 원칙적으로 불필요. 필요 시 1회권 €9.50, ACTV 앱·자판기"
+                    ],
+                    [
+                      "저녁 기차 놓침",
+                      "-",
+                      "메스트레행 지역열차는 자정 무렵까지 수시(당일 앱 확인). 최후 수단은 Piazzale Roma 택시"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "B. 마라톤",
+                "table": {
+                  "columns": [
+                    "상황",
+                    "판단 신호",
+                    "대응"
+                  ],
+                  "rows": [
+                    [
+                      "비엔날레 출구 앞 리바가 결승 구역으로 봉쇄",
+                      "펜스·진행요원",
+                      "출구 왼쪽 공원 안 Viale Garibaldi로. 리바를 밟지 않고 Via Garibaldi로 나감"
+                    ],
+                    [
+                      "Via Garibaldi가 완주자·응원 인파로 막힘",
+                      "13:00~14:30 절정",
+                      "멈추지 말고 인파 흐름대로 북쪽 골목(Campo Bandiera e Moro 방향)으로 빠짐. 점심 10분 지연은 허용"
+                    ],
+                    [
+                      "광장·피아제타 횡단이 막힘",
+                      "바리케이드",
+                      "대성당은 북쪽 입구라 횡단 불필요. 두칼레는 16:30 이후 진행요원 지점에서 횡단, 10분 대기"
+                    ],
+                    [
+                      "16:45에도 두칼레 앞 바리케이드가 남음",
+                      "후미 주자 잔류",
+                      "17:00 슬롯은 마지막 입장 18:00까지 여유. 광장 카페에서 15분 더 기다렸다가 진입"
+                    ],
+                    [
+                      "마라톤을 구경하고 싶음",
+                      "14:45~15:00 여유",
+                      "점심 후 광장 가장자리 아케이드에서 부교를 건너온 주자 5~10분 관람. 대성당 슬롯이 우선"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "C. 날씨·아쿠아 알타",
+                "table": {
+                  "columns": [
+                    "상황",
+                    "판단 신호",
+                    "대응"
+                  ],
+                  "rows": [
+                    [
+                      "아쿠아 알타 예보 100cm 이상",
+                      "Centro Maree, hi!tide, 사이렌",
+                      "광장에 임시 통로(passerelle) 설치됨. 방수 신발·덧신. 대성당 입장이 지연·일시 중단될 수 있으니 슬롯 시각에 입구에서 직원 안내 대기. 두칼레는 영향 적음"
+                    ],
+                    [
+                      "아쿠아 알타 110cm 이상",
+                      "사이렌 2회 이상",
+                      "광장 대부분 침수. 대성당 입장 중단 가능. 점심을 길게 하고 두칼레로 바로. 침수 광장 반영 사진은 보너스"
+                    ],
+                    [
+                      "비",
+                      "-",
+                      "비엔날레는 관 사이가 야외라 우산·우비. 오후는 실내(대성당·두칼레). 일몰 사진 포기, 카페 시간 늘림"
+                    ],
+                    [
+                      "강풍",
+                      "-",
+                      "바포레토 결항 가능(A 참고). 광장 카페 테라스 대신 실내"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "D. 시간 지연",
+                "table": {
+                  "columns": [
+                    "상황",
+                    "판단 신호",
+                    "대응"
+                  ],
+                  "rows": [
+                    [
+                      "비엔날레 13:00 퇴장 못 지킴",
+                      "13:20 이후",
+                      "점심을 30분 컷(피자 한 판 나눠 먹기)으로 줄여 14:55 도착 유지"
+                    ],
+                    [
+                      "점심이 길어져 14:55 도착 어려움",
+                      "14:40에 아직 식사 중",
+                      "디저트·커피 생략. 대성당은 Spadaria에서 2분"
+                    ],
+                    [
+                      "대성당 슬롯을 놓침",
+                      "15:35 이후 도착",
+                      "입구 직원에게 문의(재입장 보장 없음). 안 되면 외관·광장 사진으로 대체, 두칼레에 시간 투자"
+                    ],
+                    [
+                      "두칼레 17:00에 늦음",
+                      "-",
+                      "마지막 입장 18:00까지 현장 재량으로 입장 가능한 편. 18:00 넘으면 불가"
+                    ],
+                    [
+                      "저녁 19:30에 늦음",
+                      "19:10에 아직 광장·두칼레",
+                      "19:25 전에 Ca' Dolfin에 전화·왓츠앱(+39 041 528 5299). 확정 화면 기준 예약 시각 10분까지만 자리 유지"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "E. 예약·컨디션·기타",
+                "table": {
+                  "columns": [
+                    "상황",
+                    "대응"
+                  ],
+                  "rows": [
+                    [
+                      "Ca' Dolfin에서 예약을 못 찾음",
+                      "확정 화면(저녁 일정 첨부)을 보여 줌. 그래도 안 되면 대안 1: Trattoria alla Fontana(Fondamenta Cannaregio 1102, 역 도보 8분 — 전날 저녁 식당). 대안 2: 산마르코 근처에서 먹고 1번선으로 귀가"
+                    ],
+                    [
+                      "피곤함",
+                      "비엔날레는 한·일관만 1시간. 두칼레는 대회의실·탄식의 다리만 1시간. 스프리츠 생략하고 두칼레 후 바로 저녁"
+                    ],
+                    [
+                      "한 사람 컨디션 난조",
+                      "대성당(1시간)만 함께 보고 두칼레는 한 명만. 광장 카페에서 합류"
+                    ],
+                    [
+                      "폰 시각 헷갈림",
+                      "10/25 새벽 자동 변경. 의심되면 역 전광판·바포레토 안내판 기준"
+                    ],
+                    [
+                      "티켓 PDF 안 열림",
+                      "오프라인 저장본·스크린샷·이메일 순. 비엔날레는 vivaticket 거래코드로 재발급 가능"
+                    ],
+                    [
+                      "소매치기",
+                      "1번선·Rialto·광장이 위험 구간. 크로스백은 앞으로, 지퍼 잠금"
+                    ]
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "ducale16",
+            "icon": "🕓",
+            "title": "두칼레 표가 16:00인 경우의 대체 타임라인",
+            "summary": "대성당 45분 → 16:10 두칼레 · 골든아워 포기 · 저녁은 19:30 그대로",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "두칼레 표가 16:00이면 대성당을 45분 안에 마치고 바로 두칼레로 넘어갑니다. 일몰은 두칼레 안에서 맞으니 골든아워는 포기합니다. Ca' Dolfin은 19:30으로 확정돼 있어 저녁 시각은 그대로이고, 두칼레 뒤에 1시간 정도 여유가 생깁니다. 13:00까지는 기준 타임라인과 같습니다."
+                ],
+                "table": {
+                  "columns": [
+                    "시각",
+                    "일정",
+                    "메모"
+                  ],
+                  "rows": [
+                    [
+                      "13:35",
+                      "점심 Dallo Zio",
+                      "14:35에는 일어나기. 코스는 1개 + 피자 나눠 먹기"
+                    ],
+                    [
+                      "14:50",
+                      "대성당 Porta San Pietro 앞",
+                      "보안검색 줄 감안"
+                    ],
+                    [
+                      "15:15",
+                      "대성당 + 팔라 도로",
+                      "45분. 팔라 도로는 10분, 나머지는 본당 모자이크"
+                    ],
+                    [
+                      "16:00",
+                      "퇴장 → 피아제타 횡단",
+                      "코스 해제 전이면 진행요원 지점. 5~10분"
+                    ],
+                    [
+                      "16:10",
+                      "두칼레 Porta del Frumento 입장",
+                      "16:00 슬롯은 대개 30분 안이면 입장 가능. 늦어도 16:30"
+                    ],
+                    [
+                      "18:00",
+                      "두칼레 퇴장",
+                      "폐관 작업 18:30 시작. 마지막 입장 18:00"
+                    ],
+                    [
+                      "18:00",
+                      "광장 야경 + 스프리츠",
+                      "이미 어두움. 뒷골목 바에서 여유 있게 (~19:00)"
+                    ],
+                    [
+                      "19:05",
+                      "도보 → Ca' Dolfin",
+                      "구글 12분, 여유 두고 출발"
+                    ],
+                    [
+                      "19:30",
+                      "저녁 Ca' Dolfin",
+                      "✅ 예약 확정 시각. 10분 지나면 자리 해제"
+                    ],
+                    [
+                      "21:30",
+                      "출발 → S. Lucia",
+                      "25~30분"
+                    ],
+                    [
+                      "22:00",
+                      "기차 → Mestre",
+                      ""
+                    ],
+                    [
+                      "22:25",
+                      "호텔 도착",
+                      "기준안과 같음"
+                    ]
+                  ]
+                },
+                "bullets": [
+                  "두칼레 슬롯 시각이 애매하면 표 하단의 입장 조건을 읽어 보세요. 슬롯 없는 통합권이면 12:00부터 아무 때나 들어갈 수 있어 기준 타임라인(17:00)이 그대로 맞습니다."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "budget",
+            "icon": "💶",
+            "title": "예산·현금 계획",
+            "summary": "2인 약 €350 (두칼레 기구매면 €280) · 현금 €60~80",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "2인 기준 입장·교통이 약 €175, 식사·음료가 약 €180으로 합계 €350 전후입니다. 두칼레를 이미 샀다면 €280 전후입니다. 식사 금액은 2026년 9월 기준 대략치입니다."
+                ],
+                "table": {
+                  "columns": [
+                    "항목",
+                    "1인",
+                    "2인",
+                    "결제"
+                  ],
+                  "rows": [
+                    [
+                      "비엔날레 통합권",
+                      "€30.50",
+                      "€61",
+                      "온라인 선결제"
+                    ],
+                    [
+                      "대성당 + 팔라 도로",
+                      "€20",
+                      "€40",
+                      "온라인 선결제"
+                    ],
+                    [
+                      "두칼레 궁전",
+                      "€35",
+                      "€70",
+                      "온라인 선결제 (기구매 시 0)"
+                    ],
+                    [
+                      "저녁 기차 S. Lucia → Mestre",
+                      "약 €1.5",
+                      "약 €3",
+                      "자판기, 카드·현금"
+                    ],
+                    [
+                      "예비 바포레토 1회권",
+                      "€9.50",
+                      "€19",
+                      "필요 시만"
+                    ],
+                    [
+                      "점심 Dallo Zio",
+                      "€25~35",
+                      "€60",
+                      "카드 가능"
+                    ],
+                    [
+                      "스프리츠 (뒷골목 바 기준)",
+                      "€5~6",
+                      "€12",
+                      "현금이 편함"
+                    ],
+                    [
+                      "저녁 Ca' Dolfin",
+                      "€40~60",
+                      "€100",
+                      "카드 가능, 코페르토 별도"
+                    ]
+                  ]
+                },
+                "bullets": [
+                  "현금은 €60~80 정도면 충분합니다. 기차표·스프리츠·소액 팁 용도이고, 나머지는 카드로 됩니다. 비엔날레 안 카페와 기념품 서점도 카드가 됩니다."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "contacts",
+            "icon": "📞",
+            "title": "연락처·링크·저장해 둘 지도 경로",
+            "summary": "연락처 5 · 링크 5 · 지도 경로 6",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "당일 필요한 번호와 링크, 그리고 출발 전에 지도 앱에 저장할 경로 여섯 개입니다."
+                ],
+                "table": {
+                  "columns": [
+                    "곳",
+                    "번호·주소"
+                  ],
+                  "rows": [
+                    [
+                      "Ca' Dolfin",
+                      "+39 041 5285299, Campiello Dolfin 5903 (Salizada S. Canzian)"
+                    ],
+                    [
+                      "Dallo Zio San Marco",
+                      "+39 041 5202144, Spadaria 676"
+                    ],
+                    [
+                      "비엔날레 안내",
+                      "+39 041 5218 828 (월~금 10~13시·14~17시, 토 10~13시)"
+                    ],
+                    [
+                      "Venicemarathon 사무국",
+                      "+39 041 532 1871, info@venicemarathon.it"
+                    ],
+                    [
+                      "BW Plus Hotel Bologna",
+                      "+39 041 931000, Via Piave 214, Mestre"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "지도에 저장할 경로",
+                "bullets": [
+                  "1. Giardini Biennale 정류장 → 비엔날레 Viale Trento 1260 입구",
+                  "2. 비엔날레 출구 → 공원 안 Viale Garibaldi → Via Garibaldi → Campo Bandiera e Moro → Salizada dei Greci → Campo SS. Filippo e Giacomo → Calle Canonica → Spadaria 676",
+                  "3. Spadaria 676 → Piazzetta dei Leoncini (대성당 Porta San Pietro)",
+                  "4. Piazzetta dei Leoncini → Porta del Frumento (두칼레, 몰로 쪽)",
+                  "5. 산마르코 광장 → Mercerie → Campo S. Bartolomeo → Salizada S. Giovanni Grisostomo → Salizada S. Canzian 5903",
+                  "6. Ca' Dolfin → Strada Nova → Venezia S. Lucia역",
+                  "조수 예보: 베네치아시 Centro Maree 페이지, hi!tide 앱"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fixes",
+            "icon": "🛠️",
+            "title": "원문에서 바로잡은 것",
+            "summary": "Ca' Dolfin 19:30·10분 · Daily Pass 13:10 · 호텔→역 2분 · 조식 · D8 기상 · 리알토 경로",
+            "blocks": [
+              {
+                "bullets": [
+                  "**Ca' Dolfin:** 원문은 '19:40 확정 여부', 늦으면 '20분 안이면 대개 유지'인데, 예약 확정 화면(9/20 저장, 저녁 일정 첨부)은 **Sunday 25 October · 19:30 · 2인**이고 '예약 시각 10분까지만 테이블 유지'예요. 그래서 두칼레 뒤 동선을 19:10 출발로, 16:00 대체안의 '저녁 19:15'를 19:30으로 바꿨어요.",
+                  "**Daily Pass 만료:** 원문은 '10/24 13:50 개시 → 12:50 만료'인데 10/24 가이드는 14:10 개시라 13:10 만료로 맞췄어요.",
+                  "**호텔 → 메스트레역:** 원문 '도보 약 7분'은 실제로 약 50 m(2분)예요. 10/24 가이드의 '역 앞 도보 2분'이 맞아요.",
+                  "**호텔 조식:** 아고다 확정서의 포함 서비스는 무료 Wi-Fi뿐이라 조식은 예약에 없어요. 현장 결제하거나 역 앞 바를 쓰세요.",
+                  "**다음 날 기상:** 원문 'D8은 06:30 기상'은 10/26 가이드(07:00 기상·08:20 체크아웃)와 달라 07:00으로 맞췄어요.",
+                  "**두칼레 → Ca' Dolfin 경로:** 원문 'Mercerie → Rialto → Campo S. Bartolomeo'는 리알토 다리를 건넜다 돌아오는 순서로 읽혀요. Campo S. Bartolomeo는 다리 앞 광장이고 Ca' Dolfin은 같은 쪽이라 다리는 건너지 않아요. 구글 도보 12분(원문 25분).",
+                  "**Ateneo San Basso 무료 짐 보관:** 2020년 이후 중단 보도가 있어 '현장 확인'을 붙였어요.",
+                  "**한국관 조각:** '한강 작가가 만든 조각'보다 '『작별하지 않는다』 첫 장면에서 출발한 조각'이 전시 소개에 가까워 그렇게 적었어요.",
+                  "**Dallo Zio 예약 시각:** 원문엔 시각이 없어서, 13:40 도착·14:45 출발에 맞게 13:45를 권장으로 넣었어요.",
+                  "**앱에서 바뀐 값:** 기상 08:30 → 07:30, 비엔날레 입장 11:00 → 10:10, 리바 해안 산책 → 안쪽 골목(마라톤), 두칼레 16:00 → 17:00 슬롯 기준, 일본관 제목 → 《Grass Babies, Moon Babies》."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sources",
+            "icon": "🔗",
+            "title": "출처 (2026-09-28 확인)",
+            "summary": "Venicemarathon · 2025 교통 공지 · 비엔날레 · 대성당 · 두칼레 · ACTV",
+            "blocks": [
+              {
+                "bullets": [
+                  "[Venicemarathon 2026 안내(Venezia Unica)](https://www.veneziaunica.it/en/things-to-do-in-venice/events/venicemarathon-2026)",
+                  "[39회 대회 교통 조정 공지(2025-10-23)](https://www.venicemarathon.it/it/rassegna-stampa/149-b-2025/150-a-2025/1905-39-wizz-air-venicemarathon-modifiche-alla-viabilita-trasporto-pubblico-e-treni)",
+                  "[Venicemarathon 뉴스 2026](https://www.venicemarathon.it/it/rassegna-stampa/156-b-2026/157-a-2026) — 교통 조정 원문 · [ACTV 운행 공지](https://actv.avmspa.it) — 10/22~23 마라톤 조정 공지",
+                  "[Biennale Arte 2026 Information](https://www.labiennale.org/en/art/2026/information) — 운영시간·규정",
+                  "[대성당 공식 예매 안내](https://tickets.basilicasanmarco.it/en/) — 슬롯·규정 · [두칼레 공식 정보](https://palazzoducale.visitmuve.it/informazioni-pratiche/) — 운영시간",
+                  "[ACTV 12번선 시간표(2026-04-22 시행)](https://actv.avmspa.it/sites/default/files/avm/navigazione/Actv_nav_linea_12.pdf)",
+                  "[Ca' Dolfin 공식 사이트](https://ristorantecadolfin.it/en/) — 영업시간 · Ca' Dolfin 예약 확정 화면(저녁 일정 첨부)",
+                  "대성당 규정·두칼레 운영시간·식당 영업시간·교통 요금은 공식 사이트 검색 결과 기준. 마라톤 바포레토 조정은 2025년 공지 기준이며 2026년 공지로 대체해야 함"
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "day": 8,
       "date": "2026-10-26",
       "weekday": "월",
       "city": "Venice → Milan",
-      "title": "오전 베네치아→밀라노 + 두오모·갈레리아 + 저녁 MXP 출국",
+      "title": "베네치아→밀라노: 두오모 테라스 13:45 · 갈레리아 → 말펜사 익스프레스 15:55 → KE928 20:05",
       "hotel": "비행기 (KE928)",
       "defaultTransportMode": "transit",
-      "estimatedCostForTwo": 130,
+      "estimatedCostForTwo": 195,
       "cashForTwo": 30,
-      "cashNote": "밀라노 지하철 M3 두오모 왕복(1회권 €2.2 × 2인 × 2회)·역 커피/간식 정도만. 마지막 유로 소진일 — 남은 현금은 말펜사 공항 면세점에서 쓰고 오세요(재환전은 손해). KIPOINT 짐보관·Trattoria Milanese는 카드 OK.",
+      "cashNote": "현금 €30이면 충분 — 거의 전부 카드(도시세·지하철 컨택리스·KIPOINT·식당·테라스 온라인). 남은 유로 동전은 공항 가기 전 물·간식으로 털고 지폐만. 비상 예비비: 택시 첸트랄레→말펜사 정액 약 €114, 공항버스 2인 €10~26, 대체 짐 보관 €5~10.",
       "alerts": [
-        "🎫 예매 완료 — ①Venezia Mestre 09:00 → Milano Centrale 11:15 (직통) ②Milano Centrale 16:25 → Malpensa Aeroporto T1 17:18 (직통). 둘 다 Trenitalia 앱 'My Journeys'에 있음.",
-        "★ 말펜사 익스프레스는 Milano Centrale 출발 — 오전에 도착한 바로 그 역에서 탑니다(Cadorna로 갈 필요 없음, 지하철 환승 없음). Centrale의 말펜사 익스프레스 승강장은 1~3번 쪽(역 서쪽 끝)이라 짐 픽업 후 이동에 10분 잡을 것 — 전광판 확인 후 16:05까지 승강장 도착. 놓쳐도 약 30분 뒤 16:55편이 최종 안전망(KE928 20:05엔 여유).",
-        "출국일 타임라인: 09:00 Mestre 출발 → 11:15 Centrale 도착 → 시내 4시간 → 15:35 Centrale 복귀·짐 픽업 → 16:25 말펜사 익스프레스 → 17:18 MXP T1 도착(출발 20:05까지 약 2시간 45분 버퍼).",
-        "★ 아침이 이릅니다 — 09:00 기차라 08:00엔 호텔을 나서야 합니다. 짐은 전날 밤에 다 싸두고, BW Plus 조식이 07:00부터인지 전날 프런트에 확인(늦게 시작하면 테이크아웃 요청). 체크아웃도 08:00 전.",
-        "Centrale역 KIPOINT 짐 보관(€11/일)으로 큰 캐리어 두고 시내 관광 — 픽업 후 같은 역에서 바로 말펜사 익스프레스 탑승. 지하철은 M3 두오모 왕복뿐이라 캐리어 들고 지하철 탈 일 없음.",
-        "점심은 밀라노 명물 Trattoria Milanese(리소토 알라 밀라네제) 착석식 12:15 — 오픈 12:00 직후라 자리·서빙이 여유롭습니다. 셰어 금지 리소토는 1인 1개. 밀라노 도착 전날(D7) 저녁 +39 02 8645 1991로 예약.",
-        "★ 플랜B(열차 지연 시): 두오모 내부·옥상은 포기하고 광장 외관+갈레리아만 40분. 점심을 Centrale역 안 Mercato Centrale Milano로 바꾸면 두오모 왕복 리스크가 사라집니다.",
-        "두오모 옥상은 '시간 미지정/오픈' 티켓으로만 — 고정시간 예약은 출국 타임라인과 충돌하니 ❌."
+        "✈️ 목표는 하나 — 20:05 KE928(말펜사 T1)을 여유 있게 타기. 두오모와 갈레리아는 버릴 수 있지만 비행기는 못 버림. 대한항공 체크인 마감 19:05, 게이트 마감 19:45.",
+        "🎫 예매 완료 — ①Venezia Mestre 09:00 → Milano Centrale 11:15 ②말펜사 익스프레스 Milano Centrale 15:55 → Malpensa T1 (9/28에 16:25에서 변경, 둘 다 Trenitalia 앱 My Journeys). 놓치면 같은 표로 뒤 열차 — 16:25는 안전, 16:55는 택스리펀 포기, 그 뒤는 17:25를 기다리지 말고 택시(정액 약 €114).",
+        "🛂 가장 큰 위험 3가지는 공항: EES 출국심사(2026-04-10 전면 시행, 말펜사 대기 예측 불가) · 택스리펀(위탁 물건은 체크인 전 T1 2층 12번 구역, 45~60분) · 프레차로사 지연·파업. 보안검색 뒤 면세점보다 출국심사 먼저.",
+        "⏳ 컷오프(넘으면 그 자리에서 결정): 첸트랄레 도착 11:45 → 점심 Luini · 12:15 → 테라스 포기 · 13:15 → 관광 전부 포기(짐 맡기지 않고 공항) · 테라스 입장 14:15 · KIPOINT 15:30 → 16:25편 · 택스리펀 18:20 · 출국심사 18:45.",
+        "🗓️ 월요일 휴관: 최후의 만찬·브레라 미술관·노베첸토 미술관·스포르체스코 성 내부 박물관. 두오모·테라스·갈레리아·라스칼라 광장은 정상. 두오모 박물관은 수요일 휴관이라 월요일 OK.",
+        "🍝 Trattoria Milanese dal 1933(Via Santa Marta 11) 12:15 2인 예약 필수(+39 02 8645 1991) — 이름 비슷한 dal 1997은 월요일 휴무인 다른 곳. 두오모 테라스 13:45 시간지정권(엘리베이터, 2인 약 €36)은 D-14(10/12)쯤 ticket.duomomilano.it.",
+        "🏨 조식은 예약에 미포함 — 07:30 조식은 호텔 현장 결제 또는 역 앞 바. 08:20 체크아웃, 도시세(2박 2인 약 €12.40)는 카드로 현장 결제. 전날 밤 대한항공 온라인 체크인(48시간 전부터).",
+        "📅 파업: 이탈리아는 최소 10일 전 공고 의무라 10/16이 지나면 10/26 파업이 새로 붙을 수 없음. 9/28 기준 10/22~29에 등록된 파업은 없음(10/30 총파업은 있음). 10/12·10/23에 재확인."
       ],
       "items": [
-        { "id": "D8-01", "sequence": 1, "startTime": "06:30", "endTime": "07:00", "title": "기상·준비", "note": "짐은 전날 밤에 다 싸둘 것 — 09:00 기차라 아침이 이름", "mappable": false },
-        { "id": "D8-02", "sequence": 2, "startTime": "07:00", "endTime": "07:40", "title": "호텔 조식 (마지막 베네치아)", "note": "조식 07:00 시작 여부를 전날 프런트에 확인 · 늦으면 테이크아웃 요청", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null },
-        { "id": "D8-03", "sequence": 3, "startTime": "07:40", "endTime": "08:00", "title": "체크아웃", "note": "08:00 전 출발", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null },
-        { "id": "D8-04", "sequence": 4, "startTime": "08:00", "endTime": "09:00", "title": "Mestre역 도보·플랫폼", "note": "도보 5분 · 커피·빵 사고 여유롭게 대기", "mappable": true, "type": "station", "placeName": "Stazione di Venezia Mestre, Viale Stazione, 30171 Venezia", "placeId": "ChIJj4rg9iS0fkcRlo4qoF69ajY", "lat": 45.4824787, "lng": 12.2317675, "transportFromPrevious": "walking" },
-        { "id": "D8-05", "sequence": 5, "startTime": "09:00", "endTime": "11:15", "title": "Frecciarossa 출발 → 밀라노 (2h 15m)", "note": "🎫 예매 완료 (09:00 → 11:15 직통) · 베로나·브레시아 경유", "mappable": false, "transportFromPrevious": "train" },
-        { "id": "D8-06", "sequence": 6, "startTime": "11:15", "title": "밀라노 Centrale 도착", "mappable": true, "type": "station", "placeName": "Milano Centrale", "placeId": "ChIJQ1j3T8XGhkcRKs-XGhSxJiI", "lat": 45.487137, "lng": 9.204822, "transportFromPrevious": "train" },
-        { "id": "D8-07", "sequence": 7, "startTime": "11:15", "endTime": "11:35", "title": "짐 보관 (KIPOINT, Centrale역 내)", "note": "€11/일 · 큰 캐리어 OK · 15:35에 다시 픽업하러 옴", "mappable": false },
-        { "id": "D8-08", "sequence": 8, "startTime": "11:35", "endTime": "12:15", "title": "지하철 M3 → Duomo (3정거장) · 도보 Via Santa Marta", "note": "€2.2 · 두오모역에서 식당까지 도보 7분", "mappable": false, "transportFromPrevious": "transit" },
-        { "id": "D8-09", "sequence": 9, "startTime": "12:15", "endTime": "13:30", "title": "점심: Trattoria Milanese — 밀라노 북부 요리", "note": "Via Santa Marta 11 · 두오모 도보 7분 · 월~토 12:00~14:30/19:00~22:30·일요일만 휴무(월요일 세이프) · 오픈 12:00 직후라 자리·서빙 여유 · 리소토는 셰어 금지, 코톨레타는 양 많아 셰어 · 열차 지연 시 플랜B Mercato Centrale", "recommendedMenu": ["리소토 알라 밀라네제(사프란·셰어 금지)", "코톨레타 알라 밀라네제(양 많음·셰어)", "오소부코"], "mappable": true, "type": "restaurant", "placeName": "Trattoria Milanese, Via Santa Marta 11, Milano", "lat": null, "lng": null, "reservationLevel": "recommended", "transportFromPrevious": "walking", "estimatedCost": 70 },
-        { "id": "D8-10", "sequence": 10, "startTime": "13:30", "endTime": "14:40", "title": "밀라노 두오모 광장 + (선택) 두오모 옥상", "note": "기차가 빨라져 70분 확보 — 옥상까지 여유 · 옥상은 '시간 미지정/오픈' 티켓으로만(고정시간 예약 ❌, €15/인 옵션) · 줄 짧으면 내부도", "mappable": true, "type": "sightseeing", "placeName": "Duomo di Milano", "placeId": "ChIJoTZGw67GhkcREy4aECdOf6s", "lat": 45.4640976, "lng": 9.1919265, "transportFromPrevious": "walking" },
-        { "id": "D8-11", "sequence": 11, "startTime": "14:40", "endTime": "15:05", "title": "갈레리아 비토리오 에마누엘레 II", "note": "세계 가장 오래된 쇼핑몰 · 황소 발자국 의식", "mappable": true, "type": "shopping", "placeName": "Galleria Vittorio Emanuele II, Milano", "placeId": "ChIJw7aG_QY1eUcRFtQJWKmcCyc", "lat": 45.4658434, "lng": 9.1899401, "transportFromPrevious": "walking" },
-        { "id": "D8-12", "sequence": 12, "startTime": "15:05", "endTime": "15:15", "title": "라스칼라 광장·동상 (1분)", "mappable": true, "type": "sightseeing", "placeName": "Piazza della Scala, Milano", "placeId": "ChIJxQN4-63GhkcR-9PPaathtmM", "lat": 45.4672111, "lng": 9.1902263, "transportFromPrevious": "walking" },
-        { "id": "D8-13", "sequence": 13, "startTime": "15:15", "endTime": "15:35", "title": "지하철 M3 → Centrale (3정거장)", "mappable": false, "transportFromPrevious": "transit" },
-        { "id": "D8-14", "sequence": 14, "startTime": "15:35", "endTime": "15:55", "title": "짐 픽업 (KIPOINT) · 물·간식 구입", "note": "픽업 대기줄 감안 20분", "mappable": false },
-        { "id": "D8-15", "sequence": 15, "startTime": "15:55", "endTime": "16:25", "title": "★ Centrale 말펜사 익스프레스 승강장 이동·대기", "note": "🎫 말펜사 익스프레스는 Milano Centrale 출발(Cadorna 아님) · 승강장은 1~3번 쪽(역 서쪽 끝) — 전광판으로 확인, 짐 들고 이동 10분 · 놓쳐도 약 30분 뒤 16:55편", "mappable": true, "type": "station", "placeName": "Milano Centrale", "placeId": "ChIJQ1j3T8XGhkcRKs-XGhSxJiI", "lat": 45.487137, "lng": 9.204822, "transportFromPrevious": "transit" },
-        { "id": "D8-16", "sequence": 16, "startTime": "16:25", "endTime": "17:18", "title": "Malpensa Express 탑승 → MXP T1 도착 (53분)", "note": "🎫 예매 완료 (Milano Centrale 16:25 → Malpensa Aeroporto T1 17:18 직행) · 도착 후 KE 출국 카운터로, 출발(20:05)까지 약 2시간 45분 버퍼", "mappable": true, "type": "airport", "placeName": "Milan Malpensa Airport Terminal 1 (MXP)", "placeId": "ChIJR6BsfxJhhkcRM9qTpVN8cac", "lat": 45.6269595, "lng": 8.7122707, "transportFromPrevious": "train" },
-        { "id": "D8-17", "sequence": 17, "startTime": "17:25", "endTime": "18:30", "title": "KE928 체크인·수하물 위탁·보안검색", "mappable": false },
-        { "id": "D8-18", "sequence": 18, "startTime": "18:30", "endTime": "19:30", "title": "면세점·마지막 쇼핑", "note": "남은 유로 현금 소진", "mappable": false },
-        { "id": "D8-19", "sequence": 19, "startTime": "19:30", "endTime": "20:00", "title": "게이트 도착·탑승", "mappable": false },
-        { "id": "D8-20", "sequence": 20, "startTime": "20:05", "title": "KE 928 MXP 출발", "note": "B787-9", "mappable": false, "transportFromPrevious": "flight" }
+        { "id": "D8-01", "sequence": 1, "startTime": "07:00", "endTime": "07:30", "title": "기상·짐 마무리", "note": "여권·항공권·택스리펀 서류를 한 파우치에 · 08:00 Trenitalia 앱에서 09:00 편 지연 여부 확인 · 유심 데이터 잔량 · 방 최종 점검(충전기·세면도구·금고)", "mappable": false },
+        { "id": "D8-02", "sequence": 2, "startTime": "07:30", "endTime": "08:20", "title": "조식", "note": "아고다 예약에 조식 미포함(포함 서비스는 무료 Wi-Fi뿐) — 호텔 현장 결제 또는 역 앞 바", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null },
+        { "id": "D8-03", "sequence": 3, "startTime": "08:20", "endTime": "08:35", "title": "체크아웃 — 도시세 카드 결제", "note": "메스트레 2박 2인 약 €12.40(아고다 확정서: 도시세는 숙소에서 결제) · 호텔은 역 광장 건너편, 5분이면 전광판 앞", "mappable": false },
+        { "id": "D8-04", "sequence": 4, "startTime": "08:35", "endTime": "09:00", "title": "메스트레역 — 전광판에서 승강장·호차 위치 확인", "note": "프레차로사는 메스트레 정차 시간이 짧음 — 승강장이 뜨면 바로 올라가 승강장 안내판에서 호차(carrozza) 위치 확인", "mappable": true, "type": "station", "placeName": "Stazione di Venezia Mestre, Viale Stazione, 30171 Venezia", "placeId": "ChIJj4rg9iS0fkcRlo4qoF69ajY", "lat": 45.4824787, "lng": 12.2317675, "transportFromPrevious": "walking" },
+        { "id": "D8-05", "sequence": 5, "startTime": "09:00", "endTime": "11:15", "title": "🎫 Frecciarossa 메스트레 → 밀라노 첸트랄레 (예매 완료 · 2h15)", "note": "놓치면 두오모를 포기 · 캐리어는 타자마자 입구 선반, 도착 10분 전 꺼내 두기 · 열차 안에서: KIPOINT 온라인 예약 확인, Trattoria Milanese 예약 확인, 두오모 테라스 QR 준비, 말펜사 익스프레스 15:55 표 확인 · 놓치면 다음 열차(약 1시간 간격) · 60분 이상 지연 25%, 120분 이상 50% 환불(Trenitalia 앱)", "mappable": false, "transportFromPrevious": "train" },
+        { "id": "D8-06", "sequence": 6, "startTime": "11:15", "endTime": "11:35", "title": "첸트랄레 도착 → KIPOINT 짐 보관 (15분)", "note": "승강장(상층)에서 에스컬레이터로 지상층 갤러리아 상업구역 → 파란색 Deposito Bagagli 안내 · 가방당 첫 5시간 €6, 이후 시간당 €1 · 카드 가능 · 짐표는 사진 · 07:00~21:00 · 대기 20분 이상·만실이면 Stow Your Bags(Via Pergolesi 22, 도보 2분)", "mappable": true, "type": "station", "placeName": "Milano Centrale", "placeId": "ChIJQ1j3T8XGhkcRKs-XGhSxJiI", "lat": 45.487137, "lng": 9.204822, "transportFromPrevious": "train", "estimatedCost": 12 },
+        { "id": "D8-07", "sequence": 7, "startTime": "11:35", "endTime": "12:15", "title": "M3 Duomo 4정거장 → 도보 Via Santa Marta 11", "note": "노란선 San Donato행 · 1회권 €2.20, 컨택리스 카드로 개찰구 태그가 가장 빠름 · Duomo역에서 Via Torino 쪽으로 8~12분 · 지하철 안에서 가방은 앞으로", "mappable": false, "transportFromPrevious": "transit", "estimatedCost": 5 },
+        { "id": "D8-08", "sequence": 8, "startTime": "12:15", "endTime": "13:15", "title": "점심: Trattoria Milanese dal 1933 (예약 필수)", "note": "Via Santa Marta 11 · +39 02 8645 1991 · 이름 비슷한 dal 1997은 월요일 휴무인 다른 곳 — 예약 전화 때 주소 확인 · 12:50에 계산서(il conto) 부탁, 13:15 출발 · 1인 €30~45", "recommendedMenu": ["리조토 알라 밀라네제", "코톨레타 (크니 하나를 나눠도 됨)", "오소부코"], "mappable": true, "type": "restaurant", "placeName": "Trattoria Milanese, Via Santa Marta 11, Milano", "placeId": "ChIJd8ROFKvGhkcRUf875a9G9lM", "lat": 45.4629116, "lng": 9.1837802, "reservationLevel": "required", "transportFromPrevious": "walking", "estimatedCost": 75 },
+        { "id": "D8-09", "sequence": 9, "startTime": "13:30", "endTime": "13:45", "title": "두오모 광장 도착 · 테라스 보안검색 줄", "note": "테라스 입구는 성당 북쪽 측면(갈레리아 쪽) · 13:30에는 줄에 서 있기 · 큰 가방·삼각대 반입 불가", "mappable": true, "type": "sightseeing", "placeName": "Duomo di Milano", "placeId": "ChIJoTZGw67GhkcREy4aECdOf6s", "lat": 45.4640976, "lng": 9.1919265, "transportFromPrevious": "walking" },
+        { "id": "D8-10", "sequence": 10, "startTime": "13:45", "endTime": "14:40", "title": "🎫 두오모 테라스 13:45 시간지정권 (엘리베이터 · 55분)", "note": "유일한 관광 고정점 · 엘리베이터는 1층 테라스까지, 2층 테라스와 하산은 계단(약 250단) · 비 오면 대리석 바닥 미끄러움 · 성당 내부까지 가려면 어깨·무릎 가림, 시간 없으면 테라스만 · 줄 30분 이상이면 슬롯이 지나도 직원에게 QR — 14:15까지 못 들어가면 포기하고 갈레리아로", "mappable": false, "estimatedCost": 36 },
+        { "id": "D8-11", "sequence": 11, "startTime": "14:40", "endTime": "15:05", "title": "갈레리아 비토리오 에마누엘레 II", "note": "바닥의 황소 모자이크는 사진만 찍고 지나감 · 택스리펀 받을 물건은 상점에서 여권 제시, tax free 영수증(OTELLO 코드 포함) — €70 이상 구매 조건 · 영수증·여권 세트로 보관", "mappable": true, "type": "shopping", "placeName": "Galleria Vittorio Emanuele II, Milano", "placeId": "ChIJw7aG_QY1eUcRFtQJWKmcCyc", "lat": 45.4658434, "lng": 9.1899401, "transportFromPrevious": "walking" },
+        { "id": "D8-12", "sequence": 12, "startTime": "15:05", "endTime": "15:10", "title": "라스칼라 광장 — 사진만 찍고 이동", "mappable": true, "type": "sightseeing", "placeName": "Piazza della Scala, Milano", "placeId": "ChIJxQN4-63GhkcR-9PPaathtmM", "lat": 45.4672111, "lng": 9.1902263, "transportFromPrevious": "walking" },
+        { "id": "D8-13", "sequence": 13, "startTime": "15:10", "endTime": "15:30", "title": "도보 → Montenapoleone M3 3정거장 → Centrale", "note": "라스칼라 광장에서 Via Manzoni를 따라 5분 · Duomo역 M3 4정거장도 가능", "mappable": false, "transportFromPrevious": "transit", "estimatedCost": 5 },
+        { "id": "D8-14", "sequence": 14, "startTime": "15:30", "endTime": "15:45", "title": "KIPOINT 짐 픽업 · 물·간식 구입", "note": "15:30 KIPOINT 도착이 기준 — 못 하면 16:25편으로 전환(마지막 여유) · 물은 보안검색 전에 다 마시니 작은 것만", "mappable": true, "type": "station", "placeName": "Milano Centrale", "placeId": "ChIJQ1j3T8XGhkcRKs-XGhSxJiI", "lat": 45.487137, "lng": 9.204822, "transportFromPrevious": "transit" },
+        { "id": "D8-15", "sequence": 15, "startTime": "15:45", "endTime": "15:55", "title": "말펜사 익스프레스 승강장 (트레노르드 구역, 보통 1~3번)", "note": "출발 15분 전 전광판으로 승강장 확인", "mappable": false },
+        { "id": "D8-16", "sequence": 16, "startTime": "15:55", "endTime": "16:48", "title": "🎫 말펜사 익스프레스 Centrale 15:55 → T1 (51~53분 · 16:48경 · 백업 16:25)", "note": "Trenitalia 앱 표(9/28에 16:25 → 15:55로 변경) — 정확한 도착 시각은 앱 티켓으로 확인 · Porta Garibaldi 경유 · T1이 첫 공항역 — T1 안내가 나오면 하차(종점 T2까지 가면 무료 셔틀로 돌아와야 함) · 놓치면 같은 표로 뒤 열차: 16:25(T1 17:18)는 아직 안전, 16:55(17:48경)는 택스리펀 포기·온라인 체크인 한 경우만, 그것도 놓치면 택시(정액 약 €114)", "mappable": true, "type": "airport", "placeName": "Milan Malpensa Airport Terminal 1 (MXP)", "placeId": "ChIJR6BsfxJhhkcRM9qTpVN8cac", "lat": 45.6269595, "lng": 8.7122707, "transportFromPrevious": "train" },
+        { "id": "D8-17", "sequence": 17, "startTime": "16:48", "endTime": "17:45", "title": "T1: 택스리펀(해당 시) → 체크인·위탁", "note": "택스리펀 데스크는 T1 2층 12번 체크인 구역 — 위탁수하물에 넣을 물건은 체크인 전 검증(45~60분 더 듦), 기내 반입 물건은 보안검색 후 세관 · 18:20까지 안 끝나면 포기하고 체크인 · 대한항공 체크인 마감 19:05(출발 60분 전) · 온라인 체크인을 해 두면 위탁만", "mappable": false },
+        { "id": "D8-18", "sequence": 18, "startTime": "17:45", "endTime": "18:30", "title": "보안검색 → 출국심사(EES) — 면세점보다 먼저", "note": "보안검색 후 상점에 들르지 말고 바로 출국심사 · 첫 EES 등록은 1인 5분 정도, 셀프 키오스크가 있으면 유인 창구보다 빠름 · 18:45가 넘으면 줄 앞쪽 직원에게 탑승권을 보여주고 KE928 승객임을 알리기", "mappable": false },
+        { "id": "D8-19", "sequence": 19, "startTime": "18:30", "endTime": "19:15", "title": "면세점·가벼운 식사", "note": "출국심사를 마친 뒤에만 · 기내식은 이륙 후 한참 뒤", "mappable": false },
+        { "id": "D8-20", "sequence": 20, "startTime": "19:15", "endTime": "20:05", "title": "게이트 도착", "note": "탑승은 보통 출발 40분 전 시작 · 게이트 마감 19:45", "mappable": false },
+        { "id": "D8-21", "sequence": 21, "startTime": "20:05", "title": "✈️ KE928 말펜사 T1 출발 → 10/27 15:35 인천 T2 (11h30)", "note": "동계 스케줄 첫 주 — 대한항공 앱으로 출발 시각·T1 재확인 · 인천 환승 2h50 → 18:25 KE1407 부산", "mappable": false, "transportFromPrevious": "flight" }
       ],
       "reservations": [
-        { "id": "RES-D8-LUNCH", "placeName": "Trattoria Milanese", "meal": "lunch", "reservationLevel": "recommended", "recommendedTiming": "여행 중 (D7 저녁 전화)", "note": "Via Santa Marta 11, 두오모 도보 7분. 전화 +39 02 8645 1991 — 밀라노 도착 전날(D7) 저녁에 전화(이날부터 시차 -8시간, 한국 가족 대리 시 주의) / 구글맵 예약 버튼도 확인. 월~토 12:00~14:30/19:00~22:30·일요일만 휴무(토요일 영업·월요일 세이프). ★열차가 11:15 Centrale 도착이라 오픈 직후 12:15로 예약 — 자리·서빙 모두 여유롭습니다. 리소토 알라 밀라네제(셰어 금지)·코톨레타(양 많음·셰어)·오소부코. 열차 30분+ 지연 시 예약 취소 후 Mercato Centrale Milano(Centrale역사 내)로 플랜B.", "messageEN": "Hello, I'd like to book a table for 2 on Monday 26 October at 12:15 pm, under the name [이름]. Thank you!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone lunedì 26 ottobre alle 12:15, a nome [이름]. Grazie!", "messageKO": "안녕하세요, [이름] 이름으로 10월 26일 월요일 12:15 2인 테이블을 예약하고 싶습니다. 감사합니다!" }
-      ]
+        { "id": "RES-D8-LUNCH", "placeName": "Trattoria Milanese dal 1933", "meal": "lunch", "reservationLevel": "required", "recommendedTiming": "D-14 (10/12 전후) — 10/26(월) 12:15 2인 · +39 02 8645 1991", "note": "Via Santa Marta 11(두오모역에서 도보 8~12분). 월~토 12:00~14:30 / 19:00~22:30, 일 휴무. 이름이 비슷한 'dal 1997'은 월요일 휴무이고 다른 곳 — 예약 전화 때 주소(Via Santa Marta 11) 확인. 리조토 알라 밀라네제·코톨레타·오소부코, 1인 €30~45. 12:50에 계산서, 13:15 출발. 열차가 30분~1시간 늦으면 전화로 취소하고 Luini 판체로토(Via Santa Radegonda 16)로. 만석·누락이면 Luini나 Trattoria da Pino(Via Cerva 14, 월~토 점심).", "messageEN": "Hello, I'd like to book a table for 2 on Monday 26 October at 12:15, under the name [이름]. Is this Trattoria Milanese in Via Santa Marta 11? Thank you!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone lunedì 26 ottobre alle 12:15, a nome [이름]. È la Trattoria Milanese di Via Santa Marta 11? Grazie!", "messageKO": "안녕하세요, [이름] 이름으로 10월 26일 월요일 12:15 2인 테이블을 예약하고 싶습니다. Via Santa Marta 11의 Trattoria Milanese 맞나요? 감사합니다!" }
+      ],
+      "guide": {
+        "source": "완벽가이드/10 26 (월) 베네치아→밀라노→귀국 완벽 가이드.md (2026-09-28 · @하늘이)",
+        "sections": [
+          {
+            "id": "overview",
+            "icon": "🗓️",
+            "title": "하루 한눈에",
+            "summary": "목표는 20:05 KE928 · 고정점 5개 · 위험 3가지는 공항 · 월요일 휴관",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "이날의 목표는 하나, 20:05 KE928(말펜사 T1)을 여유 있게 타는 것이다. 밀라노 관광은 그 여유 안에서만 한다."
+                ],
+                "table": {
+                  "columns": [
+                    "시각",
+                    "무엇",
+                    "왜 중요한가"
+                  ],
+                  "rows": [
+                    [
+                      "09:00",
+                      "Frecciarossa 메스트레 → 밀라노 첸트랄레 (11:15 도착)",
+                      "하루의 시작. 놓치면 두오모를 포기한다"
+                    ],
+                    [
+                      "13:45",
+                      "두오모 테라스 시간지정권 입장",
+                      "유일한 관광 고정점"
+                    ],
+                    [
+                      "15:55",
+                      "말펜사 익스프레스 첸트랄레 출발 (백업 16:25)",
+                      "이 열차가 기준선. 16:25는 마지막 여유"
+                    ],
+                    [
+                      "17:45",
+                      "보안검색 → 출국심사(EES) 진입",
+                      "면세점보다 먼저. 대기 예측이 안 된다"
+                    ],
+                    [
+                      "20:05",
+                      "KE928 출발 → 10/27 15:35 인천 T2",
+                      "동계 스케줄 첫 주. 앱으로 재확인"
+                    ]
+                  ]
+                }
+              },
+              {
+                "title": "이날 가장 큰 위험 3가지는 밀라노 시내가 아니라 공항에 있다",
+                "bullets": [
+                  "**EES 출국심사:** 2026년 4월부터 출국 시에도 지문·얼굴 확인을 하며, 말펜사는 이탈리아에서 영향이 가장 큰 공항으로 꼽힌다. 대기 시간을 예측할 수 없다.",
+                  "**택스리펀:** 갈레리아에서 산 물건을 위탁수하물에 넣으면 체크인 전 T1 12번 구역에서 검증받아야 하고 45~60분이 더 든다.",
+                  "**프레차로사 지연·파업:** 현재 10/26에 공고된 파업은 없지만 목록은 계속 갱신된다. 2시간 이상 늦으면 관광을 버리고 공항으로 직행한다."
+                ]
+              },
+              {
+                "paragraphs": [
+                  "월요일이라 최후의 만찬, 브레라 미술관, 노베첸토 미술관, 스포르체스코 성 내부 박물관은 휴관이다. 두오모·테라스·갈레리아·라스칼라 광장은 정상 운영이라 이 동선은 월요일에 안전하다.",
+                  "원본 일정에서 기상 30분 늦춤, 짐 보관 15분 확보, 점심 12:15, 말펜사 익스프레스 15:55 기준(16:25 백업), 출국심사를 면세점보다 앞에 두는 것으로 바꿨다. 시각은 모두 현지 시간(10/25부터 CET, 한국과 8시간 차)이다."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "legs",
+            "icon": "🧭",
+            "title": "구간별 실행 가이드",
+            "summary": "메스트레 → 첸트랄레 → 점심 → 테라스 → 갈레리아 → 말펜사 익스프레스 → T1",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "각 구간에서 실제로 손에 쥐고 해야 할 일만 적었다. 순서대로 따라가면 된다."
+                ]
+              },
+              {
+                "title": "1. 메스트레역 → 프레차로사 (08:20~11:15)",
+                "bullets": [
+                  "BW Plus Hotel Bologna는 역 광장 건너편이다. 체크아웃 후 5분이면 승강장 전광판 앞에 선다.",
+                  "프레차로사는 메스트레 정차 시간이 짧다. 전광판에 승강장이 뜨면 바로 올라가 호차(carrozza) 위치를 승강장 안내판에서 확인한다.",
+                  "캐리어 선반은 객차 입구와 좌석 위에 있다. 타자마자 입구 선반에 넣고, 도착 10분 전에 미리 꺼내 둔다.",
+                  "열차 안에서 할 일: KIPOINT 온라인 예약 확인, Trattoria Milanese 예약 확인, 두오모 테라스 QR 준비, 말펜사 익스프레스 15:55 표 확인(Trenitalia 앱, 9/28 변경 완료)."
+                ]
+              },
+              {
+                "title": "2. 첸트랄레 도착 → 짐 보관 → 두오모 (11:15~12:15)",
+                "bullets": [
+                  "승강장(상층)에서 에스컬레이터로 지상층 갤러리아 상업구역으로 내려간다. 파란색 Deposito Bagagli 안내를 따라가면 KIPOINT다.",
+                  "요금은 가방당 첫 5시간 6€, 이후 시간당 1€. 카드 결제 가능. 짐표는 사진을 찍어 둔다.",
+                  "지하 M3(노란선) Duomo 방향. San Donato행 열차를 타고 4정거장. 1회권 2.20€, 카드 컨택리스로 개찰구 태그가 가장 빠르다.",
+                  "Duomo역에서 나와 Via Torino 쪽으로 8~12분 걸으면 Via Santa Marta 11이다. 지하철 안에서 가방은 앞으로 멘다."
+                ]
+              },
+              {
+                "title": "3. 점심 Trattoria Milanese dal 1933 (12:15~13:15)",
+                "bullets": [
+                  "이름이 비슷한 dal 1997은 월요일 휴무이고 다른 곳이다. 예약 전화 시 주소를 확인한다.",
+                  "리조토 알라 밀라네제, 코톨레타, 오소부코가 대표 메뉴다. 코톨레타는 크니 하나를 나눠도 된다.",
+                  "12:50에 계산서(il conto)를 부탁한다. 13:15 출발이 기준이다."
+                ]
+              },
+              {
+                "title": "4. 두오모 테라스 (13:30~14:40)",
+                "bullets": [
+                  "테라스 입구는 성당 북쪽 측면(갈레리아 쪽)이다. 보안검색 줄이 있으니 13:30에는 줄에 서 있어야 한다.",
+                  "엘리베이터는 1층 테라스까지만 간다. 2층 테라스와 하산은 계단(약 250단)이다. 편한 신발이 필수다.",
+                  "큰 가방·삼각대는 반입 불가다. 비가 오면 대리석 바닥이 미끄럽다.",
+                  "성당 내부까지 들어가려면 어깨와 무릎을 가려야 한다. 시간이 없으면 테라스만 본다."
+                ]
+              },
+              {
+                "title": "5. 갈레리아·라스칼라 → 첸트랄레 복귀 (14:40~15:45)",
+                "bullets": [
+                  "갈레리아 바닥의 황소 모자이크는 사진만 찍고 지나간다.",
+                  "택스리펀을 받을 물건은 상점에서 여권을 제시하고 tax free 영수증(OTELLO 코드 포함)을 받는다. 70€ 이상 구매가 조건이다.",
+                  "라스칼라 광장에서 Via Manzoni를 따라 5분 걸으면 Montenapoleone M3역이다. Centrale 방향 3정거장.",
+                  "15:30 KIPOINT 도착이 기준이다. 물은 보안검색 전에 다 마셔야 하니 작은 것만 산다."
+                ]
+              },
+              {
+                "title": "6. 말펜사 익스프레스 (15:45~16:48)",
+                "bullets": [
+                  "첸트랄레에서 매시 25분·55분 출발, Porta Garibaldi를 거쳐 T1까지 51~53분이다(16:25 → 17:18 티켓 기준 53분). 요금은 편도 15€.",
+                  "표는 Trenitalia 앱에 있다(9/28에 16:25 → 15:55로 변경). Trenitalia 디지털 지역권은 출발 전이면 앱 '티켓 관리(Gestisci biglietto)'에서 당일 시각을 무료로 바꿀 수 있고, 열차를 놓치면 같은 표로 뒤 열차를 탄다.",
+                  "승강장은 트레노르드 구역(보통 1~3번)이다. 출발 15분 전 전광판으로 확인한다.",
+                  "T1이 첫 공항역이다. 종점 T2까지 가면 무료 셔틀로 돌아와야 하니 T1 안내가 나오면 내린다."
+                ]
+              },
+              {
+                "title": "7. 말펜사 T1 (16:48~20:05)",
+                "bullets": [
+                  "순서는 택스리펀(해당 시) → 체크인·위탁 → 보안검색 → 출국심사(EES) → 면세점·식사 → 게이트다.",
+                  "택스리펀 데스크는 T1 2층 12번 체크인 구역이다. 위탁수하물에 넣을 물건은 체크인 전에 검증받는다. 기내 반입 물건은 보안검색 후 세관에서 처리한다.",
+                  "대한항공 체크인 마감은 출발 60분 전(19:05), 게이트 마감은 20분 전(19:45)이다. 온라인 체크인을 미리 해 두면 위탁만 하면 된다.",
+                  "보안검색 후 상점에 들르지 말고 출국심사로 간다. 첫 EES 등록은 1인 5분 정도이고, 셀프 키오스크가 있으면 유인 창구보다 빠르다.",
+                  "출국심사를 마친 뒤 면세점과 식사. 게이트는 19:15까지 도착한다."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "contingency",
+            "icon": "🔀",
+            "title": "상황별 대응 매뉴얼",
+            "summary": "열차 지연·파업 · 짐 보관 · 식당 · 두오모 · 공항 열차 · 택스리펀 · EES · 결항 · 인천",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "판단 원칙은 하나다. 두오모와 갈레리아는 버릴 수 있지만 20:05 비행기는 못 버린다. 아래 표는 일어날 순서대로 정리했다."
+                ],
+                "table": {
+                  "columns": [
+                    "상황 (판단 기준)",
+                    "대응",
+                    "포기하는 것 · 비용"
+                  ],
+                  "rows": [
+                    [
+                      "프레차로사 30분~1시간 지연 (첸트랄레 도착 12:15 이전)",
+                      "점심을 Luini 판체로토(두오모 뒤 Via Santa Radegonda)로 바꿔 15분에 끝내고 13:45 테라스 슬롯을 지킨다. Trattoria Milanese에는 전화로 취소한다.",
+                      "앉아서 먹는 점심"
+                    ],
+                    [
+                      "프레차로사 1~2시간 지연 (도착 12:15~13:15)",
+                      "테라스는 포기한다. 짐 맡기고 두오모 광장·갈레리아만 보고 15:30 KIPOINT 기준으로 돌아온다.",
+                      "테라스 티켓(2인 약 36€)"
+                    ],
+                    [
+                      "프레차로사 2시간 이상 지연·결항 (도착 13:15 이후)",
+                      "짐을 맡기지 않는다. 바로 트레노르드 승강장으로 가서 다음 말펜사 익스프레스를 탄다(보유표는 출발 전 앱에서 시각 변경). 공항에서 식사한다. Frecce는 60분 이상 지연 시 25%, 120분 이상 50% 환불 대상이니 Trenitalia 앱에서 신청한다.",
+                      "밀라노 관광 전부"
+                    ],
+                    [
+                      "철도 파업 공고 (10/15 전후 확인)",
+                      "Trenitalia '파업 시 보장 열차(treni garantiti)' 목록에 09:00 편이 있는지 본다. 없으면 목록에 있는 편이나 Italo로 바꾼다. 트레노르드 파업이면 공항 열차 취소 시 첸트랄레↔말펜사 무정차 대체 버스가 운행된다.",
+                      "표 변경 수수료"
+                    ],
+                    [
+                      "밀라노 지하철(ATM) 파업",
+                      "첸트랄레→두오모는 도보 35분 또는 택시 약 15€다. 돌아올 때도 같다. 15:30 KIPOINT 기준 시각은 유지한다.",
+                      "택시비 약 30€"
+                    ],
+                    [
+                      "비·강풍",
+                      "테라스는 악천후 시 폐쇄될 수 있다. 대신 성당 내부와 두오모 박물관(월요일 개관, 수요일 휴관)을 보거나 리나센테 7층 푸드홀에서 두오모를 본다.",
+                      "테라스"
+                    ],
+                    [
+                      "KIPOINT 대기 20분 이상·만실",
+                      "역에서 2분 거리 Stow Your Bags(Via Pergolesi 22, 무인 보관함) 또는 Radical Storage·Bounce 앱으로 근처 상점 보관소를 쓴다.",
+                      "5~10€ 추가"
+                    ],
+                    [
+                      "식당 예약 누락·만석",
+                      "Luini 판체로토(월요일 점심 영업)나 Trattoria da Pino(Via Cerva 14, 월~토 점심)로 간다. 출발 전 두 곳 영업시간을 구글맵에서 확인해 둔다.",
+                      "없음"
+                    ],
+                    [
+                      "두오모 보안검색 줄 30분 이상",
+                      "슬롯 시각이 지나도 직원에게 QR을 보여주면 보통 들여보낸다. 14:15까지 못 들어가면 포기하고 갈레리아로 간다.",
+                      "테라스"
+                    ],
+                    [
+                      "15:55 말펜사 익스프레스 놓침",
+                      "같은 표로 16:25편(T1 17:18 도착, 출발 2h47 전)은 아직 안전하다. 16:55편(17:48경 도착)은 택스리펀을 포기하고 온라인 체크인을 해 둔 경우에만 탄다. 16:55도 놓치면 17:25편을 기다리지 말고 택시다.",
+                      "16:55 이후 택스리펀"
+                    ],
+                    [
+                      "트레노르드 운휴·장애",
+                      "첸트랄레 동쪽 출구 Piazza Luigi di Savoia에서 Autostradale·Terravision 등 공항버스가 15~20분 간격, 50~70분, 5~13€다. 시간이 급하면 택시 정액 약 114€(1대 기준, 50~60분).",
+                      "30~114€"
+                    ],
+                    [
+                      "택스리펀 줄이 너무 김",
+                      "18:20까지 처리가 안 되면 포기하고 체크인한다. 물건을 기내 가방으로 옮기면 보안검색 후 세관에서 처리할 수 있지만 EES 대기와 겹치니 권하지 않는다.",
+                      "환급액(구매액의 약 13~15%)"
+                    ],
+                    [
+                      "EES 출국심사 줄 1시간 이상",
+                      "18:45가 넘으면 줄 앞쪽 직원에게 탑승권을 보여주고 KE928 승객임을 알린다. 게이트 마감 19:45다. 공항은 대기가 길어지면 수동 처리로 전환한 전례가 있다.",
+                      "면세점·식사"
+                    ],
+                    [
+                      "KE928 1시간 이상 지연",
+                      "인천 환승 2h50이 줄어든다. 입국심사·수하물 픽업·국내선 재위탁에 최소 1h30이 필요하니, 밀라노에서 대한항공 직원 또는 앱으로 KE1407 다음 편 선제 변경을 요청한다.",
+                      "22시 전 귀가"
+                    ],
+                    [
+                      "KE928 결항",
+                      "대한항공 T1 카운터에서 재예약과 숙박을 요청한다. 여행자보험 항공 지연 특약과 영수증을 챙긴다. 다음 KE928은 수요일이다. 아시아나 OZ582(22:00)는 화·목·토 운항이라 10/26(월)엔 없고 10/27(화)편이 가장 빠르다. 경유편도 함께 요청한다.",
+                      "하루 이상"
+                    ],
+                    [
+                      "인천에서 KE1407(18:25) 놓침",
+                      "T2 대한항공 환승 카운터에서 부산행 후속편으로 바꾼다. 없으면 공항철도로 서울역 이동 후 KTX(부산까지 약 2h40).",
+                      "22시 전 귀가"
+                    ],
+                    [
+                      "수하물 미도착",
+                      "인천 T2 대한항공 수하물 카운터에서 PIR을 작성하고 집 배송을 신청한다. 부산 도착 후 접수하면 절차가 늦어진다.",
+                      "없음"
+                    ],
+                    [
+                      "밀라노에서 여권 분실",
+                      "경찰(Questura) 분실 신고서 → 주밀라노 대한민국 총영사관 긴급여권. 월요일 근무일이라 당일 처리 시도가 가능하지만 항공편 변경은 각오한다.",
+                      "당일 귀국"
+                    ]
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "cutoff",
+            "icon": "⏳",
+            "title": "컷오프 결정표",
+            "summary": "시계가 이 시각을 넘으면 그 자리에서 결정하고 되돌리지 않는다",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "고민하지 않기 위한 표다. 시계가 이 시각을 넘으면 그 자리에서 결정하고, 되돌리지 않는다."
+                ],
+                "table": {
+                  "columns": [
+                    "시각",
+                    "이 시각까지 못 하면",
+                    "결정"
+                  ],
+                  "rows": [
+                    [
+                      "11:45",
+                      "첸트랄레 도착",
+                      "점심을 Luini 판체로토로 바꾼다. 테라스 슬롯은 지킨다"
+                    ],
+                    [
+                      "12:15",
+                      "첸트랄레 도착",
+                      "테라스 포기. 짐 맡기고 두오모 광장·갈레리아만 보고 15:30 KIPOINT로"
+                    ],
+                    [
+                      "13:15",
+                      "첸트랄레 도착",
+                      "관광 전부 포기. 짐을 맡기지 않고 다음 말펜사 익스프레스를 탄다"
+                    ],
+                    [
+                      "14:15",
+                      "테라스 입장",
+                      "테라스 포기. 갈레리아로 바로 간다"
+                    ],
+                    [
+                      "15:30",
+                      "KIPOINT 도착",
+                      "16:25편으로 전환한다. 이게 마지막 여유다"
+                    ],
+                    [
+                      "16:25",
+                      "말펜사 익스프레스 탑승",
+                      "택스리펀 포기. 온라인 체크인을 하고 16:55편을 탄다"
+                    ],
+                    [
+                      "16:55",
+                      "말펜사 익스프레스 탑승",
+                      "17:25편을 기다리지 말고 택시(정액 약 114€)를 탄다"
+                    ],
+                    [
+                      "18:20",
+                      "택스리펀 처리 완료",
+                      "포기하고 체크인 줄로 간다"
+                    ],
+                    [
+                      "18:45",
+                      "출국심사 통과",
+                      "직원에게 탑승권을 보여주고 KE928 승객임을 알린다"
+                    ],
+                    [
+                      "19:05",
+                      "체크인·위탁 완료",
+                      "대한항공 체크인 마감. 이후는 카운터 직원 판단"
+                    ],
+                    [
+                      "19:45",
+                      "게이트 도착",
+                      "게이트 마감. 탑승 불가"
+                    ]
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "prep",
+            "icon": "🧳",
+            "title": "사전 준비 체크리스트",
+            "summary": "D-14 7 · D-3 5 · 전날 밤 6 · 당일 아침 4",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "이탈리아 파업은 최소 10일 전 공고가 의무라, 10/16이 지나면 10/26 파업이 새로 붙을 수 없다. D-14 확인과 D-3 재확인이면 충분하다."
+                ]
+              },
+              {
+                "title": "D-14 (10/12 전후)",
+                "checklist": [
+                  "두오모 테라스 13:45 시간지정권 구매 (ticket.duomomilano.it, 엘리베이터 상행, 2인)",
+                  "Trattoria Milanese dal 1933 예약 전화 (+39 02 8645 1991, 12:15, 2명, Via Santa Marta 11 확인)",
+                  "대한항공 앱에서 KE928 출발 20:05·T1 재확인 (동계 스케줄 첫 주)",
+                  "프레차로사 09:00 편 좌석·호차 번호 확인",
+                  "파업 캘린더 확인 (철도 Trenitalia, 트레노르드, 밀라노 ATM)",
+                  "여행자보험 항공 지연·결항 특약과 청구 서류 확인",
+                  "KIPOINT 온라인 예약 (kibag.it, 선택)"
+                ]
+              },
+              {
+                "title": "D-3 (10/23)",
+                "checklist": [
+                  "파업 캘린더 재확인",
+                  "Trenitalia 앱에서 말펜사 익스프레스 15:55 표 확인 (9/28 변경 완료 — 도착 시각도 확인)",
+                  "밀라노 10/26 날씨 확인. 비 예보면 테라스 대안 준비",
+                  "Luini·Trattoria da Pino 월요일 영업시간 구글맵 확인",
+                  "현금 잔액 확인 (이날 필요 현금 약 30€)"
+                ]
+              },
+              {
+                "title": "전날 밤 (10/25, 메스트레)",
+                "checklist": [
+                  "대한항공 온라인 체크인 (출발 48시간 전부터 가능, 좌석 확인)",
+                  "캐리어 재정리: 택스리펀 물건은 맨 위, 세관이 열어볼 수 있게",
+                  "기내 가방: 여권·항공권·택스리펀 영수증·보조배터리·충전기·액체류 100ml 분리",
+                  "폰: Trenitalia·트레노르드·ATM·대한항공 앱 로그인 확인, 밀라노 오프라인 지도 저장",
+                  "알람 07:00. 서머타임은 이미 끝나 있어 폰 시각은 정상",
+                  "조식(예약에 미포함 — 현장 결제 여부)과 도시세 결제 준비"
+                ]
+              },
+              {
+                "title": "당일 아침",
+                "checklist": [
+                  "08:00 Trenitalia 앱에서 09:00 편 지연 여부 확인",
+                  "여권·항공권·택스리펀 서류 파우치 손에 들고 나감",
+                  "유심 데이터 잔량 확인",
+                  "방 최종 점검 (충전기, 세면도구, 금고)"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "budget",
+            "icon": "💶",
+            "title": "예산과 현금",
+            "summary": "2인 약 180~210€ (말펜사 익스프레스 결제 완료 포함) · 현금 30€",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "이날 2인 지출은 약 180~210€로, 원본 일정의 130€보다 50~80€ 많다. 거의 전부 카드로 결제할 수 있어 현금은 30€면 된다."
+                ],
+                "table": {
+                  "columns": [
+                    "항목",
+                    "2인 금액",
+                    "결제"
+                  ],
+                  "rows": [
+                    [
+                      "도시세 (메스트레 2박, 체크아웃 시)",
+                      "12.40€",
+                      "카드"
+                    ],
+                    [
+                      "지하철 M3 4회 (2.20€×4)",
+                      "8.80€",
+                      "컨택리스 카드"
+                    ],
+                    [
+                      "KIPOINT 캐리어 2개 (5시간 이내)",
+                      "12€",
+                      "카드·현금"
+                    ],
+                    [
+                      "점심 Trattoria Milanese (1인 30~45€)",
+                      "60~90€",
+                      "카드"
+                    ],
+                    [
+                      "두오모 테라스 엘리베이터권",
+                      "약 36€",
+                      "온라인 카드"
+                    ],
+                    [
+                      "말펜사 익스프레스 (15€×2)",
+                      "30€",
+                      "Trenitalia 앱 (결제 완료)"
+                    ],
+                    [
+                      "공항 식사·간식·물",
+                      "20~30€",
+                      "카드"
+                    ]
+                  ]
+                },
+                "bullets": [
+                  "비상 예비비는 따로 잡아 둔다. 택시 첸트랄레→말펜사 정액 약 114€, 공항버스 2인 10~26€, 대체 짐 보관 5~10€다. 남은 유로 동전은 공항 가기 전 물·간식으로 털고, 지폐만 들고 간다."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "contacts",
+            "icon": "📞",
+            "title": "주소·연락처·앱",
+            "summary": "호텔 · KIPOINT · 식당 3 · 두오모 · 공항 교통 · 택스리펀 · KE928 · 파업 · EES · 긴급",
+            "blocks": [
+              {
+                "paragraphs": [
+                  "당일 폰에서 바로 찾을 수 있게 한 표에 모았다. 구글맵에는 출발 전에 전부 저장해 둔다."
+                ],
+                "table": {
+                  "columns": [
+                    "항목",
+                    "주소·연락처",
+                    "메모"
+                  ],
+                  "rows": [
+                    [
+                      "BW Plus Hotel Bologna",
+                      "Via Piave 214, Mestre · +39 041 931000",
+                      "메스트레역 광장 건너편. 체크아웃 12:00"
+                    ],
+                    [
+                      "KIPOINT 짐 보관",
+                      "밀라노 첸트랄레 지상층 갤러리아, +39 02 3962 2425",
+                      "07:00~21:00, 가방당 첫 5시간 6€"
+                    ],
+                    [
+                      "Stow Your Bags (대체)",
+                      "Via Pergolesi 22",
+                      "역에서 도보 2분, 무인 보관함"
+                    ],
+                    [
+                      "Trattoria Milanese dal 1933",
+                      "Via Santa Marta 11, +39 02 8645 1991",
+                      "월~토 12:00~14:30 / 19:00~22:30, 일 휴무. dal 1997과 다른 곳"
+                    ],
+                    [
+                      "Luini (백업)",
+                      "Via Santa Radegonda 16",
+                      "두오모 뒤, 판체로토, 서서 15분"
+                    ],
+                    [
+                      "Trattoria da Pino (백업)",
+                      "Via Cerva 14",
+                      "월~토 점심, 출발 전 영업시간 확인"
+                    ],
+                    [
+                      "두오모 테라스 티켓",
+                      "ticket.duomomilano.it",
+                      "엘리베이터는 1층까지, 하산 계단, 박물관 수요일 휴관"
+                    ],
+                    [
+                      "말펜사 익스프레스",
+                      "첸트랄레 트레노르드 승강장, 매시 :25 / :55",
+                      "15€, 51~53분, T1 하차 · 보유표 15:55 (Trenitalia 앱)"
+                    ],
+                    [
+                      "공항버스 (대체)",
+                      "Piazza Luigi di Savoia, 첸트랄레 동쪽 출구",
+                      "Autostradale·Terravision 등, 15~20분 간격, 50~70분"
+                    ],
+                    [
+                      "택시 (대체)",
+                      "첸트랄레 택시 승강장",
+                      "밀라노 시내↔말펜사 정액 약 114€"
+                    ],
+                    [
+                      "택스리펀",
+                      "말펜사 T1 2층 12번 체크인 구역",
+                      "체크인 전 검증, 여권·영수증·물건 지참"
+                    ],
+                    [
+                      "대한항공 KE928",
+                      "말펜사 T1, 20:05 출발",
+                      "체크인 마감 19:05, 게이트 마감 19:45, 앱으로 재확인"
+                    ],
+                    [
+                      "파업 캘린더",
+                      "Commissione Garanzia Sciopero",
+                      "파업 시 Trenitalia 보장 열차 목록 (링크는 출처)"
+                    ],
+                    [
+                      "EES 대기 현황",
+                      "eesqueue.com 말펜사",
+                      "당일 오후 참고용"
+                    ],
+                    [
+                      "긴급",
+                      "이탈리아 통합 긴급전화 112, 외교부 영사콜센터 +82-2-3210-0404",
+                      "여권 분실 시 주밀라노 총영사관(구글맵 검색)"
+                    ]
+                  ]
+                },
+                "bullets": [
+                  "**앱:** Trenitalia(프레차로사 지연 확인·환불, 말펜사 익스프레스 보유표), 트레노르드(말펜사 익스프레스 운행), ATM Milano(지하철), 대한항공(체크인·재예약), 구글맵 오프라인 지도(밀라노), Global Blue 또는 Planet(택스리펀 추적)."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fixes",
+            "icon": "🛠️",
+            "title": "원문에서 바로잡은 것",
+            "summary": "15:55 표 변경 반영 · 컷오프 표 두 줄 · OZ582 요일 · 16:25 도착 17:18 · 조식",
+            "blocks": [
+              {
+                "bullets": [
+                  "**말펜사 익스프레스:** 원문은 '트레노르드 앱에서 15:55 표 새로 구매'인데, 9/28에 Trenitalia 앱의 16:25 표를 15:55로 바꿨으므로 '구매'를 '보유표 확인'으로, 예산은 '결제 완료'로 적었어요. 16:25를 놓쳐도 같은 표로 뒤 열차를 탈 수 있어요. 원문의 '선택한 출발 시각부터 3시간 유효'는 트레노르드 표 규정이라 Trenitalia 표 설명에서는 뺐어요(Trenitalia 표는 출발 전 앱에서 시각 변경).",
+                  "**T1 도착:** 원문 '16:25편 T1 17:16'은 실제 티켓 기준 17:18(53분)이에요. 15:55편도 16:46이 아니라 16:48경일 수 있어요 — 앱 티켓의 도착 시각으로 확인하세요.",
+                  "**컷오프 표 12:15 줄:** 원문 컷오프 표는 '12:15 도착 못 하면 Luini, 테라스 지킴'인데 대응 표는 '도착 12:15~13:15면 테라스 포기'라 서로 달랐어요. 대응 표 기준으로 11:45 → Luini, 12:15 → 테라스 포기로 맞췄어요.",
+                  "**컷오프 표 17:25 줄:** '17:25까지 탑승 못 하면 택시'는 17:25 열차를 타는 것보다 늦어져요. 대응 표 뜻('17:25편 이후는 택시')대로 '16:55를 놓치면 바로 택시'로 고쳤어요.",
+                  "**KE928 결항 대안 OZ582:** 아시아나 OZ582는 화·목·토 운항이라 10/26(월)엔 없어요. 가장 빠른 건 10/27(화) OZ582 또는 수요일 KE928이에요.",
+                  "**호텔 조식:** 원문 '조식 포함 여부는 예약 조건 확인' — 아고다 확정서엔 포함 서비스가 무료 Wi-Fi뿐이라 미포함이에요.",
+                  "**앱에서 바뀐 값:** 기상 06:30 → 07:00, M3 3정거장 → 4정거장, KIPOINT '€11/일' → 첫 5시간 €6, 두오모 옥상 '시간 미지정 티켓만' → 13:45 시간지정권, 말펜사 16:25 → 15:55."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sources",
+            "icon": "🔗",
+            "title": "출처",
+            "summary": "Trenord · KE928 · 식당 · 두오모 · 택스리펀 · EES · 파업 · 택시 · 공항버스 · 호텔",
+            "blocks": [
+              {
+                "bullets": [
+                  "[Trenord 공항 노선](https://www.trenord.it/en/routes-and-timetables/services/airport-routes-mxp/) · [말펜사 익스프레스 시간표](https://www.malpensaexpress.it/en/lines-and-timetable/most-searched-lines/milano-centrale-malpensa-aeroporto-t1-route/)",
+                  "[KE928 스케줄](https://info.flightmapper.net/route/Korean_Air_KE_MXP_ICN)",
+                  "[Trattoria Milanese dal 1933](https://www.tripadvisor.it/Restaurant_Review-g187849-d4409934-Reviews-Trattoria_Milanese_Dal_1933-Milan_Lombardy.html)",
+                  "[두오모 테라스 요금](https://www.milanofree.it/milano/turismo/terrazze-duomo-di-milano-prezzi-orari-ascensore/scale-e-prenotazioni.html) · [두오모 테라스 티켓](https://ticket.duomomilano.it/categoria/duomo-museo-e-terrazze/)",
+                  "[KIPOINT 밀라노 첸트랄레](https://www.kibag.it/deposito-bagagli-milano/deposito-bagagli-milano-centrale/)",
+                  "[말펜사 택스리펀](https://www.withprive.com/en/blog/vat-refund-malpensa-airport-milan) · [말펜사 EES](https://www.visaverge.com/airlines/easyjet-passengers-face-hours-at-milan-malpensa-as-eu-entryexit-system-slows-border/) · [EES 대기 현황](https://eesqueue.com/airport/milan-malpensa-international-airport)",
+                  "[파업 캘린더](https://commissionegaranziasciopero.it/calendario-scioperi?page=1) · [Trenitalia 파업 시 보장 열차](https://www.trenitalia.com/it/informazioni/treni-garantiti-incasodisciopero.html) · [10월 파업 캘린더](https://www.sicurauto.it/news/traffico-e-viabilita/sciopero-trasporti-ottobre-2026-stop-di-bus-treni-e-aerei/)",
+                  "[택시 정액](https://www.sicurauto.it/news/taxi-milano-per-malpensa-linate-e-orio-quanto-costa/) · [공항버스](https://www.milanofree.it/milano/trasporti/malpensa-shuttle-milano-2026-orari-prezzi-e-fermate-bus.html) · [호텔 정책](https://www.hotels.com/ho204598)",
+                  "[Trenitalia 디지털 지역권 규정](https://www.trenitalia.com/it/regionale/nuovo-biglietto-digitale-regionale.html) — 출발 전 시각 무료 변경",
+                  "체크인·게이트 마감 시각과 백업 식당 영업시간은 확인이 필요하다."
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "day": 9,
@@ -4456,11 +6680,11 @@
       "전화는 현지 오전 10~12시 또는 오후 4~6시(브레이크 타임)에 잘 받습니다. 10/24까지는 시차 -7시간(한국 오후 5~7시=현지 오전), 10/25부터는 서머타임 해제로 -8시간(한국 오후 6~8시=현지 오전)이라 시간 계산 주의.",
       "국제전화 대신 WhatsApp 메시지/통화가 되는 곳이 많으니 번호를 WhatsApp에서 먼저 검색해보기.",
       "예약 확인 메일·메시지는 캡처해서 사진첩에 보관 — 도착 시 이름과 함께 제시.",
-      "관광지 예약(두칼레 16:00 입장·아카데미아·비엔날레)은 별도 관리 — 이 팁은 식당 전용.",
+      "관광지 예약(두칼레 17:00 슬롯·대성당 15:15·비엔날레·두오모 테라스 13:45·아카데미아)은 각 날 📖 가이드에서 관리 — 이 팁은 식당 전용.",
       "전화 예약(EN): Hello, I'd like to book a table for two on October 22nd at 7:30 pm, please. The name is [성함].",
       "전화 예약(IT): Buonasera! Vorrei prenotare un tavolo per due persone, per il ventidue ottobre alle diciannove e trenta. A nome [성함]. (부오나세라! 보레이 프레노타레 운 타볼로 페르 두에 페르소네)",
       "식당 도착 시: Hello, we have a reservation for two under [성함].",
-      "WhatsApp 예약(Ca' Dolfin): Hello! I would like to reserve a table for 2 people on Sunday, October 25th at 7:15 pm. Name: [성함]. We are on our honeymoon from Korea. Thank you! 😊",
+      "WhatsApp(Ca' Dolfin, ✅ 10/25 19:30 2인 예약 완료 — 10분 지나면 자리 해제): 늦을 때 Hello, this is [성함] with a table for 2 tonight at 19:30. We're running about 10 minutes late — could you please keep our table? Thank you!",
       "허니문 어필(서비스·자리 좋아지는 마법의 문장): We're on our honeymoon! — 웰컴 프로세코나 디저트 서비스가 종종 나옵니다."
     ],
     "culture": [
@@ -4472,7 +6696,7 @@
       "카드 결제 대부분 가능. 단 Sostanza는 신용카드 불가(현금만·2인 €70~100, D4 현금 €200 소액권 준비), All'Antico Vinaio 일부 매장·피자리움은 현금 여유(€20), 투어 수신기·바티칸 불포함 비용은 현금만. 카드 단말기가 원화 결제(DCC)를 물으면 항상 EUR.",
       "예약 시간 엄수: 15분 이상 늦으면 자리 날아갈 수 있음 — 늦으면 전화/WhatsApp(Cybo·La Giostra 모두 WhatsApp 받음).",
       "라스트오더: 표기 마감보다 주방은 30분~1시간 먼저 닫는다고 생각할 것.",
-      "휴무 함정(검증 완료): 이 일정 요일은 전부 충돌 없음. 임의 변경 시 주의 — Da Tudini 1969 매일 11:30~ / Roma Sparita 월 전일·일 저녁 휴무(9~5월) / Sostanza 토·일 휴무(저녁 19:30·21:30 두 타임) / Cybo 연중무휴(매일 12~02시) / Pizzarium 수 11~22시 브레이크 없음 / La Giostra 저녁 18:30~ / Ca' Dolfin 월요일 휴무 / Trattoria Milanese 일요일 휴무.",
+      "휴무 함정(검증 완료): 이 일정 요일은 전부 충돌 없음. 임의 변경 시 주의 — Da Tudini 1969 매일 11:30~ / Roma Sparita 월 전일·일 저녁 휴무(9~5월) / Sostanza 토·일 휴무(저녁 19:30·21:30 두 타임) / Cybo 연중무휴(매일 12~02시) / Pizzarium 수 11~22시 브레이크 없음 / La Giostra 저녁 18:30~ / Ca' Dolfin 매일 11:30~22:30(공식) / Trattoria Milanese 일요일 휴무.",
       "시차: 10/24까지 -7시간, 10/25(일)부터 -8시간(유럽 서머타임 해제) — 여행 중 예약 전화·시간 계산에 반영.",
       "유용한 표현: Un tavolo per due(운 타볼로 페르 두에)=2인 테이블이요 / Il conto, per favore(일 콘토 페르 파보레)=계산서 주세요."
     ]
