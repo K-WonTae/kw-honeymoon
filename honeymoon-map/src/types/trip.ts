@@ -28,7 +28,7 @@ export type PlaceType =
 
 export type ReservationLevel = 'required' | 'recommended' | 'walk-in'
 
-export type Meal = 'lunch' | 'dinner' | 'dessert'
+export type Meal = 'lunch' | 'dinner' | 'dessert' | 'aperitivo'
 
 export interface ScheduleItem {
   id: string // "D2-08"

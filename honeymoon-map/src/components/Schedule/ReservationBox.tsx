@@ -1,5 +1,5 @@
 import type { Reservation } from '../../types/trip'
-import { RESERVATION_META, needsBooking } from '../../lib/tripUtils'
+import { MEAL_LABEL, RESERVATION_META, needsBooking } from '../../lib/tripUtils'
 import type { UserDataApi } from '../../hooks/useUserData'
 import { CopyButton } from '../CopyButton'
 
@@ -10,12 +10,6 @@ interface Props {
   embedded?: boolean
   /** true 면 안내문·EN/IT 멘트를 빼고 예약 완료 등록(체크·예약번호·메모)만 — 일정 카드 안에 넣을 때 */
   compact?: boolean
-}
-
-const MEAL_LABEL: Record<string, string> = {
-  lunch: '점심',
-  dinner: '저녁',
-  dessert: '디저트',
 }
 
 /**

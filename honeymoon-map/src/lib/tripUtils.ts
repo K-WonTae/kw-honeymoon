@@ -292,7 +292,7 @@ export function collectRestaurants(trip: Trip): RestaurantEntry[] {
         date: d.date,
         weekday: d.weekday,
         time: item.endTime ? `${item.startTime}–${item.endTime}` : item.startTime,
-        name: item.placeName ?? item.title,
+        name: restaurantDisplayName(item, res),
         city: cleanCity(d.city),
         type: item.type,
         placeId: item.placeId,
@@ -316,6 +316,22 @@ export const MEAL_LABEL: Record<Meal, string> = {
   lunch: '점심',
   dinner: '저녁',
   dessert: '디저트',
+  aperitivo: '아페리티보',
+}
+
+/**
+ * 일정 카드 제목에서 식당 이름만 — "점심: Da Tudini 1969 🎫 11:30 예약 — 그리차…" → "Da Tudini 1969".
+ * 식당 탭·지도 탭이 일정 탭과 같은 이름으로 보이게 한다 (placeName 은 지오코딩용 주소 문자열이라 표시용이 아니다).
+ */
+export function restaurantDisplayName(item: ScheduleItem, reservation?: Reservation): string {
+  if (reservation?.placeName) return reservation.placeName
+  let s = item.title
+  s = s.replace(/^(늦은 점심|점심|저녁|조식|아침|디저트|아페리티보)\s*:\s*/, '')
+  s = s.split(' — ')[0]
+  s = s.replace(/\s*🎫.*$/, '').replace(/\s*✅.*$/, '')
+  s = s.replace(/\s*\([^)]*\)\s*$/, '')
+  s = s.replace(/\s*도착$/, '')
+  return s.trim() || item.placeName || item.title
 }
 
 export interface SightEntry {

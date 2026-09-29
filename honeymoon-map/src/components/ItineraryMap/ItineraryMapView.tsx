@@ -26,17 +26,18 @@ function fmtDate(iso?: string): string {
   return iso.slice(5).replace('-', '/')
 }
 
-const META: Record<PlaceCategory, { title: string; narrative: string }> = {
+// 제목의 숫자는 실제 항목 수로 채운다(식당 탭과 같은 목록에서 placeId 가 있는 곳만 지도에 찍힌다)
+const META: Record<PlaceCategory, { title: (n: number) => string; narrative: string }> = {
   restaurant: {
-    title: '식당·카페 14곳',
-    narrative: '로마·피렌체·베네치아·밀라노 4개 도시의 식당·카페. 마커/카드를 누르면 양쪽이 함께 강조됩니다.',
+    title: (n) => `식당·카페 ${n}곳`,
+    narrative: '로마·피렌체·베네치아·밀라노 4개 도시의 식당·카페 — 식당 탭과 같은 목록 중 지도 좌표가 있는 곳. 마커/카드를 누르면 양쪽이 함께 강조됩니다.',
   },
   hotel: {
-    title: '숙소 3곳',
-    narrative: '9일간 묵는 호텔 3곳. 평점·사진은 실시간으로 불러옵니다.',
+    title: (n) => `숙소 ${n}곳`,
+    narrative: '9일간 묵는 호텔. 평점·사진은 실시간으로 불러옵니다.',
   },
   sight: {
-    title: '관광지',
+    title: (n) => `관광지 ${n}곳`,
     narrative: '9일 일정의 관광지·시장·투어 미팅 장소. 같은 곳을 여러 날 방문하면 카드가 날짜별로 나뉩니다.',
   },
 }
@@ -119,7 +120,7 @@ export function ItineraryMapView({ trip, mapId, user, onGoToItem }: Props) {
         onSelect={setSelectedId}
       />
       <SidebarPanel
-        title={meta.title}
+        title={meta.title(entries.length)}
         narrative={meta.narrative}
         category={category}
         onCategoryChange={handleCategory}

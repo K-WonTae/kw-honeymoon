@@ -15,6 +15,11 @@
 - `mappable: true` : 공항·기차역·호텔·식당·카페/젤라또·관광지·투어 미팅·쇼핑/시장 등 **물리적 장소**.
 - `mappable: false` : `기상·준비`, `호텔 조식`, `비행`, `환승`, `보안검색`, `취침`, `짐 보관/픽업`,
   `체크아웃` 등 좌표가 없는 행 → 일정표에만 표시. **애매하면 false** (지도 정돈 우선).
+- **식당 탭은 `type`이 `restaurant`/`cafe`인 항목을 그대로 모읍니다** — 특정 가게가 정해지지 않은 식사
+  (예: D6 메스트레역 앞 점심)도 식당 탭에 실으려면 `type: 'restaurant'` + `reservationLevel: 'walk-in'`을 주되
+  `mappable: false`로 둡니다. 반대로 카페가 목적이 아닌 산책·휴식 행(D4 San Niccolò 거리)은 `sightseeing`으로 두어
+  식당 탭에 성문 이름이 식당처럼 뜨지 않게 합니다. 식당 탭·지도 탭의 표시 이름은 `restaurantDisplayName()`
+  (예약 `placeName` → 없으면 카드 제목에서 식당 이름만)이고, `placeName`은 지오코딩용입니다.
 - **마커 번호**는 "그 날 좌표가 확보된 mappable 항목들의 순서"로 1부터 다시 매깁니다
   (일정 카드의 `sequence`와 별개). 카드↔마커 연동은 `item.id`로 합니다.
   → 계산은 `lib/tripUtils.ts`의 `buildMappablePoints()`가 담당.
