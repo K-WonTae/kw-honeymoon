@@ -373,7 +373,7 @@ function AppInner() {
 
         {view === 'alldays' && <AllDaysView trip={trip} user={user} fx={fx} onGoToDay={openDay} />}
 
-        {view === 'hotels' && <HotelsView hotels={hotels} onGoToItem={goToItem} />}
+        {view === 'hotels' && <HotelsView hotels={hotels} user={user} onGoToItem={goToItem} />}
         {view === 'restaurants' && (
           <RestaurantsView
             restaurants={restaurants}
@@ -385,7 +385,7 @@ function AppInner() {
         )}
         {view === 'placemap' &&
           (API_KEY ? (
-            <ItineraryMapView trip={trip} mapId={MAP_ID} onGoToItem={goToItem} />
+            <ItineraryMapView trip={trip} user={user} mapId={MAP_ID} onGoToItem={goToItem} />
           ) : (
             <MapFallback />
           ))}

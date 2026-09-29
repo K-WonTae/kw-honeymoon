@@ -3,7 +3,7 @@ import type { Trip } from '../types/trip'
 import type { UserDataApi } from '../hooks/useUserData'
 import type { FxSetting } from '../lib/money'
 import { eurToKrwText, formatEur } from '../lib/money'
-import { mappableItems } from '../lib/tripUtils'
+import { mappableItems, reservationProgress, reservationsForItem } from '../lib/tripUtils'
 import { AlertCard } from './Schedule/AlertCard'
 import { ScheduleCard } from './Schedule/ScheduleCard'
 import { OnePager, type PaperDensity } from './OnePager'
@@ -70,6 +70,11 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
 
   const totalEur = trip.days.reduce((sum, d) => sum + (d.estimatedCostForTwo ?? 0), 0)
   const totalCashEur = trip.days.reduce((sum, d) => sum + (d.cashForTwo ?? 0), 0)
+  // 9일 전체 예약 완료 진행률 (워크인 제외)
+  const resAll = reservationProgress(
+    trip.days.flatMap((d) => d.reservations),
+    user.isReservationDone,
+  )
 
   return (
     <div className="alldays">
@@ -118,12 +123,21 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
         </div>
         <p className="alldays-sub">
           {layout === 'cards'
-            ? '9일 전체 일정입니다. 방문 완료는 모든 화면과 공유되며, 한 날의 장소를 모두 완료하면 그 날은 자동으로 접힙니다. 날짜 제목을 눌러 접고 펼 수 있습니다.'
-            : '9일 전체 일정을 스크롤 없이 A4 한 장에 압축했습니다. “인쇄 / PDF”로 저장해 들고 다니세요. 핵심만/전체로 밀도를 조절할 수 있습니다.'}
+            ? '9일 전체 일정입니다. 방문 완료·예약 완료 등록은 모든 화면과 공유되며, 한 날의 장소를 모두 완료하면 그 날은 자동으로 접힙니다. 날짜 제목을 눌러 접고 펼 수 있습니다.'
+            : '9일 전체 일정을 스크롤 없이 A4 한 장에 압축했습니다. “인쇄 / PDF”로 저장해 들고 다니세요. 핵심만/전체로 밀도를 조절할 수 있습니다. 항목 옆 ✅는 예약 완료, 📒는 예약 미완료입니다.'}
         </p>
         <div className="alldays-total">
           💶 9일 누적 예상비용(2인): <strong>{formatEur(totalEur)}</strong> ·{' '}
           <strong>{eurToKrwText(totalEur, fx.eurToKrw)}</strong>
+          {resAll.needed > 0 && (
+            <>
+              {' '}
+              ·{' '}
+              <span className={`day-progress-chip res ${resAll.done === resAll.needed ? 'done' : ''}`}>
+                📒 예약 {resAll.done}/{resAll.needed} 완료
+              </span>
+            </>
+          )}
         </div>
         <div className="alldays-cash">
           <div className="alldays-cash-head">
@@ -154,12 +168,13 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
         </div>
       </div>
 
-      {layout === 'paper' && <OnePager trip={trip} fx={fx} density={density} />}
+      {layout === 'paper' && <OnePager trip={trip} fx={fx} density={density} user={user} />}
 
       {layout === 'cards' && (
       <div className="alldays-list">
         {trip.days.map((day) => {
           const prog = dayProgress(trip, day.day, user)
+          const resProg = reservationProgress(day.reservations, user.isReservationDone)
           const isCollapsed = collapsed[day.day]
           // 그 날 mappable 항목의 1-base 마커 번호
           let n = 0
@@ -184,6 +199,14 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
                     </span>
                   </span>
                 </button>
+                {resProg.needed > 0 && (
+                  <span
+                    className={`day-progress-chip res ${resProg.done === resProg.needed ? 'done' : ''}`}
+                    title="예약 완료 등록 진행률 (워크인 제외)"
+                  >
+                    📒 {resProg.done}/{resProg.needed}
+                  </span>
+                )}
                 <span className={`day-progress-chip ${prog.complete ? 'done' : ''}`}>
                   {prog.complete ? '✓ 완료' : `${prog.done}/${prog.total}`}
                 </span>
@@ -226,6 +249,7 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
                         <ScheduleCard
                           key={item.id}
                           item={item}
+                          reservations={reservationsForItem(day, item)}
                           markerNumber={num}
                           selected={false}
                           legSelected={false}

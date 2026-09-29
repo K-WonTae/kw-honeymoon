@@ -4,6 +4,7 @@ import type { UserDataApi } from '../hooks/useUserData'
 import {
   MEAL_LABEL,
   RESERVATION_META,
+  needsBooking,
   placeTypeMeta,
   type RestaurantEntry,
 } from '../lib/tripUtils'
@@ -28,7 +29,7 @@ const FILTERS: { key: Filter; label: string }[] = [
   { key: 'walk-in', label: '워크인' },
 ]
 
-/** 식당 한눈에 보기 — 9일 전체 식당/카페 · 예약 필요도 필터 · EN/IT 멘트 */
+/** 식당 한눈에 보기 — 9일 전체 식당/카페 · 예약 필요도 필터 · EN/IT 멘트 · 예약 완료 등록 */
 export function RestaurantsView({ restaurants, user, fx, onGoToItem, diningTips }: Props) {
   const [filter, setFilter] = useState<Filter>('all')
   const [incompleteOnly, setIncompleteOnly] = useState(false)
@@ -41,23 +42,19 @@ export function RestaurantsView({ restaurants, user, fx, onGoToItem, diningTips 
     return c
   }, [restaurants])
 
-  const reservable = useMemo(
-    () => restaurants.filter((r) => r.reservationLevel && r.reservationLevel !== 'walk-in'),
-    [restaurants],
-  )
-  const doneCount = reservable.filter(
-    (r) => r.reservationId && user.getReservationState(r.reservationId).status === 'done',
-  ).length
+  // 예약 완료 체크 대상 = 예약 원본이 있고 워크인이 아닌 곳. 배지·필터·요약·등록 버튼이 전부 이 기준을 쓴다
+  // (예약 원본이 없는 카페엔 일정 카드처럼 아무것도 붙지 않는다)
+  const isBookable = (r: RestaurantEntry) => !!r.reservation && needsBooking(r.reservation)
+  const isDone = (r: RestaurantEntry) => !!r.reservation && user.isReservationDone(r.reservation)
+  const reservable = useMemo(() => restaurants.filter(isBookable), [restaurants])
+  const doneCount = reservable.filter(isDone).length
 
   const list = useMemo(() => {
     const byLevel =
       filter === 'all' ? restaurants : restaurants.filter((r) => r.reservationLevel === filter)
     if (!incompleteOnly) return byLevel
-    return byLevel.filter(
-      (r) =>
-        r.reservationLevel !== 'walk-in' &&
-        (!r.reservationId || user.getReservationState(r.reservationId).status !== 'done'),
-    )
+    return byLevel.filter((r) => isBookable(r) && !isDone(r))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [restaurants, filter, incompleteOnly, user])
 
   return (
@@ -66,7 +63,8 @@ export function RestaurantsView({ restaurants, user, fx, onGoToItem, diningTips 
         <h2>🍽️ 식당 {restaurants.length}곳</h2>
         <p className="overview-sub">
           예약 필수 {counts.required} · 권장 {counts.recommended} · 워크인 {counts['walk-in']} —
-          예약 {reservable.length}개 중 {doneCount}개 완료 — 예약 멘트(EN/IT)를 바로 복사하세요.
+          예약 {reservable.length}개 중 {doneCount}개 완료 — 예약이 되면 「예약 완료 등록」을 누르세요.
+          일정 카드·전체일정·지도 탭에도 같이 표시됩니다.
         </p>
         <div className="ov-filter" role="group" aria-label="예약 필요도 필터">
           {FILTERS.map((f) => (
@@ -91,12 +89,18 @@ export function RestaurantsView({ restaurants, user, fx, onGoToItem, diningTips 
         {list.map((r) => {
           const typeMeta = placeTypeMeta(r.type)
           const resMeta = r.reservationLevel ? RESERVATION_META[r.reservationLevel] : undefined
-          const reservationState = r.reservationId ? user.getReservationState(r.reservationId) : null
+          const bookable = isBookable(r)
+          const done = isDone(r)
+          // 입력칸엔 원본(공백 포함), 배지엔 trim 값
+          const rawConfirmationNo = r.reservation
+            ? user.getReservationState(r.reservation.id).confirmationNo
+            : undefined
+          const confirmationNo = rawConfirmationNo?.trim()
           const parts = { placeId: r.placeId, placeName: r.placeName }
           const navUrl = navUrlFromParts(parts, 'transit')
           const placeUrl = placeUrlFromParts(parts)
           return (
-            <div key={r.itemId} className="ov-card">
+            <div key={r.itemId} className={`ov-card ${bookable ? (done ? 'res-booked' : 'res-open') : ''}`}>
               <div className="ov-card-head">
                 <div className="ov-title-wrap">
                   <span className="ov-name">{r.name}</span>
@@ -106,18 +110,15 @@ export function RestaurantsView({ restaurants, user, fx, onGoToItem, diningTips 
                   </span>
                 </div>
                 {resMeta && <span className={`badge ${resMeta.className}`}>{resMeta.label}</span>}
-                {r.reservationLevel !== 'walk-in' && (
-                  <span
-                    className={`badge ${
-                      reservationState?.status === 'done' ? 'res-done' : 'res-pending'
-                    }`}
-                  >
-                    {reservationState?.status === 'done' ? '예약 완료' : '예약 미완료'}
+                {bookable && (
+                  <span className={`badge res-status ${done ? 'res-done' : 'res-pending'}`}>
+                    {done ? '✅ 예약 완료' : '📒 예약 미완료'}
                   </span>
                 )}
               </div>
 
               <div className="badges">
+                {confirmationNo && <span className="badge res-conf">🎫 {confirmationNo}</span>}
                 {typeMeta && (
                   <span className="badge badge-type">
                     <span aria-hidden>{typeMeta.icon}</span> {typeMeta.label}
@@ -170,6 +171,24 @@ export function RestaurantsView({ restaurants, user, fx, onGoToItem, diningTips 
               )}
 
               <div className="ov-actions">
+                {bookable && (
+                  <button
+                    className={`btn ${done ? 'btn-ghost' : 'btn-res'}`}
+                    onClick={() => user.setReservationDone(r.reservation!, !done)}
+                  >
+                    {done ? '↩ 예약 미완료로 되돌리기' : '✅ 예약 완료 등록'}
+                  </button>
+                )}
+                {bookable && (
+                  <input
+                    className="reservation-input ov-res-input"
+                    type="text"
+                    placeholder="예약번호 / 확인코드"
+                    value={rawConfirmationNo ?? ''}
+                    onChange={(e) => user.setReservationConfirmation(r.reservation!.id, e.target.value)}
+                    aria-label="예약번호"
+                  />
+                )}
                 <button className="btn btn-ghost" onClick={() => onGoToItem(r.day, r.itemId)}>
                   📅 Day {r.day} 일정에서 보기
                 </button>

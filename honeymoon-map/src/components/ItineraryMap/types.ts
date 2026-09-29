@@ -1,4 +1,4 @@
-import type { ReservationLevel } from '../../types/trip'
+import type { Reservation, ReservationLevel } from '../../types/trip'
 
 export type PlaceCategory = 'restaurant' | 'hotel' | 'sight'
 
@@ -10,6 +10,8 @@ export interface PlaceListItem {
   city: string
   metaLine: string // "Day 2 점심 · 13:00–13:45" 등
   resLevel?: ReservationLevel
+  /** 이 장소에 걸린 예약 중 체크 대상(워크인 제외) — 예약 완료 배지·등록 버튼용 */
+  reservations?: Reservation[]
   note?: string
   goToDay: number
   goToItemId: string

@@ -53,7 +53,21 @@ https://www.google.com/maps/dir/?api=1&destination={lat,lng | 인코딩 주소}
 1. `src/data/trip.json`의 `days[]`에 `DayPlan`을 추가(또는 기존 Day의 `items[]`에 행 추가).
    `id`는 `D{day}-{2자리 sequence}` 규칙, `sequence`는 그 날 시간 순.
 2. 물리적 장소면 `mappable: true` + `type` 지정. 좌표 규칙(위 §)에 따라 `placeId` 또는 `placeName` 채움.
-3. 식당/호텔이면 같은 Day의 `reservations[]`에 `Reservation`(예약 필요도·시점·EN/IT 멘트) 추가.
+3. 식당/호텔/투어면 같은 Day의 `reservations[]`에 `Reservation`(예약 필요도·시점·EN/IT 멘트) 추가.
+   **`itemId`로 걸리는 일정 항목을 명시**합니다(호텔은 도착/체크인 항목, 투어는 미팅 항목). 없으면 이름 매칭으로
+   추정하지만 투어·호텔은 이름이 달라 안 잡힙니다. 이미 확정된 예약은 `booked: true`.
+
+## 예약 완료 등록 — 한 상태를 모든 화면이 읽는다
+
+- 완료 여부는 `useUserData().isReservationDone(r)` 하나로 판단합니다: 기기에서 **명시적으로 등록/해제한**
+  `reservations[r.id].status`가 있으면 그 값, 없으면 데이터의 `booked`. 예약번호·메모만 적은 엔트리는 `status`가
+  없어야 합니다(`updateReservationState`가 기본 status 를 넣지 않는 이유). 등록은 `setReservationDone(r, done)`
+  (localStorage, 백업에 포함).
+- 등록 UI: 일정 카드의 📒 버튼(카드에 걸린 예약 전부 토글) + 📝 펼침의 `ReservationBox compact`(예약번호·메모),
+  DayBrief 「예약 & 멘트」, 식당 탭·지도 탭 카드의 「예약 완료 등록」 버튼, 숙소 탭의 체크박스.
+- 표시: 카드 배지 `✅ 예약 완료 / 📒 예약 미완료`, DayBrief 칩 `📒 예약 N · 미완료 M / 완료 ✓`, 전체일정 헤더 칩,
+  원페이퍼 항목 옆 ✅/📒, 식당·숙소·지도 탭 배지. 워크인(`walk-in`)은 체크 대상이 아니라 아무것도 붙지 않습니다.
+- 항목↔예약 연결은 `reservationsForItem(day, item)`(`itemId` 우선, 없으면 이름 매칭)만 씁니다.
 4. 경고가 필요하면 `alerts[]`에 한 줄. 비용은 `estimatedCostForTwo`(Day) / `estimatedCost`(항목, EUR·2인 기준).
    현금은 `cashForTwo`(Day, EUR·2인) + `cashNote`(어디에 쓰는지 한 줄). **`cashForTwo`는 그 날 예상비용 중
    "카드가 안 되거나 현금이 훨씬 편한 몫"만** 담습니다(전체 비용의 부분집합, 별도 합산 아님).

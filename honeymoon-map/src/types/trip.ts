@@ -58,6 +58,10 @@ export interface Reservation {
   placeName: string
   meal?: Meal
   reservationLevel: ReservationLevel
+  /** 이 예약이 걸린 일정 항목 id — 그 카드에 예약 완료 배지·📒 등록 버튼이 붙는다 (없으면 이름 매칭으로 추정) */
+  itemId?: string
+  /** 데이터 기준으로 이미 예약(확정)된 건 — 기기에서 따로 등록하지 않아도 '예약 완료'로 시작한다 */
+  booked?: boolean
   recommendedTiming?: string // "6주 전"
   messageEN?: string
   messageIT?: string

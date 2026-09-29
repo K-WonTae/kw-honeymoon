@@ -95,6 +95,40 @@ function matchesReservation(item: ScheduleItem, reservationPlaceName: string): b
   return a.includes(target) || target.includes(a) || b.includes(target)
 }
 
+/** 예약 완료 체크 대상인지 — 워크인은 등록할 것이 없다 */
+export function needsBooking(r: Reservation): boolean {
+  return r.reservationLevel !== 'walk-in'
+}
+
+/** 일정 항목에 걸린 예약들 — 데이터의 itemId 가 우선, 없으면 이름 매칭으로 추정 */
+export function reservationsForItem(day: DayPlan, item: ScheduleItem): Reservation[] {
+  const explicit = day.reservations.filter((r) => r.itemId === item.id)
+  if (explicit.length) return explicit
+  return day.reservations.filter((r) => !r.itemId && matchesReservation(item, r.placeName))
+}
+
+/** 예약 하나가 걸린 일정 항목 (같은 날 안에서) */
+export function itemForReservation(day: DayPlan, r: Reservation): ScheduleItem | undefined {
+  if (r.itemId) return day.items.find((i) => i.id === r.itemId)
+  return day.items.find((i) => matchesReservation(i, r.placeName))
+}
+
+export interface ReservationProgress {
+  /** 체크 대상(워크인 제외) 예약 수 */
+  needed: number
+  /** 그중 완료된 수 */
+  done: number
+}
+
+/** 예약 완료 진행률 — DayBrief 칩·전체일정 헤더·식당 탭 요약이 함께 쓴다 */
+export function reservationProgress(
+  reservations: Reservation[],
+  isDone: (r: Reservation) => boolean,
+): ReservationProgress {
+  const needed = reservations.filter(needsBooking)
+  return { needed: needed.length, done: needed.filter(isDone).length }
+}
+
 /** "2026-10-19" + days → "2026-10-20" (체크아웃일 계산, UTC 고정) */
 function addDaysISO(iso: string, days: number): string {
   const [y, m, d] = iso.split('-').map(Number)
@@ -218,6 +252,8 @@ function inferMeal(startTime: string): Meal | undefined {
 export interface RestaurantEntry {
   itemId: string
   reservationId?: string
+  /** 이 식당에 걸린 예약 원본 — 예약 완료 표시·등록에 쓴다 */
+  reservation?: Reservation
   day: number
   date: string
   weekday: string
@@ -244,10 +280,14 @@ export function collectRestaurants(trip: Trip): RestaurantEntry[] {
   for (const d of trip.days) {
     for (const item of d.items) {
       if (item.type !== 'restaurant' && item.type !== 'cafe') continue
-      const res = d.reservations.find((r) => matchesReservation(item, r.placeName))
+      // 데이터의 itemId 연결이 우선, 없으면 이름 매칭
+      const res =
+        d.reservations.find((r) => r.itemId === item.id) ??
+        d.reservations.find((r) => !r.itemId && matchesReservation(item, r.placeName))
       out.push({
         itemId: item.id,
         reservationId: res?.id,
+        reservation: res,
         day: d.day,
         date: d.date,
         weekday: d.weekday,
@@ -289,6 +329,8 @@ export interface SightEntry {
   placeId?: string
   type: PlaceType
   note?: string
+  /** 투어 미팅 등 이 장소에 걸린 예약(체크 대상만) */
+  reservation?: Reservation
 }
 
 /** 9일 전체에서 관광지/쇼핑/투어 미팅을 집계 (지도+리스트 페이지용) */
@@ -300,6 +342,7 @@ export function collectSights(trip: Trip): SightEntry[] {
       if (!it.type || !types.has(it.type)) continue
       out.push({
         itemId: it.id,
+        reservation: d.reservations.find((r) => r.itemId === it.id && needsBooking(r)),
         day: d.day,
         date: d.date,
         weekday: d.weekday,

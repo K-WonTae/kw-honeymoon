@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { DayPlan } from '../../types/trip'
 import type { FxSetting } from '../../lib/money'
 import { eurToKrwText } from '../../lib/money'
+import { needsBooking } from '../../lib/tripUtils'
 import type { UserDataApi } from '../../hooks/useUserData'
 import { AlertCard } from './AlertCard'
 import { GuidePanel } from './GuidePanel'
@@ -29,8 +30,9 @@ export function DayBrief({ day, fx, user }: Props) {
   const guideCount = day.guide?.sections.length ?? 0
   // 예약&멘트: 워크인은 체크 대상이 아니라 "예약 필요" 건수와 그중 미완료만 센다
   const resCount = day.reservations.length
-  const resNeeded = day.reservations.filter((r) => r.reservationLevel !== 'walk-in')
-  const resPending = resNeeded.filter((r) => user.getReservationState(r.id).status !== 'done').length
+  const resNeeded = day.reservations.filter(needsBooking)
+  const resPending = resNeeded.filter((r) => !user.isReservationDone(r)).length
+  const resAllDone = resNeeded.length > 0 && resPending === 0
   // 예상 비용 중 현금 비중 (%) — 둘 다 있고 비용이 0 이 아닐 때만
   const cashRatio =
     hasCost && hasCash && (day.estimatedCostForTwo ?? 0) > 0
@@ -66,9 +68,9 @@ export function DayBrief({ day, fx, user }: Props) {
             </span>
           )}
           {resCount > 0 && (
-            <span className={`brief-chip res ${resPending > 0 ? 'pending' : ''}`}>
+            <span className={`brief-chip res ${resPending > 0 ? 'pending' : ''} ${resAllDone ? 'done' : ''}`}>
               <span aria-hidden>📒</span> 예약 {resCount}
-              {resPending > 0 ? ` · 미완료 ${resPending}` : ''}
+              {resPending > 0 ? ` · 미완료 ${resPending}` : resAllDone ? ' · 완료 ✓' : ''}
             </span>
           )}
           {guideCount > 0 && (

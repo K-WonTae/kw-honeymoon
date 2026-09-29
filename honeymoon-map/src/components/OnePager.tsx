@@ -1,6 +1,8 @@
 import type { Trip, PlaceType } from '../types/trip'
 import type { FxSetting } from '../lib/money'
+import type { UserDataApi } from '../hooks/useUserData'
 import { eurToKrwText, formatEur } from '../lib/money'
+import { needsBooking, reservationsForItem } from '../lib/tripUtils'
 
 export type PaperDensity = 'highlights' | 'all'
 
@@ -8,6 +10,8 @@ interface Props {
   trip: Trip
   fx: FxSetting
   density: PaperDensity
+  /** 있으면 예약이 걸린 항목 옆에 ✅(완료)/📒(미완료)를 찍는다 */
+  user?: UserDataApi
 }
 
 const TYPE_ICON: Record<PlaceType, string> = {
@@ -27,7 +31,7 @@ const TYPE_ICON: Record<PlaceType, string> = {
  * - 'all'        : 모든 행(준비/취침 등 포함) → 더 빽빽함.
  * 마커 번호는 AllDaysView/지도와 동일하게 "그 날 mappable 순서" 기준.
  */
-export function OnePager({ trip, fx, density }: Props) {
+export function OnePager({ trip, fx, density, user }: Props) {
   const totalEur = trip.days.reduce((sum, d) => sum + (d.estimatedCostForTwo ?? 0), 0)
   const totalCashEur = trip.days.reduce((sum, d) => sum + (d.cashForTwo ?? 0), 0)
 
@@ -53,7 +57,14 @@ export function OnePager({ trip, fx, density }: Props) {
           const rows = day.items
             .map((item) => {
               const num = item.mappable ? ++n : undefined
-              return { item, num }
+              const bookable = user ? reservationsForItem(day, item).filter(needsBooking) : []
+              const resMark =
+                bookable.length === 0
+                  ? null
+                  : bookable.every((r) => user!.isReservationDone(r))
+                    ? 'done'
+                    : 'pending'
+              return { item, num, resMark }
             })
             .filter(({ item }) => (density === 'highlights' ? item.mappable : true))
 
@@ -70,7 +81,7 @@ export function OnePager({ trip, fx, density }: Props) {
               </header>
 
               <ul className="op-items">
-                {rows.map(({ item, num }) => (
+                {rows.map(({ item, num, resMark }) => (
                   <li
                     key={item.id}
                     className={`op-item ${item.mappable ? 'place' : 'plain'}`}
@@ -90,6 +101,14 @@ export function OnePager({ trip, fx, density }: Props) {
                         </span>
                       ) : null}
                       {item.title}
+                      {resMark && (
+                        <span
+                          className={`op-res-mark ${resMark}`}
+                          title={resMark === 'done' ? '예약 완료' : '예약 미완료'}
+                        >
+                          {resMark === 'done' ? '✅' : '📒'}
+                        </span>
+                      )}
                     </span>
                   </li>
                 ))}
@@ -116,7 +135,7 @@ export function OnePager({ trip, fx, density }: Props) {
       </div>
 
       <div className="op-foot-note">
-        🗺️ 번호는 각 날짜 지도 마커 순서와 같습니다 · A4 세로 1장 인쇄/PDF 저장에 맞춰져 있습니다.
+        🗺️ 번호는 각 날짜 지도 마커 순서와 같습니다 · ✅ 예약 완료 · 📒 예약 미완료 · A4 세로 1장 인쇄/PDF 저장에 맞춰져 있습니다.
       </div>
     </div>
   )

@@ -1,10 +1,12 @@
 import { useMemo, useState } from 'react'
 import type { Trip } from '../../types/trip'
+import type { UserDataApi } from '../../hooks/useUserData'
 import {
   MEAL_LABEL,
   collectHotels,
   collectRestaurants,
   collectSights,
+  needsBooking,
 } from '../../lib/tripUtils'
 import { usePlaceDetails } from '../../hooks/usePlaceDetails'
 import { MapPanel } from './MapPanel'
@@ -14,6 +16,8 @@ import type { PlaceCategory, PlaceListItem } from './types'
 interface Props {
   trip: Trip
   mapId: string
+  /** 있으면 카드에 예약 완료 배지·등록 버튼이 붙는다 (일정·식당·숙소 탭과 같은 상태) */
+  user?: UserDataApi
   onGoToItem: (day: number, itemId: string) => void
 }
 
@@ -37,11 +41,11 @@ const META: Record<PlaceCategory, { title: string; narrative: string }> = {
   },
 }
 
-export function ItineraryMapView({ trip, mapId, onGoToItem }: Props) {
+export function ItineraryMapView({ trip, mapId, user, onGoToItem }: Props) {
   const [category, setCategory] = useState<PlaceCategory>('restaurant')
   const [selectedId, setSelectedId] = useState<string | null>(null)
 
-  // 카테고리별 통합 항목 목록
+  // 카테고리별 통합 항목 목록 (예약 원본을 함께 실어 두고, 완료 여부는 카드가 user 로 그때그때 읽는다)
   const entriesByCategory = useMemo(() => {
     const restaurants: PlaceListItem[] = collectRestaurants(trip)
       .filter((r) => r.placeId)
@@ -52,6 +56,7 @@ export function ItineraryMapView({ trip, mapId, onGoToItem }: Props) {
         city: r.city,
         metaLine: `Day ${r.day} ${r.meal ? MEAL_LABEL[r.meal] : ''} · ${r.time}`.replace(/ +/g, ' '),
         resLevel: r.reservationLevel,
+        reservations: r.reservation && needsBooking(r.reservation) ? [r.reservation] : undefined,
         note: [
           r.recommendedTiming ? `예약 시점: ${r.recommendedTiming}` : undefined,
           r.recommendedMenu?.length ? `추천: ${r.recommendedMenu.join(' · ')}` : undefined,
@@ -70,6 +75,7 @@ export function ItineraryMapView({ trip, mapId, onGoToItem }: Props) {
         category: 'hotel' as const,
         city: h.city,
         metaLine: `${h.nights}박 · ${fmtDate(h.checkInDate)} 체크인 → ${fmtDate(h.checkOutDate)} 체크아웃`,
+        reservations: h.reservations.filter(needsBooking),
         note: undefined,
         goToDay: h.checkInDay ?? 1,
         goToItemId: h.checkInItemId ?? '',
@@ -83,6 +89,7 @@ export function ItineraryMapView({ trip, mapId, onGoToItem }: Props) {
         category: 'sight' as const,
         city: s.city,
         metaLine: `Day ${s.day} · ${s.time}`,
+        reservations: s.reservation ? [s.reservation] : undefined,
         note: s.note,
         goToDay: s.day,
         goToItemId: s.itemId,
@@ -120,6 +127,7 @@ export function ItineraryMapView({ trip, mapId, onGoToItem }: Props) {
         details={details}
         selectedId={selectedId}
         loading={loading}
+        user={user}
         onSelect={setSelectedId}
         onGoToItem={onGoToItem}
       />

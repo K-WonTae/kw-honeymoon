@@ -2956,3 +2956,130 @@ code {
   color: var(--muted);
   line-height: 1.45;
 }
+
+/* ── 예약 완료 등록 (📒) ─────────────────────────────────────
+   상태는 기기 저장(useUserData.reservations)이며 일정 카드·DayBrief 칩·식당·숙소·전체일정·
+   원페이퍼·지도 탭이 같은 값을 읽는다. 초록 = 완료, 주황 = 미완료. */
+.op-res {
+  color: #c2cbd6;
+}
+.op-res.done {
+  background: #15803d;
+  border-color: #15803d;
+  color: #fff;
+}
+.card.res-open .res-status {
+  animation: none;
+}
+.brief-chip.res.done {
+  background: #dcfce7;
+  color: #15803d;
+}
+.day-progress-chip.res {
+  background: var(--warn-50);
+  color: #b45309;
+}
+.day-progress-chip.res.done {
+  background: #dcfce7;
+  color: #15803d;
+}
+.card-res-box {
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  border-radius: var(--radius-sm);
+  padding: 8px 10px 4px;
+}
+.card.res-open .card-res-box {
+  border-color: #fed7aa;
+  background: #fff7ed;
+}
+.card-res-title {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--text-mid);
+  margin-bottom: 4px;
+}
+.card-res-box .reservation-list {
+  gap: 6px;
+}
+.card-res-box .reservation-box {
+  padding: 8px 0 6px;
+  box-shadow: none;
+  background: transparent;
+  border: 0;
+  border-top: 1px dashed var(--border);
+}
+.card-res-box .reservation-box:first-child {
+  border-top: 0;
+  padding-top: 2px;
+}
+/* 일정 카드 안 compact 상자는 폭이 좁다(좌 35% 분할 + card-extra 들여쓰기) → 데스크톱에서도 항상 세로 1열 */
+.card-res-box .reservation-user {
+  grid-template-columns: 1fr;
+}
+/* 상태 배지는 nowrap 이라 좁은 카드에서 넘칠 수 있다 — 넘치면 말줄임 */
+.res-status {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+.res-conf-note {
+  font-weight: 700;
+  color: #15803d;
+}
+.res-conf {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #15803d;
+}
+/* 식당 탭 액션 줄의 예약번호 입력 — 버튼과 같은 줄에, 한 줄 전체를 차지하지 않게 */
+.ov-res-input {
+  flex: 1 1 200px;
+  width: auto;
+  max-width: 320px;
+}
+.reservation-box.compact .reservation-timing {
+  font-size: 0.74rem;
+}
+.reservation-box.done .reservation-name::before {
+  content: '✅ ';
+}
+.res-check span {
+  font-weight: 700;
+}
+.btn-res {
+  background: #15803d;
+  border-color: #15803d;
+  color: #fff;
+}
+.btn-res:hover {
+  background: #166534;
+  border-color: #166534;
+  color: #fff;
+}
+.op-res-mark {
+  margin-left: 3px;
+  font-size: 0.62rem;
+  vertical-align: 1px;
+}
+.op-res-mark.pending {
+  opacity: 0.8;
+}
+.ov-card-head .res-status {
+  margin-left: 4px;
+}
+
+/* 모바일: 카드 오른쪽 버튼(🧭·📒·✓·📝)이 4개까지 늘어 한 줄이면 본문이 너무 좁아진다 → 2×2 로 접는다 */
+@media (max-width: 900px) {
+  /* 📒 버튼이 있는 카드(res-open/res-booked)만 접는다 — 3버튼 카드는 기존 한 줄 유지 */
+  .card.res-open .card-ops,
+  .card.res-booked .card-ops {
+    flex-wrap: wrap;
+    width: 86px;
+    justify-content: flex-end;
+    align-content: center;
+    gap: 6px;
+  }
+}

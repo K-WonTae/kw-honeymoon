@@ -1,4 +1,5 @@
 import type { PlaceDetails } from '../../hooks/usePlaceDetails'
+import type { UserDataApi } from '../../hooks/useUserData'
 import type { PlaceCategory, PlaceListItem } from './types'
 import { PlaceCard } from './PlaceCard'
 
@@ -11,6 +12,7 @@ interface Props {
   details: Map<string, PlaceDetails>
   selectedId: string | null
   loading: boolean
+  user?: UserDataApi
   onSelect: (placeId: string) => void
   onGoToItem: (day: number, itemId: string) => void
 }
@@ -38,6 +40,7 @@ export function SidebarPanel({
   details,
   selectedId,
   loading,
+  user,
   onSelect,
   onGoToItem,
 }: Props) {
@@ -79,6 +82,7 @@ export function SidebarPanel({
                   entry={e}
                   details={details.get(e.placeId)}
                   selected={selectedId === e.placeId}
+                  user={user}
                   onSelect={onSelect}
                   onGoToItem={onGoToItem}
                 />

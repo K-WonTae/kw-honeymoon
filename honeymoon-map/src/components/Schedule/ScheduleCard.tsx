@@ -1,6 +1,13 @@
 import { useState } from 'react'
-import type { MappablePoint, RouteLeg, ScheduleItem, TransportMode } from '../../types/trip'
+import type {
+  MappablePoint,
+  Reservation,
+  RouteLeg,
+  ScheduleItem,
+  TransportMode,
+} from '../../types/trip'
 import {
+  needsBooking,
   placeTypeMeta,
   RESERVATION_META,
   transportLabel,
@@ -12,9 +19,12 @@ import { eurToKrwText } from '../../lib/money'
 import type { UserDataApi } from '../../hooks/useUserData'
 import { mergeAttachments, useAttachmentLock } from '../../lib/builtinAttachments'
 import { Attachments } from './Attachments'
+import { ReservationBox } from './ReservationBox'
 
 interface Props {
   item: ScheduleItem
+  /** 이 항목에 걸린 예약(reservationsForItem). 워크인은 표시하지 않고 예약 필요·권장만 배지·📒 버튼이 붙는다 */
+  reservations?: Reservation[]
   point?: MappablePoint
   /** point 없이도 마커 번호만 표시하고 싶을 때 (전체일정 페이지 등) */
   markerNumber?: number
@@ -32,6 +42,7 @@ interface Props {
 
 export function ScheduleCard({
   item,
+  reservations,
   point,
   markerNumber,
   legToNext,
@@ -55,6 +66,15 @@ export function ScheduleCard({
   const memo = user.getMemo(item.id)
   const checklist = user.getChecklist(item.id)
 
+  // 예약 완료 등록 — 이 항목에 걸린 예약 중 체크 대상(워크인 제외). 상태는 기기 저장(useUserData.reservations)이라
+  // 식당·숙소·전체일정·지도 탭과 같은 값을 본다. 예약이 둘(호텔 늦은 체크인 + 허니문 어필)이면 둘 다 함께 토글.
+  const bookable = (reservations ?? []).filter(needsBooking)
+  const bookedCount = bookable.filter((r) => user.isReservationDone(r)).length
+  const resDone = bookable.length > 0 && bookedCount === bookable.length
+  const confirmationNos = bookable
+    .map((r) => user.getReservationState(r.id).confirmationNo?.trim())
+    .filter((c): c is string => !!c)
+
   // 네비 실행 URL — 카드의 항목 좌표(또는 해결된 좌표)와 현재 이동수단 반영
   const navUrl = item.mappable
     ? buildNavUrl(item, toTravelMode(item.transportFromPrevious ?? mode), point?.lat, point?.lng)
@@ -73,7 +93,9 @@ export function ScheduleCard({
     <div
       className={`card ${item.mappable ? 'mappable' : 'non-mappable'} ${
         selected ? 'selected' : ''
-      } ${completed ? 'completed' : ''} ${highlight ? `card--${highlight}` : ''}`}
+      } ${completed ? 'completed' : ''} ${highlight ? `card--${highlight}` : ''} ${
+        bookable.length > 0 ? (resDone ? 'res-booked' : 'res-open') : ''
+      }`}
       id={`card-${item.id}`}
     >
       <div className="card-row" onClick={() => item.mappable && onSelect(item.id)}>
@@ -91,7 +113,7 @@ export function ScheduleCard({
           <div className="card-title">{item.title}</div>
           {highlight && <span className={`time-badge time-badge-${highlight}`}>{highlight === 'now' ? '지금' : '다음'}</span>}
 
-          {(typeMeta || resMeta || transport || item.note || legToNext) && (
+          {(typeMeta || resMeta || bookable.length > 0 || transport || item.note || legToNext) && (
             <div className="card-sub">
               {typeMeta && (
                 <span className="badge badge-type">
@@ -99,6 +121,21 @@ export function ScheduleCard({
                 </span>
               )}
               {resMeta && <span className={`badge ${resMeta.className}`}>{resMeta.label}</span>}
+              {bookable.length > 0 && (
+                <span
+                  className={`badge res-status ${resDone ? 'res-done' : 'res-pending'}`}
+                  title={resDone ? '예약 완료로 등록됨' : '📒 버튼으로 예약 완료를 등록하세요'}
+                >
+                  {resDone
+                    ? '✅ 예약 완료'
+                    : bookable.length > 1
+                      ? `📒 예약 미완료 ${bookedCount}/${bookable.length}`
+                      : '📒 예약 미완료'}
+                </span>
+              )}
+              {confirmationNos.length > 0 && (
+                <span className="card-note res-conf-note">🎫 {confirmationNos.join(' · ')}</span>
+              )}
               {transport && <span className="badge badge-transport">↳ {transport}</span>}
               {typeof item.estimatedCost === 'number' && (
                 <span className="badge badge-cost">
@@ -144,6 +181,17 @@ export function ScheduleCard({
               🧭
             </a>
           )}
+          {bookable.length > 0 && (
+            <button
+              className={`op op-res ${resDone ? 'done' : ''}`}
+              aria-pressed={resDone}
+              aria-label="예약 완료 등록"
+              title="예약 완료 등록 (다시 누르면 해제)"
+              onClick={() => bookable.forEach((r) => user.setReservationDone(r, !resDone))}
+            >
+              📒
+            </button>
+          )}
           <button
             className={`op op-visit ${completed ? 'done' : ''}`}
             aria-pressed={completed}
@@ -165,6 +213,13 @@ export function ScheduleCard({
 
       {expanded && (
         <div className="card-extra" onClick={(e) => e.stopPropagation()}>
+          {bookable.length > 0 && (
+            <div className="card-res-box">
+              <div className="card-res-title">📒 예약 완료 등록 · 예약번호</div>
+              <ReservationBox reservations={bookable} user={user} embedded compact />
+            </div>
+          )}
+
           <textarea
             className="memo-input"
             placeholder="메모 입력…"

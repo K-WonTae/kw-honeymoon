@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef } from 'react'
 import type { DayPlan, MappablePoint, RouteSummary, TransportMode } from '../../types/trip'
 import type { UserDataApi } from '../../hooks/useUserData'
 import type { FxSetting } from '../../lib/money'
+import { reservationsForItem } from '../../lib/tripUtils'
 import { DayBrief } from './DayBrief'
 import { ScheduleCard } from './ScheduleCard'
 
@@ -78,6 +79,7 @@ export function ScheduleList({
           <ScheduleCard
             key={item.id}
             item={item}
+            reservations={reservationsForItem(day, item)}
             point={pointByItemId.get(item.id)}
             legToNext={legByFromId.get(item.id)}
             nextLabel={nextTitleByFromId.get(item.id)}

@@ -1,4 +1,5 @@
 import { useCallback } from 'react'
+import type { Reservation } from '../types/trip'
 import { useLocalStorage } from './useLocalStorage'
 
 export interface ChecklistEntry {
@@ -16,7 +17,8 @@ export interface AttachmentMeta {
 }
 
 export interface ReservationUserState {
-  status: 'pending' | 'done'
+  /** 기기에서 명시적으로 등록/해제한 값. 없으면(undefined) 데이터의 booked 를 따른다 — 예약번호·메모만 적어도 status 는 생기지 않는다 */
+  status?: 'pending' | 'done'
   confirmationNo?: string
   memo?: string
   updatedAt: string
@@ -57,6 +59,13 @@ export interface UserDataApi {
   setReservationStatus: (reservationId: string, status: 'pending' | 'done') => void
   setReservationConfirmation: (reservationId: string, confirmationNo: string) => void
   setReservationMemo: (reservationId: string, memo: string) => void
+  /**
+   * 예약 완료 여부 — 기기에서 등록한 값이 있으면 그 값, 없으면 데이터의 booked(이미 확정된 예약).
+   * 일정 카드·DayBrief·식당·숙소·전체일정·원페이퍼·지도 탭이 전부 이 함수 하나를 본다.
+   */
+  isReservationDone: (r: Reservation) => boolean
+  /** 예약 완료 등록/해제 (localStorage 에 저장, 백업 파일에도 포함) */
+  setReservationDone: (r: Reservation, done: boolean) => void
   completedCount: (ids: string[]) => number
 }
 
@@ -183,7 +192,8 @@ export function useUserData(): UserDataApi {
     (reservationId: string, patch: Partial<ReservationUserState>) => {
       setData((prev) => {
         const reservations = prev.reservations ?? {}
-        const current = reservations[reservationId] ?? { status: 'pending', updatedAt: '' }
+        // status 는 넣지 않는다 — 예약번호·메모만 저장한 엔트리가 booked 기본값을 덮어쓰면 안 된다
+        const current: ReservationUserState = reservations[reservationId] ?? { updatedAt: '' }
         return {
           ...prev,
           reservations: {
@@ -221,6 +231,22 @@ export function useUserData(): UserDataApi {
     [updateReservationState],
   )
 
+  const isReservationDone = useCallback(
+    (r: Reservation): boolean => {
+      const s = normalized.reservations?.[r.id]
+      // 명시적 status 만 booked 를 덮어쓴다 (예약번호·메모만 있는 엔트리는 booked 그대로)
+      return s?.status ? s.status === 'done' : !!r.booked
+    },
+    [normalized.reservations],
+  )
+
+  const setReservationDone = useCallback(
+    (r: Reservation, done: boolean) => {
+      updateReservationState(r.id, { status: done ? 'done' : 'pending' })
+    },
+    [updateReservationState],
+  )
+
   return {
     data: normalized,
     isCompleted,
@@ -238,6 +264,8 @@ export function useUserData(): UserDataApi {
     setReservationStatus,
     setReservationConfirmation,
     setReservationMemo,
+    isReservationDone,
+    setReservationDone,
     completedCount,
   }
 }
