@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type {
   MappablePoint,
   Reservation,
@@ -38,6 +38,12 @@ interface Props {
   user: UserDataApi
   onSelect: (id: string) => void
   onSelectLeg: (fromId: string, toId: string) => void
+  /**
+   * 방문 완료(✓)한 항목을 한 줄로 접는다 — 일정 탭 전용. 아직 안 한 항목이 바로 보이게 하려는 것.
+   * 접힌 줄을 누르면 잠깐 펼쳐지고(peek), 아래 「접기」로 다시 접힌다. 펼침은 기기에 저장하지 않으므로
+   * 앱을 다시 열거나 Day 를 바꾸면 완료 항목은 항상 접힌 상태로 시작한다.
+   */
+  collapseCompleted?: boolean
 }
 
 export function ScheduleCard({
@@ -55,9 +61,12 @@ export function ScheduleCard({
   user,
   onSelect,
   onSelectLeg,
+  collapseCompleted = false,
 }: Props) {
   const [expanded, setExpanded] = useState(false)
   const [draft, setDraft] = useState('')
+  // 완료 항목을 잠깐 펼쳐 본 상태. ✓ 를 켜거나 끌 때마다 초기화해서, 새로 체크한 항목은 곧바로 접힌다.
+  const [peek, setPeek] = useState(false)
 
   const typeMeta = placeTypeMeta(item.type)
   const resMeta = item.reservationLevel ? RESERVATION_META[item.reservationLevel] : undefined
@@ -65,6 +74,11 @@ export function ScheduleCard({
   const completed = user.isCompleted(item.id)
   const memo = user.getMemo(item.id)
   const checklist = user.getChecklist(item.id)
+
+  useEffect(() => {
+    setPeek(false)
+  }, [completed])
+  const collapsed = collapseCompleted && completed && !peek
 
   // 예약 완료 등록 — 이 항목에 걸린 예약 중 체크 대상(워크인 제외). 상태는 기기 저장(useUserData.reservations)이라
   // 식당·숙소·전체일정·지도 탭과 같은 값을 본다. 예약이 둘(호텔 늦은 체크인 + 허니문 어필)이면 둘 다 함께 토글.
@@ -88,6 +102,54 @@ export function ScheduleCard({
   const attachments = mergeAttachments(item.id, user.getAttachments(item.id))
   const hasMemo = !!memo || checklist.length > 0 || attachments.length > 0
   const num = point?.markerNumber ?? markerNumber
+
+  // 완료 항목 접힘 — 시각·번호·제목·✓ 만 남긴 한 줄. id 는 유지해 지도→일정 스크롤 연동이 그대로 된다.
+  if (collapsed) {
+    return (
+      <div
+        className={`card card--collapsed completed ${item.mappable ? 'mappable' : 'non-mappable'} ${
+          selected ? 'selected' : ''
+        } ${highlight ? `card--${highlight}` : ''}`}
+        id={`card-${item.id}`}
+      >
+        <div
+          className="card-row"
+          role="button"
+          aria-expanded={false}
+          title="펼치기"
+          onClick={() => {
+            setPeek(true)
+            if (item.mappable) onSelect(item.id)
+          }}
+        >
+          <div className="card-time">{timeLabel}</div>
+          {num ? (
+            <span className="marker-num" aria-label={`마커 ${num}`}>
+              {num}
+            </span>
+          ) : (
+            <span className="marker-dot" aria-hidden />
+          )}
+          <div className="card-main">
+            <div className="card-title">{item.title}</div>
+          </div>
+          <span className="card-fold-hint" aria-hidden>
+            ▾
+          </span>
+          <div className="card-ops" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="op op-visit done"
+              aria-pressed
+              title="방문 완료 (다시 누르면 해제)"
+              onClick={() => user.toggleCompleted(item.id)}
+            >
+              ✓
+            </button>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div
@@ -271,6 +333,19 @@ export function ScheduleCard({
 
           <Attachments itemId={item.id} user={user} />
         </div>
+      )}
+
+      {collapseCompleted && completed && (
+        <button
+          type="button"
+          className="card-fold"
+          onClick={(e) => {
+            e.stopPropagation()
+            setPeek(false)
+          }}
+        >
+          ▴ 접기
+        </button>
       )}
     </div>
   )

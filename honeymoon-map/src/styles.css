@@ -959,6 +959,63 @@ code {
   color: var(--text-mid);
 }
 
+/* 완료(✓)한 항목은 일정 탭에서 한 줄로 접힌다 — 안 한 항목이 바로 보이게.
+   줄을 누르면 펼쳐지고, 펼친 카드 맨 아래 「▴ 접기」로 다시 접는다 */
+.card--collapsed {
+  opacity: 0.72;
+  box-shadow: none;
+}
+.card--collapsed .card-row {
+  padding: 5px 13px;
+  gap: 9px;
+  cursor: pointer;
+}
+.card--collapsed:hover {
+  opacity: 1;
+}
+.card--collapsed .card-time {
+  font-size: 0.68rem;
+}
+.card--collapsed .marker-num {
+  width: 20px;
+  height: 20px;
+  font-size: 0.7rem;
+}
+.card--collapsed .card-title {
+  font-size: 0.86rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card--collapsed .op {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 0.86rem;
+}
+.card-fold-hint {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.card-fold {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-top: 1px dashed var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 6px 13px;
+  cursor: pointer;
+  text-align: center;
+}
+.card-fold:hover {
+  color: var(--text);
+}
+
 .card-time {
   flex: 0 0 48px;
   font-size: 0.74rem;

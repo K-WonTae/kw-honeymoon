@@ -91,6 +91,7 @@ export function ScheduleList({
             user={user}
             onSelect={onSelect}
             onSelectLeg={onSelectLeg}
+            collapseCompleted
           />
         ))}
       </div>
