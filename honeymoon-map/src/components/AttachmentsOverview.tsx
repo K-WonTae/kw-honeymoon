@@ -76,7 +76,7 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
       for (const entry of entries) {
         const meta = entry.meta
         if (!meta.type.startsWith('image/')) continue
-        const blob = await loadAttachmentBlob(meta)
+        const blob = await loadAttachmentBlob(meta).catch(() => null)
         if (cancelled) break
         if (blob) {
           const url = URL.createObjectURL(blob)
@@ -98,7 +98,7 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
 
   async function downloadBlob(meta: AnyAttachmentMeta) {
     const cached = thumbs[meta.id]
-    const blob = cached ? null : await loadAttachmentBlob(meta)
+    const blob = cached ? null : await loadAttachmentBlob(meta).catch((e) => { alert((e as Error).message); return null })
     const url = cached ?? (blob ? URL.createObjectURL(blob) : null)
     if (!url) {
       alert('파일을 찾을 수 없습니다.')

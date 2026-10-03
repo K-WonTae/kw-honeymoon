@@ -24,6 +24,7 @@ import { ItineraryMapView } from './components/ItineraryMap/ItineraryMapView'
 import { AllDaysView } from './components/AllDaysView'
 import { AttachmentsOverview } from './components/AttachmentsOverview'
 import { SettingsPanel } from './components/SettingsPanel'
+import { SharedSyncPanel } from './components/SharedSyncPanel'
 
 type View = 'schedule' | 'alldays' | 'hotels' | 'restaurants' | 'placemap' | 'attachments'
 type Highlight = 'now' | 'next'
@@ -348,6 +349,8 @@ function AppInner() {
             />
           )}
         </header>
+
+        <SharedSyncPanel />
 
         {view === 'schedule' && (
           <>

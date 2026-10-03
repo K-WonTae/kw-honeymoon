@@ -49,7 +49,7 @@ export function SettingsPanel({ open, fx, onSaveRate, onClose }: Props) {
     try {
       const backup = await parseBackupFile(file)
       const ok = window.confirm(
-        '기존 방문체크·메모·예약상태·환율·첨부파일을 모두 덮어씁니다. 계속할까요?',
+        '기존 방문체크·메모·예약상태·환율·첨부파일 목록을 덮어씁니다. 공유 연결 중이면 다른 기기에도 반영됩니다. 계속할까요?',
       )
       if (!ok) return
       await restoreBackup(backup)

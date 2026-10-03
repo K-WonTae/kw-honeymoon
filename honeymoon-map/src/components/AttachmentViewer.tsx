@@ -23,7 +23,9 @@ export function useAttachmentViewer(thumbs: Record<string, string>) {
         setViewing({ meta, url: cached, owned: false })
         return
       }
-      const blob = await loadAttachmentBlob(meta)
+      let blob: Blob | null
+      try { blob = await loadAttachmentBlob(meta) }
+      catch (e) { alert((e as Error).message); return }
       if (!blob) {
         alert('파일을 찾을 수 없습니다.')
         return

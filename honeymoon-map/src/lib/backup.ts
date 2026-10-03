@@ -1,6 +1,8 @@
 import { FX_STORAGE_KEY } from './money'
-import { clearBlobs, getBlob, putBlob } from './attachments'
+import { getBlob, putBlob } from './attachments'
 import type { AttachmentMeta, UserData } from '../hooks/useUserData'
+import { setSharedData } from './sharedSync'
+import { emptyUserData, toCells, validCells } from './syncModel'
 
 const USERDATA_KEY = 'honeymoon:userdata:v1'
 const SPLIT_KEY = 'honeymoon:splitRatio'
@@ -123,13 +125,17 @@ export async function parseBackupFile(file: File): Promise<BackupFile> {
 }
 
 export async function restoreBackup(backup: BackupFile): Promise<void> {
-  Object.entries(backup.localStorage).forEach(([key, value]) => {
-    if (![USERDATA_KEY, FX_STORAGE_KEY, SPLIT_KEY].includes(key)) return
-    localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value))
-  })
-
-  await clearBlobs()
+  const raw = backup.localStorage[USERDATA_KEY]
+  const imported = typeof raw === 'string' ? JSON.parse(raw) : raw
+  const next = { ...emptyUserData(), ...(imported as Partial<UserData> | undefined) }
+  if (!validCells(toCells(next))) throw new Error('백업의 예약·첨부 정보가 올바르지 않습니다.')
+  // Keep cached shared files. Restoring metadata queues tombstones for removed entries.
   for (const att of backup.attachments) {
     await putBlob(att.id, base64ToBlob(att.dataBase64, att.type || 'application/octet-stream'))
   }
+  if (imported !== undefined) setSharedData(next)
+  Object.entries(backup.localStorage).forEach(([key, value]) => {
+    if (![FX_STORAGE_KEY, SPLIT_KEY].includes(key)) return
+    localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value))
+  })
 }

@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import type { Reservation } from '../types/trip'
-import { useLocalStorage } from './useLocalStorage'
+import { useSharedData } from '../lib/sharedSync'
 
 export interface ChecklistEntry {
   id: string
@@ -8,7 +8,7 @@ export interface ChecklistEntry {
   checked: boolean
 }
 
-/** 첨부파일 메타데이터 (바이너리는 IndexedDB에 별도 저장) */
+/** 첨부파일 메타데이터 (원본은 공용 저장소, 기기에는 오프라인 캐시) */
 export interface AttachmentMeta {
   id: string
   name: string
@@ -32,16 +32,6 @@ export interface UserData {
   reservations: Record<string, ReservationUserState>
 }
 
-const INITIAL: UserData = {
-  completed: {},
-  memos: {},
-  checklists: {},
-  attachments: {},
-  reservations: {},
-}
-
-const STORAGE_KEY = 'honeymoon:userdata:v1'
-
 export interface UserDataApi {
   data: UserData
   isCompleted: (id: string) => boolean
@@ -64,14 +54,14 @@ export interface UserDataApi {
    * 일정 카드·DayBrief·식당·숙소·전체일정·원페이퍼·지도 탭이 전부 이 함수 하나를 본다.
    */
   isReservationDone: (r: Reservation) => boolean
-  /** 예약 완료 등록/해제 (localStorage 에 저장, 백업 파일에도 포함) */
+  /** 예약 완료 등록/해제 (공용 저장소와 기기 캐시에 저장, 백업에도 포함) */
   setReservationDone: (r: Reservation, done: boolean) => void
   completedCount: (ids: string[]) => number
 }
 
-/** 사용자 입력(방문 체크·메모·체크리스트)을 localStorage 에 영속화 */
+/** 사용자 입력을 기기에 보관하고 공용 저장소와 자동 동기화한다. */
 export function useUserData(): UserDataApi {
-  const [data, setData] = useLocalStorage<UserData>(STORAGE_KEY, INITIAL)
+  const [data, setData] = useSharedData()
   const normalized: UserData = {
     completed: data.completed ?? {},
     memos: data.memos ?? {},
@@ -107,7 +97,7 @@ export function useUserData(): UserDataApi {
       setData((prev) => {
         const list = prev.checklists[id] ?? []
         const entry: ChecklistEntry = {
-          id: `${id}-c${list.length}-${trimmed.length}`,
+          id: `${id}-${crypto.randomUUID()}`,
           text: trimmed,
           checked: false,
         }

@@ -96,6 +96,21 @@ code {
   z-index: 5;
 }
 
+.shared-sync-panel {
+  flex: 0 0 auto;
+  padding: 8px 16px;
+  background: var(--accent-50);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.82rem;
+  max-height: 32vh;
+  overflow: auto;
+}
+.shared-sync-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; }
+.shared-sync-head span { color: var(--text-mid); }
+.shared-sync-panel p { margin: 6px 0 0; }
+.shared-sync-panel .attach-lock-row { margin-top: 8px; }
+.shared-sync-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 5px; }
+
 .brand {
   display: flex;
   align-items: center;

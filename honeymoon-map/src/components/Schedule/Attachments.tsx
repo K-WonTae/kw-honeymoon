@@ -45,7 +45,7 @@ export function Attachments({ itemId, user }: Props) {
       const next: Record<string, string> = {}
       for (const m of metas) {
         if (!m.type.startsWith('image/')) continue
-        const blob = await loadAttachmentBlob(m)
+        const blob = await loadAttachmentBlob(m).catch(() => null)
         if (cancelled) break
         if (blob) {
           const url = URL.createObjectURL(blob)
@@ -68,7 +68,8 @@ export function Attachments({ itemId, user }: Props) {
     for (const file of Array.from(files)) {
       // 안전장치: 너무 큰 파일 경고 (그래도 진행)
       if (file.size > 25 * 1024 * 1024) {
-        alert(`${file.name} 은(는) 25MB를 넘습니다. 저장에 실패할 수 있어요.`)
+        alert(`${file.name} 은(는) 25MB를 넘습니다. 더 작은 파일을 선택해 주세요.`)
+        continue
       }
       const id = `att-${itemId}-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`
       try {
@@ -92,7 +93,7 @@ export function Attachments({ itemId, user }: Props) {
 
   async function downloadBlob(m: AnyAttachmentMeta) {
     const cached = thumbs[m.id]
-    const blob = cached ? null : await loadAttachmentBlob(m)
+    const blob = cached ? null : await loadAttachmentBlob(m).catch((e) => { alert((e as Error).message); return null })
     const url = cached ?? (blob ? URL.createObjectURL(blob) : null)
     if (!url) {
       alert('파일을 찾을 수 없습니다.')

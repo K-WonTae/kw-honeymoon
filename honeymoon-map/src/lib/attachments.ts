@@ -1,6 +1,4 @@
-// 첨부파일(티켓·PDF·QR 등)의 바이너리를 IndexedDB에 저장.
-// 용량이 큰 파일도 담을 수 있어 localStorage보다 적합하다.
-// (메타데이터 = 이름/타입/크기는 useUserData(localStorage)에 따로 보관)
+// 첨부파일은 비공개 공용 저장소에 동기화하고 IndexedDB에 오프라인 캐시한다.
 
 const DB_NAME = 'honeymoon'
 const STORE = 'attachments'
@@ -34,7 +32,7 @@ export async function putBlob(id: string, blob: Blob): Promise<void> {
 }
 
 /** id 로 Blob 조회 (없으면 null) */
-export async function getBlob(id: string): Promise<Blob | null> {
+export async function getCachedBlob(id: string): Promise<Blob | null> {
   const db = await openDB()
   return new Promise((resolve, reject) => {
     const tx = db.transaction(STORE, 'readonly')
@@ -42,6 +40,28 @@ export async function getBlob(id: string): Promise<Blob | null> {
     req.onsuccess = () => resolve((req.result as Blob) ?? null)
     req.onerror = () => reject(req.error)
   })
+}
+
+const downloads = new Map<string, Promise<Blob | null>>()
+/** 기기 캐시가 없으면 암호로 보호된 공용 저장소에서 내려받는다. */
+export async function getBlob(id: string): Promise<Blob | null> {
+  let cached: Blob | null = null
+  try { cached = await getCachedBlob(id) } catch { /* 온라인 보기 허용 */ }
+  if (cached) return cached
+  const existing = downloads.get(id)
+  if (existing) return existing
+  const download = (async () => {
+    const { remoteFileUrl } = await import('./syncTransport')
+    const url = await remoteFileUrl(id)
+    if (!url) return null
+    const response = await fetch(url, { signal: AbortSignal.timeout(60_000) })
+    if (!response.ok) throw new Error('첨부를 내려받지 못했습니다. 인터넷 연결을 확인해 주세요.')
+    const blob = await response.blob()
+    try { await putBlob(id, blob) } catch { /* 캐시 실패가 파일 열기를 막지는 않는다 */ }
+    return blob
+  })().finally(() => downloads.delete(id))
+  downloads.set(id, download)
+  return download
 }
 
 /** id 의 Blob 삭제 */
