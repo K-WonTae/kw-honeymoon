@@ -2,13 +2,14 @@ import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { BlobNotFoundError, head, issueSignedToken, presignUrl } from '@vercel/blob'
 import { handleUploadPresigned, type HandleUploadPresignedBody } from '@vercel/blob/client'
 import { authenticated, configured, sameOrigin, sessionCookie, verifyPassword } from '../server/syncAuth.js'
-import { readShared, writeShared } from '../server/sharedStore.js'
+import { readShared, sharedStorageDiagnostics, writeShared } from '../server/sharedStore.js'
 import { validCells, type SyncOperation } from '../src/lib/syncModel.js'
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader('Cache-Control', 'private, no-store')
   res.setHeader('X-Content-Type-Options', 'nosniff')
   const action = String(req.query.action ?? 'status')
+  let authorized = false
   try {
     if (action === 'status' && req.method === 'GET') return res.json({ configured: configured(), authenticated: configured() && await authenticated(req) })
     if (!configured()) return res.status(503).json({ error: '공용 저장소 연결이 필요합니다. Vercel에서 Private Blob 저장소를 연결해 주세요.' })
@@ -39,12 +40,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.json(result)
     }
     if (!await authenticated(req)) return res.status(401).json({ error: '공유 암호를 입력해 주세요.' })
+    authorized = true
     if (req.method !== 'GET' && !sameOrigin(req)) return res.status(403).json({ error: '접근이 허용되지 않습니다.' })
     if (action === 'session' && req.method === 'DELETE') {
       await sessionCookie(res, true)
       return res.json({ ok: true })
     }
-    if (action === 'state' && req.method === 'GET') return res.json({ cells: (await readShared()).doc.cells })
+    if (action === 'state' && req.method === 'GET') {
+      const shared = await readShared()
+      return res.json({ cells: shared.doc.cells,
+        ...(req.query.diagnostics === '1' ? { diagnostics: await sharedStorageDiagnostics(shared.etag) } : {}) })
+    }
     if (action === 'state' && req.method === 'POST') {
       const op = req.body as SyncOperation
       if (!op || !/^[a-zA-Z0-9-]{10,100}$/.test(op.id) || !validCells(op.cells) ||
@@ -68,6 +74,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: '지원하지 않는 요청입니다.' })
   } catch (e) {
     console.error('Shared sync failed:', e instanceof Error ? e.name : 'UnknownError')
-    return res.status(503).json({ error: '공유 저장소에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.' })
+    const diagnostic = authorized && action === 'state' && e instanceof Error ? {
+      name: e.name,
+      message: e.message.replace(/https?:\/\/\S+/g, '[URL]').replace(/[A-Za-z0-9_-]{40,}/g, '[value]').slice(0, 300),
+    } : undefined
+    return res.status(503).json({ error: '공유 저장소에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.', ...(diagnostic ? { diagnostic } : {}) })
   }
 }

@@ -1,7 +1,19 @@
-import { BlobPreconditionFailedError, get, put } from '@vercel/blob'
+import { BlobPreconditionFailedError, get, head, put } from '@vercel/blob'
 import { applyOperation, type SharedDocument, type SyncOperation } from '../src/lib/syncModel.js'
 
 const PATH = 'honeymoon/shared-v1.json'
+export async function sharedStorageDiagnostics(readTag: string | undefined) {
+  const metadata = await head(PATH)
+  const identity = await get(PATH, { access: 'private', useCache: false, headers: { 'Accept-Encoding': 'identity' } })
+  const identityTag = identity?.blob.etag
+  await identity?.stream?.cancel()
+  return {
+    hasReadTag: !!readTag, hasMetadataTag: !!metadata.etag, hasIdentityTag: !!identityTag,
+    readTagMatchesMetadata: readTag === metadata.etag,
+    identityTagMatchesMetadata: identityTag === metadata.etag,
+    weakReadTag: readTag?.startsWith('W/') ?? false,
+  }
+}
 export async function readShared() {
   const result = await get(PATH, { access: 'private', useCache: false })
   if (!result) return { doc: { version: 1, cells: {}, applied: {} } as SharedDocument, etag: undefined }
