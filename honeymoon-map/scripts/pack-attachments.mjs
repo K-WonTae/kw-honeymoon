@@ -27,10 +27,11 @@ function arg(name) {
 }
 
 const backupPath = arg('backup')
-const password = arg('password')
+const passwordFile = arg('password-file')
+const password = passwordFile ? readFileSync(passwordFile, 'utf8').trim() : arg('password')
 
 if (!backupPath || !password) {
-  console.error('사용법: node scripts/pack-attachments.mjs --backup <백업.json> --password <암호>')
+  console.error('사용법: node scripts/pack-attachments.mjs --backup <백업.json> --password-file <로컬 암호 파일> (또는 --password <암호>)')
   process.exit(1)
 }
 if (!existsSync(backupPath)) {
