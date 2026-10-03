@@ -1,4 +1,4 @@
-import { upload } from '@vercel/blob/client'
+import { uploadPresigned } from '@vercel/blob/client'
 
 export class SyncError extends Error {
   constructor(message: string, public status: number) { super(message) }
@@ -21,7 +21,7 @@ export async function uploadRemoteFile(id: string, blob: Blob) {
   // A retry after a lost upload response reuses the already-stored immutable file.
   if (await remoteFileUrl(id)) return
   if (blob.size > 25 * 1024 * 1024) throw new Error('공유 첨부는 파일당 25MB까지 지원합니다.')
-  await upload('honeymoon/files/' + id, blob, {
+  await uploadPresigned('honeymoon/files/' + id, blob, {
     access: 'private', handleUploadUrl: '/api/sync?action=upload',
     contentType: blob.type || 'application/octet-stream',
     multipart: blob.size > 5 * 1024 * 1024,

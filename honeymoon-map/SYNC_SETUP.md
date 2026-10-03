@@ -5,7 +5,7 @@
 1. Vercel에서 `kw-honeymoon` 프로젝트를 엽니다.
 2. **Storage → Create Database / Create Storage → Blob**을 선택합니다.
 3. 접근 방식은 반드시 **Private**을 선택합니다. 저장소 이름은 `honeymoon-shared`처럼 지정합니다.
-4. 이 프로젝트의 **Production** 환경에 연결합니다. `BLOB_READ_WRITE_TOKEN` 환경변수가 자동 추가되는지 확인합니다. 변수 이름의 접두사는 기본값으로 둡니다.
+4. 이 프로젝트의 **Production** 환경에 연결합니다. `BLOB_STORE_ID` 또는 `BLOB_READ_WRITE_TOKEN` 환경변수가 자동 추가되는지 확인합니다. 변수 이름의 접두사는 기본값으로 둡니다. `BLOB_STORE_ID` 방식에서는 Vercel의 자동 OIDC 인증을 사용합니다.
 5. 수정 코드의 배포가 이미 끝났다면 **Deployments → 최신 배포 → Redeploy**를 실행하여 환경변수를 반영합니다.
 6. 기존 데이터가 있는 **PC에서 먼저** 사이트를 새로고침하고, 상단의 **PC · 휴대폰 함께 보기**에서 **기존 첨부 암호**를 입력합니다.
 7. **공유 완료**가 표시될 때까지 기다립니다. 처음에는 PC에 저장된 첨부파일을 전송하므로 시간이 걸릴 수 있습니다.

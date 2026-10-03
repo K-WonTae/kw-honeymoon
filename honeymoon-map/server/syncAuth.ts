@@ -2,27 +2,30 @@ import { createDecipheriv, createHash, createHmac, pbkdf2, timingSafeEqual } fro
 import { promisify } from 'node:util'
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import manifest from '../src/data/attachments.json' with { type: 'json' }
+import { sessionSecret } from './sessionSecret.js'
 
 const COOKIE = 'honeymoon_sync'
 const AGE = 60 * 60 * 24 * 180
-export function configured() { return !!process.env.BLOB_READ_WRITE_TOKEN && (!!process.env.HONEYMOON_SYNC_PASSWORD || !!manifest.check) }
-function sign(payload: string) {
-  const secret = process.env.HONEYMOON_SYNC_SECRET || process.env.BLOB_READ_WRITE_TOKEN
-  if (!secret) throw new Error('Storage is not configured')
+export function configured() {
+  const storage = !!process.env.BLOB_READ_WRITE_TOKEN || (!!process.env.BLOB_STORE_ID && !!process.env.VERCEL_OIDC_TOKEN)
+  return storage && (!!process.env.HONEYMOON_SYNC_PASSWORD || !!manifest.check)
+}
+async function sign(payload: string) {
+  const secret = await sessionSecret()
   return createHmac('sha256', secret).update(payload).digest('base64url')
 }
-export function authenticated(req: VercelRequest) {
+export async function authenticated(req: VercelRequest) {
   const cookie = req.cookies?.[COOKIE] ?? req.headers.cookie?.split('; ').find((c) => c.startsWith(COOKIE + '='))?.slice(COOKIE.length + 1)
   if (!cookie) return false
   const [expiry, signature] = cookie.split('.')
   if (!signature || !/^\d+$/.test(expiry) || Number(expiry) < Date.now()) return false
-  const expected = Buffer.from(sign(expiry))
+  const expected = Buffer.from(await sign(expiry))
   const actual = Buffer.from(signature)
   return expected.length === actual.length && timingSafeEqual(expected, actual)
 }
-export function sessionCookie(res: VercelResponse, clear = false) {
+export async function sessionCookie(res: VercelResponse, clear = false) {
   const expiry = String(Date.now() + AGE * 1000)
-  res.setHeader('Set-Cookie', `${COOKIE}=${clear ? '' : expiry + '.' + sign(expiry)}; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=${clear ? 0 : AGE}`)
+  res.setHeader('Set-Cookie', `${COOKIE}=${clear ? '' : expiry + '.' + await sign(expiry)}; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=${clear ? 0 : AGE}`)
 }
 export async function verifyPassword(password: unknown) {
   if (typeof password !== 'string' || !password || password.length > 256) return false

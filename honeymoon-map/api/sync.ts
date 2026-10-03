@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { BlobNotFoundError, head, issueSignedToken, presignUrl } from '@vercel/blob'
-import { handleUpload, type HandleUploadBody } from '@vercel/blob/client'
+import { handleUploadPresigned, type HandleUploadPresignedBody } from '@vercel/blob/client'
 import { authenticated, configured, sameOrigin, sessionCookie, verifyPassword } from '../server/syncAuth.js'
 import { readShared, writeShared } from '../server/sharedStore.js'
 import { validCells, type SyncOperation } from '../src/lib/syncModel.js'
@@ -10,30 +10,38 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader('X-Content-Type-Options', 'nosniff')
   const action = String(req.query.action ?? 'status')
   try {
-    if (action === 'status' && req.method === 'GET') return res.json({ configured: configured(), authenticated: configured() && authenticated(req) })
+    if (action === 'status' && req.method === 'GET') return res.json({ configured: configured(), authenticated: configured() && await authenticated(req) })
     if (!configured()) return res.status(503).json({ error: '공용 저장소 연결이 필요합니다. Vercel에서 Private Blob 저장소를 연결해 주세요.' })
     if (action === 'session' && req.method === 'POST') {
       if (!sameOrigin(req)) return res.status(403).json({ error: '접근이 허용되지 않습니다.' })
       if (!await verifyPassword(req.body?.password)) return res.status(401).json({ error: '암호가 맞지 않습니다.' })
-      sessionCookie(res)
+      await sessionCookie(res)
       return res.json({ ok: true })
     }
     if (action === 'upload' && req.method === 'POST') {
-      const result = await handleUpload({
-        body: req.body as HandleUploadBody, request: req,
-        onBeforeGenerateToken: async (pathname) => {
-          if (!authenticated(req) || !sameOrigin(req)) throw new Error('공유 암호를 입력해 주세요.')
+      if (req.body?.type === 'blob.generate-presigned-url') {
+        if (!await authenticated(req)) return res.status(401).json({ error: '공유 암호를 입력해 주세요.' })
+        if (!sameOrigin(req)) return res.status(403).json({ error: '접근이 허용되지 않습니다.' })
+      }
+      const result = await handleUploadPresigned({
+        body: req.body as HandleUploadPresignedBody, request: req,
+        getSignedToken: async (pathname) => {
+          if (!await authenticated(req) || !sameOrigin(req)) throw new Error('공유 암호를 입력해 주세요.')
           if (!/^honeymoon\/files\/att-[a-zA-Z0-9-]{1,180}$/.test(pathname)) throw new Error('Invalid path')
-          return { addRandomSuffix: false, allowOverwrite: false, maximumSizeInBytes: 25 * 1024 * 1024,
+          const constraints = { maximumSizeInBytes: 25 * 1024 * 1024,
             allowedContentTypes: ['image/*', 'application/pdf', 'application/octet-stream'], validUntil: Date.now() + 15 * 60 * 1000 }
+          return {
+            token: await issueSignedToken({ pathname, operations: ['put'], ...constraints }),
+            urlOptions: { addRandomSuffix: false, allowOverwrite: false, ...constraints },
+          }
         },
       })
       return res.json(result)
     }
-    if (!authenticated(req)) return res.status(401).json({ error: '공유 암호를 입력해 주세요.' })
+    if (!await authenticated(req)) return res.status(401).json({ error: '공유 암호를 입력해 주세요.' })
     if (req.method !== 'GET' && !sameOrigin(req)) return res.status(403).json({ error: '접근이 허용되지 않습니다.' })
     if (action === 'session' && req.method === 'DELETE') {
-      sessionCookie(res, true)
+      await sessionCookie(res, true)
       return res.json({ ok: true })
     }
     if (action === 'state' && req.method === 'GET') return res.json({ cells: (await readShared()).doc.cells })
