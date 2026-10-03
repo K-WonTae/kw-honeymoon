@@ -7,7 +7,8 @@ import { sessionSecret } from './sessionSecret.js'
 const COOKIE = 'honeymoon_sync'
 const AGE = 60 * 60 * 24 * 180
 export function configured() {
-  const storage = !!process.env.BLOB_READ_WRITE_TOKEN || (!!process.env.BLOB_STORE_ID && !!process.env.VERCEL_OIDC_TOKEN)
+  // In functions OIDC arrives through request context, not process.env. The Blob SDK resolves it.
+  const storage = !!process.env.BLOB_READ_WRITE_TOKEN || !!process.env.BLOB_STORE_ID
   return storage && (!!process.env.HONEYMOON_SYNC_PASSWORD || !!manifest.check)
 }
 async function sign(payload: string) {

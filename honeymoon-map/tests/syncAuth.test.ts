@@ -29,7 +29,7 @@ test('detect both token-based and OIDC-only Blob connections', () => {
     assert.equal(configured(), true)
     delete process.env.BLOB_READ_WRITE_TOKEN
     process.env.BLOB_STORE_ID = 'test-store'
-    assert.equal(configured(), false)
+    assert.equal(configured(), true)
     process.env.VERCEL_OIDC_TOKEN = 'test-oidc-token'
     assert.equal(configured(), true)
   } finally {
