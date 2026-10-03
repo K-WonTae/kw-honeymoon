@@ -22,13 +22,20 @@ test('client migrates, retries, preserves offline edits and downloads files on a
   }, applied: {} }
   let loseNextResponse = false
   let fileExists = false
+  let session = true
+  let blockStatus: Promise<void> | undefined
   const pdf = new Blob(['test ticket contents'], { type: 'application/pdf' })
   const realFetch = globalThis.fetch
   globalThis.fetch = async (input, options) => {
     const url = new URL(String(input), 'https://kw-honeymoon.vercel.app')
     if (url.hostname === 'files.example') return new Response(pdf)
     const action = url.searchParams.get('action')
-    if (action === 'status') return Response.json({ configured: true, authenticated: true })
+    if (action === 'session') { session = true; return Response.json({ ok: true }) }
+    if (action === 'status') {
+      const current = session
+      if (blockStatus) { const blocked = blockStatus; blockStatus = undefined; await blocked }
+      return Response.json({ configured: true, authenticated: current })
+    }
     if (action === 'file') return fileExists ? Response.json({ url: 'https://files.example/ticket' }) : Response.json({ error: 'missing' }, { status: 404 })
     if (action === 'state' && options?.method === 'POST') {
       const op = JSON.parse(String(options.body)) as SyncOperation
@@ -78,5 +85,21 @@ test('client migrates, retries, preserves offline edits and downloads files on a
     const { getBlob } = await import('../src/lib/attachments')
     assert.equal(await (await getBlob(meta.id))!.text(), await pdf.text())
     assert.equal(toCells(JSON.parse(values.get('honeymoon:userdata:v1')!))[cellKey('memos', 'day')], 'newer phone edit')
+
+    // A pre-login response arrives after login: connecting still starts a fresh sync.
+    session = false
+    let releaseStatus!: () => void
+    blockStatus = new Promise<void>((resolve) => { releaseStatus = resolve })
+    const checking = sync.synchronize()
+    await new Promise<void>((resolve) => setImmediate(resolve))
+    const connecting = sync.connectShared('test-password')
+    await new Promise<void>((resolve) => setImmediate(resolve))
+    releaseStatus()
+    await Promise.all([checking, connecting])
+    const appliedBefore = Object.keys(doc.applied).length
+    sync.setSharedData((data) => ({ ...data, completed: { ...data.completed, newday: true } }))
+    await sync.synchronize()
+    assert.equal(Object.keys(doc.applied).length, appliedBefore + 1)
+    assert.equal(doc.cells[cellKey('completed', 'newday')], true)
   } finally { globalThis.fetch = realFetch }
 })

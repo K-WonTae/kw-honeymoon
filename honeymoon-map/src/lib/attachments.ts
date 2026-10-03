@@ -1,4 +1,5 @@
 // 첨부파일은 비공개 공용 저장소에 동기화하고 IndexedDB에 오프라인 캐시한다.
+import { remoteFileUrl } from './syncTransport'
 
 const DB_NAME = 'honeymoon'
 const STORE = 'attachments'
@@ -51,7 +52,6 @@ export async function getBlob(id: string): Promise<Blob | null> {
   const existing = downloads.get(id)
   if (existing) return existing
   const download = (async () => {
-    const { remoteFileUrl } = await import('./syncTransport')
     const url = await remoteFileUrl(id)
     if (!url) return null
     const response = await fetch(url, { signal: AbortSignal.timeout(60_000) })

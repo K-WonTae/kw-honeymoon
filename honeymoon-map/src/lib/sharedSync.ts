@@ -138,6 +138,8 @@ export function synchronize(): Promise<void> {
 
 export async function connectShared(password: string) {
   await syncRequest('session', { password })
+  // Finish a status request started before login, so its stale response cannot relock the session.
+  if (running) await running
   authenticated = true
   await synchronize()
 }
