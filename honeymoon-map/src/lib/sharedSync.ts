@@ -65,19 +65,41 @@ export function setSharedData(value: UserData | ((prev: UserData) => UserData)) 
   }
 }
 
+function attachmentDeletedLater(op: Pending, key: string): boolean {
+  const index = queue.findIndex((pending) => pending.id === op.id)
+  if (index < 0) return false
+  let deleted = false
+  for (const pending of queue.slice(index + 1)) {
+    if (!pending.insertOnly && Object.prototype.hasOwnProperty.call(pending.cells, key)) {
+      deleted = pending.cells[key] === null
+    }
+  }
+  return deleted
+}
+
 async function ensureFiles(op: Pending, remote: Cells): Promise<Cells> {
   const cells = { ...op.cells }
   for (const [key, value] of Object.entries(cells)) {
     if (JSON.parse(key)[0] !== 'attachments' || value === null) continue
     if (op.insertOnly && Object.prototype.hasOwnProperty.call(remote, key)) continue
+    // A later deletion must reach the server even when it removed the original
+    // needed by an earlier, unacknowledged addition. Keep unrelated cells intact.
+    if (attachmentDeletedLater(op, key)) { delete cells[key]; continue }
     const meta = value as AttachmentMeta
-    const blob = await getCachedBlob(meta.id)
-    if (blob) await uploadRemoteFile(meta.id, blob)
-    else if (!await remoteFileUrl(meta.id)) {
-      if (!op.migration) throw new Error(`${meta.name}: 원본 파일을 찾을 수 없습니다. 파일을 다시 첨부해 주세요.`)
-      // Metadata left behind by the old app without a local file cannot be migrated.
-      delete cells[key]
+    try {
+      const blob = await getCachedBlob(meta.id)
+      if (attachmentDeletedLater(op, key)) { delete cells[key]; continue }
+      if (blob) await uploadRemoteFile(meta.id, blob)
+      else if (!await remoteFileUrl(meta.id)) {
+        if (!op.migration) throw new Error(`${meta.name}: 원본 파일을 찾을 수 없습니다. 파일을 다시 첨부해 주세요.`)
+        // Metadata left behind by the old app without a local file cannot be migrated.
+        delete cells[key]
+      }
+    } catch (error) {
+      // Deletion may be queued while a file lookup/upload is in flight.
+      if (!attachmentDeletedLater(op, key)) throw error
     }
+    if (attachmentDeletedLater(op, key)) delete cells[key]
   }
   return cells
 }
