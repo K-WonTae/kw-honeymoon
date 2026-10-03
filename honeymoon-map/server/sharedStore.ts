@@ -15,9 +15,11 @@ export async function sharedStorageDiagnostics(readTag: string | undefined) {
   }
 }
 export async function readShared() {
-  const result = await get(PATH, { access: 'private', useCache: false })
+  // Compression rewrites the HTTP ETag to W/"...", which cannot be used for Blob CAS writes.
+  const result = await get(PATH, { access: 'private', useCache: false, headers: { 'Accept-Encoding': 'identity' } })
   if (!result) return { doc: { version: 1, cells: {}, applied: {} } as SharedDocument, etag: undefined }
   if (result.statusCode !== 200) throw new Error('Unexpected storage response')
+  if (!result.blob.etag || result.blob.etag.startsWith('W/')) throw new Error('Shared storage returned an unusable version tag')
   const doc = await new Response(result.stream).json() as SharedDocument
   if (doc.version !== 1 || !doc.cells || !doc.applied) throw new Error('Invalid shared document')
   return { doc, etag: result.blob.etag }
