@@ -5797,19 +5797,19 @@
       "date": "2026-10-26",
       "weekday": "월",
       "city": "Venice → Milan",
-      "title": "베네치아→밀라노: 두오모 테라스 13:45 · 갈레리아 → 말펜사 익스프레스 16:25 → KE928 20:05",
+      "title": "베네치아→밀라노: 두오모 광장 · 갈레리아 쇼핑 1h30 → 말펜사 익스프레스 16:25 → KE928 20:05",
       "hotel": "비행기 (KE928)",
       "defaultTransportMode": "transit",
-      "estimatedCostForTwo": 195,
+      "estimatedCostForTwo": 160,
       "cashForTwo": 30,
-      "cashNote": "현금 €30이면 충분 — 거의 전부 카드(도시세·지하철 컨택리스·KIPOINT·식당·테라스 온라인). 남은 유로 동전은 공항 가기 전 물·간식으로 털고 지폐만. 비상 예비비: 택시 첸트랄레→말펜사 정액 €114(주 고시), 공항버스 2인 €10~26, 대체 짐 보관 €5~10.",
+      "cashNote": "현금 €30이면 충분 — 거의 전부 카드(도시세·지하철 컨택리스·KIPOINT·식당·갈레리아 쇼핑). 남은 유로 동전은 공항 가기 전 물·간식으로 털고 지폐만. 비상 예비비: 택시 첸트랄레→말펜사 정액 €114(주 고시), 공항버스 2인 €10~26, 대체 짐 보관 €5~10.",
       "alerts": [
         "✈️ 목표는 하나 — 20:05 KE928(말펜사 T1)을 여유 있게 타기. 두오모와 갈레리아는 버릴 수 있지만 비행기는 못 버림. 대한항공 공식: 체크인 마감 19:05(60분 전), 탑승 시작 19:30, 탑승구 마감 19:55(10분 전) — 19:15엔 게이트에. KE928 20:05는 10/25 시작 동계 스케줄(월·수·금·일 운항, T1). 인천 도착은 15:35 → 15:45로 변경 안내 받음(부산행 KE1407 18:25 환승 2h40, 여유 있음).",
         "🎫 예매 완료 — ①Frecciarossa 9718 Venezia Mestre 09:00 → Milano Centrale 11:15(PNR은 첨부 캡처 · 6호차 19A·19B) ②말펜사 익스프레스 Trenord 2960 Milano Centrale 16:25 → Malpensa T1 17:18(1등석 2인 €30 · 티켓 번호는 첨부 캡처 · 예약 사진과 동일한 표로 10/9 확인). 바꿀 일이 생기면 전날 23:59까지 앱에서 날짜·시각 무료 변경, 이 표는 앱 환불이 안 되니 새로 사지 말 것. 놓칠 것 같으면 출발 시각 전에 앱에서 시각 변경(무료) — 출발 시각이 지나면 변경 불가, 다른 열차를 타면 차장에게 €5. 16:55는 택스리펀 포기, 그 뒤는 17:25를 기다리지 말고 택시(정액 €114).",
         "🛂 가장 큰 위험 3가지는 공항: EES 출국심사(2026-04-10 전면 시행, 말펜사 대기 예측 불가) · 택스리펀(위탁 물건은 체크인 전 T1 2층 12번 구역, 45~60분) · 프레차로사 지연·파업. 보안검색 뒤 면세점보다 출국심사 먼저.",
-        "⏳ 컷오프(넘으면 그 자리에서 결정): 첸트랄레 도착 11:45 → 점심 Luini · 12:15 → 테라스 포기 · 13:15 → 관광 전부 포기(짐 맡기지 않고 공항) · 테라스 입장 14:15 · 갈레리아 출발 15:05 · KIPOINT 15:55 → 16:55편(택스리펀 포기) · 택스리펀 18:20 · 출국심사 18:45.",
-        "🗓️ 월요일 휴관: 최후의 만찬·브레라 미술관·노베첸토 미술관·스포르체스코 성 내부 박물관. 두오모·테라스·갈레리아·라스칼라 광장은 정상. 두오모 박물관은 수요일 휴관이라 월요일 OK.",
-        "🍝 Trattoria Milanese dal 1933(Via Santa Marta 11) 12:15 2인 예약 필수(+39 02 8645 1991) — 이름 비슷한 dal 1997은 월요일 휴무인 다른 곳. 두오모 테라스 13:45 시간지정권(엘리베이터, 2인 약 €36)은 D-14(10/12)쯤 ticket.duomomilano.it.",
+        "⏳ 컷오프(넘으면 그 자리에서 결정): 첸트랄레 도착 11:45 → 점심 Luini · 12:15 → Luini 뒤 갈레리아만 짧게 · 13:15 → 관광 전부 포기(짐 맡기지 않고 공항) · 갈레리아 출발 15:05(쇼핑 하드 스톱) · KIPOINT 15:55 → 16:55편(택스리펀 포기) · 택스리펀 18:20 · 출국심사 18:45.",
+        "🗓️ 월요일 휴관: 최후의 만찬·브레라 미술관·노베첸토 미술관·스포르체스코 성 내부 박물관. 두오모 광장·갈레리아(상점 월요일 영업)·라스칼라 광장은 정상.",
+        "🍝 Trattoria Milanese dal 1933(Via Santa Marta 11) 12:15 2인 예약 필수(+39 02 8645 1991) — 이름 비슷한 dal 1997은 월요일 휴무인 다른 곳. 두오모 테라스는 10/10 취소(표 안 삼) — 그 시간은 갈레리아 쇼핑.",
         "🏨 조식은 예약에 미포함 — 07:30 조식은 호텔 현장 결제 또는 역 앞 바. 08:20 체크아웃, 도시세(2박 2인 약 €12.40)는 카드로 현장 결제. 전날 밤 대한항공 온라인 체크인(48시간 전부터).",
         "📅 파업: 이탈리아는 최소 10일 전 공고 의무라 10/16이 지나면 10/26 파업이 새로 붙을 수 없음. 9/28 기준 10/22~29에 등록된 파업은 없음(10/30 총파업은 있음). 10/12·10/23에 재확인."
       ],
@@ -5818,13 +5818,13 @@
         { "id": "D8-02", "sequence": 2, "startTime": "07:30", "endTime": "08:20", "title": "조식", "note": "아고다 예약에 조식 미포함(포함 서비스는 무료 Wi-Fi뿐) — 호텔 현장 결제 또는 역 앞 바", "mappable": true, "type": "hotel", "placeName": "Best Western Plus Hotel Bologna Mestre", "placeId": "ChIJOTQVhzqufkcRIYz5xcSfFNc", "lat": null, "lng": null },
         { "id": "D8-03", "sequence": 3, "startTime": "08:20", "endTime": "08:35", "title": "체크아웃 — 도시세 카드 결제", "note": "메스트레 2박 2인 약 €12.40(아고다 확정서: 도시세는 숙소에서 결제) · 호텔은 역 광장 건너편, 5분이면 전광판 앞", "mappable": false },
         { "id": "D8-04", "sequence": 4, "startTime": "08:35", "endTime": "09:00", "title": "메스트레역 — 전광판에서 승강장·호차 위치 확인", "note": "프레차로사는 메스트레 정차 시간이 짧음 — 승강장이 뜨면 바로 올라가 승강장 안내판에서 호차(carrozza) 위치 확인", "mappable": true, "type": "station", "placeName": "Stazione di Venezia Mestre, Viale Stazione, 30171 Venezia", "placeId": "ChIJj4rg9iS0fkcRlo4qoF69ajY", "lat": 45.4824787, "lng": 12.2317675, "transportFromPrevious": "walking" },
-        { "id": "D8-05", "sequence": 5, "startTime": "09:00", "endTime": "11:15", "title": "🎫 Frecciarossa 9718 메스트레 → 밀라노 첸트랄레 (예매 완료 · PNR은 첨부 캡처 · 6호차 19A·19B · 2h15)", "note": "✅ PNR은 첨부 캡처 · Super Economy · 6호차 19A(KIM)·19B(JANG) · €61.80(좌석 지정 포함) · 캡처는 이 카드에 첨부 · 놓치면 두오모를 포기 · 캐리어는 타자마자 입구 선반, 도착 10분 전 꺼내 두기 · 열차 안에서: KIPOINT 온라인 예약 확인, Trattoria Milanese 예약 확인, 두오모 테라스 QR 준비, 말펜사 익스프레스 16:25 표 확인(Trenitalia 앱) · 놓치면 다음 열차(약 1시간 간격) · 60분 이상 지연 25%, 120분 이상 50% 환불(Trenitalia 앱)", "mappable": false, "transportFromPrevious": "train" },
+        { "id": "D8-05", "sequence": 5, "startTime": "09:00", "endTime": "11:15", "title": "🎫 Frecciarossa 9718 메스트레 → 밀라노 첸트랄레 (예매 완료 · PNR은 첨부 캡처 · 6호차 19A·19B · 2h15)", "note": "✅ PNR은 첨부 캡처 · Super Economy · 6호차 19A(KIM)·19B(JANG) · €61.80(좌석 지정 포함) · 캡처는 이 카드에 첨부 · 놓치면 갈레리아 쇼핑을 포기 · 캐리어는 타자마자 입구 선반, 도착 10분 전 꺼내 두기 · 열차 안에서: KIPOINT 온라인 예약 확인, Trattoria Milanese 예약 확인, 갈레리아 쇼핑 리스트 정리, 말펜사 익스프레스 16:25 표 확인(Trenitalia 앱) · 놓치면 다음 열차(약 1시간 간격) · 60분 이상 지연 25%, 120분 이상 50% 환불(Trenitalia 앱)", "mappable": false, "transportFromPrevious": "train" },
         { "id": "D8-06", "sequence": 6, "startTime": "11:15", "endTime": "11:35", "title": "첸트랄레 도착 → KIPOINT 짐 보관 (15분)", "note": "승강장(상층)에서 에스컬레이터로 지상층 갤러리아 상업구역 → 파란색 Deposito Bagagli 안내 · 가방당 첫 5시간 €6, 이후 시간당 €1 · 카드 가능 · 짐표는 사진 · 07:00~21:00 · 대기 20분 이상·만실이면 Stow Your Bags(Via Pergolesi 22, 도보 2분)", "mappable": true, "type": "station", "placeName": "Milano Centrale", "placeId": "ChIJQ1j3T8XGhkcRKs-XGhSxJiI", "lat": 45.487137, "lng": 9.204822, "transportFromPrevious": "train", "estimatedCost": 12 },
         { "id": "D8-07", "sequence": 7, "startTime": "11:35", "endTime": "12:15", "title": "M3 Duomo 4정거장 → 도보 Via Santa Marta 11", "note": "노란선 San Donato행 · 1회권 €2.20, 컨택리스 카드로 개찰구 태그가 가장 빠름 · Duomo역에서 Via Torino 쪽으로 8~12분 · 지하철 안에서 가방은 앞으로", "mappable": false, "transportFromPrevious": "transit", "estimatedCost": 5 },
         { "id": "D8-08", "sequence": 8, "startTime": "12:15", "endTime": "13:15", "title": "점심: Trattoria Milanese dal 1933 (예약 필수)", "note": "Via Santa Marta 11 · +39 02 8645 1991 · 이름 비슷한 dal 1997은 월요일 휴무인 다른 곳 — 예약 전화 때 주소 확인 · 12:50에 계산서(il conto) 부탁, 13:15 출발 · 1인 €30~45", "recommendedMenu": ["리조토 알라 밀라네제", "코톨레타 (크니 하나를 나눠도 됨)", "오소부코"], "mappable": true, "type": "restaurant", "placeName": "Trattoria Milanese, Via Santa Marta 11, Milano", "placeId": "ChIJd8ROFKvGhkcRUf875a9G9lM", "lat": 45.4629116, "lng": 9.1837802, "reservationLevel": "required", "transportFromPrevious": "walking", "estimatedCost": 75 },
-        { "id": "D8-09", "sequence": 9, "startTime": "13:30", "endTime": "13:45", "title": "두오모 광장 도착 · 테라스 보안검색 줄", "note": "테라스 입구는 성당 북쪽 측면(갈레리아 쪽) · 13:30에는 줄에 서 있기 · 큰 가방·삼각대 반입 불가", "mappable": true, "type": "sightseeing", "placeName": "Duomo di Milano", "placeId": "ChIJoTZGw67GhkcREy4aECdOf6s", "lat": 45.4640976, "lng": 9.1919265, "transportFromPrevious": "walking" },
-        { "id": "D8-10", "sequence": 10, "startTime": "13:45", "endTime": "14:40", "title": "🎫 두오모 테라스 13:45 시간지정권 (엘리베이터 · 55분)", "note": "유일한 관광 고정점 · 엘리베이터는 1층 테라스까지, 2층 테라스와 하산은 계단(약 250단) · 비 오면 대리석 바닥 미끄러움 · 성당 내부까지 가려면 어깨·무릎 가림, 시간 없으면 테라스만 · 줄 30분 이상이면 슬롯이 지나도 직원에게 QR — 14:15까지 못 들어가면 포기하고 갈레리아로", "mappable": false, "estimatedCost": 36 },
-        { "id": "D8-11", "sequence": 11, "startTime": "14:40", "endTime": "15:05", "title": "갈레리아 비토리오 에마누엘레 II (25분)", "note": "바닥의 황소 모자이크는 사진만 찍고 지나감 · 택스리펀 받을 물건은 상점에서 여권 제시, tax free 영수증(OTELLO 코드 포함) — €70 이상 구매 조건 · 영수증·여권 세트로 보관", "mappable": true, "type": "shopping", "placeName": "Galleria Vittorio Emanuele II, Milano", "placeId": "ChIJw7aG_QY1eUcRFtQJWKmcCyc", "lat": 45.4658434, "lng": 9.1899401, "transportFromPrevious": "walking" },
+        { "id": "D8-09", "sequence": 9, "startTime": "13:15", "endTime": "13:35", "title": "도보 10분 → 두오모 광장 · 외관 사진 (테라스 취소 — 광장에서만)", "note": "Via Santa Marta → Via Torino 북쪽 → 두오모 광장 약 10분(13:25 도착) · 테라스 시간지정권은 10/10 취소했으니 줄 서지 않고 광장에서 파사드·갈레리아 입구 배경 사진만 10분 · 광장의 팔찌·비둘기 모이 호객은 무시 · 13:35 갈레리아로", "mappable": true, "type": "sightseeing", "placeName": "Duomo di Milano", "placeId": "ChIJoTZGw67GhkcREy4aECdOf6s", "lat": 45.4640976, "lng": 9.1919265, "transportFromPrevious": "walking" },
+        { "id": "D8-10", "sequence": 10, "startTime": "13:35", "endTime": "14:50", "title": "갈레리아 비토리오 에마누엘레 II — 쇼핑 (1h15)", "note": "테라스를 취소하고 25분 → 1시간 30분(14:50 마무리 포함)으로 늘림 · 명품 플래그십(Prada 1913 본점·Louis Vuitton·Gucci·Armani·Versace) + 광장 쪽 라 리나센테(백화점, 7층 푸드홀) · 갈레리아 상점은 월요일도 영업 · 택스리펀: 한 매장 €70 이상 구매, 계산 전 여권 제시 → tax free 영수증(OTELLO 코드 포함) · 위탁수하물에 넣을 물건은 공항 체크인 전 검증(45~60분)이니 가능하면 기내 가방 크기로 · 영수증·여권 세트로 보관 · 짐은 첸트랄레 KIPOINT에 있으니 쇼핑백은 그대로 들고 지하철", "mappable": true, "type": "shopping", "placeName": "Galleria Vittorio Emanuele II, Milano", "placeId": "ChIJw7aG_QY1eUcRFtQJWKmcCyc", "lat": 45.4658434, "lng": 9.1899401, "transportFromPrevious": "walking" },
+        { "id": "D8-11", "sequence": 11, "startTime": "14:50", "endTime": "15:05", "title": "갈레리아 마무리 — 황소 모자이크 사진 · 택스리펀 영수증 세트 확인 → 북쪽 출구(라스칼라 쪽) (15분)", "note": "계산은 14:50 전에 끝내기 · 팔각 중앙 바닥의 황소 모자이크(뒤꿈치로 세 바퀴 돌면 행운)는 줄이 길면 사진만 · 영수증·여권·물건이 한 세트인지 확인 · 15:05 북쪽 아치로 나가면 바로 라스칼라 광장 — 15:05는 하드 스톱(쇼핑 중이면 끊는다)", "mappable": false, "transportFromPrevious": "walking" },
         { "id": "D8-12", "sequence": 12, "startTime": "15:05", "endTime": "15:10", "title": "라스칼라 광장 — 사진만 찍고 이동", "mappable": true, "type": "sightseeing", "placeName": "Piazza della Scala, Milano", "placeId": "ChIJxQN4-63GhkcR-9PPaathtmM", "lat": 45.4672111, "lng": 9.1902263, "transportFromPrevious": "walking" },
         { "id": "D8-13", "sequence": 13, "startTime": "15:10", "endTime": "15:25", "title": "도보 5분 → Montenapoleone M3 3정거장 → Centrale 15:22", "note": "라스칼라 광장에서 Via Manzoni를 따라 5분 · Duomo역 M3 4정거장도 가능 · 표가 16:25로 확정돼(10/9 예약 사진 대조) 9/29에 10분씩 압축했던 오후를 되돌림 — 첸트랄레에 출발 1시간 전 도착", "mappable": false, "transportFromPrevious": "transit", "estimatedCost": 5 },
         { "id": "D8-14", "sequence": 14, "startTime": "15:25", "endTime": "15:50", "title": "KIPOINT 짐 픽업 · 물·간식 구입 (25분)", "note": "역이 커서 승강장~KIPOINT 걷는 시간 있음 · 15:55까지 KIPOINT에 못 오면 16:55편(택스리펀 포기 · 출발 전 앱에서 시각 변경) · 물은 보안검색 전에 다 마시니 작은 것만", "mappable": true, "type": "station", "placeName": "Milano Centrale", "placeId": "ChIJQ1j3T8XGhkcRKs-XGhSxJiI", "lat": 45.487137, "lng": 9.204822, "transportFromPrevious": "transit" },
@@ -5839,7 +5839,6 @@
       "reservations": [
         { "id": "RES-D8-TRAIN", "placeName": "Frecciarossa 9718 Venezia Mestre → Milano Centrale", "reservationLevel": "required", "itemId": "D8-05", "booked": true, "recommendedTiming": "✅ 예매 완료 — 10/26(월) 09:00 → 11:15 · PNR은 첨부 캡처 · 6호차 19A(KIM)·19B(JANG)", "note": "Super Economy 2인 €55.80 + 좌석 지정 €6 = €61.80. Trenitalia 앱 My Journeys에 표가 있고 캡처는 기차 카드에 첨부. Super Economy는 변경·환불 불가. 60분 이상 지연 25%, 120분 이상 50% 환불." },
         { "id": "RES-D8-LUNCH", "placeName": "Trattoria Milanese dal 1933", "meal": "lunch", "reservationLevel": "required", "itemId": "D8-08", "recommendedTiming": "D-14 (10/12 전후) — 10/26(월) 12:15 2인 · +39 02 8645 1991", "note": "Via Santa Marta 11(두오모역에서 도보 8~12분). 월~토 12:00~14:30 / 19:00~22:30, 일 휴무. 이름이 비슷한 'dal 1997'은 월요일 휴무이고 다른 곳 — 예약 전화 때 주소(Via Santa Marta 11) 확인. 리조토 알라 밀라네제·코톨레타·오소부코, 1인 €30~45. 12:50에 계산서, 13:15 출발. 열차가 30분~1시간 늦으면 전화로 취소하고 Luini 판체로토(Via Santa Radegonda 16)로. 만석·누락이면 Luini나 Trattoria da Pino(Via Cerva 14, 월~토 점심).", "messageEN": "Hello, I'd like to book a table for 2 on Monday 26 October at 12:15, under the name [이름]. Is this Trattoria Milanese in Via Santa Marta 11? Thank you!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone lunedì 26 ottobre alle 12:15, a nome [이름]. È la Trattoria Milanese di Via Santa Marta 11? Grazie!", "messageKO": "안녕하세요, [이름] 이름으로 10월 26일 월요일 12:15 2인 테이블을 예약하고 싶습니다. Via Santa Marta 11의 Trattoria Milanese 맞나요? 감사합니다!" },
-        { "id": "RES-D8-TERRACE", "placeName": "두오모 테라스 13:45 시간지정권", "reservationLevel": "required", "itemId": "D8-10", "recommendedTiming": "D-14 (10/12 전후) — ticket.duomomilano.it 에서 10/26(월) 13:45 엘리베이터 시간지정권 2인(약 €36) · 10/9 현재 구매 기록 없음", "note": "유일한 관광 고정점. 엘리베이터는 1층 테라스까지, 2층 테라스와 하산은 계단(약 250단). 큰 가방·삼각대 반입 불가. 줄이 30분 넘으면 슬롯이 지나도 직원에게 QR — 14:15까지 못 들어가면 포기하고 갈레리아로. 구매하면 이 항목을 📒로 완료 등록하고 QR을 테라스 카드에 첨부." },
         { "id": "RES-D8-MALPENSA", "placeName": "말펜사 익스프레스 Trenord 2960 Milano Centrale → Malpensa T1", "reservationLevel": "required", "itemId": "D8-16", "booked": true, "recommendedTiming": "✅ 예매 완료 — 10/26(월) 16:25 → 17:18 · 1등석 2인 €30 · 티켓 번호는 첨부 캡처 (예약 사진과 동일, 10/9 확인)", "note": "예약 사진과 동일한 표(10/9 확인): Trenord 2960 Milano Centrale 16:25 → Malpensa T1 17:18. 좌석 지정 없음(1등석), 출발 시각에 자동 개시(validation), 전날 23:59까지 앱에서 날짜·시각 무료 변경, 환불 불가(Trenord 구간). 요금 편도 €15. T1 하차(T2가 종점 아님). 15:50 승강장 도착이면 35분 여유. 캡처는 기차 카드에 첨부." }
       ],
       "guide": {
@@ -5849,7 +5848,7 @@
             "id": "overview",
             "icon": "🗓️",
             "title": "하루 한눈에",
-            "summary": "목표는 20:05 KE928 · 고정점 5개 · 위험 3가지는 공항 · 월요일 휴관",
+            "summary": "목표는 20:05 KE928 · 고정점 4개 · 위험 3가지는 공항 · 월요일 휴관",
             "blocks": [
               {
                 "paragraphs": [
@@ -5866,11 +5865,6 @@
                       "09:00",
                       "Frecciarossa 메스트레 → 밀라노 첸트랄레 (11:15 도착)",
                       "하루의 시작. 놓치면 두오모를 포기한다"
-                    ],
-                    [
-                      "13:45",
-                      "두오모 테라스 시간지정권 입장",
-                      "유일한 관광 고정점"
                     ],
                     [
                       "16:25",
@@ -5901,8 +5895,8 @@
               },
               {
                 "paragraphs": [
-                  "월요일이라 최후의 만찬, 브레라 미술관, 노베첸토 미술관, 스포르체스코 성 내부 박물관은 휴관이다. 두오모·테라스·갈레리아·라스칼라 광장은 정상 운영이라 이 동선은 월요일에 안전하다.",
-                  "원본 일정에서 기상 30분 늦춤, 짐 보관 15분 확보, 점심 12:15, 말펜사 익스프레스 16:25 표(예약 사진과 동일), 출국심사를 면세점보다 앞에 두는 것으로 바꿨다. 시각은 모두 현지 시간(10/25부터 CET, 한국과 8시간 차)이다."
+                  "월요일이라 최후의 만찬, 브레라 미술관, 노베첸토 미술관, 스포르체스코 성 내부 박물관은 휴관이다. 두오모 광장·갈레리아(상점 월요일 영업)·라스칼라 광장은 정상이라 이 동선은 월요일에 안전하다.",
+                  "원본 일정에서 기상 30분 늦춤, 짐 보관 15분 확보, 점심 12:15, 말펜사 익스프레스 16:25 표(예약 사진과 동일), 출국심사를 면세점보다 앞에 두는 것으로 바꿨다. 10/10에는 두오모 테라스를 취소하고(표 안 삼) 그 시간을 갈레리아 쇼핑에 넘겨 13:35~15:05(1시간 30분)로 늘렸다 — 두오모는 광장에서 외관 사진만. 시각은 모두 현지 시간(10/25부터 CET, 한국과 8시간 차)이다."
                 ]
               }
             ]
@@ -5911,7 +5905,7 @@
             "id": "legs",
             "icon": "🧭",
             "title": "구간별 실행 가이드",
-            "summary": "메스트레 → 첸트랄레 → 점심 → 테라스 → 갈레리아 → 말펜사 익스프레스 → T1",
+            "summary": "메스트레 → 첸트랄레 → 점심 → 두오모 광장 → 갈레리아 쇼핑 → 말펜사 익스프레스 → T1",
             "blocks": [
               {
                 "paragraphs": [
@@ -5924,7 +5918,7 @@
                   "BW Plus Hotel Bologna는 역 광장 건너편이다. 체크아웃 후 5분이면 승강장 전광판 앞에 선다.",
                   "프레차로사는 메스트레 정차 시간이 짧다. 전광판에 승강장이 뜨면 바로 올라가 호차(carrozza) 위치를 승강장 안내판에서 확인한다.",
                   "캐리어 선반은 객차 입구와 좌석 위에 있다. 타자마자 입구 선반에 넣고, 도착 10분 전에 미리 꺼내 둔다.",
-                  "열차 안에서 할 일: KIPOINT 온라인 예약 확인, Trattoria Milanese 예약 확인, 두오모 테라스 QR 준비, 말펜사 익스프레스 16:25 표 확인(Trenitalia 앱)."
+                  "열차 안에서 할 일: KIPOINT 온라인 예약 확인, Trattoria Milanese 예약 확인, 갈레리아 쇼핑 리스트 정리, 말펜사 익스프레스 16:25 표 확인(Trenitalia 앱)."
                 ]
               },
               {
@@ -5945,21 +5939,20 @@
                 ]
               },
               {
-                "title": "4. 두오모 테라스 (13:30~14:40)",
+                "title": "4. 두오모 광장 → 갈레리아 쇼핑 (13:15~15:05)",
                 "bullets": [
-                  "테라스 입구는 성당 북쪽 측면(갈레리아 쪽)이다. 보안검색 줄이 있으니 13:30에는 줄에 서 있어야 한다.",
-                  "엘리베이터는 1층 테라스까지만 간다. 2층 테라스와 하산은 계단(약 250단)이다. 편한 신발이 필수다.",
-                  "큰 가방·삼각대는 반입 불가다. 비가 오면 대리석 바닥이 미끄럽다.",
-                  "성당 내부까지 들어가려면 어깨와 무릎을 가려야 한다. 시간이 없으면 테라스만 본다.",
-                  "테라스는 55분(14:40 퇴장)으로 잡는다. 표가 16:25로 확정돼(10/9) 첸트랄레에서 35분 여유가 있으니 9/29에 줄였던 시간을 되돌렸다."
+                  "13:15 식당을 나와 Via Torino를 따라 북쪽으로 10분 걸으면 두오모 광장이다(13:25). 테라스 시간지정권은 10/10 취소했으니 줄에 서지 않는다. 광장에서 파사드와 갈레리아 입구를 배경으로 사진만 10분 찍는다.",
+                  "13:35 갈레리아에 들어간다. 쇼핑은 14:50까지 1시간 15분, 마무리까지 15:05(1시간 30분)다. 원래 25분이던 걸 테라스 시간으로 늘렸다.",
+                  "갈레리아 안은 명품 플래그십(Prada 1913 본점, Louis Vuitton, Gucci, Armani, Versace)이고, 광장 쪽 라 리나센테(백화점, 7층 푸드홀)는 브랜드 폭이 넓다. 갈레리아 상점은 월요일도 영업한다.",
+                  "택스리펀을 받을 물건은 상점에서 여권을 제시하고 tax free 영수증(OTELLO 코드 포함)을 받는다. 한 매장 70€ 이상 구매가 조건이다. 위탁수하물에 넣을 물건은 공항 체크인 전 검증(45~60분)이 필요하니 가능하면 기내 가방에 들어갈 크기로 산다.",
+                  "짐은 첸트랄레 KIPOINT에 있으니 쇼핑백은 그대로 들고 지하철을 탄다. 부피 큰 물건은 피한다.",
+                  "14:50에는 계산을 끝내고 황소 모자이크 사진, 영수증·여권·물건 세트 확인. 15:05 북쪽 아치로 나가면 라스칼라 광장이다. 15:05는 하드 스톱이다 — 쇼핑 중이면 끊는다."
                 ]
               },
               {
-                "title": "5. 갈레리아·라스칼라 → 첸트랄레 복귀 (14:40~15:50)",
+                "title": "5. 라스칼라 → 첸트랄레 복귀 (15:05~15:50)",
                 "bullets": [
-                  "갈레리아 바닥의 황소 모자이크는 사진만 찍고 지나간다.",
-                  "택스리펀을 받을 물건은 상점에서 여권을 제시하고 tax free 영수증(OTELLO 코드 포함)을 받는다. 70€ 이상 구매가 조건이다.",
-                  "갈레리아 25분(15:05 퇴장), 라스칼라 광장 사진만(15:10 출발). Via Manzoni를 따라 5분 걸으면 Montenapoleone M3역이다. Centrale 방향 3정거장, 15:22 도착.",
+                  "라스칼라 광장은 사진만 찍고 15:10 출발. Via Manzoni를 따라 5분 걸으면 Montenapoleone M3역이다. Centrale 방향 3정거장, 15:22 도착.",
                   "15:25 KIPOINT 픽업(25분), 15:50 승강장(개찰 게이트 통과 시간 포함) — 16:25 출발까지 35분 여유라 역 안 카페에서 쉬어도 된다. 15:55까지 KIPOINT에 못 오면 16:55편(택스리펀 포기, 출발 전 앱에서 시각 변경). 물은 보안검색 전에 다 마셔야 하니 작은 것만 산다."
                 ]
               },
@@ -5990,7 +5983,7 @@
             "id": "contingency",
             "icon": "🔀",
             "title": "상황별 대응 매뉴얼",
-            "summary": "열차 지연·파업 · 짐 보관 · 식당 · 두오모 · 공항 열차 · 택스리펀 · EES · 결항 · 인천",
+            "summary": "열차 지연·파업 · 짐 보관 · 식당 · 비 · 공항 열차 · 택스리펀 · EES · 결항 · 인천",
             "blocks": [
               {
                 "paragraphs": [
@@ -6005,13 +5998,13 @@
                   "rows": [
                     [
                       "프레차로사 30분~1시간 지연 (첸트랄레 도착 12:15 이전)",
-                      "점심을 Luini 판체로토(두오모 뒤 Via Santa Radegonda)로 바꿔 15분에 끝내고 13:45 테라스 슬롯을 지킨다. Trattoria Milanese에는 전화로 취소한다.",
+                      "점심을 Luini 판체로토(두오모 뒤 Via Santa Radegonda)로 바꿔 15분에 끝내고 갈레리아 쇼핑 시간을 지킨다. Trattoria Milanese에는 전화로 취소한다.",
                       "앉아서 먹는 점심"
                     ],
                     [
                       "프레차로사 1~2시간 지연 (도착 12:15~13:15)",
-                      "테라스는 포기한다. 짐 맡기고 두오모 광장·갈레리아만 보고 15:50 KIPOINT 기준으로 돌아온다.",
-                      "테라스 티켓(2인 약 36€)"
+                      "짐 맡기고 Luini로 먹은 뒤 갈레리아만 남는 시간만큼 본다. 15:25 KIPOINT 픽업은 그대로다.",
+                      "앉아서 먹는 점심 · 쇼핑 시간"
                     ],
                     [
                       "프레차로사 2시간 이상 지연·결항 (도착 13:15 이후)",
@@ -6030,8 +6023,8 @@
                     ],
                     [
                       "비·강풍",
-                      "테라스는 악천후 시 폐쇄될 수 있다. 대신 성당 내부와 두오모 박물관(월요일 개관, 수요일 휴관)을 보거나 리나센테 7층 푸드홀에서 두오모를 본다.",
-                      "테라스"
+                      "갈레리아는 유리 지붕이라 비에도 그대로 쇼핑한다. 두오모 광장 사진만 짧게 줄인다. 젖는 구간은 식당→두오모 광장 도보 10분뿐이다.",
+                      "두오모 광장 사진"
                     ],
                     [
                       "KIPOINT 대기 20분 이상·만실",
@@ -6042,11 +6035,6 @@
                       "식당 예약 누락·만석",
                       "Luini 판체로토(월요일 점심 영업)나 Trattoria da Pino(Via Cerva 14, 월~토 점심)로 간다. 출발 전 두 곳 영업시간을 구글맵에서 확인해 둔다.",
                       "없음"
-                    ],
-                    [
-                      "두오모 보안검색 줄 30분 이상",
-                      "슬롯 시각이 지나도 직원에게 QR을 보여주면 보통 들여보낸다. 14:15까지 못 들어가면 포기하고 갈레리아로 간다.",
-                      "테라스"
                     ],
                     [
                       "16:25 말펜사 익스프레스 놓침",
@@ -6118,12 +6106,12 @@
                     [
                       "11:45",
                       "첸트랄레 도착",
-                      "점심을 Luini 판체로토로 바꾼다. 테라스 슬롯은 지킨다"
+                      "점심을 Luini 판체로토로 바꾼다. 갈레리아 쇼핑은 그대로"
                     ],
                     [
                       "12:15",
                       "첸트랄레 도착",
-                      "테라스 포기. 짐 맡기고 두오모 광장·갈레리아만 보고 15:50 KIPOINT로"
+                      "Luini로 먹고 갈레리아만 남는 시간만큼. 15:25 KIPOINT 픽업은 그대로"
                     ],
                     [
                       "13:15",
@@ -6131,9 +6119,9 @@
                       "관광 전부 포기. 짐을 맡기지 않고 다음 말펜사 익스프레스를 탄다"
                     ],
                     [
-                      "14:15",
-                      "테라스 입장",
-                      "테라스 포기. 갈레리아로 바로 간다 (갈레리아는 15:05에 떠난다)"
+                      "15:05",
+                      "갈레리아 출발",
+                      "쇼핑을 끊는다. 계산 줄에 서 있으면 포기하고 나온다 — 라스칼라 사진은 생략해도 15:10 Montenapoleone행 도보는 지킨다"
                     ],
                     [
                       "15:55",
@@ -6189,7 +6177,7 @@
               {
                 "title": "D-14 (10/12 전후)",
                 "checklist": [
-                  "두오모 테라스 13:45 시간지정권 구매 (ticket.duomomilano.it, 엘리베이터 상행, 2인)",
+                  "갈레리아 쇼핑 리스트·예산 정하기 (택스리펀은 한 매장 70€ 이상 · 위탁 검증 45~60분 감안해 기내 가방 크기로)",
                   "Trattoria Milanese dal 1933 예약 전화 (+39 02 8645 1991, 12:15, 2명, Via Santa Marta 11 확인)",
                   "대한항공 앱에서 KE928 출발 20:05·T1 재확인 (동계 스케줄 첫 주)",
                   "프레차로사 09:00 편 좌석·호차 번호 확인",
@@ -6203,7 +6191,7 @@
                 "checklist": [
                   "파업 캘린더 재확인",
                   "Trenitalia 앱에서 말펜사 익스프레스 표 10/26 16:25→17:18 재확인(예약 사진과 동일) — 바꿀 일이 생기면 전날 23:59까지 앱에서 무료 변경, 환불은 안 되니 새로 사지 말 것",
-                  "밀라노 10/26 날씨 확인. 비 예보면 테라스 대안 준비",
+                  "밀라노 10/26 날씨 확인. 비 예보면 두오모 광장 사진은 짧게 (갈레리아는 실내)",
                   "Luini·Trattoria da Pino 월요일 영업시간 구글맵 확인",
                   "현금 잔액 확인 (이날 필요 현금 약 30€)"
                 ]
@@ -6236,11 +6224,11 @@
             "id": "budget",
             "icon": "💶",
             "title": "예산과 현금",
-            "summary": "2인 약 180~210€ (말펜사 익스프레스 결제 완료 포함) · 현금 30€",
+            "summary": "2인 약 145~185€ (말펜사 익스프레스 결제 완료 포함 · 갈레리아 쇼핑은 별도) · 현금 30€",
             "blocks": [
               {
                 "paragraphs": [
-                  "이날 2인 지출은 약 180~210€로, 원본 일정의 130€보다 50~80€ 많다. 거의 전부 카드로 결제할 수 있어 현금은 30€면 된다."
+                  "이날 2인 지출은 약 145~185€로, 원본 일정의 130€보다 15~55€ 많다(10/10 테라스 취소로 36€ 줄었다). 갈레리아 쇼핑은 별도다. 거의 전부 카드로 결제할 수 있어 현금은 30€면 된다."
                 ],
                 "table": {
                   "columns": [
@@ -6270,9 +6258,9 @@
                       "카드"
                     ],
                     [
-                      "두오모 테라스 엘리베이터권",
-                      "약 36€",
-                      "온라인 카드"
+                      "갈레리아 쇼핑",
+                      "별도 (출발 전 예산 정하기)",
+                      "카드 · 한 매장 70€ 이상이면 택스리펀"
                     ],
                     [
                       "말펜사 익스프레스 (15€×2)",
@@ -6296,7 +6284,7 @@
             "id": "contacts",
             "icon": "📞",
             "title": "주소·연락처·앱",
-            "summary": "호텔 · KIPOINT · 식당 3 · 두오모 · 공항 교통 · 택스리펀 · KE928 · 파업 · EES · 긴급",
+            "summary": "호텔 · KIPOINT · 식당 3 · 갈레리아 · 공항 교통 · 택스리펀 · KE928 · 파업 · EES · 긴급",
             "blocks": [
               {
                 "paragraphs": [
@@ -6340,9 +6328,9 @@
                       "월~토 점심, 출발 전 영업시간 확인"
                     ],
                     [
-                      "두오모 테라스 티켓",
-                      "ticket.duomomilano.it",
-                      "엘리베이터는 1층까지, 하산 계단, 박물관 수요일 휴관"
+                      "갈레리아 비토리오 에마누엘레 II",
+                      "Piazza del Duomo(두오모 북쪽) ↔ Piazza della Scala",
+                      "상점은 대개 10:00~19:30(매장마다 다름), 월요일 영업 · 라 리나센테는 광장 쪽 · 북쪽 아치가 라스칼라 광장"
                     ],
                     [
                       "말펜사 익스프레스",
@@ -6396,7 +6384,7 @@
             "id": "fixes",
             "icon": "🛠️",
             "title": "원문에서 바로잡은 것",
-            "summary": "10/9 말펜사 16:25 기준·KE928 15:45 · 컷오프 표 두 줄 · OZ582 요일 · 조식",
+            "summary": "10/10 테라스 취소 · 10/9 말펜사 16:25 기준·KE928 15:45 · 컷오프 표 두 줄 · OZ582 요일 · 조식",
             "blocks": [
               {
                 "bullets": [
@@ -6409,7 +6397,8 @@
                   "**앱에서 바뀐 값:** 기상 06:30 → 07:00, M3 3정거장 → 4정거장, KIPOINT '€11/일' → 첫 5시간 €6, 두오모 옥상 '시간 미지정 티켓만' → 13:45 시간지정권, 말펜사 16:25 → 15:55.",
                   "**9/29 수정안 반영:** 오후를 10분씩 압축(테라스 50분·갈레리아 20분·라스칼라 14:55·M3 15:00·KIPOINT 15:15·승강장 15:35)해 첸트랄레에서 20분을 확보했고, 16:25편을 \"백업\"이 아니라 실제 기대치로 적었어요(T1 17:18, 출발 2h47 전). 앱 캡처에 표 날짜가 27 Oct로 보여 되돌리기 항목을 넣었고, 같은 날 08:21 캡처에서 26 Oct 로 되돌린 것을 확인했어요. 인천 환승은 내항기라 입국심사·짐 재위탁이 없다는 것도 고쳤어요.",
                   "**9/29 웹 검증으로 고친 값:** 말펜사 익스프레스 요금 13€ → 15€(2025-08 인상), 소요 51~53분 → 53분(공식 시각표), \"종점 T2\" → T2 뒤 Gallarate까지 가는 열차라 T1 하차 필수, \"놓치면 같은 표로 뒤 열차\" → 출발 전 앱에서 시각 변경(지나면 차내 5€), 대한항공 \"게이트 마감 19:45\" → 탑승 시작 19:30·탑승구 마감 19:55(공식), 말펜사 EES는 첫 등록이 아니라 검증, 택시 정액 114€는 주 고시가(경유 없는 직행).",
-                  "**10/9 예약 정리 반영:** 말펜사 표를 예약 사진과 대조해 Trenord 2960 16:25→17:18(1등석)로 확정했어요(9/29에 앱에서 15:55로 보였던 건 되돌린 상태). 그래서 9/29에 10분씩 압축했던 오후를 되돌렸어요: 테라스 55분·갈레리아 25분·라스칼라 15:05·M3 15:10·KIPOINT 15:25·승강장 15:50(출발까지 35분 여유). KE928 인천 도착은 15:35 → 15:45로 바뀌었어요(대한항공 스케줄 변경 안내). 두오모 테라스·Trattoria Milanese는 아직 예약 기록이 없어요."
+                  "**10/9 예약 정리 반영:** 말펜사 표를 예약 사진과 대조해 Trenord 2960 16:25→17:18(1등석)로 확정했어요(9/29에 앱에서 15:55로 보였던 건 되돌린 상태). 그래서 9/29에 10분씩 압축했던 오후를 되돌렸어요: 테라스 55분·갈레리아 25분·라스칼라 15:05·M3 15:10·KIPOINT 15:25·승강장 15:50(출발까지 35분 여유). KE928 인천 도착은 15:35 → 15:45로 바뀌었어요(대한항공 스케줄 변경 안내). 두오모 테라스·Trattoria Milanese는 아직 예약 기록이 없어요.",
+                  "**10/10 두오모 테라스 취소:** 13:45 시간지정권은 사지 않기로 했어요(구매 전이라 환불할 것도 없어요). 테라스 13:30~14:40 시간을 갈레리아 쇼핑에 넘겨 13:35~15:05(1시간 30분, 원래 25분)로 늘렸고, 두오모는 13:25~13:35 광장에서 외관 사진만이에요. 라스칼라 15:05 출발부터 뒤는 그대로예요. 예산에서 테라스 36€를 뺐고, 컷오프 표의 14:15 테라스 줄을 15:05 갈레리아 출발 줄로 바꿨어요."
                 ]
               }
             ]
@@ -6418,14 +6407,13 @@
             "id": "sources",
             "icon": "🔗",
             "title": "출처",
-            "summary": "Trenord · KE928 · 식당 · 두오모 · 택스리펀 · EES · 파업 · 택시 · 공항버스 · 호텔",
+            "summary": "Trenord · KE928 · 식당 · 택스리펀 · EES · 파업 · 택시 · 공항버스 · 호텔",
             "blocks": [
               {
                 "bullets": [
                   "[Trenord 공항 노선](https://www.trenord.it/en/routes-and-timetables/services/airport-routes-mxp/) · [말펜사 익스프레스 시간표](https://www.malpensaexpress.it/en/lines-and-timetable/most-searched-lines/milano-centrale-malpensa-aeroporto-t1-route/)",
                   "[KE928 스케줄](https://info.flightmapper.net/route/Korean_Air_KE_MXP_ICN)",
                   "[Trattoria Milanese dal 1933](https://www.tripadvisor.it/Restaurant_Review-g187849-d4409934-Reviews-Trattoria_Milanese_Dal_1933-Milan_Lombardy.html)",
-                  "[두오모 테라스 요금](https://www.milanofree.it/milano/turismo/terrazze-duomo-di-milano-prezzi-orari-ascensore/scale-e-prenotazioni.html) · [두오모 테라스 티켓](https://ticket.duomomilano.it/categoria/duomo-museo-e-terrazze/)",
                   "[KIPOINT 밀라노 첸트랄레](https://www.kibag.it/deposito-bagagli-milano/deposito-bagagli-milano-centrale/)",
                   "[말펜사 택스리펀](https://www.withprive.com/en/blog/vat-refund-malpensa-airport-milan) · [말펜사 EES](https://www.visaverge.com/airlines/easyjet-passengers-face-hours-at-milan-malpensa-as-eu-entryexit-system-slows-border/) · [EES 대기 현황](https://eesqueue.com/airport/milan-malpensa-international-airport)",
                   "[파업 캘린더](https://commissionegaranziasciopero.it/calendario-scioperi?page=1) · [Trenitalia 파업 시 보장 열차](https://www.trenitalia.com/it/informazioni/treni-garantiti-incasodisciopero.html) · [10월 파업 캘린더](https://www.sicurauto.it/news/traffico-e-viabilita/sciopero-trasporti-ottobre-2026-stop-di-bus-treni-e-aerei/)",
@@ -6475,7 +6463,7 @@
       "전화는 현지 오전 10~12시 또는 오후 4~6시(브레이크 타임)에 잘 받습니다. 10/24까지는 시차 -7시간(한국 오후 5~7시=현지 오전), 10/25부터는 서머타임 해제로 -8시간(한국 오후 6~8시=현지 오전)이라 시간 계산 주의.",
       "국제전화 대신 WhatsApp 메시지/통화가 되는 곳이 많으니 번호를 WhatsApp에서 먼저 검색해보기.",
       "예약 확인 메일·메시지는 캡처해서 사진첩에 보관 — 도착 시 이름과 함께 제시.",
-      "관광지 예약(두칼레 17:00 슬롯·대성당 15:30·비엔날레·두오모 테라스 13:45·아카데미아)은 각 날 📖 가이드에서 관리 — 이 팁은 식당 전용.",
+      "관광지 예약(두칼레 17:00 슬롯·대성당 15:30·비엔날레·아카데미아)은 각 날 📖 가이드에서 관리 — 이 팁은 식당 전용.",
       "전화 예약(EN): Hello, I'd like to book a table for two on October 22nd at 7:30 pm, please. The name is [성함].",
       "전화 예약(IT): Buonasera! Vorrei prenotare un tavolo per due persone, per il ventidue ottobre alle diciannove e trenta. A nome [성함]. (부오나세라! 보레이 프레노타레 운 타볼로 페르 두에 페르소네)",
       "식당 도착 시: Hello, we have a reservation for two under [성함].",
