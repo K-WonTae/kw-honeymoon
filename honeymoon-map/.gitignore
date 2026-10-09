@@ -23,3 +23,6 @@ dist-ssr
 .env
 .env.*
 !.env.example
+
+# 예약 원본(여권명·바우처·티켓) — 공개 저장소에 올리지 않는다. 앱에는 암호화해 내장(public/att)
+예약내용/
