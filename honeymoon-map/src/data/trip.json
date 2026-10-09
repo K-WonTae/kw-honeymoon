@@ -5005,18 +5005,18 @@
       "date": "2026-10-25",
       "weekday": "일",
       "city": "Venice",
-      "title": "베네치아: 마라톤·서머타임 종료 · 비엔날레 → 산마르코 대성당 15:30 · 두칼레 17:00(⏳ 미결제) · Ca' Dolfin 19:30",
+      "title": "베네치아: 마라톤·서머타임 종료 · 비엔날레 → 산마르코 대성당 15:30 · 두칼레 17:00 · Ca' Dolfin 19:30",
       "hotel": "BW Plus Hotel Bologna",
       "defaultTransportMode": "walking",
       "estimatedCostForTwo": 350,
       "cashForTwo": 80,
-      "cashNote": "현금은 €60~80 정도 — 저녁 기차표 자판기(약 €1.5×2), 뒷골목 바 스프리츠, 소액 팁. 비엔날레·대성당은 결제 완료, 두칼레는 온라인 선결제(⏳ 10/13까지), Dallo Zio·Ca' Dolfin·비엔날레 안 카페·서점은 카드.",
+      "cashNote": "현금은 €60~80 정도 — 저녁 기차표 자판기(약 €1.5×2), 뒷골목 바 스프리츠, 소액 팁. 비엔날레·대성당·두칼레 전부 결제 완료, Dallo Zio·Ca' Dolfin·비엔날레 안 카페·서점은 카드.",
       "alerts": [
         "⏰ 오늘의 세 조건 — 베니스 마라톤(결승이 비엔날레 옆 리바 세테 마르티리) · 서머타임 종료(03:00→02:00) · 일요일 대성당은 14:00부터. 고정점: 13:00 비엔날레 퇴장 · 15:30 대성당 · 17:00 두칼레 · 19:30 Ca' Dolfin.",
         "🏃 마라톤: 11시부터 16시 반경까지 자테레·몰로·산마르코 광장·리바 전체가 코스. 해안길 대신 안쪽 골목으로 걷고, 대성당은 북쪽 입구(Porta San Pietro)라 코스를 건너지 않음. 광장 남쪽(피아제타·몰로)은 후미 주자(15:40경)~코스 해제(16:30경)까지 통제라 북쪽 레온치니 광장에서 대기. 두칼레만 코스 해제 뒤 진행요원 지점에서 피아제타 횡단.",
         "🚤 바포레토 조정은 2025년 공지 기준 — 1번선 토요일 첫차~일요일 21:00 S. Marco Vallaresso 미정차, 일요일 08:30~16:30 Giardini Centro 대신 Giardini Biennale 정차, S. Basilio·Spirito Santo·Giardini Centro 선착장 중단. 올해 공지는 대회 2~3일 전(10/22~23) actv.avmspa.it·venicemarathon.it에서 확인하고 24일 저녁 한 번 더(9/29 현재 2026 공지 미발행) — 1번선이 Biennale에 안 서면 Sant'Elena 하선(도보 5분). 토요일(10/24)도 1번선은 Vallaresso 미정차라 산마르코 쪽은 S. Zaccaria.",
         "⏱️ 서머타임 종료: 폰 시계 자동 변경 확인, 알람은 새 시각 07:30. 일출 약 06:40, 일몰 약 17:10. 한국과 8시간 차(한국 정오 = 베네치아 04:00).",
-        "🎫 티켓: 비엔날레 ✅ 구매 완료(Intero 2매 · 날짜 자유, 11/22까지 · 자르디니 1회+아르세날레 1회 · PDF 첨부) · 대성당+팔라 도로 ✅ 구매 완료(15:30 슬롯 · 앞뒤 15분까지 허용 · 환불·변경 불가 · QR PDF 4장 첨부) · 두칼레 ⏳ 미결제 — Vivaticket 휴대폰 OTP 발송 오류로 결제 실패, 고객센터 답장 대기 · 10/13(화)까지 해결 안 되면 공식 인증 판매처에서 17:00 슬롯 구매(16:00만 남으면 📖 대체 타임라인). 세 장 모두 PDF 오프라인 저장+스크린샷.",
+        "🎫 티켓: 비엔날레 ✅ 구매 완료(Intero 2매 · 날짜 자유, 11/22까지 · 자르디니 1회+아르세날레 1회 · PDF 첨부) · 대성당+팔라 도로 ✅ 구매 완료(15:30 슬롯 · 앞뒤 15분까지 허용 · 환불·변경 불가 · QR PDF 4장 첨부) · 두칼레 ✅ 구매 완료(Vivaticket 10/9 발권 · 17:00 슬롯 2매 €35×2 · 코레르 박물관 16:50 연계권 €0 포함, 일정상 안 씀 · 입장 코드 PDF 2장 첨부 — 폰 화면 QR로 입장). 세 곳 모두 PDF 오프라인 저장+스크린샷.",
         "🍝 Ca' Dolfin ✅ 19:30 2인 예약 확정(예약번호·전화 PIN은 첨부 확정 PDF · 확정 화면·PDF는 저녁 일정 첨부) — 예약 시각 10분이 지나면 자리 해제. 19:10에는 광장을 떠나기. 늦으면 19:25 전에 +39 041 528 5299 전화·왓츠앱.",
         "🚨 점심 Dallo Zio는 'San Marco'(Spadaria 676) 지점 — 구글맵에 'Santa Margherita'(도르소두로) 지점이 먼저 뜸. ✅ 13:45 2인 예약 완료(메일 확인) · +39 041 520 2144.",
         "🎒 작은 크로스백 하나씩(대성당 40×30×20cm 초과 배낭·트롤리 불가) · 어깨·무릎 가림 · 방수 신발 또는 덧신. Daily Pass는 12:30 만료 — 오후는 전부 도보라 영향 없고, 저녁 기차표(약 €1.5/인)만 자판기에서 사서 개찰.",
@@ -5037,8 +5037,8 @@
         { "id": "D7-12", "sequence": 12, "startTime": "13:45", "endTime": "14:55", "title": "점심: Dallo Zio San Marco ✅ 13:45 예약 완료 (Spadaria 676)", "note": "⚠️ 구글맵에 'Santa Margherita'(도르소두로) 지점이 먼저 뜸 — San Marco 지점 저장 · 매일 11:00~23:00 · +39 041 520 2144 / TheFork · ✅ 13:45 2인 예약 완료(메일) · 14:55에는 일어나기 · 13:20 넘어 퇴장했으면 30분 컷(피자 한 판 나눠 먹기)", "recommendedMenu": ["오징어먹물 파스타(al nero di seppia)", "봉골레", "해산물 리조토"], "mappable": true, "type": "restaurant", "placeName": "Ristorante Dallo Zio, Spadaria 676, San Marco, Venezia", "placeId": "ChIJ9d7HNtexfkcR0hzPtTFWAo4", "lat": 45.435565, "lng": 12.3387472, "reservationLevel": "recommended", "transportFromPrevious": "walking", "estimatedCost": 60 },
         { "id": "D7-13", "sequence": 13, "startTime": "14:55", "endTime": "15:30", "title": "대성당 Porta San Pietro 앞 (15:15 도착) · 보안검색 줄", "note": "정면을 보고 왼쪽(북쪽) Piazzetta dei Leoncini — Spadaria에서 2분, 광장·마라톤 코스를 건너지 않음 · 광장 남쪽(피아제타·몰로)은 후미 주자 통과(15:40경)~코스 해제(16:30경)까지 통제 — 북쪽 레온치니 광장에서 대기 · 슬롯 15분 전 도착(공식 티켓 안내: 앞뒤 15분까지 허용) · 14:50에 아직 식사 중이면 디저트·커피 생략", "mappable": false, "transportFromPrevious": "walking" },
         { "id": "D7-14", "sequence": 14, "startTime": "15:30", "endTime": "16:30", "title": "🎫 산마르코 대성당 + 팔라 도로 (15:30 슬롯 · 약 1시간) ✅ 구매 완료", "note": "✅ €20×2 결제 완료 · 15:30~16:00 슬롯, 앞뒤 15분까지 허용(공식 티켓 안내) · 환불·변경 불가 · QR 티켓 PDF 4장은 이 카드에 첨부(큐알_ 파일이 입장용, 1_은 영수증) · 오디오가이드는 입장 개찰 뒤 카운터 대여 · 일요일 관광 입장 14:00~17:15(마지막 16:45) · 배낭 40×30×20cm 초과·트롤리 불가 · 어깨·무릎 가림 · 플래시·삼각대 금지 · 나르텍스 모자이크 → 본당 → 제단 뒤 팔라 도로(별도 검표, 10분) → 출구 · 박물관·로자는 이 티켓에 없음 · 예배 사유로 입장 일시 중단 가능", "mappable": true, "type": "sightseeing", "placeName": "Basilica di San Marco, Venezia", "placeId": "ChIJv2xSZNexfkcRBaKsgyfVEgo", "lat": 45.4345606, "lng": 12.3397125, "transportFromPrevious": "walking", "estimatedCost": 40 },
-        { "id": "D7-15", "sequence": 15, "startTime": "16:30", "endTime": "17:00", "title": "광장 카페 스프리츠 → 피아제타·몰로 골든아워 → 16:45 두칼레 Porta del Frumento 앞", "note": "일몰 약 17:10 · 코스 해제(16:30경) 후 몰로로 — 산조르조 마조레·곤돌라 방향 · 해제 전이면 광장 안쪽 아케이드 카페에서 대기 · 광장 정면 카페(Florian·Quadri 등)는 음악료 포함 1잔 €15~20, 뒷골목 바 €4~6 · 피아제타 횡단은 진행요원 지점에서, 10분 대기 반영 · 16:45에도 바리케이드면 광장 카페에서 15분 더", "mappable": true, "type": "sightseeing", "placeName": "Piazzetta San Marco, Venezia", "placeId": "ChIJ2yyuYMWxfkcRbsMFeL-4mqc", "lat": 45.4340207, "lng": 12.3397778, "transportFromPrevious": "walking", "estimatedCost": 12 },
-        { "id": "D7-16", "sequence": 16, "startTime": "17:00", "endTime": "19:00", "title": "🎫 두칼레 궁전 (17:00 슬롯 · ⏳ 미결제 — 10/13까지 해결 · 18:30부터 폐관 작업이라 실질 1시간 30분)", "note": "⏳ 미결제 — Vivaticket 휴대폰 OTP 발송 오류로 결제 실패, 고객센터 답장 대기 · 10/13(화)까지 안 되면 공식 인증 판매처에서 17:00 슬롯 구매 · €35/인(I Musei di Piazza San Marco) · 황금계단 → 대회의실(틴토레토 〈천국〉) → 탄식의 다리 → 감옥 순(안뜰 → 거인의 계단부터) · 피곤하면 대회의실·탄식의 다리만 1시간 · 10월 폐관 19:00·입장 마감 18:00, 폐관 작업 18:30 시작(공식) — 17:00 입장이면 원안의 \"약 2시간\"은 안 나오고 실질 1시간 30분, 18:30부터 방을 닫기 시작 · 일몰 17:07~17:10이라 관람 중 해가 짐 · 19:00 광장 야경은 그대로 · 표 시각이 16:00이면 📖 가이드 '두칼레 16:00 대체 타임라인'", "mappable": true, "type": "sightseeing", "placeName": "Palazzo Ducale, Venezia", "placeId": "ChIJiYRBbtexfkcR0XTK3ATSCbg", "lat": 45.4337035, "lng": 12.3403894, "transportFromPrevious": "walking", "estimatedCost": 70 },
+        { "id": "D7-15", "sequence": 15, "startTime": "16:30", "endTime": "17:00", "title": "광장 카페 스프리츠 → 피아제타·몰로 골든아워 → 16:45 두칼레 Porta del Frumento 앞", "note": "일몰 약 17:10 · 코스 해제(16:30경) 후 몰로로 — 산조르조 마조레·곤돌라 방향 · 해제 전이면 광장 안쪽 아케이드 카페에서 대기 · 광장 정면 카페(Florian·Quadri 등)는 음악료 포함 1잔 €15~20, 뒷골목 바 €4~6 · 피아제타 횡단은 진행요원 지점에서, 10분 대기 반영 · 16:45에도 바리케이드면 광장 카페에서 15분 더 · 코레르 박물관 16:50 연계권(€0)이 있지만 두칼레 17:00에 맞추려면 생략 — 광장 맞은편(알라 나폴레오니카) 안뜰·카페 정도만", "mappable": true, "type": "sightseeing", "placeName": "Piazzetta San Marco, Venezia", "placeId": "ChIJ2yyuYMWxfkcRbsMFeL-4mqc", "lat": 45.4340207, "lng": 12.3397778, "transportFromPrevious": "walking", "estimatedCost": 12 },
+        { "id": "D7-16", "sequence": 16, "startTime": "17:00", "endTime": "19:00", "title": "🎫 두칼레 궁전 (17:00 슬롯 ✅ 구매 완료 · 18:30부터 폐관 작업이라 실질 1시간 30분)", "note": "✅ 10/9 Vivaticket 발권 완료 — 17:00 Ingresso P. Ducale 2매(€35×2), 입장 코드 PDF는 이 카드에 첨부(폰 화면 QR, 구매자 WONTAE KIM) · 같은 거래의 코레르 박물관 16:50 연계권(€0)도 첨부 — 광장 맞은편 알라 나폴레오니카, 일정상 생략해도 됨 · €35/인(I Musei di Piazza San Marco) · 황금계단 → 대회의실(틴토레토 〈천국〉) → 탄식의 다리 → 감옥 순(안뜰 → 거인의 계단부터) · 피곤하면 대회의실·탄식의 다리만 1시간 · 10월 폐관 19:00·입장 마감 18:00, 폐관 작업 18:30 시작(공식) — 17:00 입장이면 원안의 \"약 2시간\"은 안 나오고 실질 1시간 30분, 18:30부터 방을 닫기 시작 · 일몰 17:07~17:10이라 관람 중 해가 짐 · 19:00 광장 야경은 그대로", "mappable": true, "type": "sightseeing", "placeName": "Palazzo Ducale, Venezia", "placeId": "ChIJiYRBbtexfkcR0XTK3ATSCbg", "lat": 45.4337035, "lng": 12.3403894, "transportFromPrevious": "walking", "estimatedCost": 70 },
         { "id": "D7-17", "sequence": 17, "startTime": "19:00", "endTime": "19:30", "title": "광장 야경 사진 (10분) → 도보 Ca' Dolfin (구글 12분)", "note": "조명 켜진 광장·종탑·대성당 · Mercerie → Campo S. Bartolomeo(리알토 다리 앞, 다리는 건너지 않음) → Salizada S. Giovanni Grisostomo → Salizada S. Canzian · 19:10에는 출발 — 예약은 10분만 유지", "mappable": false, "transportFromPrevious": "walking" },
         { "id": "D7-18", "sequence": 18, "startTime": "19:30", "endTime": "21:30", "title": "저녁: Ca' Dolfin ✅ 19:30 예약 확정", "note": "✅ 예약번호·전화 PIN은 첨부 확정 PDF · Campiello Dolfin 5903 (Salizada S. Canzian) · +39 041 528 5299 (전화·왓츠앱) · 예약 확정 화면(이 일정 첨부): 예약 시각 10분이 지나면 자리 해제 · 매일 11:30~22:30(공식 사이트) · 카드 가능, 코페르토 별도 · 2인 약 €100", "recommendedMenu": ["스파게티 알로 스콜리오 (해산물)", "프리토 미스토 (해산물 튀김)"], "mappable": true, "type": "restaurant", "placeName": "Ristorante Ca' Dolfin, Salizada San Canzian 5903, Venezia", "placeId": "ChIJb1zWBtyxfkcRvMu_T_lDtMM", "lat": 45.4396253, "lng": 12.3372992, "reservationLevel": "required", "transportFromPrevious": "walking", "estimatedCost": 100 },
         { "id": "D7-19", "sequence": 19, "startTime": "21:30", "endTime": "22:00", "title": "출발 → Strada Nova → S. Lucia (25~30분)", "note": "기차표 자판기 구매 + 개찰(Daily Pass 만료 후라 편도 약 €1.5/인) · 1번선 Ca' d'Oro → Ferrovia 1회권 €9.50/인도 있지만 시간 이득 거의 없음 · 1번선·Rialto는 소매치기 주의", "mappable": true, "type": "station", "placeName": "Venezia Santa Lucia", "placeId": "ChIJ8dEcUcexfkcRCZPKgPIBfPw", "lat": 45.4410697, "lng": 12.3210436, "transportFromPrevious": "walking", "estimatedCost": 3 },
@@ -5049,7 +5049,7 @@
         { "id": "RES-D7-BIENNALE", "placeName": "비엔날레 아르테 2026 입장권 (Intero)", "reservationLevel": "required", "itemId": "D7-05", "booked": true, "recommendedTiming": "✅ 구매 완료 — Intero 2매 · 날짜 자유(11/22까지)", "note": "자르디니 1회 + 아르세날레 1회 입장(이번엔 자르디니만). 10월 운영 10:00~18:00, 월 휴무. 큰 가방·캐리어 반입 불가, 소품 보관소 무료. PDF는 비엔날레 카드에 첨부. 복제·환불 불가 — vivaticket 거래코드로 재발급 가능." },
         { "id": "RES-D7-LUNCH", "placeName": "Ristorante Dallo Zio (San Marco)", "meal": "lunch", "reservationLevel": "recommended", "itemId": "D7-12", "recommendedTiming": "✅ 예약 완료 — 10/25(일) 13:45 · 2인 (예약 확인 메일 Gmail 보관) · +39 041 520 2144", "note": "Spadaria 676(산마르코 광장 북쪽, 대성당 Porta San Pietro까지 2분) · 매일 11:00~23:00 · +39 041 520 2144 / TheFork · ⚠️ 구글맵 검색 시 'Santa Margherita'(도르소두로) 지점이 먼저 뜸 — San Marco 지점으로 저장. 비엔날레 13:00 퇴장 → 골목 30~35분이라 도착은 13:35~13:40 — 가이드는 '예약 14:00이면 그 시각'이라고만 적었는데, 14:45에 일어나야 하므로 13:45 예약이 가장 맞음(14:00이면 45분 컷). 퇴장이 13:20 넘으면 30분 컷.", "messageEN": "Hello, I'd like to book a table for 2 on Sunday 25 October at 13:45, under the name [이름]. We need to leave by 14:45 for our basilica slot. We're on our honeymoon — thank you so much!", "messageIT": "Buongiorno, vorrei prenotare un tavolo per 2 persone domenica 25 ottobre alle 13:45, a nome [이름]. Dobbiamo andare via alle 14:45 per la visita alla Basilica. Siamo in luna di miele — grazie mille!", "messageKO": "안녕하세요, [이름] 이름으로 10월 25일 일요일 13:45 2인 테이블을 예약하고 싶습니다. 대성당 입장 때문에 14:45에는 나가야 합니다. 신혼여행 중입니다 — 정말 감사합니다!", "booked": true },
         { "id": "RES-D7-BASILICA", "placeName": "산마르코 대성당 + 팔라 도로 입장권 (15:30)", "reservationLevel": "required", "itemId": "D7-14", "booked": true, "recommendedTiming": "✅ 구매 완료 — 10/25(일) 15:30~16:00 슬롯 · 2매 · €20×2", "note": "주문번호·확인번호·티켓 번호는 첨부 영수증 참고. 공식 티켓 안내: 예약 시각 앞뒤 15분까지 도착 허용, 환불·변경 불가, 어깨·무릎 가림, 배낭 40×30×20cm 초과·트롤리 불가, 오디오가이드는 개찰 뒤 카운터 대여. 박물관·로자 데이 카발리는 미포함. 개인 예매 입구 Porta San Pietro(북쪽, 레온치니 광장). QR PDF 4장은 대성당 카드에 첨부." },
-        { "id": "RES-D7-DUCALE", "placeName": "두칼레 궁전 (17:00 슬롯)", "reservationLevel": "required", "itemId": "D7-16", "recommendedTiming": "⏳ 미결제 — Vivaticket 휴대폰 OTP 발송 오류로 결제 실패 · 고객센터 답장 대기 · 10/13(화)까지 해결 안 되면 공식 인증 판매처에서 17:00 슬롯 구매", "note": "€35/인(I Musei di Piazza San Marco · 코레르 박물관 등 포함). 10/31까지 09:00~19:00, 마지막 입장 18:00, 18:30부터 폐관 작업 → 17:00 입장이면 실질 1시간 30분. 17:00이 없고 16:00만 남으면 📖 가이드 '두칼레 16:00 대체 타임라인'. 구매되면 이 항목을 📒로 완료 등록하고 PDF를 두칼레 카드에 첨부." },
+        { "id": "RES-D7-DUCALE", "placeName": "두칼레 궁전 입장권 (17:00) + 코레르 박물관 연계권 (16:50)", "reservationLevel": "required", "itemId": "D7-16", "recommendedTiming": "✅ 구매 완료 — 10/25(일) 17:00 입장 2매 · €35×2 · Vivaticket 10/9 10:16 발권 (I Musei di Piazza San Marco · 코레르 박물관 16:50 연계권 €0 포함)", "note": "입장 코드(Cod. Accesso)가 적힌 PDF 2장은 두칼레 카드에 첨부 — 폰 화면 QR, 구매자 WONTAE KIM. 10/31까지 09:00~19:00, 마지막 입장 18:00, 18:30부터 폐관 작업 → 17:00 입장이면 실질 1시간 30분. 코레르 박물관 연계권(16:50)은 같은 거래로 발권됐지만 두칼레 17:00에 맞추려면 생략 — 광장 맞은편 알라 나폴레오니카 입구. 입장권 재발급·문의는 Vivaticket 거래번호(첨부 PDF 상단 Tran)로.", "booked": true },
         { "id": "RES-D7-DINNER", "placeName": "Ristorante Ca' Dolfin", "meal": "dinner", "reservationLevel": "required", "itemId": "D7-18", "booked": true, "recommendedTiming": "✅ 예약 완료 — 10/25(일) 19:30 · 2인 · 예약번호·전화 PIN은 첨부 확정 PDF (확정 화면·PDF는 저녁 일정 첨부)", "note": "🎫 예약 확정: Sunday 25 October · 19:30 · 2명. 확정 화면 문구: 예약 시각에서 10분까지만 테이블을 잡아 둠(따로 합의하지 않으면). Campiello Dolfin 5903 (Salizada S. Canzian), 두칼레에서 도보 12분(구글). +39 041 528 5299 — 전화·왓츠앱·이메일 모두 확정 화면에서 가능. 매일 11:30~22:30(공식 사이트, 휴무일 없음). 스파게티 알로 스콜리오, 프리토 미스토. 2인 약 €100, 카드 가능, 코페르토 별도. 늦을 것 같으면 19:25 전에 아래 멘트로 연락. 예약 코드는 확정 화면(첨부)에서 확인.", "messageEN": "Hello, this is [이름] with a table for 2 tonight at 19:30. We're running about 10 minutes late — could you please keep our table? Thank you so much!", "messageIT": "Buonasera, sono [이름], abbiamo un tavolo per 2 stasera alle 19:30. Siamo in ritardo di circa 10 minuti — potete tenerci il tavolo, per favore? Grazie mille!", "messageKO": "안녕하세요, 오늘 19:30 2인 예약한 [이름]입니다. 10분 정도 늦을 것 같은데 자리를 잡아 주실 수 있을까요? 정말 감사합니다!" }
       ],
       "guide": {
@@ -5153,7 +5153,7 @@
               {
                 "title": "D-3 (10/22~23, 피렌체에서)",
                 "checklist": [
-                  "두칼레 17:00 슬롯 구매 완료 여부 — 10/13까지 Vivaticket 답장 없으면 공식 인증 판매처에서 구매(최종 마감 10/22)",
+                  "✅ 두칼레 17:00 입장권 PDF 2장이 앱 두칼레 카드에서 열리는지 확인 (입장 코드 QR)",
                   "ACTV 마라톤 운행 공지 확인: 1번선이 Giardini Biennale에 서는지, 08:30~16:30 중단 정류장이 무엇인지 (actv.avmspa.it 또는 venicemarathon.it 뉴스)",
                   "10/25 오후 조수 예보 확인 (Centro Maree, hi!tide 앱). 100cm 이상이면 광장 일부 침수",
                   "날씨 예보: 비·바람 여부에 따라 우산·방수 신발 결정",
@@ -5166,7 +5166,7 @@
                 "checklist": [
                   "폰 시계 자동 변경 설정 확인. 알람은 서머타임 종료 후 기준 07:30으로 새로 설정",
                   "ACTV 마라톤 공지 최종 확인(24일 저녁) — 1번선이 Giardini Biennale에 서는지. 안 서면 Sant'Elena 하선(도보 5분)",
-                  "티켓 PDF 오프라인 저장 + 스크린샷: 비엔날레(✅ 첨부)·대성당(✅ 첨부)·두칼레(⏳ 구매 후)",
+                  "티켓 PDF 오프라인 저장 + 스크린샷: 비엔날레(✅ 첨부)·대성당(✅ 첨부)·두칼레(✅ 첨부, 코레르 연계권 포함)",
                   "가방은 작은 크로스백 하나씩. 대성당은 40×30×20cm 초과 배낭 반입 불가",
                   "복장: 어깨·무릎 가림(대성당). 방수 신발 또는 덧신",
                   "Venezia Daily Pass 만료 시각 확인 (10/24 13:30 개시면 10/25 12:30 만료)",
@@ -5188,7 +5188,7 @@
             "id": "tickets",
             "icon": "🎫",
             "title": "티켓·예약 상태표",
-            "summary": "비엔날레 ✅ · 대성당 ✅ 15:30 · 두칼레 ⏳ 미결제 · Dallo Zio ✅ · Ca' Dolfin ✅ · 교통",
+            "summary": "비엔날레 ✅ · 대성당 ✅ 15:30 · 두칼레 ✅ 17:00 · Dallo Zio ✅ · Ca' Dolfin ✅ · 교통",
             "blocks": [
               {
                 "paragraphs": [
@@ -5216,9 +5216,9 @@
                     ],
                     [
                       "두칼레 궁전 (I Musei di Piazza San Marco)",
-                      "palazzoducale.visitmuve.it, €35 (30일 전 구매 €30, 10/25분은 기한 지남)",
-                      "시간 슬롯제. 슬롯 없는 표는 12:00부터 입장. 마지막 입장 18:00. 코레르 박물관 등 3곳 포함(안 씀)",
-                      "⏳ 미결제 — OTP 오류로 결제 실패, Vivaticket 답장 대기. 10/13까지 안 되면 공식 인증 판매처에서 17:00 슬롯 구매. 16:00만 있으면 아래 대체 타임라인"
+                      "Vivaticket(공식), €35 (10/9 발권 완료)",
+                      "시간 슬롯제(17:00). 마지막 입장 18:00. 코레르 박물관 16:50 연계권 포함(일정상 생략)",
+                      "✅ 구매 완료 · 입장 코드 PDF 2장 첨부(두칼레 카드) · 폰 화면 QR"
                     ],
                     [
                       "Dallo Zio 점심",
@@ -5412,6 +5412,7 @@
               {
                 "title": "두칼레 궁전 (17:00 슬롯)",
                 "bullets": [
+                  "**입장권:** ✅ 17:00 Ingresso P. Ducale 2매(€35×2, Vivaticket 10/9 발권). 입장 코드 PDF는 두칼레 카드 첨부 — 폰 화면 QR. 같은 거래의 코레르 박물관 16:50 연계권(€0)은 일정상 생략(광장 맞은편 알라 나폴레오니카).",
                   "**입구:** Porta del Frumento, 피아제타·몰로 쪽(대성당 반대편). 코스 바로 옆이라 16:30 전에는 바리케이드가 남아 있을 수 있음. 진행요원 횡단 지점 이용, 10분 여유.",
                   "**도착:** 슬롯 15분 전. 마지막 입장 18:00, 폐관 19:00(폐관 작업 18:30 시작). 광장 남쪽(피아제타·몰로)은 15:40~16:30경까지 통제라 그 전엔 북쪽 레온치니 광장에서 대기.",
                   "**동선(실질 1시간 30분):** 안뜰 → 거인의 계단 → 황금계단 → 대회의실(틴토레토 〈천국〉) → 탄식의 다리 → 감옥 → 출구. 10월 폐관 19:00·입장 마감 18:00이고 18:30부터 방을 닫기 시작해(공식) 17:00 입장이면 \"약 2시간\"은 안 나와요. 일몰(17:07~17:10)은 안에서 맞아요. 피곤하면 대회의실과 탄식의 다리만 1시간."
@@ -5619,99 +5620,14 @@
             ]
           },
           {
-            "id": "ducale16",
-            "icon": "🕓",
-            "title": "두칼레 표가 16:00인 경우의 대체 타임라인 (17:00이 매진일 때만)",
-            "summary": "대성당 35분 → 16:15 두칼레 · 골든아워 포기 · 저녁은 19:30 그대로",
-            "blocks": [
-              {
-                "paragraphs": [
-                  "두칼레 표가 16:00이면 대성당을 35분 안에 마치고 바로 두칼레로 넘어갑니다. 일몰은 두칼레 안에서 맞으니 골든아워는 포기합니다. Ca' Dolfin은 19:30으로 확정돼 있어 저녁 시각은 그대로이고, 두칼레 뒤에 1시간 정도 여유가 생깁니다. 13:00까지는 기준 타임라인과 같습니다."
-                ],
-                "table": {
-                  "columns": [
-                    "시각",
-                    "일정",
-                    "메모"
-                  ],
-                  "rows": [
-                    [
-                      "13:45",
-                      "점심 Dallo Zio",
-                      "14:40에는 일어나기. 코스는 1개 + 피자 나눠 먹기"
-                    ],
-                    [
-                      "15:15",
-                      "대성당 Porta San Pietro 앞",
-                      "보안검색 줄 감안"
-                    ],
-                    [
-                      "15:30",
-                      "대성당 + 팔라 도로",
-                      "35분. 팔라 도로는 10분, 나머지는 본당 모자이크"
-                    ],
-                    [
-                      "16:05",
-                      "퇴장 → 피아제타 횡단",
-                      "코스 해제 전이면 진행요원 지점. 5~10분"
-                    ],
-                    [
-                      "16:15",
-                      "두칼레 Porta del Frumento 입장",
-                      "16:00 슬롯은 대개 30분 안이면 입장 가능. 늦어도 16:30"
-                    ],
-                    [
-                      "18:00",
-                      "두칼레 퇴장",
-                      "폐관 작업 18:30 시작. 마지막 입장 18:00"
-                    ],
-                    [
-                      "18:00",
-                      "광장 야경 + 스프리츠",
-                      "이미 어두움. 뒷골목 바에서 여유 있게 (~19:00)"
-                    ],
-                    [
-                      "19:05",
-                      "도보 → Ca' Dolfin",
-                      "구글 12분, 여유 두고 출발"
-                    ],
-                    [
-                      "19:30",
-                      "저녁 Ca' Dolfin",
-                      "✅ 예약 확정 시각. 10분 지나면 자리 해제"
-                    ],
-                    [
-                      "21:30",
-                      "출발 → S. Lucia",
-                      "25~30분"
-                    ],
-                    [
-                      "22:00",
-                      "기차 → Mestre",
-                      ""
-                    ],
-                    [
-                      "22:25",
-                      "호텔 도착",
-                      "기준안과 같음"
-                    ]
-                  ]
-                },
-                "bullets": [
-                  "두칼레 슬롯 시각이 애매하면 표 하단의 입장 조건을 읽어 보세요. 슬롯 없는 통합권이면 12:00부터 아무 때나 들어갈 수 있어 기준 타임라인(17:00)이 그대로 맞습니다."
-                ]
-              }
-            ]
-          },
-          {
             "id": "budget",
             "icon": "💶",
             "title": "예산·현금 계획",
-            "summary": "2인 약 €350 (비엔날레·대성당 €101 결제 완료 · 두칼레 €70 미결제) · 현금 €60~80",
+            "summary": "2인 약 €350 (비엔날레·대성당·두칼레 €171 결제 완료 — 현장 입장료 0) · 현금 €60~80",
             "blocks": [
               {
                 "paragraphs": [
-                  "2인 기준 입장·교통이 약 €175, 식사·음료가 약 €180으로 합계 €350 전후입니다. 두칼레를 이미 샀다면 €280 전후입니다. 식사 금액은 2026년 9월 기준 대략치입니다."
+                  "2인 기준 입장·교통이 약 €175, 식사·음료가 약 €180으로 합계 €350 전후입니다. 입장권 세 곳(€171)은 모두 결제가 끝나 현장 지출은 식사·교통 약 €180입니다. 식사 금액은 2026년 9월 기준 대략치입니다."
                 ],
                 "table": {
                   "columns": [
@@ -5737,7 +5653,7 @@
                       "두칼레 궁전",
                       "€35",
                       "€70",
-                      "⏳ 미결제 — 10/13까지 온라인 구매"
+                      "✅ 결제 완료 (Vivaticket 10/9)"
                     ],
                     [
                       "저녁 기차 S. Lucia → Mestre",
