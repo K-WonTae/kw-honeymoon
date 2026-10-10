@@ -17,15 +17,20 @@ interface Props {
   onGoToItem: (day: number, itemId: string) => void
 }
 
-interface AttachmentEntry {
+/** 첨부가 붙어 있는 일정 카드 하나 */
+interface AttachmentLink {
   day: number
-  date: string
-  weekday: string
-  city: string
   itemId: string
   itemTitle: string
   time: string
+}
+
+/** 목록의 한 줄 = 파일 하나. 같은 파일이 여러 카드에 걸려 있으면(왕복 e-티켓 등) links 가 여럿 */
+interface AttachmentEntry {
+  /** 목록에서 이 파일을 보여줄 Day (처음 걸린 카드의 날) */
+  day: number
   meta: AnyAttachmentMeta
+  links: AttachmentLink[]
 }
 
 function iconFor(type: string): string {
@@ -48,20 +53,24 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
   const { unlocked, total: builtinTotal } = useAttachmentLock()
 
   const entries = useMemo<AttachmentEntry[]>(() => {
-    return trip.days.flatMap((day) =>
-      day.items.flatMap((item) =>
-        mergeAttachments(item.id, user.getAttachments(item.id)).map((meta) => ({
-          day: day.day,
-          date: day.date,
-          weekday: day.weekday,
-          city: day.city,
-          itemId: item.id,
-          itemTitle: item.title,
-          time: itemTime(item.startTime, item.endTime),
-          meta,
-        })),
-      ),
-    )
+    // 같은 파일(같은 id)이 여러 카드에 걸려 있으면 한 줄로 모은다 — 예: 왕복 e-티켓은 출국·귀국 카드 양쪽
+    const byId = new Map<string, AttachmentEntry>()
+    for (const day of trip.days) {
+      for (const item of day.items) {
+        for (const meta of mergeAttachments(item.id, user.getAttachments(item.id))) {
+          const link: AttachmentLink = {
+            day: day.day,
+            itemId: item.id,
+            itemTitle: item.title,
+            time: itemTime(item.startTime, item.endTime),
+          }
+          const existing = byId.get(meta.id)
+          if (existing) existing.links.push(link)
+          else byId.set(meta.id, { day: day.day, meta, links: [link] })
+        }
+      }
+    }
+    return [...byId.values()]
     // unlocked: 암호가 풀리면 내장 첨부가 목록에 합류한다
   }, [trip, user, unlocked])
 
@@ -119,7 +128,7 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
     } catch {
       /* 무시 */
     }
-    user.removeAttachment(entry.itemId, entry.meta.id)
+    for (const link of entry.links) user.removeAttachment(link.itemId, entry.meta.id)
   }
 
   const grouped = useMemo(() => {
@@ -183,7 +192,12 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
                         {entry.meta.name}
                       </span>
                       <span className="attachment-file-meta">
-                        {entry.time} · {entry.itemTitle} · {fmtSize(entry.meta.size)}
+                        {entry.links[0].time} · {entry.links[0].itemTitle} · {fmtSize(entry.meta.size)}
+                        {entry.links.length > 1 &&
+                          ` · Day ${entry.links
+                            .slice(1)
+                            .map((link) => link.day)
+                            .join('·')} 카드에도`}
                       </span>
                     </div>
 
@@ -199,13 +213,17 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
                       >
                         저장
                       </button>
-                      <button
-                        type="button"
-                        className="attach-btn"
-                        onClick={() => onGoToItem(entry.day, entry.itemId)}
-                      >
-                        일정
-                      </button>
+                      {entry.links.map((link) => (
+                        <button
+                          key={link.itemId}
+                          type="button"
+                          className="attach-btn"
+                          onClick={() => onGoToItem(link.day, link.itemId)}
+                          title={`${link.time} ${link.itemTitle}`}
+                        >
+                          {entry.links.length > 1 ? `D${link.day} 일정` : '일정'}
+                        </button>
+                      ))}
                       {!entry.meta.builtin && (
                         <button
                           type="button"

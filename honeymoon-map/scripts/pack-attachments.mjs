@@ -9,8 +9,11 @@
 //
 // 이렇게 하면 기기·브라우저를 바꿔도 사이트만 열면 첨부가 그대로 보인다.
 // 브라우저 저장소(IndexedDB)로 옮기는 과정이 아예 필요 없어진다.
+//
+// 내용이 똑같은 파일(예: 왕복 e-티켓을 출국·귀국 카드 양쪽에)은 한 번만 암호화해 싣고,
+// 목록에서 두 카드가 같은 bin 을 가리킨다. 📎 첨부 탭은 그 파일을 한 줄로 보여준다.
 
-import { createCipheriv, pbkdf2Sync, randomBytes } from 'node:crypto'
+import { createCipheriv, createHash, pbkdf2Sync, randomBytes } from 'node:crypto'
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -66,30 +69,43 @@ if (existsSync(OUT_DIR)) {
 }
 
 const index = {}
+/** sha256(원본) → 이미 실은 파일 {id, file, iv}. 같은 내용은 한 번만 싣는다. */
+const byHash = new Map()
 let packed = 0
+let shared = 0
 let bytes = 0
 
-backup.attachments.forEach((att, i) => {
+for (const att of backup.attachments) {
   const plain = Buffer.from(att.dataBase64, 'base64')
-  const { iv, data } = encrypt(plain)
-  const file = `att/b-${String(i + 1).padStart(2, '0')}.bin`
+  const hash = createHash('sha256').update(plain).digest('hex')
+  let stored = byHash.get(hash)
 
-  writeFileSync(join(ROOT, 'public', file), data)
+  if (!stored) {
+    const n = String(byHash.size + 1).padStart(2, '0')
+    const { iv, data } = encrypt(plain)
+    const file = `att/b-${n}.bin`
+    writeFileSync(join(ROOT, 'public', file), data)
+    stored = { id: `builtin-${n}`, file, iv }
+    byHash.set(hash, stored)
+    packed += 1
+    bytes += plain.length
+    console.log(`  ${att.itemId}  ${att.name}  ${(plain.length / 1024).toFixed(0)}KB → ${file}`)
+  } else {
+    shared += 1
+    console.log(`  ${att.itemId}  ${att.name}  (내용 동일 → ${stored.file} 공유)`)
+  }
 
   const list = (index[att.itemId] ??= [])
+  if (list.some((e) => e.id === stored.id)) continue // 같은 카드에 같은 파일이 두 번이면 한 번만
   list.push({
-    id: `builtin-${String(i + 1).padStart(2, '0')}`,
+    id: stored.id,
     name: att.name,
     type: att.type,
-    size: att.size,
-    file,
-    iv,
+    size: plain.length,
+    file: stored.file,
+    iv: stored.iv,
   })
-
-  packed += 1
-  bytes += plain.length
-  console.log(`  ${att.itemId}  ${att.name}  ${(plain.length / 1024).toFixed(0)}KB → ${file}`)
-})
+}
 
 // 파일명·호텔명이 드러나지 않도록 목록 자체도 암호화한다
 const indexEnc = encrypt(Buffer.from(JSON.stringify(index), 'utf8'))
@@ -111,6 +127,6 @@ writeFileSync(
   'utf8',
 )
 
-console.log(`\n첨부 ${packed}개 (${(bytes / 1024 / 1024).toFixed(2)}MB) 암호화 완료.`)
+console.log(`\n첨부 ${packed}개 (${(bytes / 1024 / 1024).toFixed(2)}MB) 암호화 완료.` + (shared ? ` 같은 내용 ${shared}건은 파일을 공유.` : ''))
 console.log(`  ${MANIFEST}`)
 console.log('앱에서 암호를 한 번 입력하면 모든 기기에서 열립니다.')
