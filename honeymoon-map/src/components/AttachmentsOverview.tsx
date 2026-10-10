@@ -49,6 +49,12 @@ function itemTime(startTime: string, endTime?: string): string {
   return endTime ? `${startTime}~${endTime}` : startTime
 }
 
+/** 여러 카드에 걸린 파일의 카드 구분 — 날이 다르면 Day 로, 같은 날이면 시작 시각으로 */
+function linkLabel(links: AttachmentLink[], link: AttachmentLink): string {
+  const sameDay = links.every((l) => l.day === links[0].day)
+  return sameDay ? link.time.split('~')[0] : `D${link.day}`
+}
+
 export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
   const { unlocked, total: builtinTotal } = useAttachmentLock()
 
@@ -197,9 +203,9 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
                       <span className="attachment-file-meta">
                         {entry.links[0].time} · {entry.links[0].itemTitle} · {fmtSize(entry.meta.size)}
                         {entry.links.length > 1 &&
-                          ` · Day ${entry.links
+                          ` · ${entry.links
                             .slice(1)
-                            .map((link) => link.day)
+                            .map((link) => linkLabel(entry.links, link))
                             .join('·')} 카드에도`}
                       </span>
                     </div>
@@ -224,7 +230,7 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
                           onClick={() => onGoToItem(link.day, link.itemId)}
                           title={`${link.time} ${link.itemTitle}`}
                         >
-                          {entry.links.length > 1 ? `D${link.day} 일정` : '일정'}
+                          {entry.links.length > 1 ? `${linkLabel(entry.links, link)} 일정` : '일정'}
                         </button>
                       ))}
                       {!entry.meta.builtin && (
