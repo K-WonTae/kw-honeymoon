@@ -174,7 +174,10 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
 
               <div className="attachment-files">
                 {dayEntries.map((entry) => (
-                  <article key={entry.meta.id} className="attachment-file">
+                  <article
+                    key={entry.meta.id}
+                    className={entry.links.length > 1 ? 'attachment-file attachment-file-multi' : 'attachment-file'}
+                  >
                     {thumbs[entry.meta.id] ? (
                       <img
                         className="attachment-preview"

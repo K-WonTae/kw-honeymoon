@@ -2234,6 +2234,16 @@ code {
   justify-content: flex-end;
   gap: 6px;
 }
+/* 여러 카드에 걸린 파일(왕복 e-티켓)은 버튼이 넷 — 좁은 화면에선 이름 아래 행으로 내려 이름 칸을 지킨다 */
+@media (max-width: 900px) {
+  .attachment-file-multi {
+    grid-template-columns: 56px minmax(0, 1fr);
+  }
+  .attachment-file-multi .attachment-file-actions {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+}
 
 /* ── Itinerary map + list (장소지도) ──────────────────────── */
 .itinerary-map {
