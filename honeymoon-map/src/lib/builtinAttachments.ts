@@ -82,15 +82,16 @@ export function builtinFor(itemId: string): BuiltinAttachmentMeta[] {
 }
 
 /**
- * 내장 첨부 + 이 기기에서 올린 첨부를 한 목록으로 (내장이 앞).
- * 내장에 이미 들어간 파일을 예전에 이 기기에서도 올렸다면 같은 것이 두 번 보이므로,
- * 같은 일정·같은 이름·같은 크기면 내장 쪽만 남긴다.
+ * 내장 첨부 + 공유 저장소·이 기기에서 올린 첨부를 한 목록으로 (내장이 앞).
+ * 내장에 이미 들어간 파일을 사용자가 직접 올려 두기도 했다면 같은 것이 두 번 보이므로,
+ * 같은 일정에서 종류·크기가 같은 사본(이름은 달라도 — 예: 'Roma Sparita.pdf' 와
+ * 'Roma Sparita 19:30 예약 확정 메일.pdf')은 내장 쪽만 남긴다.
  */
 export function mergeAttachments(itemId: string, userMetas: AttachmentMeta[]): AnyAttachmentMeta[] {
   const builtins = builtinFor(itemId)
   if (builtins.length === 0) return userMetas
-  const seen = new Set(builtins.map((b) => `${b.name}\u0000${b.size}`))
-  return [...builtins, ...userMetas.filter((m) => !seen.has(`${m.name}\u0000${m.size}`))]
+  const seen = new Set(builtins.map((b) => `${b.type}\u0000${b.size}`))
+  return [...builtins, ...userMetas.filter((m) => !seen.has(`${m.type}\u0000${m.size}`))]
 }
 
 async function deriveKey(password: string): Promise<CryptoKey> {
