@@ -92,9 +92,9 @@ https://www.google.com/maps/dir/?api=1&destination={lat,lng | 인코딩 주소}
   (`{day}/{sectionId}/{blockIdx}/{itemIdx}` → boolean). 섹션 `id` 를 바꾸면 체크가 초기화됩니다.
 - **item `id` 는 내장 첨부의 키**입니다(`attachments.json` 은 암호화돼 있어 재패킹 없이는 못 고침).
   현재 첨부가 걸린 id(2026-10-11 · 내장 파일 29 · 카드 연결 32): `D1-01 D1-19 D2-08 D2-18 D3-19 D4-06 D4-08 D4-21
-  D5-04 D5-05 D5-11 D5-19 D5-22 D6-05 D6-07 D7-05 D7-12 D7-14 D7-16 D7-18 D8-05 D8-08 D8-16 D9-02`.
+  D5-04 D5-05 D5-11 D5-19 D5-22 D6-05 D6-07 D7-05 D7-12 D7-14 D7-16 D7-18 D8-05 D8-10 D8-17 D9-02`.
   일정을 재구성할 때 이 id 의 의미(D4-08 = 피렌체 호텔 도착, D4-21 = Il Santo Bevitore 저녁, D5-19 = Loggia Roof Bar,
-  D5-22 = La Giostra)가 유지되게 항목을 합치거나 나눕니다. 새 확정서는 백업 JSON 에 더해 `pack-attachments.mjs` 로 다시 쌉니다.
+  D5-22 = La Giostra, D8-10 = Trattoria Milanese 점심, D8-17 = 말펜사 익스프레스)가 유지되게 항목을 합치거나 나눕니다. 새 확정서는 백업 JSON 에 더해 `pack-attachments.mjs` 로 다시 쌉니다.
 - **첨부 파일은 팩마다 고유 폴더 `public/att/<packId>/b-NN.bin`** 에 씁니다(packId = salt 해시 8자리, 2026-10-11). 같은 이름을 다른 키로
   덮어쓰면 새 버전이 활성화되는 순간 열려 있던 옛 페이지·캐시의 옛 파일과 섞여 전부 못 열게 됩니다. 그래서 `main.tsx` 가
   `virtual:pwa-register` 로 새 서비스워커 활성화 때 자동 새로고침하고, `getBuiltinBlob` 은 404·복호화 실패 시 세션당 한 번
