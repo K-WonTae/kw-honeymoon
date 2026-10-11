@@ -4,12 +4,14 @@ import type {
   Reservation,
   RouteLeg,
   ScheduleItem,
+  TransferGuide,
   TransportMode,
 } from '../../types/trip'
 import {
   needsBooking,
   placeTypeMeta,
   RESERVATION_META,
+  TRANSPORT_ICON,
   transportLabel,
 } from '../../lib/tripUtils'
 import { buildNavUrl, toTravelMode } from '../../lib/navUrl'
@@ -30,6 +32,8 @@ interface Props {
   markerNumber?: number
   legToNext?: RouteLeg
   nextLabel?: string
+  /** 다음 장소까지의 이동 안내(데이터) — 구간 칩에 이동수단·출발 시각을 붙인다 */
+  nextTransfer?: TransferGuide
   selected: boolean
   legSelected: boolean
   highlight?: 'now' | 'next'
@@ -53,6 +57,7 @@ export function ScheduleCard({
   markerNumber,
   legToNext,
   nextLabel,
+  nextTransfer,
   selected,
   legSelected,
   highlight,
@@ -95,6 +100,12 @@ export function ScheduleCard({
     : null
 
   const timeLabel = item.endTime ? `${item.startTime}–${item.endTime}` : item.startTime
+  // 같은 자리(호텔 조식 → 체크아웃)는 0 m 구간이라 칩을 달지 않는다
+  const legChip =
+    legToNext && !(legToNext.distanceMeters != null && !legToNext.excluded && legToNext.distanceMeters < 40)
+      ? legToNext
+      : undefined
+  const legMode = nextTransfer?.mode ?? legChip?.transport
 
   // 첨부 = 배포에 내장된 것(암호 풀렸을 때) + 이 기기에서 올린 것.
   // 잠금이 풀리면 다시 그려서 빨간 점이 폰에서도 뜨게 한다 (기억한 암호로 자동 해제도 여기서 시작).
@@ -175,7 +186,7 @@ export function ScheduleCard({
           <div className="card-title">{item.title}</div>
           {highlight && <span className={`time-badge time-badge-${highlight}`}>{highlight === 'now' ? '지금' : '다음'}</span>}
 
-          {(typeMeta || resMeta || bookable.length > 0 || transport || item.note || legToNext) && (
+          {(typeMeta || resMeta || bookable.length > 0 || transport || item.note || legChip) && (
             <div className="card-sub">
               {typeMeta && (
                 <span className="badge badge-type">
@@ -211,20 +222,22 @@ export function ScheduleCard({
                   🍴 추천: {item.recommendedMenu.join(' · ')}
                 </span>
               )}
-              {legToNext && (
+              {legChip && (
                 <button
                   className={`leg-chip ${legSelected ? 'active' : ''}`}
                   onClick={(e) => {
                     e.stopPropagation()
-                    onSelectLeg(legToNext.fromId, legToNext.toId)
+                    onSelectLeg(legChip.fromId, legChip.toId)
                   }}
                   title={nextLabel ? `이 구간만 지도 보기 → ${nextLabel}` : '이 구간만 지도 보기'}
                 >
-                  {legToNext.excluded
+                  {legChip.excluded
                     ? '✈ 비행'
-                    : `↓ ${legToNext.estimated ? '≈' : ''}${formatDistance(
-                        legToNext.distanceMeters,
-                      )}·${formatDuration(legToNext.durationSeconds)}`}
+                    : `↓ ${legMode ? `${TRANSPORT_ICON[legMode]} ` : ''}${
+                        nextTransfer?.depart ? `${nextTransfer.depart} 출발 · ` : ''
+                      }${legChip.estimated ? '≈' : ''}${formatDistance(legChip.distanceMeters)}·${formatDuration(
+                        legChip.durationSeconds,
+                      )}`}
                 </button>
               )}
             </div>

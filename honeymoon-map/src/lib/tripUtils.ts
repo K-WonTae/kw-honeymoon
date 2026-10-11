@@ -7,6 +7,7 @@ import type {
   Reservation,
   ReservationLevel,
   ScheduleItem,
+  TransferGuide,
   Trip,
 } from '../types/trip'
 import type { LatLng } from './geocode'
@@ -78,6 +79,88 @@ export const TRANSPORT_LABEL: Record<ItemTransport, string> = {
 
 export function transportLabel(t?: ItemTransport): string | undefined {
   return t ? TRANSPORT_LABEL[t] : undefined
+}
+
+export const TRANSPORT_ICON: Record<ItemTransport, string> = {
+  walking: '🚶',
+  transit: '🚇',
+  driving: '🚗',
+  train: '🚆',
+  taxi: '🚕',
+  vaporetto: '🚤',
+  flight: '✈️',
+}
+
+/** 카드 제목을 동선 한 줄에 맞게 — "저녁: La Giostra ✅ 19:30 예약 확정 — 배 라비올리" → "La Giostra" */
+export function shortTitle(title: string, max = 26): string {
+  let s = title.replace(/^(늦은 점심|점심|저녁|조식|아침|디저트|아페리티보)\s*:\s*/, '')
+  s = s.split(' — ')[0]
+  s = s.replace(/\s*(🎫|✅|❌|🚤|🚄|🚆|✈️)\s*/g, ' ').replace(/\s+/g, ' ').trim()
+  s = s.replace(/\s*\([^)]*\)\s*$/, '')
+  s = s.split(' → ')[0]
+  s = s.replace(/\s*·.*$/, '')
+  s = s.trim()
+  if (s.length > max) s = s.slice(0, max - 1).trimEnd() + '…'
+  return s || title
+}
+
+// ── 동선 (장소 사이 이동 구간) ───────────────────────────────────────────
+
+export interface DayLeg {
+  /** `${from.id}>${to.id}` — RouteSummary.legs 의 fromId/toId 와 맞춘다 */
+  key: string
+  from: ScheduleItem
+  to: ScheduleItem
+  /** 두 장소 사이에 있는 비(非)장소 행들 — 이동·대기·활동 카드. transfer 가 없으면 이 제목들이 단계가 된다 */
+  between: ScheduleItem[]
+  transport: ItemTransport
+  /** 직전 장소를 떠나는 시각 */
+  depart: string
+  /** 도착 장소의 시작 시각 */
+  arrive: string
+  transfer?: TransferGuide
+}
+
+/** 같은 장소(호텔 조식 → 체크아웃처럼)면 이동 구간이 아니다 */
+function samePlace(a: ScheduleItem, b: ScheduleItem): boolean {
+  if (a.placeId && b.placeId) return a.placeId === b.placeId
+  if (a.placeName && b.placeName) return a.placeName === b.placeName
+  return false
+}
+
+/**
+ * 그 날의 이동 구간 — 연속한 mappable 항목 쌍마다 하나. 같은 장소가 이어지면(호텔 안에서의 일정) 건너뛴다.
+ * 좌표가 없어도 만들어지므로(지도 키 없음·지오코딩 전) 동선 탭은 항상 보인다.
+ */
+export function buildDayLegs(day: DayPlan): DayLeg[] {
+  const out: DayLeg[] = []
+  let prev: ScheduleItem | null = null
+  let between: ScheduleItem[] = []
+  for (const item of day.items) {
+    if (!item.mappable) {
+      if (prev) between.push(item)
+      continue
+    }
+    if (prev && !samePlace(prev, item)) {
+      const hinted = item.transfer?.mode ?? item.transportFromPrevious
+      const fromBetween = between.find((b) => b.transportFromPrevious)?.transportFromPrevious
+      const transport: ItemTransport = hinted ?? fromBetween ?? 'walking'
+      const depart = item.transfer?.depart ?? between[0]?.startTime ?? prev.endTime ?? prev.startTime
+      out.push({
+        key: `${prev.id}>${item.id}`,
+        from: prev,
+        to: item,
+        between,
+        transport,
+        depart,
+        arrive: item.startTime,
+        transfer: item.transfer,
+      })
+    }
+    prev = item
+    between = []
+  }
+  return out
 }
 
 // ── 전체 트립 집계 (숙소/식당 한눈에 보기) ────────────────────────────────

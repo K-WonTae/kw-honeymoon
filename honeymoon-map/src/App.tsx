@@ -3,6 +3,7 @@ import { APIProvider, useMapsLibrary } from '@vis.gl/react-google-maps'
 import tripData from './data/trip.json'
 import type { ScheduleItem, Trip, TransportMode } from './types/trip'
 import {
+  buildDayLegs,
   buildMappablePoints,
   collectHotels,
   collectRestaurants,
@@ -17,6 +18,7 @@ import { DayTabs } from './components/DayTabs'
 import { TopBar } from './components/TopBar'
 import { SplitLayout, type MobileTab } from './components/SplitLayout'
 import { ScheduleList, type LegSelection } from './components/Schedule/ScheduleList'
+import { RoutePanel } from './components/Schedule/RoutePanel'
 import { MapView } from './components/MapView/MapView'
 import { HotelsView } from './components/HotelsView'
 import { RestaurantsView } from './components/RestaurantsView'
@@ -27,6 +29,8 @@ import { SettingsPanel } from './components/SettingsPanel'
 import { SharedSyncPanel } from './components/SharedSyncPanel'
 
 type View = 'schedule' | 'alldays' | 'hotels' | 'restaurants' | 'placemap' | 'attachments'
+/** 일정 탭 왼쪽 패널 — 일정 카드 또는 🧭 동선(장소 사이 이동 구간) */
+type PaneView = 'cards' | 'route'
 type Highlight = 'now' | 'next'
 
 const trip = tripData as Trip
@@ -146,11 +150,13 @@ function AppInner() {
   const [selectedItemId, setSelectedItemId] = useState<string | null>(null)
   const [selectedLeg, setSelectedLeg] = useState<LegSelection | null>(null)
   const [mobileTab, setMobileTab] = useState<MobileTab>('schedule')
+  const [paneView, setPaneView] = useState<PaneView>('cards')
   const [coords, setCoords] = useState<Map<string, LatLng>>(new Map())
 
   const day = useMemo(() => trip.days.find((d) => d.day === selectedDay) ?? trip.days[0], [selectedDay])
   const dayMappableItems = useMemo(() => mappableItems(day), [day])
   const points = useMemo(() => buildMappablePoints(day, coords), [day, coords])
+  const dayLegs = useMemo(() => buildDayLegs(day), [day])
 
   const hotels = useMemo(() => collectHotels(trip), [])
   const restaurants = useMemo(() => collectRestaurants(trip), [])
@@ -195,6 +201,7 @@ function AppInner() {
     setSelectedItemId(itemId)
     setSelectedLeg(null)
     setMobileTab('schedule')
+    setPaneView('cards')
   }
 
   // 전체일정/탭에서 특정 Day → 단일 일정(지도) 뷰로 이동
@@ -280,19 +287,53 @@ function AppInner() {
   )
 
   const schedulePane = (
-    <ScheduleList
-      day={day}
-      points={points}
-      summary={summary}
-      highlights={highlights}
-      selectedItemId={selectedItemId}
-      selectedLeg={selectedLeg}
-      mode={mode}
-      fx={fx}
-      user={user}
-      onSelect={handleSelectItem}
-      onSelectLeg={handleSelectLeg}
-    />
+    <div className="schedule-pane">
+      <div className="pane-switch" role="tablist" aria-label="일정 / 동선">
+        <button
+          type="button"
+          role="tab"
+          aria-selected={paneView === 'cards'}
+          className={`pane-switch-btn ${paneView === 'cards' ? 'active' : ''}`}
+          onClick={() => setPaneView('cards')}
+        >
+          🗒️ 일정
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={paneView === 'route'}
+          className={`pane-switch-btn ${paneView === 'route' ? 'active' : ''}`}
+          onClick={() => setPaneView('route')}
+          title="장소 사이 이동 구간 — 언제 뭘 타는지, 길 안내, 네비"
+        >
+          🧭 동선 {dayLegs.length > 0 ? <span className="pane-switch-count">{dayLegs.length}</span> : null}
+        </button>
+      </div>
+      {paneView === 'cards' ? (
+        <ScheduleList
+          day={day}
+          points={points}
+          summary={summary}
+          highlights={highlights}
+          selectedItemId={selectedItemId}
+          selectedLeg={selectedLeg}
+          mode={mode}
+          fx={fx}
+          user={user}
+          onSelect={handleSelectItem}
+          onSelectLeg={handleSelectLeg}
+        />
+      ) : (
+        <RoutePanel
+          day={day}
+          legs={dayLegs}
+          points={points}
+          summary={summary}
+          selectedLeg={selectedLeg}
+          onSelectLeg={handleSelectLeg}
+        />
+      )}
+    </div>
   )
 
   return (

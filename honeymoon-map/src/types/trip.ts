@@ -28,6 +28,27 @@ export type PlaceType =
 
 export type ReservationLevel = 'required' | 'recommended' | 'walk-in'
 
+/**
+ * 직전 장소에서 이 항목까지 오는 길 — 🧭 동선 탭과 일정 카드의 구간 칩이 읽는다.
+ * mappable 항목에만 둔다. 문장 안의 `[텍스트](url)`·`**굵게**` 는 렌더된다.
+ */
+export interface TransferGuide {
+  /** 직전 장소를 떠나는 시각 — "18:55" */
+  depart?: string
+  /** 이동수단 (없으면 transportFromPrevious) */
+  mode?: ItemTransport
+  /** 걸리는 시간 — "12~15분" */
+  duration?: string
+  /** 뭘 타는지 한 줄 — "12번선 F.te Nove 'A' 선착장 15:00 발 → 부라노 'C' 하차" */
+  board?: string
+  /** 길 안내, 순서대로 한 단계씩 */
+  steps: string[]
+  /** 요금 — "€12~15 · 앱 카드 결제" */
+  cost?: string
+  /** 팁·대안 한 줄 */
+  tip?: string
+}
+
 export type Meal = 'lunch' | 'dinner' | 'dessert' | 'aperitivo'
 
 export interface ScheduleItem {
@@ -49,6 +70,8 @@ export interface ScheduleItem {
 
   reservationLevel?: ReservationLevel
   transportFromPrevious?: ItemTransport
+  /** 직전 장소에서 여기까지의 이동 안내 (🧭 동선 탭) */
+  transfer?: TransferGuide
   estimatedCost?: number // EUR
   completed?: boolean // 사용자 입력, localStorage (런타임에서 덮어씀)
 }

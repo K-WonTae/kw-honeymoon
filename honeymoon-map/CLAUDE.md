@@ -91,8 +91,22 @@ https://www.google.com/maps/dir/?api=1&destination={lat,lng | 인코딩 주소}
 - 가이드 체크리스트의 체크 상태는 `localStorage` `honeymoon:guidecheck:v1`
   (`{day}/{sectionId}/{blockIdx}/{itemIdx}` → boolean). 섹션 `id` 를 바꾸면 체크가 초기화됩니다.
 - **item `id` 는 내장 첨부의 키**입니다(`attachments.json` 은 암호화돼 있어 재패킹 없이는 못 고침).
-  현재 첨부가 걸린 id: `D1-01 D1-19 D4-08 D5-22 D6-07 D7-18 D9-02`. 일정을 재구성할 때 이 id 의
-  의미(D4-08 = 피렌체 호텔 도착, D5-22 = La Giostra)가 유지되게 항목을 합치거나 나눕니다.
+  현재 첨부가 걸린 id(2026-10-11 · 내장 파일 29 · 카드 연결 32): `D1-01 D1-19 D2-08 D2-18 D3-19 D4-06 D4-08 D4-21
+  D5-04 D5-05 D5-11 D5-19 D5-22 D6-05 D6-07 D7-05 D7-12 D7-14 D7-16 D7-18 D8-05 D8-08 D8-16 D9-02`.
+  일정을 재구성할 때 이 id 의 의미(D4-08 = 피렌체 호텔 도착, D4-21 = Il Santo Bevitore 저녁, D5-19 = Loggia Roof Bar,
+  D5-22 = La Giostra)가 유지되게 항목을 합치거나 나눕니다. 새 확정서는 백업 JSON 에 더해 `pack-attachments.mjs` 로 다시 쌉니다.
+
+## 🧭 동선 — `ScheduleItem.transfer`
+
+- 장소 사이의 이동 안내는 **도착 항목**(mappable)의 `transfer: TransferGuide { depart, mode, duration, board, steps[], cost, tip }`
+  에 둡니다. `lib/tripUtils.ts` 의 `buildDayLegs(day)` 가 연속한 mappable 항목 쌍마다 구간을 만들고, **같은 장소가 이어지면**
+  (placeId 같음 → placeName 같음) 구간이 아닙니다. 모든 구간에 `transfer` 가 있어야 하며(2026-10-11 기준 84구간 전부),
+  없으면 두 장소 사이의 비(非)장소 카드 제목이 단계로 대신 보입니다.
+- 일정 탭 왼쪽 패널의 「🗒️ 일정 | 🧭 동선」 전환(`App.tsx` `paneView`) → `RoutePanel`. 구간 머리를 누르면 `onSelectLeg` 로 지도의
+  그 구간만 강조(폰은 지도 탭으로), 「🧭 네비」는 현재 위치→도착지(`buildNavUrl`), 「↗ 구글맵 경로」는 출발지→도착지(`buildRouteUrl`).
+  `steps`·`board`·`tip` 문장 안의 `[텍스트](url)`·`**굵게**` 는 가이드와 같은 `renderInline` 으로 렌더됩니다.
+- 이동수단 원칙(사용자 요청 2026-10-11): **도보·택시 우선**, 기차·수상버스·항공은 고정. 지하철 구간은 택시 불발 시 대안으로 카드 노트에 남깁니다.
+- 일정 카드의 구간 칩(`↓ 🚕 19:00 출발 · 3.1 km·12분`)은 다음 장소의 `transfer.mode/depart` 를 붙이고, 40 m 미만(같은 자리)은 칩을 달지 않습니다.
 
 ## 충돌 시 우선순위 (지시서 §10)
 

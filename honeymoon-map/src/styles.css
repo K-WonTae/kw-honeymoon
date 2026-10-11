@@ -3165,3 +3165,315 @@ code {
     gap: 6px;
   }
 }
+
+/* ── 일정 패널: 🗒️ 일정 | 🧭 동선 전환 ───────────────────────── */
+.schedule-pane {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--bg);
+}
+.schedule-pane > .schedule,
+.schedule-pane > .route-panel {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.pane-switch {
+  display: flex;
+  gap: 6px;
+  padding: 8px 14px 0;
+  background: var(--bg);
+}
+.pane-switch-btn {
+  flex: 1;
+  border: 1.5px solid var(--border-strong);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: var(--text-mid);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.pane-switch-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.pane-switch-count {
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 0 7px;
+  line-height: 1.5;
+}
+.pane-switch-btn:not(.active) .pane-switch-count {
+  background: var(--surface-3);
+  color: var(--text-mid);
+}
+
+/* ── 🧭 동선 (장소 사이 이동 구간) ─────────────────────────────── */
+.route-panel {
+  height: 100%;
+  overflow-y: auto;
+  padding: 12px 14px 24px;
+  background: var(--bg);
+}
+.route-head {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 10px;
+}
+.route-head-title {
+  font-weight: 900;
+  font-size: 1rem;
+}
+.route-head-count {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-left: 6px;
+}
+.route-head-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.route-chip {
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  color: var(--text-mid);
+  white-space: nowrap;
+}
+.route-chip-walking {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+.route-chip-taxi,
+.route-chip-driving {
+  background: #ffedd5;
+  color: #c2410c;
+}
+.route-chip-train,
+.route-chip-transit {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+.route-chip-vaporetto {
+  background: #cffafe;
+  color: #0e7490;
+}
+.route-head-note {
+  margin: 8px 0 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.route-empty {
+  color: var(--muted);
+}
+.route-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.leg-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-left-width: 5px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.leg-card.leg-walking {
+  border-left-color: #2563eb;
+}
+.leg-card.leg-taxi,
+.leg-card.leg-driving {
+  border-left-color: #ea580c;
+}
+.leg-card.leg-train,
+.leg-card.leg-transit {
+  border-left-color: #7c3aed;
+}
+.leg-card.leg-vaporetto {
+  border-left-color: #0891b2;
+}
+.leg-card.leg-flight {
+  border-left-color: var(--muted);
+}
+.leg-card.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-100);
+}
+.leg-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 11px 12px 6px;
+  color: var(--text);
+  font-family: inherit;
+}
+.leg-num {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--surface-3);
+  color: var(--text-mid);
+  font-weight: 900;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.leg-card.active .leg-num {
+  background: var(--accent);
+  color: #fff;
+}
+.leg-head-main {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.leg-time {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--accent-700);
+  font-variant-numeric: tabular-nums;
+}
+.leg-route {
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.leg-mode {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text-mid);
+  white-space: nowrap;
+}
+.leg-stat {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.leg-fold {
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 0 12px 6px 48px;
+  font-family: inherit;
+}
+.leg-body {
+  padding: 0 12px 12px 48px;
+}
+.leg-board {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--accent-700);
+  background: var(--accent-50);
+  border: 1px solid var(--accent-100);
+  border-radius: var(--radius-sm);
+  padding: 7px 10px;
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+.leg-steps {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+.leg-steps li::marker {
+  color: var(--accent);
+  font-weight: 800;
+}
+.leg-steps a,
+.leg-board a,
+.leg-tip a {
+  color: var(--accent-700);
+  font-weight: 700;
+}
+.leg-steps-empty {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+.leg-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+.leg-cost {
+  color: #9a6a06;
+  font-weight: 700;
+}
+.leg-tip {
+  color: var(--text-mid);
+}
+.leg-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.leg-actions .btn {
+  text-decoration: none;
+}
+@media (max-width: 900px) {
+  .pane-switch {
+    padding: 8px 10px 0;
+  }
+  .route-panel {
+    padding: 10px;
+  }
+  .leg-head {
+    padding: 10px 10px 4px;
+    gap: 8px;
+  }
+  .leg-fold,
+  .leg-body {
+    padding-left: 44px;
+  }
+  .leg-mode {
+    font-size: 0.74rem;
+  }
+}

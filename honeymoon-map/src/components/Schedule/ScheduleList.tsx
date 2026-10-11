@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef } from 'react'
 import type { DayPlan, MappablePoint, RouteSummary, TransportMode } from '../../types/trip'
 import type { UserDataApi } from '../../hooks/useUserData'
 import type { FxSetting } from '../../lib/money'
-import { reservationsForItem } from '../../lib/tripUtils'
+import { buildDayLegs, reservationsForItem } from '../../lib/tripUtils'
 import { DayBrief } from './DayBrief'
 import { ScheduleCard } from './ScheduleCard'
 
@@ -60,6 +60,15 @@ export function ScheduleList({
     return m
   }, [points])
 
+  // 다음 장소까지의 이동 안내(데이터) — 구간 칩에 이동수단·출발 시각을 붙인다
+  const nextTransferByFromId = useMemo(() => {
+    const m = new Map<string, NonNullable<DayPlan['items'][number]['transfer']>>()
+    for (const leg of buildDayLegs(day)) {
+      if (leg.transfer) m.set(leg.from.id, leg.transfer)
+    }
+    return m
+  }, [day])
+
   // 선택된 카드를 목록 안에서 보이도록 스크롤 (지도→일정 연동)
   useEffect(() => {
     if (!selectedItemId) return
@@ -83,6 +92,7 @@ export function ScheduleList({
             point={pointByItemId.get(item.id)}
             legToNext={legByFromId.get(item.id)}
             nextLabel={nextTitleByFromId.get(item.id)}
+            nextTransfer={nextTransferByFromId.get(item.id)}
             selected={selectedItemId === item.id}
             legSelected={selectedLeg?.fromId === item.id}
             highlight={highlights[item.id]}

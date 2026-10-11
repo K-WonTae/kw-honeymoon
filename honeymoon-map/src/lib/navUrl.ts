@@ -67,6 +67,37 @@ export function buildNavUrl(
   return `https://www.google.com/maps/dir/?${params.toString()}`
 }
 
+export interface NavPoint {
+  placeId?: string
+  placeName?: string
+  lat?: number | null
+  lng?: number | null
+}
+
+function pointToken(p: NavPoint): string | null {
+  if (typeof p.lat === 'number' && typeof p.lng === 'number') return `${p.lat},${p.lng}`
+  if (p.placeName) return encodeURIComponent(p.placeName)
+  return null
+}
+
+/**
+ * 출발지→도착지 경로 URL (🧭 동선 탭의 「구글맵 경로」).
+ * 두 지점을 모두 지정하므로 구글맵이 계획한 구간 그대로를 보여 준다 — 현재 위치 기준 길찾기는 buildNavUrl.
+ */
+export function buildRouteUrl(from: NavPoint, to: NavPoint, mode: TransportMode): string | null {
+  const origin = pointToken(from)
+  const destination = pointToken(to)
+  if (!origin || !destination) return null
+  const params = new URLSearchParams()
+  params.set('api', '1')
+  params.set('origin', origin)
+  if (from.placeId) params.set('origin_place_id', from.placeId)
+  params.set('destination', destination)
+  if (to.placeId) params.set('destination_place_id', to.placeId)
+  params.set('travelmode', mode)
+  return `https://www.google.com/maps/dir/?${params.toString()}`
+}
+
 /** 좌표/PlaceId/이름 조각으로부터 네비 URL (개요 리스트용) */
 export function navUrlFromParts(
   parts: { placeId?: string; placeName?: string; lat?: number | null; lng?: number | null },

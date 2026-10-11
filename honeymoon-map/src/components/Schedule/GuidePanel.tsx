@@ -9,8 +9,8 @@ interface Props {
 
 const CHECK_KEY = 'honeymoon:guidecheck:v1'
 
-/** `[텍스트](url)` 링크와 `**굵게**` 만 푸는 아주 작은 인라인 렌더러 — 가이드 문장은 이 둘만 쓴다 */
-function renderInline(text: string): ReactNode[] {
+/** `[텍스트](url)` 링크와 `**굵게**` 만 푸는 아주 작은 인라인 렌더러 — 가이드·동선 문장은 이 둘만 쓴다 */
+export function renderInline(text: string): ReactNode[] {
   const out: ReactNode[] = []
   const re = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)|\*\*([^*]+)\*\*/g
   let last = 0
