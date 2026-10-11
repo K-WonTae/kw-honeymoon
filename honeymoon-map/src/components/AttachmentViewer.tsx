@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { AttachmentMeta } from '../hooks/useUserData'
-import { loadAttachmentBlob, type AnyAttachmentMeta } from '../lib/builtinAttachments'
+import { isRecoveringStaleBuild, loadAttachmentBlob, type AnyAttachmentMeta } from '../lib/builtinAttachments'
 
 // 첨부 「보기」는 새 탭(window.open + blob: URL)에 기대지 않고 앱 안에서 바로 띄운다.
 // 팝업 차단·설치형(PWA) 창·모바일 브라우저에서 새 탭 방식은 열리지 않거나 빈 화면이 되기 때문.
@@ -27,7 +27,8 @@ export function useAttachmentViewer(thumbs: Record<string, string>) {
       try { blob = await loadAttachmentBlob(meta) }
       catch (e) { alert((e as Error).message); return }
       if (!blob) {
-        alert('파일을 찾을 수 없습니다.')
+        // 새 버전으로 자동 새로고침 중이면 경고 없이 — 다시 뜬 화면에서 바로 열린다
+        if (!isRecoveringStaleBuild()) alert('파일을 찾을 수 없습니다.')
         return
       }
       setViewing({ meta, url: URL.createObjectURL(blob), owned: true })

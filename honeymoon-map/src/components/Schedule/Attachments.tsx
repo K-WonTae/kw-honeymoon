@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import type { UserDataApi } from '../../hooks/useUserData'
 import { deleteBlob, putBlob } from '../../lib/attachments'
 import {
+  isRecoveringStaleBuild,
   loadAttachmentBlob,
   mergeAttachments,
   useAttachmentLock,
@@ -96,7 +97,7 @@ export function Attachments({ itemId, user }: Props) {
     const blob = cached ? null : await loadAttachmentBlob(m).catch((e) => { alert((e as Error).message); return null })
     const url = cached ?? (blob ? URL.createObjectURL(blob) : null)
     if (!url) {
-      alert('파일을 찾을 수 없습니다.')
+      if (!isRecoveringStaleBuild()) alert('파일을 찾을 수 없습니다.')
       return
     }
     const a = document.createElement('a')

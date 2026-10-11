@@ -191,6 +191,33 @@ export function tryAutoUnlock(): Promise<boolean> {
   return autoUnlocking
 }
 
+/**
+ * 재패킹으로 파일·키가 바뀌었는데 옛 페이지(옛 목록·옛 키)나 캐시의 옛 파일이 남아 있으면 파일이 없거나(404)
+ * 복호화가 실패한다. 세션당 한 번만 서비스워커를 갱신하고 새로고침해 새 버전으로 맞춘다 — 두 번째부터는 조용히 null.
+ */
+const RECOVER_KEY = 'honeymoon:attrecover:v1'
+let recovering = false
+/** 복구 새로고침이 예약돼 있으면 true — 그 사이 「파일을 찾을 수 없습니다」 경고는 띄우지 않는다 */
+export function isRecoveringStaleBuild(): boolean {
+  return recovering
+}
+async function recoverStaleBuild(reason: string): Promise<void> {
+  try {
+    if (sessionStorage.getItem(RECOVER_KEY)) return
+    sessionStorage.setItem(RECOVER_KEY, `${reason} ${new Date().toISOString()}`)
+  } catch {
+    return
+  }
+  recovering = true
+  try {
+    const reg = await navigator.serviceWorker?.getRegistration()
+    await reg?.update()
+  } catch {
+    /* 무시 */
+  }
+  window.location.reload()
+}
+
 /** 내장 첨부 1개를 내려받아 복호화한다. 잠겨 있으면 null. */
 export async function getBuiltinBlob(meta: AnyAttachmentMeta): Promise<Blob | null> {
   if (!meta.file || !meta.iv) return null
@@ -199,7 +226,10 @@ export async function getBuiltinBlob(meta: AnyAttachmentMeta): Promise<Blob | nu
   if (!cryptoKey) return null
 
   const res = await fetch(`${import.meta.env.BASE_URL}${meta.file}`)
-  if (!res.ok) return null
+  if (!res.ok) {
+    if (res.status === 404) void recoverStaleBuild(`404 ${meta.file}`)
+    return null
+  }
   const cipher = await res.arrayBuffer()
   let plain: ArrayBuffer
   try {
@@ -209,6 +239,7 @@ export async function getBuiltinBlob(meta: AnyAttachmentMeta): Promise<Blob | nu
       cipher,
     )
   } catch {
+    void recoverStaleBuild(`decrypt ${meta.file}`)
     return null
   }
   const blob = new Blob([plain], { type: meta.type || 'application/octet-stream' })

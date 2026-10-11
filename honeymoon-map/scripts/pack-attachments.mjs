@@ -12,6 +12,10 @@
 //
 // 내용이 똑같은 파일(예: 왕복 e-티켓을 출국·귀국 카드 양쪽에)은 한 번만 암호화해 싣고,
 // 목록에서 두 카드가 같은 bin 을 가리킨다. 📎 첨부 탭은 그 파일을 한 줄로 보여준다.
+//
+// 파일은 팩마다 고유한 폴더 public/att/<packId>/ 에 쓴다 (packId = salt 해시 앞 8자리).
+// 같은 이름(att/b-01.bin)을 다른 키로 덮어쓰면, 새 버전으로 바뀌는 순간 열려 있던 옛 페이지(옛 키)나
+// 브라우저·서비스워커 캐시의 옛 파일과 섞여 「파일을 찾을 수 없습니다」가 났다(2026-10-11).
 
 import { createCipheriv, createHash, pbkdf2Sync, randomBytes } from 'node:crypto'
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs'
@@ -50,6 +54,8 @@ if (backup?.schema !== 'honeymoon-backup') {
 
 const salt = randomBytes(16)
 const key = pbkdf2Sync(password, salt, ITERATIONS, 32, 'sha256')
+const packId = createHash('sha256').update(salt).digest('hex').slice(0, 8)
+const PACK_DIR = join(OUT_DIR, packId)
 
 /** AES-256-GCM 으로 암호화하고 인증태그를 뒤에 붙인다 (WebCrypto 가 기대하는 배치) */
 function encrypt(buf) {
@@ -59,14 +65,13 @@ function encrypt(buf) {
   return { iv: iv.toString('base64'), data: Buffer.concat([body, cipher.getAuthTag()]) }
 }
 
-// 이전 결과물 정리 (지금 백업에 없는 파일이 남지 않도록)
+// 이전 결과물 정리 (옛 팩 폴더·옛 평면 bin 이 남지 않도록) — 배포에는 현재 팩만 실린다
 if (existsSync(OUT_DIR)) {
   for (const f of readdirSync(OUT_DIR)) {
-    if (f.endsWith('.bin')) rmSync(join(OUT_DIR, f))
+    rmSync(join(OUT_DIR, f), { recursive: true, force: true })
   }
-} else {
-  mkdirSync(OUT_DIR, { recursive: true })
 }
+mkdirSync(PACK_DIR, { recursive: true })
 
 const index = {}
 /** sha256(원본) → 이미 실은 파일 {id, file, iv}. 같은 내용은 한 번만 싣는다. */
@@ -83,7 +88,7 @@ for (const att of backup.attachments) {
   if (!stored) {
     const n = String(byHash.size + 1).padStart(2, '0')
     const { iv, data } = encrypt(plain)
-    const file = `att/b-${n}.bin`
+    const file = `att/${packId}/b-${n}.bin`
     writeFileSync(join(ROOT, 'public', file), data)
     stored = { id: `builtin-${n}`, file, iv }
     byHash.set(hash, stored)

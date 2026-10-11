@@ -8,6 +8,9 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      // 등록은 main.tsx 의 virtual:pwa-register 로 — 새 버전이 활성화되면 자동 새로고침해
+      // 옛 페이지(옛 첨부 목록·키)가 새 첨부 파일을 받아 못 여는 상태를 막는다.
+      injectRegister: null,
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
         name: '이탈리아 허니문',
