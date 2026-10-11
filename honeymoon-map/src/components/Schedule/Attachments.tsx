@@ -18,6 +18,7 @@ interface Props {
 function iconFor(type: string): string {
   if (type.startsWith('image/')) return '🖼️'
   if (type === 'application/pdf') return '📄'
+  if (type === 'text/html') return '📖'
   return '📎'
 }
 
@@ -73,12 +74,14 @@ export function Attachments({ itemId, user }: Props) {
         continue
       }
       const id = `att-${itemId}-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`
+      // 일부 브라우저는 .html 의 type 을 비워 보낸다 — 확장자로 보완해 뷰어가 HTML 로 열게
+      const type = file.type || (/\.html?$/i.test(file.name) ? 'text/html' : 'application/octet-stream')
       try {
         await putBlob(id, file)
         user.addAttachment(itemId, {
           id,
           name: file.name,
-          type: file.type || 'application/octet-stream',
+          type,
           size: file.size,
         })
       } catch (e) {
@@ -121,7 +124,7 @@ export function Attachments({ itemId, user }: Props) {
   return (
     <div className="attach">
       <div className="attach-head">
-        <span className="attach-title">📎 첨부파일 · 티켓/PDF/QR</span>
+        <span className="attach-title">📎 첨부파일 · 티켓/PDF/QR/HTML</span>
         <button
           type="button"
           className="btn btn-ghost btn-sm"
@@ -133,7 +136,7 @@ export function Attachments({ itemId, user }: Props) {
         <input
           ref={fileRef}
           type="file"
-          accept="image/*,application/pdf"
+          accept="image/*,application/pdf,text/html,.html"
           multiple
           hidden
           onChange={(e) => onAdd(e.target.files)}

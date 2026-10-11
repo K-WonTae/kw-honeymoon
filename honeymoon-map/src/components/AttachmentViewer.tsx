@@ -62,14 +62,16 @@ function fmtSize(bytes: number): string {
 }
 
 /**
- * 전체 화면 첨부 뷰어: 이미지는 <img>(탭하면 실제 크기 ↔ 맞춤), PDF 는 pdf.js 뷰어(쪽 넘기기·확대, 폰에서도 그려짐).
- * pdf.js 가 못 열면 <iframe> 으로 폴백. 그 외 형식은 저장만.
+ * 전체 화면 첨부 뷰어: 이미지는 <img>(탭하면 실제 크기 ↔ 맞춤), PDF 는 pdf.js 뷰어(쪽 넘기기·확대, 폰에서도 그려짐),
+ * HTML 가이드는 샌드박스 iframe 으로 바로 렌더. pdf.js 가 못 열면 <iframe> 으로 폴백. 그 외 형식은 저장만.
  */
 export function AttachmentViewer({ meta, url, blob, onClose }: ViewerProps) {
   const [zoomed, setZoomed] = useState(false)
   const [pdfFailed, setPdfFailed] = useState<string | null>(null)
   const isImage = meta.type.startsWith('image/')
   const isPdf = meta.type === 'application/pdf'
+  // HTML 가이드(예: 우피치 관람 순서)는 샌드박스 iframe 으로 그 자리에서 렌더 — 스크립트는 되지만 앱 저장소엔 손 못 댄다
+  const isHtml = meta.type === 'text/html'
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -111,7 +113,7 @@ export function AttachmentViewer({ meta, url, blob, onClose }: ViewerProps) {
       </div>
 
       <div
-        className={`viewer-body${zoomed ? ' zoomed' : ''}${isPdf && !pdfFailed ? ' pdf' : ''}`}
+        className={`viewer-body${zoomed ? ' zoomed' : ''}${isPdf && !pdfFailed ? ' pdf' : ''}${isHtml ? ' html' : ''}`}
         onClick={(e) => {
           if (e.target === e.currentTarget) onClose()
         }}
@@ -128,6 +130,14 @@ export function AttachmentViewer({ meta, url, blob, onClose }: ViewerProps) {
           <PdfViewer url={url} blob={blob} name={meta.name} onFail={(reason) => setPdfFailed(reason)} />
         ) : isPdf ? (
           <iframe className="viewer-frame" src={url} title={`${meta.name} (${pdfFailed})`} />
+        ) : isHtml ? (
+          <iframe
+            className="viewer-frame viewer-html"
+            src={url}
+            title={meta.name}
+            sandbox="allow-scripts allow-popups allow-forms"
+            referrerPolicy="no-referrer"
+          />
         ) : (
           <div className="viewer-fallback">
             <strong>이 형식은 미리보기를 지원하지 않습니다.</strong>

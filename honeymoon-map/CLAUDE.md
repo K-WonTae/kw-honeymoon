@@ -102,6 +102,8 @@ https://www.google.com/maps/dir/?api=1&destination={lat,lng | 인코딩 주소}
 - **첨부 「보기」의 PDF 는 `PdfViewer.tsx`(pdfjs-dist legacy 빌드 동적 로드)** 가 쪽마다 캔버스로 그립니다 — iframe 은 안드로이드 크롬·아이폰 PWA 에서
   빈 화면이 돼 폴백으로만 남겼습니다. 워커는 `?url` 자산으로 번들되고 SW 프리캐시(`mjs`)에 들어가 오프라인에서도 열립니다.
   뷰어 검증은 스크래치패드 `pdf-test.cjs` 패턴(`.pdf-viewer[data-status=ready]` · 쪽 수 = 캔버스 수 · 캔버스 잉크 비율 · 확대 버튼 · 📎 탭 보기).
+- **HTML 첨부(`text/html`)** 는 `AttachmentViewer` 가 샌드박스 iframe(`allow-scripts allow-popups allow-forms`, blob URL)으로 바로 렌더합니다 —
+  D5-05 의 「우피치 미술관, 둘이 걷는 순서.html」(완벽가이드 폴더 원본, 인라인 CSS·스크립트, 구글 폰트만 외부). 백업 entry 의 `type` 을 `text/html` 로 두면 됩니다.
 
 ## 🧭 동선 — `ScheduleItem.transfer`
 

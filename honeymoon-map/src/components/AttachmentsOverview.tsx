@@ -36,6 +36,7 @@ interface AttachmentEntry {
 function iconFor(type: string): string {
   if (type.startsWith('image/')) return '🖼️'
   if (type === 'application/pdf') return '📄'
+  if (type === 'text/html') return '📖'
   return '📎'
 }
 
