@@ -3477,3 +3477,69 @@ code {
     font-size: 0.74rem;
   }
 }
+
+/* ── PDF 뷰어 (pdf.js · 첨부 「보기」) ───────────────────────── */
+.viewer-body.pdf {
+  display: block; /* 뷰어가 스스로 스크롤한다 */
+  overflow: hidden;
+}
+.pdf-viewer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.pdf-toolbar {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 12px;
+  background: #111827;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.pdf-zoom {
+  display: inline-flex;
+  gap: 4px;
+}
+.pdf-zoom .attach-btn {
+  min-width: 40px;
+  text-align: center;
+}
+.pdf-zoom .attach-btn:disabled {
+  opacity: 0.4;
+}
+.pdf-pages {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding: 10px 12px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y;
+}
+.pdf-pages.zoomed {
+  align-items: flex-start; /* 확대하면 좌상단부터 스크롤 */
+}
+.pdf-page {
+  flex: 0 0 auto;
+  background: #fff;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+.pdf-page canvas {
+  display: block;
+}
+.pdf-status {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 24px;
+  text-align: center;
+  font-size: 0.9rem;
+}

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { AttachmentMeta } from '../hooks/useUserData'
 import { isRecoveringStaleBuild, loadAttachmentBlob, type AnyAttachmentMeta } from '../lib/builtinAttachments'
+import { PdfViewer } from './PdfViewer'
 
 // 첨부 「보기」는 새 탭(window.open + blob: URL)에 기대지 않고 앱 안에서 바로 띄운다.
 // 팝업 차단·설치형(PWA) 창·모바일 브라우저에서 새 탭 방식은 열리지 않거나 빈 화면이 되기 때문.
@@ -8,6 +9,8 @@ import { isRecoveringStaleBuild, loadAttachmentBlob, type AnyAttachmentMeta } fr
 interface Viewing {
   meta: AttachmentMeta
   url: string
+  /** 원본 바이너리 — PDF 뷰어(pdf.js)가 object URL 을 다시 읽지 않고 바로 연다 */
+  blob?: Blob
   /** 보기용으로 새로 만든 object URL 이면 닫을 때 우리가 revoke 한다 (썸네일 URL 은 소유자가 따로 정리) */
   owned: boolean
 }
@@ -31,7 +34,7 @@ export function useAttachmentViewer(thumbs: Record<string, string>) {
         if (!isRecoveringStaleBuild()) alert('파일을 찾을 수 없습니다.')
         return
       }
-      setViewing({ meta, url: URL.createObjectURL(blob), owned: true })
+      setViewing({ meta, url: URL.createObjectURL(blob), blob, owned: true })
     },
     [thumbs],
   )
@@ -47,6 +50,8 @@ export function useAttachmentViewer(thumbs: Record<string, string>) {
 interface ViewerProps {
   meta: AttachmentMeta
   url: string
+  /** PDF 원본 (있으면 pdf.js 가 바로 연다) */
+  blob?: Blob
   onClose: () => void
 }
 
@@ -56,9 +61,13 @@ function fmtSize(bytes: number): string {
   return `${(bytes / 1024 / 1024).toFixed(1)} MB`
 }
 
-/** 전체 화면 첨부 뷰어: 이미지는 <img>(탭하면 실제 크기 ↔ 맞춤), PDF 는 <iframe>. 그 외는 저장만. */
-export function AttachmentViewer({ meta, url, onClose }: ViewerProps) {
+/**
+ * 전체 화면 첨부 뷰어: 이미지는 <img>(탭하면 실제 크기 ↔ 맞춤), PDF 는 pdf.js 뷰어(쪽 넘기기·확대, 폰에서도 그려짐).
+ * pdf.js 가 못 열면 <iframe> 으로 폴백. 그 외 형식은 저장만.
+ */
+export function AttachmentViewer({ meta, url, blob, onClose }: ViewerProps) {
   const [zoomed, setZoomed] = useState(false)
+  const [pdfFailed, setPdfFailed] = useState<string | null>(null)
   const isImage = meta.type.startsWith('image/')
   const isPdf = meta.type === 'application/pdf'
 
@@ -102,7 +111,7 @@ export function AttachmentViewer({ meta, url, onClose }: ViewerProps) {
       </div>
 
       <div
-        className={`viewer-body${zoomed ? ' zoomed' : ''}`}
+        className={`viewer-body${zoomed ? ' zoomed' : ''}${isPdf && !pdfFailed ? ' pdf' : ''}`}
         onClick={(e) => {
           if (e.target === e.currentTarget) onClose()
         }}
@@ -115,8 +124,10 @@ export function AttachmentViewer({ meta, url, onClose }: ViewerProps) {
             title={zoomed ? '탭하면 화면에 맞춤' : '탭하면 실제 크기'}
             onClick={() => setZoomed((z) => !z)}
           />
+        ) : isPdf && !pdfFailed ? (
+          <PdfViewer url={url} blob={blob} name={meta.name} onFail={(reason) => setPdfFailed(reason)} />
         ) : isPdf ? (
-          <iframe className="viewer-frame" src={url} title={meta.name} />
+          <iframe className="viewer-frame" src={url} title={`${meta.name} (${pdfFailed})`} />
         ) : (
           <div className="viewer-fallback">
             <strong>이 형식은 미리보기를 지원하지 않습니다.</strong>

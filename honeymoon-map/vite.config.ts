@@ -28,7 +28,8 @@ export default defineConfig({
       },
       workbox: {
         // bin = 암호화된 내장 첨부. 현지에서 데이터가 안 터져도 티켓을 열 수 있도록 미리 캐시한다.
-        globPatterns: ['**/*.{js,css,html,json,ico,png,svg,woff2,bin}'],
+        // mjs = pdf.js 워커 (PDF 뷰어가 현지 오프라인에서도 열리게)
+        globPatterns: ['**/*.{js,mjs,css,html,json,ico,png,svg,woff2,bin}'],
         navigateFallbackDenylist: [/^\/api\//],
         maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
         runtimeCaching: [

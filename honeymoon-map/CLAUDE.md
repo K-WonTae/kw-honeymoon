@@ -99,6 +99,9 @@ https://www.google.com/maps/dir/?api=1&destination={lat,lng | 인코딩 주소}
   덮어쓰면 새 버전이 활성화되는 순간 열려 있던 옛 페이지·캐시의 옛 파일과 섞여 전부 못 열게 됩니다. 그래서 `main.tsx` 가
   `virtual:pwa-register` 로 새 서비스워커 활성화 때 자동 새로고침하고, `getBuiltinBlob` 은 404·복호화 실패 시 세션당 한 번
   SW 갱신 + 새로고침으로 스스로 복구합니다(`honeymoon:attrecover:v1`). 재패킹 뒤엔 반드시 다시 빌드·배포합니다.
+- **첨부 「보기」의 PDF 는 `PdfViewer.tsx`(pdfjs-dist legacy 빌드 동적 로드)** 가 쪽마다 캔버스로 그립니다 — iframe 은 안드로이드 크롬·아이폰 PWA 에서
+  빈 화면이 돼 폴백으로만 남겼습니다. 워커는 `?url` 자산으로 번들되고 SW 프리캐시(`mjs`)에 들어가 오프라인에서도 열립니다.
+  뷰어 검증은 스크래치패드 `pdf-test.cjs` 패턴(`.pdf-viewer[data-status=ready]` · 쪽 수 = 캔버스 수 · 캔버스 잉크 비율 · 확대 버튼 · 📎 탭 보기).
 
 ## 🧭 동선 — `ScheduleItem.transfer`
 

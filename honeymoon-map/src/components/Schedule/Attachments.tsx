@@ -190,7 +190,7 @@ export function Attachments({ itemId, user }: Props) {
         <p className="attach-empty">예매 티켓·바우처 QR·PDF를 올려두면 현장에서 바로 열어볼 수 있어요.</p>
       )}
 
-      {viewing && <AttachmentViewer meta={viewing.meta} url={viewing.url} onClose={closeViewer} />}
+      {viewing && <AttachmentViewer meta={viewing.meta} url={viewing.url} blob={viewing.blob} onClose={closeViewer} />}
     </div>
   )
 }

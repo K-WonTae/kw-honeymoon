@@ -252,7 +252,7 @@ export function AttachmentsOverview({ trip, user, onGoToItem }: Props) {
         </div>
       )}
 
-      {viewing && <AttachmentViewer meta={viewing.meta} url={viewing.url} onClose={closeViewer} />}
+      {viewing && <AttachmentViewer meta={viewing.meta} url={viewing.url} blob={viewing.blob} onClose={closeViewer} />}
     </div>
   )
 }
