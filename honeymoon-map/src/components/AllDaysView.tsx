@@ -155,7 +155,7 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
             </li>
             <li>
               <strong>카드로 충분한 곳</strong> — 호텔·기차(Frecciarossa·Trenord)·가이드투어 투어비(마이리얼트립
-              결제분)·입장권 사전예매·예약한 식당 전부(Il Santo Bevitore·La Giostra·Pontini·Ca' Dolfin·Trattoria
+              결제분)·입장권 사전예매·예약한 식당 전부(Trattoria dall'Oste·La Giostra·Pontini·Ca' Dolfin·Trattoria
               Milanese 등)·Venezia Daily Pass·짐보관·면세점.
             </li>
             <li>
