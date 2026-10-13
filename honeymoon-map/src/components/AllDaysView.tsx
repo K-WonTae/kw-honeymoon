@@ -151,12 +151,14 @@ export function AllDaysView({ trip, user, fx, onGoToDay }: Props) {
               티켓은 사전 이체) · D3 <strong>바티칸 투어 현장 지불 €110~140</strong>(박물관 €45~60+수신기 €3+대성당 €7
               ×2인, 카드 불가 — 출국 전 €200 이상 소액권으로 확보해 두 사람이 나눠 보관) · 로마·피렌체·메스트레{' '}
               <strong>도시세</strong>(호텔에 따라 현금) · D5 Vinaio 일부 매장 €20 · 산토 스피리토 성구실 €4 ·
-              부라노 상점·bussolà 등 노점 · 젤라또·카페 소액 · 트레비 분수 동전. 택시는 앱(itTaxi·FreeNow) 카드 결제.
+              부라노 상점·bussolà 등 노점 · 젤라또·카페 소액 · 트레비 분수 동전 · D8{' '}
+              <strong>Trattoria Milanese</strong>(카드 여부 공식 확인 안 됨 — 그날 €90) · D7 Ca' Dolfin 여유분(카드 OK지만
+              그날 €100). 택시는 앱(itTaxi·FreeNow) 카드 결제.
             </li>
             <li>
               <strong>카드로 충분한 곳</strong> — 호텔·기차(Frecciarossa·Trenord)·가이드투어 투어비(마이리얼트립
-              결제분)·입장권 사전예매·예약한 식당 전부(Trattoria dall'Oste·La Giostra·Pontini·Ca' Dolfin·Trattoria
-              Milanese 등)·Venezia Daily Pass·짐보관·면세점.
+              결제분)·입장권 사전예매·예약한 식당 대부분(Trattoria dall'Oste·La Giostra·Pontini·Dallo Zio·Ca' Dolfin 등 —
+              피자리움은 오히려 카드만)·Venezia Daily Pass·짐보관·면세점.
             </li>
             <li>
               지폐는 <strong>€20·€10 위주</strong>로 받으세요. €100·€200권은 택시·소상공인이 거부합니다.
